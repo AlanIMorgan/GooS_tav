@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--  CUSTOM CSS -->
+        <link rel="stylesheet" href="style.css?v19">
+
+        <title> OCR </title>
+    </head>
+
+    <body>
+
+        <br>
+
+        <div id="ft">
+            
+            <form action="upfile.php" method="post" name="imgForm" enctype="multipart/form-data">
+
+                <input type="file" name="imageSelected" id="imageSelected">
+
+                <br>
+
+                <br>
+
+                <select required="" name="lang" id="lang_sel">
+
+                    <option value="spa"> Castellano </option>
+
+                    <option  value="eng"> Inglés </option>
+
+                    <optgroup label="More...">
+
+                        <option  value="afr"> Africano </option>
+
+                        <option  value="deu"> Alemán </option>
+
+                        <option  value="frk"> Alemán Fraktur </option>
+
+                        <option  value="ara"> Árabe </option>
+
+                        <option  value="bel"> Bielorruso </option>
+
+                        <option  value="kan"> Canadiense </option>
+
+                        <option  value="spa_old"> Castellano viejo </option>
+
+                        <option  value="cat"> Catalán valenciano </option>
+
+                        <option  value="chi_sim"> Chino simplificado </option>
+
+                        <option  value="chi_tra"> Chino tradicional </option>
+
+                        <option  value="kor"> Coreano </option>
+
+                        <option  value="dan"> Danés </option>
+
+                        <option  value="epo"> Esperanto </option>
+
+                        <option  value="fin"> Finlandés </option>
+
+                        <option  value="fra"> Francés </option>
+
+                        <option  value="frm"> Francés medio (1400-1600)</option>
+
+                        <option  value="cym"> Galés </option>
+
+                        <option  value="glg"> Gallego </option>
+
+                        <option  value="ell"> Griego antiguo (-1453) </option>
+
+                        <option  value="ell"> Griego moderno (1453+) </option>
+
+                        <option  value="hat"> Haitiano criollo </option>
+
+                        <option  value="heb"> Hebreo </option>
+
+                        <option  value="hin"> Hindi / hindustaní </option>
+
+                        <option  value="nld"> Holandés flamenco </option>
+
+                        <option  value="ind"> Indonesio </option>
+
+                        <option  value="enm"> Inglés medio (1100-1500) </option>
+
+                        <option  value="gle"> Irlandés </option>
+
+                        <option  value="ita"> Italiano </option>
+
+                        <option  value="ita_old"> Italiano viejo </option>
+
+                        <option  value="jpn"> Japonés </option>
+
+                        <option  value="lat"> Latín </option>
+
+                        <option  value="nor"> Noruego </option>
+
+                        <option  value="fas"> Persa </option>
+
+                        <option  value="pol"> Polaco </option>
+
+                        <option  value="por"> Portugués </option>
+
+                        <option  value="rus"> Ruso </option>
+
+                        <option  value="swe"> Sueco </option>
+
+                        <option  value="bod"> Tibetano </option>
+
+                        <option  value="ukr"> Ucraniano </option>
+
+                        <option  value="vie"> Vietnamita </option>
+
+                    </optgroup>
+                </select>
+            </form>
+
+            <br>
+
+            <br>
+
+            <br> 
+            
+            <a id="send_btn" onclick="imgForm.submit()"> Enviar </a>
+
+        </div>
+
+        <br>
+
+        <br>
+        
+        <br>
+
+        <br>
+
+        <br>
+
+        <div id="text-div"></div>
+    </body>
+</html>
