@@ -63,7 +63,7 @@ function showForm() {
     form.classList.toggle("hidden");
     input.focus();
     input.value = "";
-}
+} /* 
 
 class domElement {
 
@@ -92,7 +92,7 @@ class domElement {
         
         newElement.innerText = this.texto;
     }
-}
+} */
 
 function enlace(address, text, zone) {
 
