@@ -172,7 +172,6 @@ enlace("https://www.youtube.com/", "YouTube", googleLinks);
 
 enlace("https://web.airdroid.com/", "AirDroid", userLinks);
 
-
 enlace("https://webcast.airdroid.com", "AirDroid Cast", userLinks);
 
 enlace("https://alphacoders.com/", "Alpha Coders", userLinks);
@@ -180,6 +179,8 @@ enlace("https://alphacoders.com/", "Alpha Coders", userLinks);
 enlace("https://apkpure.com/es/", "APKPure", userLinks);
 
 enlace("https://www.artistapirata.com/", "Artista Pirata", userLinks);
+
+enlace("https://www.artstation.com", "ArtStation", userLinks);
 
 enlace("http://webserver1.siiaa.siu.buap.mx/", "Autoservicios BUAP", userLinks);
 
@@ -218,6 +219,8 @@ enlace("https://github.com/AlanIMorgan", "GitHub", userLinks);
 enlace("https://gnula2.org/", "Gnula2", userLinks);
 
 enlace("https://www.guitars101.com/", "Guitars 101", userLinks);
+
+enlace("https://dashboard.heroku.com", "Heroku", userLinks);
 
 enlace("https://igram.io/", "iGram", userLinks);
 
@@ -280,6 +283,8 @@ enlace("https://seriespapaya.club/", "Series Papaya", userLinks);
 enlace("https://open.spotify.com/", "Spotify", userLinks);
 
 enlace("https://soundcloud.com/", "Soundcloud", userLinks);
+
+enlace("https://statically.io/docs/", "Statically io", userLinks);
 
 enlace("https://steamcommunity.com/app/431960/workshop/", "Steam", userLinks);
 
