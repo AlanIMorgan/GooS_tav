@@ -4,9 +4,8 @@ navListBtn = document.getElementById('nav_btn-list');
 profileNavBtn = document.getElementById('nav_profile_btn');
 navMenu = document.querySelector(".nav__li-submenu-ul");
 linksGroup =  document.getElementsByClassName("nav__submenu-element-section");
-googleLinks = linksGroup[0];
-userLinks = linksGroup[1];
-extraLinks = linksGroup[2];
+googleLinks = linksGroup[1];
+userLinks = linksGroup[2];
 resultsBoxC = document.querySelector(".results_box_container");
 results = document.querySelector(".results_box");
 profileNavMenu = document.querySelector(".nav__submenu-profile");
@@ -321,15 +320,15 @@ enlace("https://web.whatsapp.com/", "WhatsApp", userLinks);
 enlace("https://www.office.com/launch/word?auth=2", "Word", userLinks);
 
 // Extra Links
-
+/* 
 enlace("chess/index.html", "Chess", extraLinks);
 
 enlace("http://burgersrestaurant.epizy.com/google/index.html", "Google", extraLinks);
 
 enlace("matrix/index.html", "Matrix", extraLinks);
 
-enlace("{% url 'msg' %}", "Msg", extraLinks);
+enlace("msg/index.html", "Msg", extraLinks);
 
 enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks);
 
-enlace("conwell/index.html", "The game of life", extraLinks);
+enlace("conwell/index.html", "The game of life", extraLinks); */
