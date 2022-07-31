@@ -324,6 +324,8 @@ enlace("https://www.office.com/launch/word?auth=2", "Word", userLinks);
 
 enlace("chess/index.html", "Chess", extraLinks);
 
+enlace("conway/index.html", "Conway's game of life", extraLinks);
+
 enlace("http://burgersrestaurant.epizy.com/google/index.html", "Google", extraLinks);
 
 enlace("matrix/index.html", "Matrix", extraLinks);
@@ -331,5 +333,3 @@ enlace("matrix/index.html", "Matrix", extraLinks);
 enlace("msg/index.html", "Msg", extraLinks);
 
 enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks);
-
-enlace("conwell/index.html", "The game of life", extraLinks);
