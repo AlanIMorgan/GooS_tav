@@ -326,7 +326,7 @@ enlace("chess/index.html", "Chess", extraLinks);
 
 enlace("conway/index.html", "Conway's game of life", extraLinks);
 
-enlace("http://burgersrestaurant.epizy.com/google/index.html", "Google", extraLinks);
+enlace("https://google-simulator.herokuapp.com", "Google", extraLinks);
 
 enlace("matrix/index.html", "Matrix", extraLinks);
 
