@@ -229,8 +229,6 @@ enlace("https://infinityfree.net/", "Infinity Free", userLinks);
 
 enlace("https://www.instagram.com/", "Instagram", userLinks);
 
-enlace("karaoke/index.html", "Karaoke", userLinks);
-
 enlace("http://labahia.epizy.com/", "La Bahía Del Naufragio", userLinks);
 
 enlace("https://www.last.fm/es/user/XaMadness", "Last.fm", userLinks);
@@ -324,6 +322,8 @@ enlace("https://www.office.com/launch/word?auth=2", "Word", userLinks);
 enlace("chess/index.html", "Chess", extraLinks);
 
 enlace("http://burgersrestaurant.epizy.com/google/index.html", "Google", extraLinks);
+
+enlace("karaoke/index.html", "Karaoke", userLinks);
 
 enlace("matrix/index.html", "Matrix", extraLinks);
 
