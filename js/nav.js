@@ -143,7 +143,7 @@ enlace("conway/index.html", "Conway's game of life", extraLinks);
 
 enlace("https://google-simulator.herokuapp.com", "Google", extraLinks);
 
-enlace("karaoke/index.html", "Karaoke", userLinks);
+enlace("karaoke/index.html", "Karaoke", extraLinks);
 
 enlace("matrix/index.html", "Matrix", extraLinks);
 
