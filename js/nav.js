@@ -135,6 +135,24 @@ function enlace(address, text, zone) {
 const extraExtraLinks = new domElement("div", "", "", "");
 extraExtraLinks.crear(); */
 
+// Extra links
+
+enlace("chess/index.html", "Chess", extraLinks);
+
+enlace("conway/index.html", "Conway's game of life", extraLinks);
+
+enlace("https://google-simulator.herokuapp.com", "Google", extraLinks);
+
+enlace("karaoke/index.html", "Karaoke", userLinks);
+
+enlace("matrix/index.html", "Matrix", extraLinks);
+
+enlace("msg/index.html", "Msg", extraLinks);
+
+enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks);
+
+// Google links
+
 enlace("https://www.google.com/", "Búsqueda", googleLinks);
 
 enlace("https://myaccount.google.com/", "Cuenta", googleLinks);
@@ -168,7 +186,7 @@ enlace("https://translate.google.com/", "Traductor", googleLinks);
 
 enlace("https://www.youtube.com/", "YouTube", googleLinks);
 
-// User Links
+// User links
 
 enlace("https://web.airdroid.com/", "AirDroid", userLinks);
 
@@ -317,19 +335,3 @@ enlace("https://www.wikidata.org", "Wikidata", userLinks);
 enlace("https://web.whatsapp.com/", "WhatsApp", userLinks);
 
 enlace("https://www.office.com/launch/word?auth=2", "Word", userLinks);
-
-// Extra Links
-
-enlace("chess/index.html", "Chess", extraLinks);
-
-enlace("conway/index.html", "Conway's game of life", extraLinks);
-
-enlace("https://google-simulator.herokuapp.com", "Google", extraLinks);
-
-enlace("karaoke/index.html", "Karaoke", userLinks);
-
-enlace("matrix/index.html", "Matrix", extraLinks);
-
-enlace("msg/index.html", "Msg", extraLinks);
-
-enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks);
