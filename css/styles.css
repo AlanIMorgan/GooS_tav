@@ -213,7 +213,7 @@ a {
 	right: 0;
 	margin: 7px 8px;/* 
 	width: 344px; */
-	height: 430px;
+	height: 75vh;
 	background-color: var(--svnth);
 	border-radius: 6px;
 	padding: 10px;/* 
@@ -323,7 +323,6 @@ a {
 
 .nav__li-submenu-ul_list {
     display: inline-block !important;
-    height: 490px !important;
 }
 
 .nav__li-submenu-ul_list .nav__submenu-element-section {
