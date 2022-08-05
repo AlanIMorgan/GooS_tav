@@ -146,11 +146,11 @@ enlace("https://www.google.com/finance/", "Finanzas", googleLinks);
 
 enlace("https://photos.google.com/", "Fotos", googleLinks);
 
-enlace("https://www.google.com/finance/", "Fuentes", googleLinks);
+enlace("https://fonts.google.com/", "Fonts", googleLinks);
 
 enlace("https://mail.google.com/mail/u/0/#all", "Gmail", googleLinks);
 
-enlace("https://www.google.com/imghp", "Imágenes", googleLinks);
+enlace("https://www.google.com/imghp", "Images", googleLinks);
 
 enlace("https://www.google.com/maps/", "Mapas", googleLinks);
 
@@ -168,6 +168,8 @@ enlace("https://translate.google.com/", "Traductor", googleLinks);
 enlace("https://www.youtube.com/", "YouTube", googleLinks);
 
 // User Links
+
+enlace("https://aws.amazon.com/", "Amazon Web Services", userLinks);
 
 enlace("https://web.airdroid.com/", "AirDroid", userLinks);
 
@@ -196,6 +198,8 @@ enlace("https://bulma.io/", "Bulma", userLinks);
 enlace("https://codepen.io/", "CodePen", userLinks);
 
 enlace("https://www.deezer.com/es/", "Deezer", userLinks);
+
+enlace("https://www.deviantart.com", "DeviantArt", userLinks);
 
 enlace("https://diep.io/", "Diep io", userLinks);
 
