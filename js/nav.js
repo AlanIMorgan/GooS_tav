@@ -20,6 +20,14 @@ formBtn.addEventListener("click", showForm);
 profileNavBtn.addEventListener("click", showHideProfileNav);
 home.addEventListener("click", hideMenus);
 
+document.documentElement.addEventListener('keyup', (e)=>{
+
+    if (e.key == "|") {
+
+        showForm();
+    }
+});
+
 function showHideNav() {
 
     navMenu.classList.toggle("block");

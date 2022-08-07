@@ -52,75 +52,69 @@ resultsBoxC.addEventListener("click", ()=>{
 	liveSearch();
 });
 
-document.querySelector(".home__form").addEventListener("submit",()=>{
+document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
-	event.preventDefault();
-});
+	e.preventDefault();
 
-document.documentElement.addEventListener("keyup",(evt)=>{
+	let voiceText = document.querySelector(".google-search").value;
 
-	if (evt.which == 13) {
-	
-		let voiceText = document.querySelector(".google-search").value;
-	
-		if (voiceText.length > 0) { 
+	if (voiceText.length > 0) { 
 
-			if (voiceText.includes(' ')) { 
+		if (voiceText.includes(' ')) { 
+		
+			window.open("https://www.google.com/search?q=" + voiceText);
+
+			document.querySelector(".google-search").value = "";
+		}
+		
+		else {
 			
+			if (voiceText.includes('.')) {
+				
+				reduce();
+
+				function reduce() {
+
+					if (voiceText.includes('://')) {
+						
+						link = voiceText.split('://');
+
+						redirect();
+					} 
+					
+					else {
+						
+						link = [0, voiceText];/* 
+
+						console.log(link[1]); */
+
+						redirect();
+					}
+				}
+
+				function redirect() {
+
+					if (!!link[1] && !/^https?:\/\//i.test(link[1])) {
+					
+						url = 'http://' + link[1];
+
+						redir = confirm("Estás llendo a: "+voiceText);
+	
+						if (redir == true) {
+						
+							window.open(url);
+
+							document.querySelector(".google-search").value = "";
+						}
+					} 
+				}
+			}
+
+			else {
+		
 				window.open("https://www.google.com/search?q=" + voiceText);
 
 				document.querySelector(".google-search").value = "";
-			}
-			
-			else {
-				
-				if (voiceText.includes('.')) {
-					
-					reduce();
-
-					function reduce() {
-
-						if (voiceText.includes('://')) {
-							
-							link = voiceText.split('://');
-
-							redirect();
-						} 
-						
-						else {
-							
-							link = [0, voiceText];/* 
-
-							console.log(link[1]); */
-
-							redirect();
-						}
-					}
-
-					function redirect() {
-
-						if (!!link[1] && !/^https?:\/\//i.test(link[1])) {
-						
-							url = 'http://' + link[1];
-
-							redir = confirm("Estás llendo a: "+voiceText);
-		
-							if (redir == true) {
-							
-								window.open(url);
-
-								document.querySelector(".google-search").value = "";
-							}
-						} 
-					}
-				}
-
-				else {
-			
-					window.open("https://www.google.com/search?q=" + voiceText);
-	
-					document.querySelector(".google-search").value = "";
-				}
 			}
 		}
 	}
