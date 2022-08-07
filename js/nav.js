@@ -214,6 +214,8 @@ enlace("https://accesoqr.buap.mx/", "BUAP QR", userLinks);
 
 enlace("https://bulma.io/", "Bulma", userLinks);
 
+enlace("https://www.canva.com/", "Canva", userLinks);
+
 enlace("https://codepen.io/", "CodePen", userLinks);
 
 enlace("https://www.deezer.com/es/", "Deezer", userLinks);
@@ -225,6 +227,8 @@ enlace("https://diep.io/", "Diep io", userLinks);
 enlace("https://discord.com/", "Discord", userLinks);
 
 enlace("https://es.dll-files.com/", "DLL-files", userLinks);
+
+enlace("https://www.espaebook2.com/", "EspaEbook", userLinks);
 
 enlace("https://extract.me/es/", "Extractme", userLinks);
 
@@ -323,6 +327,8 @@ enlace("https://www.tiktok.com/", "TikTok", userLinks);
 enlace("https://tinypng.com/", "TinyPNG", userLinks);
 
 enlace("https://twitter.com/", "Twitter", userLinks);
+
+enlace("https://vdocuments.site/", "VDocuments", userLinks);
 
 enlace("https://victorraulrr.info/", "Victor RaulRR", userLinks);
 
