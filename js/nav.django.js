@@ -237,8 +237,6 @@ enlace("https://infinityfree.net/", "Infinity Free", userLinks);
 
 enlace("https://www.instagram.com/", "Instagram", userLinks);
 
-enlace("http://labahia.epizy.com/", "La Bahía Del Naufragio", userLinks);
-
 enlace("https://www.last.fm/es/user/XaMadness", "Last.fm", userLinks);
 
 enlace("https://www.linkedin.com/in/alanmorgan-a/", "LinkedIn", userLinks);
