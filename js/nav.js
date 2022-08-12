@@ -198,6 +198,8 @@ enlace("https://www.youtube.com/", "YouTube", googleLinks);
 
 // User links
 
+enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", userLinks);
+
 enlace("https://aws.amazon.com/", "Amazon Web Services", userLinks);
 
 enlace("https://web.airdroid.com/", "AirDroid", userLinks);
@@ -262,7 +264,7 @@ enlace("https://igram.io/", "iGram", userLinks);
 
 enlace("https://www.ilovepdf.com/", "I love PDF", userLinks);
 
-enlace("https://infinityfree.net/", "Infinity Free", userLinks);
+enlace("https://app.infinityfree.net/accounts", "Infinity Free", userLinks);
 
 enlace("https://www.instagram.com/", "Instagram", userLinks);
 
@@ -315,6 +317,8 @@ enlace("https://seriespapaya.club/", "Series Papaya", userLinks);
 enlace("https://open.spotify.com/", "Spotify", userLinks);
 
 enlace("https://soundcloud.com/", "Soundcloud", userLinks);
+
+enlace("https://stackoverflow.com/questions", "Stack Overflow", userLinks);
 
 enlace("https://statically.io/docs/", "Statically io", userLinks);
 
