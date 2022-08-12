@@ -9,11 +9,13 @@ body {
     padding: 0;
     height: 100%;
 }
+
 canvas {
     position: absolute;
     top:0;
     left: 0;
-}
+} /* 
+
 #canvas2 {
   filter: blur(1px);
-}
+} */
