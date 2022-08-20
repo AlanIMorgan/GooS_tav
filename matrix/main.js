@@ -74,11 +74,11 @@ function animate(timeStamp){
     lastTime = timeStamp;
     if (timer > nextFrame){
         ctx.textAlign = "center";
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.075)';
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.font = effect.fontSize + 'px monospace';
-        ctx.fillStyle = '#03A062';
-        ctx.fillStyle = '#ddbbff';
+        ctx.fillStyle = '#fff';
+        ctx.fillStyle = '#d0b0ff';
 
         ctx2.textAlign = "center";
         ctx2.clearRect(0, 0, canvas.width, canvas.height);
