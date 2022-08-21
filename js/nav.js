@@ -234,7 +234,13 @@ enlace("https://www.deezer.com/es/", "Deezer", userLinks);
 
 enlace("https://www.deviantart.com", "DeviantArt", userLinks);
 
+enlace("http://www.didascalica.it/", "Didascalica", userLinks);
+
 enlace("https://diep.io/", "Diep io", userLinks);
+
+enlace("https://wiki.digitalclassicist.org/", "Digital Classicist Wiki", userLinks);
+
+enlace("https://d.iogen.es/web/", "DiogenesWeb", userLinks);
 
 enlace("https://discord.com/", "Discord", userLinks);
 
@@ -262,13 +268,19 @@ enlace("https://dashboard.heroku.com", "Heroku", userLinks);
 
 enlace("https://igram.io/", "iGram", userLinks);
 
+enlace("https://www.iloveimg.com/", "I love IMG", userLinks);
+
 enlace("https://www.ilovepdf.com/", "I love PDF", userLinks);
+
+enlace("https://app.inferkit.com/demo", "InferKit", userLinks);
 
 enlace("https://app.infinityfree.net/accounts", "Infinity Free", userLinks);
 
 enlace("https://www.instagram.com/", "Instagram", userLinks);
 
 enlace("https://www.last.fm/es/user/XaMadness", "Last.fm", userLinks);
+
+enlace("https://libgen.li/", "Library Genesis", userLinks);
 
 enlace("https://www.linkedin.com/in/alanmorgan-a/", "LinkedIn", userLinks);
 
@@ -281,6 +293,8 @@ enlace("https://mega.nz/", "Mega", userLinks);
 enlace("https://www.megadiscografiascompletas.com/", "Mega Discografías", userLinks);
 
 enlace("http://tavasci3-musicrewind.blogspot.com/", "Music Rewind", userLinks);
+
+enlace("https://normas-apa.org/", "Normas APA", userLinks);
 
 enlace("https://correobuap-my.sharepoint.com/personal/alan_morgana_alumno_buap_mx/_layouts/15/onedrive.aspx?", "OneDrive", userLinks);
 
@@ -300,6 +314,8 @@ enlace("https://pcwonderland.com/", "PC Wonderland", userLinks);
 
 enlace("http://www.bajarpelisgratis.com/", "Pelis Gratis", userLinks);
 
+enlace("http://www.perseus.tufts.edu/hopper/", "Perseus Digital Library", userLinks);
+
 enlace("https://photocall.tv", "Photocall tv", userLinks);
 
 enlace("https://www.pinterest.com.mx/", "Pinterest", userLinks);
@@ -310,7 +326,13 @@ enlace("https://www.random.org/widgets/", "Random", userLinks);
 
 enlace("https://www.reddit.com/", "Reddit", userLinks);
 
+enlace("https://sci-hub.se/", "Sci-Hub", userLinks);
+
+enlace("https://www.scimagojr.com/", "SCImago Journal & Country Rank", userLinks);
+
 enlace("https://sclouddownloader.net/", "ScloudDownloader", userLinks);
+
+enlace("https://www.scopus.com/", "Scopus", userLinks);
 
 enlace("https://seriespapaya.club/", "Series Papaya", userLinks);
 
@@ -334,11 +356,15 @@ enlace("https://web.telegram.org/k/", "Telegram", userLinks);
 
 enlace("http://www.neogeofun.com/kof2002", "The King Of Fighters", userLinks);
 
+enlace("http://thelatinlibrary.com/", "The Latin Library", userLinks);
+
 enlace("https://www.tiktok.com/", "TikTok", userLinks);
 
 enlace("https://tinypng.com/", "TinyPNG", userLinks);
 
 enlace("https://twitter.com/", "Twitter", userLinks);
+
+enlace("https://www.urbandictionary.com/", "Urban Dictionary", userLinks);
 
 enlace("https://vdocuments.site/", "VDocuments", userLinks);
 
