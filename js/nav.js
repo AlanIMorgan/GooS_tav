@@ -248,6 +248,8 @@ enlace("https://es.dll-files.com/", "DLL-files", userLinks);
 
 enlace("https://www.espaebook2.com/", "EspaEbook", userLinks);
 
+enlace("https://www.ebiblioteca.org/lecturas/", "eBiblioteca", userLinks);
+
 enlace("https://extract.me/es/", "Extractme", userLinks);
 
 enlace("https://m.ezyzip.com/", "Ezyzip", userLinks);
@@ -293,6 +295,8 @@ enlace("https://mega.nz/", "Mega", userLinks);
 enlace("https://www.megadiscografiascompletas.com/", "Mega Discografías", userLinks);
 
 enlace("http://tavasci3-musicrewind.blogspot.com/", "Music Rewind", userLinks);
+
+enlace("https://www.newgrounds.com/", "Newgrounds", userLinks);
 
 enlace("https://normas-apa.org/", "Normas APA", userLinks);
 
