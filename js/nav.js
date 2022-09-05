@@ -252,7 +252,7 @@ enlace("https://www.ebiblioteca.org/lecturas/", "eBiblioteca", userLinks);
 
 enlace("https://extract.me/es/", "Extractme", userLinks);
 
-enlace("https://m.ezyzip.com/", "Ezyzip", userLinks);
+enlace("https://www.ezyzip.com/open-extract-rar-file-online.html", "Ezyzip", userLinks);
 
 enlace("https://www.facebook.com/", "Facebook", userLinks);
 
@@ -337,6 +337,8 @@ enlace("https://www.scimagojr.com/", "SCImago Journal & Country Rank", userLinks
 enlace("https://sclouddownloader.net/", "ScloudDownloader", userLinks);
 
 enlace("https://www.scopus.com/", "Scopus", userLinks);
+
+enlace("https://www.scopus.com/", "Scribbr APA generator", userLinks);
 
 enlace("https://seriespapaya.club/", "Series Papaya", userLinks);
 
