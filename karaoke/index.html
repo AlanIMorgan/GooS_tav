@@ -5260,16 +5260,21 @@
 
     function crearCancion(id) {
 
-      section = document.createElement("section");
-      idNumber = document.createElement("p");
+      section = document.createElement("label");
+      idNumber = document.createElement("label");
+      checkbox = document.createElement("input");
 
       section.setAttribute("id", "songNo" + id);
       section.setAttribute("style", "margin-bottom: 50px;background: #333;padding: 25px 0;width: 47%;text-align: center;");
       idNumber.setAttribute("style", "margin: 0 0 20px;color: #ff0;font-weight: bolder;");
+      //section.setAttribute("for", "songCheckNo" + id);
+      checkbox.setAttribute("type", "checkbox");
+      checkbox.setAttribute("id", "songCheckNo" + id);
 
       bodydiv2.appendChild(section);
       section.appendChild(idNumber);
       idNumber.innerHTML = id;
+      section.appendChild(checkbox);
       section.appendChild(songs[id]);
     }
 
