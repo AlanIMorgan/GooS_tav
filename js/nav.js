@@ -157,7 +157,7 @@ enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", extraLinks);
 
 enlace("matrix/index.html", "Matrix", extraLinks);
 
-enlace("msg/index.html", "Msg", extraLinks);
+enlace("msg/index.html", "W", extraLinks);
 
 enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks);
 
