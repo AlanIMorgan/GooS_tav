@@ -7,23 +7,95 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Karaoke </title>
+
+  <style>
+
+    #body {
+      background: #000;
+      margin: 0;
+      overflow-x: hidden;
+      color: #fff;
+    }
+
+    nav {
+      display: inline-block;
+      position: relative;
+      background: #000;
+      width: 100%;
+      height: 130px;
+    }
+
+    .form_container {
+      display: inline-block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #000;
+      text-align: center;
+    }
+
+    nav div h1 {
+      margin-bottom: 50px;
+    }
+
+    #search_song {
+      margin-bottom: 20px;
+      background: #000;
+      color: #fff;
+    }
+
+    #result_btn {
+      display: inline;
+    }
+
+    #bodydiv {
+      display: none;
+    }
+
+    #bodydiv-2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .song_section {
+      margin-bottom: 50px;
+      background: #333;
+      padding: 25px 0;
+      width: 47%;
+      text-align: center;
+    }
+
+    .id_label {
+      margin: 0 0 20px;
+      color: #ff0;
+      font-weight: bolder;
+    }
+
+    #search_btn {
+      position: absolute;
+      margin-left: 10px;
+      color: #bbb;
+    }
+  </style>
 </head>
 
-<body id="body" style="background: #000;margin: 0;overflow-x: hidden;color: #fff;">
+<body id="body">
 
-  <nav style="display: inline-block;position: relative;background: #000;width: 100%;height: 130px;">
+  <nav>
 
-    <div style="display: inline-block;position: fixed;top: 0;left: 0;right: 0;background: #000;text-align: center;">
+    <form class="form_container">
 
-      <h1 style="margin-bottom: 50px;"> Canciones </h1>
+      <h1> Canciones </h1>
 
-      <input id="search_song" type="text" style="margin-bottom: 20px;background: #000;color: #fff;">
+      <input id="search_song" type="number">
 
-      <div id="result_btn" style="display: inline;"></div>
-    </div>
+      <div id="result_btn"></div>
+    </form>
   </nav>
 
-  <div id="bodydiv" style="display: none;">
+  <div id="bodydiv">
     <div class="search-super-month-items"><audio-element data-font-weight="400" data-size-type="" class="audio audio-with-thumb audio-48 search-super-item" data-mid="4314169343" data-peer-id="-1288324289">
       <div class="audio-toggle audio-ico media-container" u="">
         <div class="audio-play-icon">
@@ -5249,7 +5321,7 @@
     </div></audio-element></div></div></div>
   </div>
 
-  <div id="bodydiv-2" style="display: flex;flex-wrap: wrap;justify-content: space-evenly;"></div>
+  <div id="bodydiv-2"></div>
 
   <script>
 
@@ -5265,8 +5337,8 @@
       checkbox = document.createElement("input");
 
       section.setAttribute("id", "songNo" + id);
-      section.setAttribute("style", "margin-bottom: 50px;background: #333;padding: 25px 0;width: 47%;text-align: center;");
-      idNumber.setAttribute("style", "margin: 0 0 20px;color: #ff0;font-weight: bolder;");
+      section.setAttribute("class", "song_section");
+      idNumber.setAttribute("class", "id_label");
       //section.setAttribute("for", "songCheckNo" + id);
       checkbox.setAttribute("type", "checkbox");
       checkbox.setAttribute("id", "songCheckNo" + id);
@@ -5297,8 +5369,18 @@
 
       resultFix = parseInt(result) - 2;
 
-      btn.innerHTML = '<a style="position: absolute;margin-left: 10px;color: #bbb;" href="#songNo' + resultFix + '"> Buscar </a>';
+      btn.innerHTML = '<a id="search_btn" href="#songNo' + resultFix + '"> Buscar </a>';
     }
+  </script>
+
+  <script>
+
+    document.querySelector(".form_container").addEventListener("submit", (e)=>{
+
+      e.preventDefault();
+
+      document.getElementById("search_btn").click();
+    });
   </script>
 </body>
 
