@@ -167,15 +167,9 @@ enlace("https://www.google.com/", "Búsqueda", googleLinks);
 
 enlace("https://myaccount.google.com/", "Cuenta", googleLinks);
 
-enlace("https://artsandculture.google.com/", "Cultura", googleLinks);
-
 enlace("https://docs.google.com/", "Documentos", googleLinks);
 
-enlace("https://www.google.com/finance/", "Finanzas", googleLinks);
-
 enlace("https://photos.google.com/", "Fotos", googleLinks);
-
-enlace("https://fonts.google.com/", "Fonts", googleLinks);
 
 enlace("https://mail.google.com/mail/u/0/#all", "Gmail", googleLinks);
 
@@ -200,15 +194,11 @@ enlace("https://www.youtube.com/", "YouTube", googleLinks);
 
 enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", userLinks);
 
-enlace("https://aws.amazon.com/", "Amazon Web Services", userLinks);
-
 enlace("https://web.airdroid.com/", "AirDroid", userLinks);
 
 enlace("https://webcast.airdroid.com", "AirDroid Cast", userLinks);
 
 enlace("https://alphacoders.com/", "Alpha Coders", userLinks);
-
-enlace("https://apkpure.com/es/", "APKPure", userLinks);
 
 enlace("https://www.artistapirata.com/", "Artista Pirata", userLinks);
 
@@ -230,13 +220,7 @@ enlace("https://codepen.io/", "CodePen", userLinks);
 
 enlace("https://www.deviantart.com", "DeviantArt", userLinks);
 
-enlace("http://www.didascalica.it/", "Didascalica", userLinks);
-
 enlace("https://diep.io/", "Diep io", userLinks);
-
-enlace("https://wiki.digitalclassicist.org/", "Digital Classicist Wiki", userLinks);
-
-enlace("https://d.iogen.es/web/", "DiogenesWeb", userLinks);
 
 enlace("https://discord.com/", "Discord", userLinks);
 
@@ -249,8 +233,6 @@ enlace("https://extract.me/es/", "Extractme", userLinks);
 enlace("https://www.ezyzip.com/open-extract-rar-file-online.html", "EzyZip", userLinks);
 
 enlace("https://www.facebook.com/", "Facebook", userLinks);
-
-enlace("https://fontawesome.com/", "Font Awesome", userLinks);
 
 enlace("https://gatonplayseries.com/", "GatonPlaySeries", userLinks);
 
@@ -267,8 +249,6 @@ enlace("https://www.iloveimg.com/", "I love IMG", userLinks);
 enlace("https://www.ilovepdf.com/", "I love PDF", userLinks);
 
 enlace("https://app.inferkit.com/demo", "InferKit", userLinks);
-
-enlace("https://app.infinityfree.net/accounts", "Infinity Free", userLinks);
 
 enlace("https://www.instagram.com/", "Instagram", userLinks);
 
@@ -310,8 +290,6 @@ enlace("https://pcwonderland.com/", "PC Wonderland", userLinks);
 
 enlace("http://www.bajarpelisgratis.com/", "Pelis Gratis", userLinks);
 
-enlace("http://www.perseus.tufts.edu/hopper/", "Perseus Digital Library", userLinks);
-
 enlace("https://photocall.tv", "Photocall tv", userLinks);
 
 enlace("https://www.pinterest.com.mx/", "Pinterest", userLinks);
@@ -338,8 +316,6 @@ enlace("https://open.spotify.com/", "Spotify", userLinks);
 
 enlace("https://soundcloud.com/", "Soundcloud", userLinks);
 
-enlace("https://stackoverflow.com/questions", "Stack Overflow", userLinks);
-
 enlace("https://steamcommunity.com/app/431960/workshop/", "Steam", userLinks);
 
 enlace("https://steamunlocked.net/", "Steam Unlocked", userLinks);
@@ -352,8 +328,6 @@ enlace("https://web.telegram.org/k/", "Telegram", userLinks);
 
 enlace("http://www.neogeofun.com/kof2002", "The King Of Fighters", userLinks);
 
-enlace("http://thelatinlibrary.com/", "The Latin Library", userLinks);
-
 enlace("https://www.tiktok.com/", "TikTok", userLinks);
 
 enlace("https://tinypng.com/", "TinyPNG", userLinks);
@@ -365,10 +339,6 @@ enlace("https://www.urbandictionary.com/", "Urban Dictionary", userLinks);
 enlace("https://victorraulrr.info/", "Victor RaulRR", userLinks);
 
 enlace("https://www.virustotal.com/", "VirusTotal", userLinks);
-
-enlace("https://www.w3schools.com/", "W3Schools", userLinks);
-
-enlace("https://www.wikiart.org/es", "WikiArt", userLinks);
 
 enlace("https://web.whatsapp.com/", "WhatsApp", userLinks);
 
