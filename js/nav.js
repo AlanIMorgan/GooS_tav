@@ -266,7 +266,11 @@ enlace("https://mega.nz/", "Mega", userLinks);
 
 enlace("https://www.megadiscografiascompletas.com/", "Mega Discografías", userLinks);
 
+enlace("https://mqs.link/", "MQS Albums Download", userLinks);
+
 enlace("http://tavasci3-musicrewind.blogspot.com/", "Music Rewind", userLinks);
+
+enlace("https://www.napster.com", "Napster", userLinks);
 
 enlace("https://www.newgrounds.com/", "Newgrounds", userLinks);
 
@@ -321,6 +325,8 @@ enlace("https://steamcommunity.com/app/431960/workshop/", "Steam", userLinks);
 enlace("https://steamunlocked.net/", "Steam Unlocked", userLinks);
 
 enlace("http://subes.becasbenitojuarez.gob.mx/", "SUBES", userLinks);
+
+enlace("https://www.typingclub.com/", "TypingClub", userLinks);
 
 enlace("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid", "Teams", userLinks);
 
