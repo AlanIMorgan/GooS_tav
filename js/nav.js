@@ -224,13 +224,9 @@ enlace("https://www.behance.net/", "Behance", userLinks);
 
 enlace("https://accesoqr.buap.mx/", "BUAP QR", userLinks);
 
-enlace("https://bulma.io/", "Bulma", userLinks);
-
 enlace("https://www.canva.com/", "Canva", userLinks);
 
 enlace("https://codepen.io/", "CodePen", userLinks);
-
-enlace("https://www.deezer.com/es/", "Deezer", userLinks);
 
 enlace("https://www.deviantart.com", "DeviantArt", userLinks);
 
@@ -243,8 +239,6 @@ enlace("https://wiki.digitalclassicist.org/", "Digital Classicist Wiki", userLin
 enlace("https://d.iogen.es/web/", "DiogenesWeb", userLinks);
 
 enlace("https://discord.com/", "Discord", userLinks);
-
-enlace("https://es.dll-files.com/", "DLL-files", userLinks);
 
 enlace("https://www.espaebook2.com/", "EspaEbook", userLinks);
 
@@ -265,8 +259,6 @@ enlace("https://github.com/AlanIMorgan", "GitHub", userLinks);
 enlace("https://gnula2.org/", "Gnula2", userLinks);
 
 enlace("https://www.guitars101.com/", "Guitars 101", userLinks);
-
-enlace("https://dashboard.heroku.com", "Heroku", userLinks);
 
 enlace("https://igram.io/", "iGram", userLinks);
 
@@ -348,8 +340,6 @@ enlace("https://soundcloud.com/", "Soundcloud", userLinks);
 
 enlace("https://stackoverflow.com/questions", "Stack Overflow", userLinks);
 
-enlace("https://statically.io/docs/", "Statically io", userLinks);
-
 enlace("https://steamcommunity.com/app/431960/workshop/", "Steam", userLinks);
 
 enlace("https://steamunlocked.net/", "Steam Unlocked", userLinks);
@@ -372,8 +362,6 @@ enlace("https://twitter.com/", "Twitter", userLinks);
 
 enlace("https://www.urbandictionary.com/", "Urban Dictionary", userLinks);
 
-enlace("https://vdocuments.site/", "VDocuments", userLinks);
-
 enlace("https://victorraulrr.info/", "Victor RaulRR", userLinks);
 
 enlace("https://www.virustotal.com/", "VirusTotal", userLinks);
@@ -381,10 +369,6 @@ enlace("https://www.virustotal.com/", "VirusTotal", userLinks);
 enlace("https://www.w3schools.com/", "W3Schools", userLinks);
 
 enlace("https://www.wikiart.org/es", "WikiArt", userLinks);
-
-enlace("https://wiby.me/", "Wiby", userLinks);
-
-enlace("https://www.wikidata.org", "Wikidata", userLinks);
 
 enlace("https://web.whatsapp.com/", "WhatsApp", userLinks);
 
