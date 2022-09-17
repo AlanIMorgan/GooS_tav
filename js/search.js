@@ -13,21 +13,31 @@ function liveSearch() {
 	//Use innerText if all contents are visible
 	//Use textContent for including hidden elements
 
-	for (var i = 0; i < links.length; i++) {
+	for (i = 0; i < links.length; i++) {
 
-		if (search_query.length > 0 && links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
+		if (search_query.length > 0) {
 
-			links[i].classList.add("actual");
+			if (links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
+	
+				links[i].classList.add("actual");
+	
+				resultsBoxC.classList.remove("hidden");
+			}
 
-			resultsBoxC.classList.remove("hidden");
-		}
-		
-		else if (search_query.length < 1) {
+			else {
+	
+				links[i].classList.remove("actual");
 
-			resultsBoxC.classList.add("hidden");
+				if (document.querySelectorAll('.actual').length < 1) {
+
+					resultsBoxC.classList.add("hidden");
+				}
+			}
 		}
 		
 		else {
+
+			resultsBoxC.classList.add("hidden");
 
 			links[i].classList.remove("actual");
 		}
