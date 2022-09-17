@@ -306,7 +306,7 @@ enlace("https://www.reddit.com/", "Reddit", userLinks);
 
 enlace("https://sci-hub.se/", "Sci-Hub", userLinks);
 
-enlace("https://www.scimagojr.com/", "SCImago Journal & Country Rank", userLinks);
+enlace("https://www.scimagojr.com/", "SCImago", userLinks);
 
 enlace("https://sclouddownloader.net/", "ScloudDownloader", userLinks);
 

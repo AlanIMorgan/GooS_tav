@@ -3,7 +3,9 @@ searchInput = document.querySelector(".google-search");
 resultsBoxC = document.querySelector(".results_box_container");
 
 links = document.querySelectorAll('.result');
-		
+
+currentURL = window.location.href;
+
 function liveSearch() {
 
 	let search_query = searchInput.value;
@@ -13,14 +15,14 @@ function liveSearch() {
 
 	for (var i = 0; i < links.length; i++) {
 
-		if (search_query != "" && links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
+		if (search_query.length > 0 && links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
 
 			links[i].classList.add("actual");
 
 			resultsBoxC.classList.remove("hidden");
 		}
 		
-		else if (search_query == "") {
+		else if (search_query.length < 1) {
 
 			resultsBoxC.classList.add("hidden");
 		}
@@ -84,9 +86,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 					
 					else {
 						
-						link = [0, voiceText];/* 
-
-						console.log(link[1]); */
+						link = [0, voiceText];
 
 						redirect();
 					}
@@ -111,10 +111,28 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 			}
 
 			else {
-		
-				window.open("https://www.google.com/search?q=" + voiceText);
 
-				document.querySelector(".google-search").value = "";
+				if (voiceText.toLowerCase() == 'bookmarks') {
+
+					if (currentURL.includes('index.html')) {
+
+						updatedURL = currentURL.replace('index.html', 'bookmarks/bookmarks.html');
+
+						window.open(updatedURL);
+					}
+
+					else {
+
+						window.open(currentURL + 'bookmarks/bookmarks.html');
+					}
+				}
+
+				else {
+		
+					window.open("https://www.google.com/search?q=" + voiceText);
+
+					document.querySelector(".google-search").value = "";
+				}
 			}
 		}
 	}
