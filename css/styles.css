@@ -227,13 +227,13 @@ a {
 	box-shadow: 5px 5px 5px #000b;
 }
 
-.nav__ul ul::-webkit-scrollbar {
+/* .nav__ul ul */ *::-webkit-scrollbar {
 	width: 16px;
 	margin: 10px;
 	border-radius: 5px;
 }
 
-.nav__ul ul::-webkit-scrollbar-thumb {
+/* .nav__ul ul */ *::-webkit-scrollbar-thumb {
 	background-color: rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.05), inset 1px 1px 0 rgba(0, 0, 0, 0.05);
 	background: var(--sec);
@@ -243,7 +243,7 @@ a {
 	box-shadow: none;
 }
 
-.nav__ul ul::-webkit-scrollbar-track {
+/* .nav__ul ul */ *::-webkit-scrollbar-track {
 	margin: 4px;
 	padding: 4px;
 }
