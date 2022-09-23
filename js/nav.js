@@ -216,8 +216,6 @@ enlace("https://accesoqr.buap.mx/", "BUAP QR", userLinks);
 
 enlace("https://www.canva.com/", "Canva", userLinks);
 
-enlace("https://codepen.io/", "CodePen", userLinks);
-
 enlace("https://www.deviantart.com", "DeviantArt", userLinks);
 
 enlace("https://diep.io/", "Diep io", userLinks);
@@ -300,6 +298,8 @@ enlace("https://www.pinterest.com.mx/", "Pinterest", userLinks);
 
 enlace("https://www.pixiv.net/", "Pixiv", userLinks);
 
+enlace("https://poesiamexa.wordpress.com", "Poesía Mexa", userLinks);
+
 enlace("https://www.random.org/widgets/", "Random", userLinks);
 
 enlace("https://www.reddit.com/", "Reddit", userLinks);
@@ -349,3 +349,5 @@ enlace("https://www.virustotal.com/", "VirusTotal", userLinks);
 enlace("https://web.whatsapp.com/", "WhatsApp", userLinks);
 
 enlace("https://www.office.com/launch/word?auth=2", "Word", userLinks);
+
+enlace("https://z-lib.org/", "ZLibrary", userLinks);
