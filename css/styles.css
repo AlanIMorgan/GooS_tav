@@ -27,12 +27,25 @@ html {
 
 .home__img {
     position: fixed;
+	z-index: 1;
     top: 0;
     left: 0;
     min-width: 100%;
     min-height: 100%;
     max-height: 100vh;
-}/* 
+}
+
+#img_mask {
+	position: fixed;
+	z-index: 2;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100vh;
+	background: #000;
+	opacity: 0;
+} /* 
 
 .home {
 	background: url(../img/bckgrnd.jpg) no-repeat center !important;
@@ -543,7 +556,7 @@ a {
 
 .home__form {
 	position: relative;
-	z-index: 9;
+	z-index: 99;
 	--searchbox-height: 44px;
 	background: var(--ffth);
 	border-radius: 22px;
@@ -608,7 +621,7 @@ a {
 .results_box_container {
 	display: inline-block;
 	position: absolute;
-	z-index: 1;
+	z-index: 9;
 	top: 0;
 	right: 0;
 	left: 0;
