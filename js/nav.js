@@ -338,6 +338,8 @@ enlace("https://www.tiktok.com/", "TikTok", userLinks);
 
 enlace("https://tinypng.com/", "TinyPNG", userLinks);
 
+enlace("https://www.tumblr.com/", "Tumblr", userLinks);
+
 enlace("https://twitter.com/", "Twitter", userLinks);
 
 enlace("https://www.urbandictionary.com/", "Urban Dictionary", userLinks);
