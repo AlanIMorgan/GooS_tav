@@ -167,7 +167,7 @@ enlace("https://www.google.com/", "Búsqueda", googleLinks);
 
 enlace("https://myaccount.google.com/", "Cuenta", googleLinks);
 
-enlace("https://docs.google.com/", "Documentos", googleLinks);
+enlace("https://docs.google.com/", "Google Docs", googleLinks);
 
 enlace("https://photos.google.com/", "Fotos", googleLinks);
 
