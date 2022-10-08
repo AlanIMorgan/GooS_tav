@@ -246,6 +246,8 @@ enlace("https://www.iloveimg.com/", "I love IMG", userLinks);
 
 enlace("https://www.ilovepdf.com/", "I love PDF", userLinks);
 
+enlace("https://imgur.com", "Imgur", userLinks);
+
 enlace("https://app.inferkit.com/demo", "InferKit", userLinks);
 
 enlace("https://www.instagram.com/", "Instagram", userLinks);
