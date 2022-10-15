@@ -252,6 +252,8 @@ enlace("https://app.inferkit.com/demo", "InferKit", userLinks);
 
 enlace("https://www.instagram.com/", "Instagram", userLinks);
 
+enlace("https://kupdf.net/", "KUPDF", userLinks);
+
 enlace("https://www.last.fm/es/user/XaMadness", "Last.fm", userLinks);
 
 enlace("https://libgen.li/", "Library Genesis", userLinks);
