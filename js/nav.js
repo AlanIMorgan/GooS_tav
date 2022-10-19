@@ -216,6 +216,8 @@ enlace("https://accesoqr.buap.mx/", "BUAP QR", userLinks);
 
 enlace("https://www.canva.com/", "Canva", userLinks);
 
+enlace("https://www.chess.com/", "Chess", userLinks);
+
 enlace("https://www.deviantart.com", "DeviantArt", userLinks);
 
 enlace("https://diep.io/", "Diep io", userLinks);
@@ -260,8 +262,6 @@ enlace("https://libgen.li/", "Library Genesis", userLinks);
 
 enlace("https://www.linkedin.com/in/alanmorgan-a/", "LinkedIn", userLinks);
 
-enlace("https://luzgamer.com/", "LuzGamer", userLinks);
-
 enlace("https://www.malavida.com", "Malavida", userLinks);
 
 enlace("https://mega.nz/", "Mega", userLinks);
@@ -288,7 +288,7 @@ enlace("https://oxxopremia.oxxo.com/", "Oxxo Premia", userLinks);
 
 enlace("pac-man/index.html", "Pac-Man", userLinks);
 
-enlace("https://paint.js.org/", "PaintJS", userLinks);
+enlace("https://jspaint.app/", "PaintJS", userLinks);
 
 enlace("https://pastedownload.com/25/", "PasteDownload", userLinks);
 
@@ -351,6 +351,8 @@ enlace("https://www.urbandictionary.com/", "Urban Dictionary", userLinks);
 enlace("https://victorraulrr.info/", "Victor RaulRR", userLinks);
 
 enlace("https://www.virustotal.com/", "VirusTotal", userLinks);
+
+enlace("https://vocalremover.org/", "Vocal Remover and Isolation", userLinks);
 
 enlace("https://web.whatsapp.com/", "WhatsApp", userLinks);
 
