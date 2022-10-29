@@ -304,6 +304,8 @@ enlace("https://www.pixiv.net/", "Pixiv", userLinks);
 
 enlace("https://poesiamexa.wordpress.com", "Poesía Mexa", userLinks);
 
+enlace("https://quillbot.com/", "QuillBot", userLinks);
+
 enlace("https://www.random.org/widgets/", "Random", userLinks);
 
 enlace("https://www.reddit.com/", "Reddit", userLinks);
