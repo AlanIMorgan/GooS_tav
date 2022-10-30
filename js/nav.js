@@ -206,11 +206,15 @@ enlace("https://www.artstation.com", "ArtStation", userLinks);
 
 enlace("http://webserver1.siiaa.siu.buap.mx/", "Autoservicios BUAP", userLinks);
 
+enlace("https://www.base-search.net/", "Bielefeld Academic Search Engine", userLinks);
+
 enlace("https://becasmexico.org/becas-para-universitarios/", "Becas México", userLinks);
 
 enlace("http://becassubes.com/", "Becas SUBES", userLinks);
 
 enlace("https://www.behance.net/", "Behance", userLinks);
+
+enlace("http://www.bioline.org.br/", "Bioline", userLinks);
 
 enlace("https://accesoqr.buap.mx/", "BUAP QR", userLinks);
 
@@ -294,6 +298,8 @@ enlace("https://pastedownload.com/25/", "PasteDownload", userLinks);
 
 enlace("https://pcwonderland.com/", "PC Wonderland", userLinks);
 
+enlace("http://www.pdfdrive.com/", "PDF Drive", userLinks);
+
 enlace("http://www.bajarpelisgratis.com/", "Pelis Gratis", userLinks);
 
 enlace("https://photocall.tv", "Photocall tv", userLinks);
@@ -310,7 +316,13 @@ enlace("https://www.random.org/widgets/", "Random", userLinks);
 
 enlace("https://www.reddit.com/", "Reddit", userLinks);
 
+enlace("https://www.refseek.com/", "Refseek", userLinks);
+
+enlace("http://repec.org/", "RePEc", userLinks);
+
 enlace("https://sci-hub.se/", "Sci-Hub", userLinks);
+
+enlace("https://www.science.gov/", "Science.gov", userLinks);
 
 enlace("https://www.scimagojr.com/", "SCImago", userLinks);
 
@@ -323,6 +335,8 @@ enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA 
 enlace("https://seriespapaya.club/", "Series Papaya", userLinks);
 
 enlace("https://open.spotify.com/", "Spotify", userLinks);
+
+enlace("https://link.springer.com/", "Springer Nature", userLinks);
 
 enlace("https://soundcloud.com/", "Soundcloud", userLinks);
 
@@ -357,6 +371,8 @@ enlace("https://www.virustotal.com/", "VirusTotal", userLinks);
 enlace("https://vocalremover.org/", "Vocal Remover and Isolation", userLinks);
 
 enlace("https://web.whatsapp.com/", "WhatsApp", userLinks);
+
+enlace("https://www.worldcat.org/", "WorldCat", userLinks);
 
 enlace("https://www.office.com/launch/word?auth=2", "Word", userLinks);
 
