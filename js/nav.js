@@ -206,6 +206,8 @@ enlace("https://www.artstation.com", "ArtStation", userLinks);
 
 enlace("http://webserver1.siiaa.siu.buap.mx/", "Autoservicios BUAP", userLinks);
 
+enlace("https://bandcamp.com/", "Bandcamp", userLinks);
+
 enlace("https://www.base-search.net/", "Bielefeld Academic Search Engine", userLinks);
 
 enlace("https://becasmexico.org/becas-para-universitarios/", "Becas México", userLinks);
@@ -281,6 +283,8 @@ enlace("https://www.napster.com", "Napster", userLinks);
 enlace("https://www.newgrounds.com/", "Newgrounds", userLinks);
 
 enlace("https://normas-apa.org/", "Normas APA", userLinks);
+
+enlace("https://sites.google.com/cuaad.udg.mx/habilidadesentics/objetos-virtuales-de-aprendizaje/normas-apa?authuser=0", "Normas APA on Google For Education", userLinks);
 
 enlace("https://correobuap-my.sharepoint.com/personal/alan_morgana_alumno_buap_mx/_layouts/15/onedrive.aspx?", "OneDrive", userLinks);
 
