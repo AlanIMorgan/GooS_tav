@@ -145,9 +145,9 @@ extraExtraLinks.crear(); */
 
 // Extra links
 
-enlace("chess/index.html", "Chess", extraLinks);
+// enlace("chess/index.html", "Chess", extraLinks);
 
-enlace("conway/index.html", "Conway's game of life", extraLinks);
+// enlace("conway/index.html", "Conway's game of life", extraLinks);
 
 enlace("https://google-simulator.vercel.app/", "Google", extraLinks);
 
@@ -157,9 +157,7 @@ enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", extraLinks);
 
 enlace("matrix/index.html", "Matrix", extraLinks);
 
-enlace("msg/index.html", "W", extraLinks);
-
-enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks);
+// enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks);
 
 // Google links
 
