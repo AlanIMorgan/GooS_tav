@@ -157,7 +157,7 @@ enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", extraLinks);
 
 enlace("matrix/index.html", "Matrix", extraLinks);
 
-enlace("pac-man/index.html", "Pac-Man", userLinks);
+enlace("pac-man/index.html", "Pac-Man", extraLinks);
 
 // enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks);
 
@@ -231,6 +231,8 @@ enlace("https://www.deviantart.com", "DeviantArt", userLinks);
 enlace("https://diep.io/", "Diep io", userLinks);
 
 enlace("https://discord.com/", "Discord", userLinks);
+
+enlace("https://duckduckgo.com/", "Duckduckgo", userLinks);
 
 enlace("https://www.espaebook2.com/", "EspaEbook", userLinks);
 
@@ -311,6 +313,8 @@ enlace("https://www.pixiv.net/", "Pixiv", userLinks);
 enlace("https://poesiamexa.wordpress.com", "Poesía Mexa", userLinks);
 
 enlace("https://quillbot.com/", "QuillBot", userLinks);
+
+enlace("https://www.qwant.com/", "Qwant", userLinks);
 
 enlace("https://www.random.org/widgets/", "Random", userLinks);
 
