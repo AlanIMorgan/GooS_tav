@@ -65,7 +65,7 @@ html {
     left: 0;
     min-width: 100%;
     min-height: 100%;
-    max-height: 100vh;
+    max-height: 100%;
 	background: #000;
 	opacity: 0;
 } /* 
@@ -539,7 +539,7 @@ a {
 .home {
 	position: absolute;
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	z-index: -1;
 }
 
@@ -748,7 +748,7 @@ a {
 .voice-search {
 	position: absolute;
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	background-color: var(--sec);
 	display: flex;
 	z-index: 99999;
@@ -760,7 +760,7 @@ a {
 
 .voice-search__result,
 .voice-search__animation {
-	height: 100vh;
+	height: 100%;
 	width: 40vw;
 	display: flex;
 	text-align: center;
