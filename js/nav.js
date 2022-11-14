@@ -17,7 +17,7 @@ input = document.querySelector(".google-search");
 navBtn.addEventListener("click", showHideNav);
 navListBtn.addEventListener("click", showHideListNav);
 formBtn.addEventListener("click", showForm);
-profileNavBtn.addEventListener("click", showHideProfileNav);
+// profileNavBtn.addEventListener("click", showHideProfileNav);
 home.addEventListener("click", hideMenus);
 
 document.documentElement.addEventListener('keyup', (e)=>{
