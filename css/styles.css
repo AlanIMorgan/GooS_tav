@@ -17,7 +17,7 @@
 }
 
 html {
-	background: var(--svnth);
+	background: #303b;
 }
 
 .home {
@@ -33,6 +33,7 @@ html {
     min-width: 100%;
     min-height: 100%;
     max-height: 100vh;
+	background-image: url(../img/jigsaw.svg);
 }
 
 #img_mask {
@@ -558,7 +559,7 @@ a {
 	position: relative;
 	z-index: 99;
 	--searchbox-height: 44px;
-	background: var(--ffth);
+	background: #333;
 	border-radius: 22px;
 	border: 1px solid var(--frth);
 	box-sizing: border-box;
@@ -630,9 +631,9 @@ a {
 	overflow: hidden;
 	margin: 0 auto;
 	padding: 45px 0px 0px;
-	border: 20px solid #3337;
+	border: 20px solid var(--ffth);
 	border-top: none;
-	border-bottom: 10px solid #3337;
+	border-bottom: 10px solid var(--ffth);
 	border-radius: 25px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
