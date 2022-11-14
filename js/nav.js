@@ -157,6 +157,8 @@ enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", extraLinks);
 
 enlace("matrix/index.html", "Matrix", extraLinks);
 
+enlace("pac-man/index.html", "Pac-Man", userLinks);
+
 // enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks);
 
 // Google links
@@ -204,15 +206,17 @@ enlace("https://www.artstation.com", "ArtStation", userLinks);
 
 enlace("http://webserver1.siiaa.siu.buap.mx/", "Autoservicios BUAP", userLinks);
 
-enlace("https://bandcamp.com/", "Bandcamp", userLinks);
+enlace("http://Baidu.com/", "Baidu", userLinks);
 
-enlace("https://www.base-search.net/", "Bielefeld Academic Search Engine", userLinks);
+enlace("https://bandcamp.com/", "Bandcamp", userLinks);
 
 enlace("https://becasmexico.org/becas-para-universitarios/", "Becas México", userLinks);
 
 enlace("http://becassubes.com/", "Becas SUBES", userLinks);
 
 enlace("https://www.behance.net/", "Behance", userLinks);
+
+enlace("https://www.base-search.net/", "Bielefeld Academic Search Engine", userLinks);
 
 enlace("http://www.bioline.org.br/", "Bioline", userLinks);
 
@@ -231,10 +235,6 @@ enlace("https://discord.com/", "Discord", userLinks);
 enlace("https://www.espaebook2.com/", "EspaEbook", userLinks);
 
 enlace("https://www.ebiblioteca.org/lecturas/", "eBiblioteca", userLinks);
-
-enlace("https://extract.me/es/", "Extractme", userLinks);
-
-enlace("https://www.ezyzip.com/open-extract-rar-file-online.html", "EzyZip", userLinks);
 
 enlace("https://www.facebook.com/", "Facebook", userLinks);
 
@@ -292,8 +292,6 @@ enlace("https://outlook.live.com/", "Outlook", userLinks);
 
 enlace("https://oxxopremia.oxxo.com/", "Oxxo Premia", userLinks);
 
-enlace("pac-man/index.html", "Pac-Man", userLinks);
-
 enlace("https://jspaint.app/", "PaintJS", userLinks);
 
 enlace("https://pastedownload.com/25/", "PasteDownload", userLinks);
@@ -342,10 +340,6 @@ enlace("https://link.springer.com/", "Springer Nature", userLinks);
 
 enlace("https://soundcloud.com/", "Soundcloud", userLinks);
 
-enlace("https://steamcommunity.com/app/431960/workshop/", "Steam", userLinks);
-
-enlace("https://steamunlocked.net/", "Steam Unlocked", userLinks);
-
 enlace("http://subes.becasbenitojuarez.gob.mx/", "SUBES", userLinks);
 
 enlace("https://www.typingclub.com/", "TypingClub", userLinks);
@@ -353,8 +347,6 @@ enlace("https://www.typingclub.com/", "TypingClub", userLinks);
 enlace("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid", "Teams", userLinks);
 
 enlace("https://web.telegram.org/k/", "Telegram", userLinks);
-
-enlace("http://www.neogeofun.com/kof2002", "The King Of Fighters", userLinks);
 
 enlace("https://www.tiktok.com/", "TikTok", userLinks);
 
@@ -374,8 +366,10 @@ enlace("https://vocalremover.org/", "Vocal Remover and Isolation", userLinks);
 
 enlace("https://web.whatsapp.com/", "WhatsApp", userLinks);
 
+enlace("https://wallhaven.cc/", "Wallhaven", userLinks);
+
 enlace("https://www.worldcat.org/", "WorldCat", userLinks);
 
-enlace("https://www.office.com/launch/word?auth=2", "Word", userLinks);
+enlace("http://Yandex.com/", "Yandex", userLinks);
 
 enlace("https://z-lib.org/", "ZLibrary", userLinks);
