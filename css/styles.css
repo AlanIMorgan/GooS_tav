@@ -316,6 +316,14 @@ a {
     text-overflow: ellipsis;
 }
 
+@media (max-width: 400px) {
+
+	.nav__ul ul {
+
+		width: 150px;
+	}
+}
+
 .nav__submenu-element {
 	border-radius: 6px;
 	margin: 5px 0px;
