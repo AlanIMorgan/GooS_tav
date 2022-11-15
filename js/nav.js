@@ -165,9 +165,11 @@ enlace("pac-man/index.html", "Pac-Man", extraLinks);
 
 enlace("https://www.google.com/", "Búsqueda", googleLinks);
 
+enlace("https://scholar.google.es/", "Búsqueda académica", googleLinks);
+
 enlace("https://myaccount.google.com/", "Cuenta", googleLinks);
 
-enlace("https://docs.google.com/", "Google Docs", googleLinks);
+enlace("https://docs.google.com/", "Docs", googleLinks);
 
 enlace("https://photos.google.com/", "Fotos", googleLinks);
 
@@ -192,6 +194,8 @@ enlace("https://www.youtube.com/", "YouTube", googleLinks);
 
 // User links
 
+enlace("https://www.academia.edu/", "Academia.edu", userLinks);
+
 enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", userLinks);
 
 enlace("https://web.airdroid.com/", "AirDroid", userLinks);
@@ -210,13 +214,13 @@ enlace("http://Baidu.com/", "Baidu", userLinks);
 
 enlace("https://bandcamp.com/", "Bandcamp", userLinks);
 
+enlace("https://www.base-search.net/", "BASE (Bielefeld Academic Search Engine)", userLinks);
+
 enlace("https://becasmexico.org/becas-para-universitarios/", "Becas México", userLinks);
 
 enlace("http://becassubes.com/", "Becas SUBES", userLinks);
 
 enlace("https://www.behance.net/", "Behance", userLinks);
-
-enlace("https://www.base-search.net/", "Bielefeld Academic Search Engine", userLinks);
 
 enlace("http://www.bioline.org.br/", "Bioline", userLinks);
 
@@ -228,11 +232,15 @@ enlace("https://www.chess.com/", "Chess", userLinks);
 
 enlace("https://www.deviantart.com", "DeviantArt", userLinks);
 
+enlace("https://dialnet.unirioja.es/", "Dialnet", userLinks);
+
 enlace("https://diep.io/", "Diep io", userLinks);
 
 enlace("https://discord.com/", "Discord", userLinks);
 
 enlace("https://duckduckgo.com/", "Duckduckgo", userLinks);
+
+enlace("https://www.espaebook2.com/", "ERIC (Education Resources Information Center)", userLinks);
 
 enlace("https://www.espaebook2.com/", "EspaEbook", userLinks);
 
@@ -318,6 +326,8 @@ enlace("https://www.qwant.com/", "Qwant", userLinks);
 
 enlace("https://www.random.org/widgets/", "Random", userLinks);
 
+enlace("https://redalyc.org/", "Redalyc", userLinks);
+
 enlace("https://www.reddit.com/", "Reddit", userLinks);
 
 enlace("https://www.refseek.com/", "Refseek", userLinks);
@@ -325,6 +335,8 @@ enlace("https://www.refseek.com/", "Refseek", userLinks);
 enlace("http://repec.org/", "RePEc", userLinks);
 
 enlace("https://sci-hub.se/", "Sci-Hub", userLinks);
+
+enlace("https://scielo.org/", "Scielo", userLinks);
 
 enlace("https://www.science.gov/", "Science.gov", userLinks);
 
@@ -340,7 +352,7 @@ enlace("https://seriespapaya.club/", "Series Papaya", userLinks);
 
 enlace("https://open.spotify.com/", "Spotify", userLinks);
 
-enlace("https://link.springer.com/", "Springer Nature", userLinks);
+enlace("https://link.springer.com/", "Springer Link", userLinks);
 
 enlace("https://soundcloud.com/", "Soundcloud", userLinks);
 
