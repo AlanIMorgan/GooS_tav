@@ -323,6 +323,11 @@ a {
 		width: 150px;
 		font-size: 12px;
 	}
+
+	.nav__submenu-element p {
+
+		font-size: 12px;
+	}
 }
 
 .nav__submenu-element {
