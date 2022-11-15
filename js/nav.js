@@ -368,9 +368,11 @@ enlace("https://www.virustotal.com/", "VirusTotal", userLinks);
 
 enlace("https://vocalremover.org/", "Vocal Remover and Isolation", userLinks);
 
+enlace("https://wallhaven.cc/", "Wallhaven", userLinks);
+
 enlace("https://web.whatsapp.com/", "WhatsApp", userLinks);
 
-enlace("https://wallhaven.cc/", "Wallhaven", userLinks);
+enlace("https://www.office.com/launch/word?auth=2", "Word", userLinks);
 
 enlace("https://www.worldcat.org/", "WorldCat", userLinks);
 
