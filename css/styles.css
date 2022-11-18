@@ -19,7 +19,8 @@
 html {
     background: linear-gradient(-45deg, #7f7, #ff7, #f77, #f7f, #37f);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 15s linear infinite;
+	animation-direction: alternate;
     height: 100%;
 	overflow: hidden;
 }
@@ -32,14 +33,9 @@ html {
         background-position: 0% 50%;
     }
  
-    50% {
-
-        background-position: 100% 50%;
-    }
- 
     100% {
 
-        background-position: 0% 50%;
+        background-position: 100% 50%;
     }
 }
 
