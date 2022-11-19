@@ -232,6 +232,8 @@ enlace("https://www.canva.com/", "Canva", userLinks);
 
 enlace("https://www.chess.com/", "Chess", userLinks);
 
+enlace("https://sur.ly/o/cinefiliamalversa.blogspot.com.ar/AA000014?pageviewId=desktop-302e36363034343030302031363638383031373733203438303533313335", "Cinéfila Malversa", userLinks);
+
 enlace("https://www.deviantart.com", "DeviantArt", userLinks);
 
 enlace("https://dialnet.unirioja.es/", "Dialnet", userLinks);
@@ -284,6 +286,8 @@ enlace("https://mega.nz/", "Mega", userLinks);
 
 enlace("https://www.megadiscografiascompletas.com/", "Mega Discografías", userLinks);
 
+enlace("https://mirandogratis.com/chungking-express.html", "Mirando Gratis", userLinks);
+
 enlace("https://mqs.link/", "MQS Albums Download", userLinks);
 
 enlace("http://tavasci3-musicrewind.blogspot.com/", "Music Rewind", userLinks);
@@ -335,6 +339,8 @@ enlace("https://www.reddit.com/", "Reddit", userLinks);
 enlace("https://www.refseek.com/", "Refseek", userLinks);
 
 enlace("http://repec.org/", "RePEc", userLinks);
+
+enlace("https://serviciosenlinea.sky.com.mx/", "SKY Servicios en línea", userLinks);
 
 enlace("https://sci-hub.se/", "Sci-Hub", userLinks);
 
