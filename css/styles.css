@@ -193,13 +193,14 @@ a {
 	fill: #eaeaea;
 	padding: 7px;
 	border-radius: 23px;
+	background: var(--ffth);
 	transition: background .25s linear;
 }
 
 .nav__li .gb_Ue:hover {
 	/*
 	background-color: rgba(255, 255, 255, 0.1); */
-	background-color: var(--sxth);
+	background-color: var(--svnth);
 }
 
 .nav__li {
@@ -208,8 +209,9 @@ a {
 	font-size: 13px;
 }
 
-.nav__li-text {
-	margin-top: -5px;
+.nav__li-text svg path {
+	
+    transform: translateY(-30px);
 }
 
 .nav__profile-img {
@@ -663,13 +665,14 @@ a {
 	max-height: 200px;
 	overflow: hidden;
 	margin: 0 auto;
-	padding: 45px 0px 0px;
-	border: 20px solid var(--ffth);
+	padding: 45px 0px 0px;/* 
+	border: 20px solid var(--ffth); */
 	border-top: none;
 	border-bottom: 10px solid var(--ffth);
 	border-radius: 25px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
+	background: var(--ffth);
 }
 
 .results_box {
@@ -677,7 +680,6 @@ a {
 	max-height: 140px;
 	padding: 10px;
 	padding-bottom: 0;
-	background: var(--ffth);
 	overflow: auto;
 }
 
