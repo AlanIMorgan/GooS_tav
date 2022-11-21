@@ -131,7 +131,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 			else {
 
-				if (voiceText.toLowerCase() == 'bookmarks') {
+				if (voiceText.toLowerCase() == 'bkmrks') {
 
 					if (currentURL.includes('index.html')) {
 
