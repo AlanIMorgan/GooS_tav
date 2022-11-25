@@ -224,6 +224,8 @@ enlace("http://becassubes.com/", "Becas SUBES", userLinks);
 
 enlace("https://www.behance.net/", "Behance", userLinks);
 
+enlace("https://www.bibliocatalogo.buap.mx/", "Bibliocatálogo BUAP", userLinks);
+
 enlace("http://www.bioline.org.br/", "Bioline", userLinks);
 
 enlace("https://accesoqr.buap.mx/", "BUAP QR", userLinks);
@@ -324,7 +326,11 @@ enlace("https://www.pinterest.com.mx/", "Pinterest", userLinks);
 
 enlace("https://www.pixiv.net/", "Pixiv", userLinks);
 
+enlace("https://juegosonlinegratis.com.mx/juego/plants-vs-zombies/", "Plants vs Zombies", userLinks);
+
 enlace("https://poesiamexa.wordpress.com", "Poesía Mexa", userLinks);
+
+enlace("https://www.qrcode-monkey.com/", "QRCode Monkey", userLinks);
 
 enlace("https://quillbot.com/", "QuillBot", userLinks);
 
