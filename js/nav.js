@@ -194,6 +194,8 @@ enlace("https://www.youtube.com/", "YouTube", googleLinks);
 
 // User links
 
+enlace("https://123apps.com/", "123Apps", userLinks);
+
 enlace("https://www.academia.edu/", "Academia.edu", userLinks);
 
 enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", userLinks);
