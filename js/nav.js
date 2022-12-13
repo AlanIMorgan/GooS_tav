@@ -409,7 +409,7 @@ enlace("https://z-lib.org/", "ZLibrary", userLinks);
 
 if ('serviceWorker' in navigator) { // Empezar a hacer las peticiones necesarias para la PWA
 
-    navigator.serviceWorker.register('js/sw.js')
+    navigator.serviceWorker.register('./js/sw.js')
     .then(reg=>console.log('Registro de SW exitoso', reg))
     .catch(err => console.warn('Error al trtar de registrar el SW', err))
 }

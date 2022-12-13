@@ -1,19 +1,20 @@
-const CACHE_NAME = 'v1_cache_goostav',
+const cacheName = 'v1_cache_goostav';
+
 urlsToCache = [
-    '/',
-    'img/google.ico',
-    'css/style.css',
-    'js/nav.js',
-    'js/search.js'
+    './',
+    './img/google.ico',
+    './css/style.css',
+    './js/nav.js',
+    './js/search.js'
 ]
 
 self.addEventListener('install', e=>{
 
     e.waitUntil(
 
-        caches.open(CACHE_NAME)
+        caches.open(cacheName)
         
-        .then(cache=>{
+        .then((cache)=>{
 
             return cache.addAll(urlsToCache)
             .then(() => self.skipWaiting())
@@ -24,18 +25,18 @@ self.addEventListener('install', e=>{
 
 self.addEventListener('active', e=>{
 
-    const cacheWhiteList = [CACHE_NAME];
+    const cacheWhiteList = [cacheName];
 
     e.waitUntil(
 
         caches.keys()
         .then(cacheNames => {
 
-            cacheNames.map(cacheName=>{
+            cacheNames.map(cacheName_two =>{
 
-                if (cacheWhiteList.indexOf(cacheName) === -1) {
+                if (cacheWhiteList.indexOf(cacheName_two) === -1) {
 
-                    return caches.delete(cacheName);
+                    return caches.delete(cacheName_two);
                 }
             })
         })
