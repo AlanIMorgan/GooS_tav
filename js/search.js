@@ -2,6 +2,8 @@ searchInput = document.querySelector(".google-search");
 
 resultsBoxC = document.querySelector(".results_box_container");
 
+results = document.querySelector(".results_box");
+
 links = document.querySelectorAll('.result');
 
 currentURL = window.location.href;
@@ -132,18 +134,20 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 			else {
 
 				if (voiceText.toLowerCase() == 'bkmrks') {
-
-					if (currentURL.includes('index.html')) {
-
-						updatedURL = currentURL.replace('index.html', 'bookmarks/bookmarks.html');
-
-						window.open(updatedURL);
-					}
-
-					else {
-
-						window.open(currentURL + 'bookmarks/bookmarks.html');
-					}
+				
+					let bkmrksResult = document.createElement("a");
+				
+					bkmrksResult.setAttribute("href", "https://goostav.vercel.app/bookmarks/bookmarks.html");
+				
+					bkmrksResult.setAttribute("target", "_blank");
+				
+					bkmrksResult.setAttribute("class", "result actual");
+				
+					results.appendChild(bkmrksResult);
+					
+					bkmrksResult.innerText = "Bkmrks";
+					
+					resultsBoxC.classList.remove("hidden");
 				}
 
 				else {
