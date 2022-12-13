@@ -149,7 +149,7 @@ extraExtraLinks.crear(); */
 
 // enlace("conway/index.html", "Conway's game of life", extraLinks);
 
-enlace("https://goostav.vercel.app/", "Google", extraLinks);
+enlace("https://goostav.vercel.app/", "GooS_tav", extraLinks);
 
 enlace("karaoke/index.html", "Karaoke", extraLinks);
 
@@ -188,7 +188,6 @@ enlace("https://play.google.com/store/", "Play Store", googleLinks);
 enlace("https://docs.google.com/spreadsheets", "Sheets", googleLinks);
 
 enlace("https://translate.google.com/", "Traductor", googleLinks);
-
 
 enlace("https://www.youtube.com/", "YouTube", googleLinks);
 
@@ -407,3 +406,10 @@ enlace("https://www.worldcat.org/", "WorldCat", userLinks);
 enlace("http://Yandex.com/", "Yandex", userLinks);
 
 enlace("https://z-lib.org/", "ZLibrary", userLinks);
+
+if ('serviceWorker' in navigator) { // Empezar a hacer las peticiones necesarias para la PWA
+
+    navigator.serviceWorker.register('./js/sw.js')
+    .then(reg=>console.log('Registro de SW exitoso', reg))
+    .catch(err => console.warn('Error al trtar de registrar el SW', err))
+}
