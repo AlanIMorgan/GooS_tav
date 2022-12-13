@@ -6,37 +6,38 @@
     "theme_color":"#333",
     "orientation":"portrait",
     "display":"standalone",
-    "start_url":"index.html",
-    "scope":"./",
+    "id": "/?source=pwa",
+    "start_url":"/?source=pwa",
+    "scope":"/",
     "lang":"es-MX",
     "icons":[
         {
-            "src":"/img/google-16.png",
+            "src":"img/google-16.png",
             "sizes":"16x16",
             "type":"image/png"
         },
         {
-            "src":"/img/google-32.png",
+            "src":"img/google-32.png",
             "sizes":"32x32",
             "type":"image/png"
         },
         {
-            "src":"/img/google-48.png",
+            "src":"img/google-48.png",
             "sizes":"48x48",
             "type":"image/png"
         },
         {
-            "src":"/img/google-64.png",
+            "src":"img/google-64.png",
             "sizes":"64x64",
             "type":"image/png"
         },
         {
-            "src":"/img/google-128.png",
+            "src":"img/google-128.png",
             "sizes":"128x128",
             "type":"image/png"
         },
         {
-            "src":"/img/google-256.png",
+            "src":"img/google-256.png",
             "sizes":"256x256",
             "type":"image/png"
         }

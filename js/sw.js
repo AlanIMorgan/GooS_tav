@@ -1,10 +1,10 @@
 const CACHE_NAME = 'v1_cache_goostav',
 urlsToCache = [
-    './',
-    './img/google.ico',
-    './css/style.css',
-    './js/nav.js',
-    './js/search.js'
+    '/',
+    'img/google.ico',
+    'css/style.css',
+    'js/nav.js',
+    'js/search.js'
 ]
 
 self.addEventListener('install', e=>{
