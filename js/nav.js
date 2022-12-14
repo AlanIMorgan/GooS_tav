@@ -1,3 +1,10 @@
+if ('serviceWorker' in navigator) { // Empezar a hacer las peticiones necesarias para la PWA
+
+    navigator.serviceWorker.register('./sw.js', {scope: './'})
+    .then(reg=>console.log('Registro de SW exitoso', reg))
+    .catch(err => console.warn('Error al trtar de registrar el SW', err));
+}
+
 formBtn = document.getElementById('form-btn');
 navBtn = document.getElementById('nav_btn');
 navListBtn = document.getElementById('nav_btn-list');
@@ -406,10 +413,3 @@ enlace("https://www.worldcat.org/", "WorldCat", userLinks);
 enlace("http://Yandex.com/", "Yandex", userLinks);
 
 enlace("https://z-lib.org/", "ZLibrary", userLinks);
-
-if ('serviceWorker' in navigator) { // Empezar a hacer las peticiones necesarias para la PWA
-
-    navigator.serviceWorker.register('./sw.js')
-    .then(reg=>console.log('Registro de SW exitoso', reg))
-    .catch(err => console.warn('Error al trtar de registrar el SW', err))
-}
