@@ -150,6 +150,23 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 					resultsBoxC.classList.remove("hidden");
 				}
 
+				else if (voiceText.toLowerCase() == 'krk') {
+				
+					let krkResult = document.createElement("a");
+				
+					krkResult.setAttribute("href", "https://goostav.vercel.app/karaoke/");
+				
+					krkResult.setAttribute("target", "_blank");
+				
+					krkResult.setAttribute("class", "result actual");
+				
+					results.appendChild(krkResult);
+					
+					krkResult.innerText = "Karaoke";
+					
+					resultsBoxC.classList.remove("hidden");
+				}
+
 				else {
 
 					searchInput.value = "";

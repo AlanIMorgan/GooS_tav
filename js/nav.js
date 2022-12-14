@@ -143,25 +143,25 @@ function enlace(address, text, zone) {
 const extraExtraLinks = new domElement("div", "", "", "");
 extraExtraLinks.crear(); */
 
-// Extra links
+//    Extra links    //
 
-// enlace("chess/index.html", "Chess", extraLinks);
+/* enlace("chess/index.html", "Chess", extraLinks);
 
-// enlace("conway/index.html", "Conway's game of life", extraLinks);
+enlace("conway/index.html", "Conway's game of life", extraLinks); */
 
 enlace("https://goostav.vercel.app/", "GooS_tav", extraLinks);
 
-enlace("karaoke/index.html", "Karaoke", extraLinks);
+// enlace("karaoke/index.html", "Karaoke", extraLinks);
 
 enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", extraLinks);
 
-enlace("matrix/index.html", "Matrix", extraLinks);
+enlace("matrix/index.html", "Matrix", extraLinks); /* 
 
 enlace("pac-man/index.html", "Pac-Man", extraLinks);
 
-// enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks);
+enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks); */
 
-// Google links
+//    Google links    //
 
 enlace("https://www.google.com/", "Búsqueda", googleLinks);
 
@@ -191,7 +191,7 @@ enlace("https://translate.google.com/", "Traductor", googleLinks);
 
 enlace("https://www.youtube.com/", "YouTube", googleLinks);
 
-// User links
+//    User links    //
 
 enlace("https://123apps.com/", "123Apps", userLinks);
 
