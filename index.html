@@ -304,8 +304,18 @@
 			</div>
 		</div>
 		
-		<script src="js/nav.js?v54"></script>
+		<script src="js/nav.js?v55"></script>
 		<script src="js/search.js?v24"></script> <!-- 
 		<script src="js/voice-search.js?v2"></script> -->
+
+		<script>
+			
+			if ('serviceWorker' in navigator) { // Empezar el proceso para la PWA
+
+				navigator.serviceWorker.register('./sw.js', {scope: './'})
+				.then(reg=>console.log('Registro de SW exitoso', reg))
+				.catch(err => console.warn('Error al trtar de registrar el SW', err));
+			}
+		</script>
 	</body>
 </html>
