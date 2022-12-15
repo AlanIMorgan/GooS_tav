@@ -33,6 +33,19 @@ self.addEventListener('install', event => {
 
         cache.addAll(urlsToCache);
     })());
+});
+
+self.addEventListener('activate', (e) => {
+
+    e.waitUntil(caches.keys().then((keyList) => {
+
+        return Promise.all(keyList.map((key) => {
+        
+            if (key === CACHE_NAME) { return; }
+
+            return caches.delete(key);
+        }));
+    }));
 }); /* 
 
 self.addEventListener('active', e=>{
