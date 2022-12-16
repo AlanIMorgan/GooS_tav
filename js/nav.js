@@ -1,8 +1,8 @@
 if ("Notification" in window) {
 
-    console.log("The Notifications API is supported");
+    console.log("The Notifications API is supported"); /* 
 
-    document.addEventListener('click', () => {
+    document.addEventListener('click', e => {
     
         Notification.requestPermission().then(permission => {
 
@@ -12,10 +12,8 @@ if ("Notification" in window) {
 
                 const notification = new Notification("¡Gracias por aceptar las notificaciones!");
             }
-            
-            document.removeEventListener('click');
         });
-    });
+    }); */
 }
 
 formBtn = document.getElementById('form-btn');
