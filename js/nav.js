@@ -1,3 +1,21 @@
+if ("Notification" in window) {
+
+    console.log("The Notifications API is supported");
+
+    document.addEventListener('click', () => {
+    
+        Notification.requestPermission().then(permission => {
+
+            if (permission === "granted") {
+
+                console.log("The user accepted");
+
+                const notification = new Notification("¡Gracias por aceptar las notificaciones!");
+            }
+        });
+    });
+}
+
 formBtn = document.getElementById('form-btn');
 navBtn = document.getElementById('nav_btn');
 navListBtn = document.getElementById('nav_btn-list');

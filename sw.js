@@ -116,3 +116,8 @@ self.addEventListener('fetch', event => {
         }
     })());
 });
+
+setTimeout(() => {
+
+    self.registration.showNotification("App corriendo en segundo plano");
+}, 3000);
