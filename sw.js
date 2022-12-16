@@ -115,9 +115,9 @@ self.addEventListener('fetch', event => {
             return cachedResponse;
         }
     })());
-});
+}); /* 
 
 setTimeout(() => {
 
     self.registration.showNotification("App corriendo en segundo plano");
-}, 3000);
+}, 3000); */

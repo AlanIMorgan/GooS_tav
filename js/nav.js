@@ -12,6 +12,8 @@ if ("Notification" in window) {
 
                 const notification = new Notification("¡Gracias por aceptar las notificaciones!");
             }
+            
+            document.removeEventListener('click');
         });
     });
 }
