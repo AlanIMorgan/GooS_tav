@@ -137,9 +137,9 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 				
 					let bkmrksResult = document.createElement("a");
 				
-					bkmrksResult.setAttribute("href", "https://goostav.vercel.app/bookmarks/bookmarks.html");
+					bkmrksResult.setAttribute("href", "bookmarks/bookmarks.html");
 				
-					bkmrksResult.setAttribute("target", "_blank");
+					// bkmrksResult.setAttribute("target", "_blank");
 				
 					bkmrksResult.setAttribute("class", "result actual");
 				
@@ -154,15 +154,49 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 				
 					let krkResult = document.createElement("a");
 				
-					krkResult.setAttribute("href", "https://goostav.vercel.app/karaoke/");
+					krkResult.setAttribute("href", "karaoke/");
 				
-					krkResult.setAttribute("target", "_blank");
+					// krkResult.setAttribute("target", "_blank");
 				
 					krkResult.setAttribute("class", "result actual");
 				
 					results.appendChild(krkResult);
 					
 					krkResult.innerText = "Karaoke";
+					
+					resultsBoxC.classList.remove("hidden");
+				}
+
+				else if (voiceText.toLowerCase() == 'calendar') {
+				
+					let krkResult = document.createElement("a");
+				
+					krkResult.setAttribute("href", "calendar/");
+				
+					// krkResult.setAttribute("target", "_blank");
+				
+					krkResult.setAttribute("class", "result actual");
+				
+					results.appendChild(krkResult);
+					
+					krkResult.innerText = "Calendario";
+					
+					resultsBoxC.classList.remove("hidden");
+				}
+
+				else if (voiceText.toLowerCase() == 'mtrx') {
+				
+					let krkResult = document.createElement("a");
+				
+					krkResult.setAttribute("href", "matrix/");
+				
+					// krkResult.setAttribute("target", "_blank");
+				
+					krkResult.setAttribute("class", "result actual");
+				
+					results.appendChild(krkResult);
+					
+					krkResult.innerText = "Matrix";
 					
 					resultsBoxC.classList.remove("hidden");
 				}

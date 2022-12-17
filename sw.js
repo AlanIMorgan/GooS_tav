@@ -2,10 +2,13 @@ const CACHE_NAME = `my-sample-app-cache-v1`;
 
 urlsToCache = [
     './',
-    './img/google.ico',
     './css/style.css',
     './js/nav.js',
-    './js/search.js'
+    './js/search.js',
+    './bookmarks/bookmarks.html',
+    './calendar/index.html',
+    './karaoke/index.html',
+    './matrix/index.html'
 ] /* 
 
 self.addEventListener('install', e=>{

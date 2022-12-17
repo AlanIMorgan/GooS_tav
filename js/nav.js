@@ -161,7 +161,7 @@ extraExtraLinks.crear(); */
 
 //    Extra links    //
 
-enlace("https://goostav.vercel.app/calendar/", "Calendario", extraLinks); /*
+/* enlace("calendar/", "Calendario", extraLinks);
 
 enlace("chess/index.html", "Chess", extraLinks);
 
@@ -171,9 +171,9 @@ enlace("https://goostav.vercel.app/", "GooS_tav", extraLinks);
 
 // enlace("karaoke/index.html", "Karaoke", extraLinks);
 
-enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", extraLinks);
+enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", extraLinks); /* 
 
-enlace("matrix/index.html", "Matrix", extraLinks); /* 
+enlace("matrix/index.html", "Matrix", extraLinks);
 
 enlace("pac-man/index.html", "Pac-Man", extraLinks);
 
