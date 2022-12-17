@@ -1,6 +1,4 @@
-if ("Notification" in window) {
-
-    console.log("The Notifications API is supported"); /* 
+if ("Notification" in window) { /* 
 
     document.addEventListener('click', e => {
     
@@ -163,7 +161,9 @@ extraExtraLinks.crear(); */
 
 //    Extra links    //
 
-/* enlace("chess/index.html", "Chess", extraLinks);
+enlace("https://goostav.vercel.app/calendar/", "Calendario", extraLinks); /*
+
+enlace("chess/index.html", "Chess", extraLinks);
 
 enlace("conway/index.html", "Conway's game of life", extraLinks); */
 

@@ -612,7 +612,7 @@ a {
 	padding: 45px 0px 0px;/* 
 	border: 20px solid var(--ffth); */
 	border-top: none;
-	border-bottom: 10px solid var(--ffth);
+	border-bottom: 5px solid var(--ffth);
 	border-radius: 25px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
@@ -620,9 +620,9 @@ a {
 }
 
 .results_box {
-	min-height: 45px;
+	min-height: 33px;
 	max-height: 140px;
-	padding: 10px;
+	padding: 5px;
 	padding-bottom: 0;
 	overflow: auto;
 }
