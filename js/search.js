@@ -152,7 +152,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 				if (voiceText.toLowerCase() == 'bkmrks') {
 
-					createLink("Bookmarks", "bookmarks/");
+					createLink("bookmarks/", "Bookmarks");
 				}
 
 				else if (voiceText.toLowerCase() == 'krk') {
@@ -208,7 +208,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 				else if (voiceText.toLowerCase() == 'wp') {
 
-					createLink("Wp", "img/wp.png");
+					createLink("img/wp.png", "Wp");
 				}
 
 				else {
