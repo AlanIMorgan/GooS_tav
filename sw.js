@@ -8,7 +8,8 @@ urlsToCache = [
     './bookmarks/bookmarks.html',
     './calendar/index.html',
     './karaoke/index.html',
-    './matrix/index.html'
+    './matrix/index.html',
+    './img/wp.png'
 ] /* 
 
 self.addEventListener('install', e=>{

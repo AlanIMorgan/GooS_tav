@@ -397,6 +397,8 @@ enlace("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid",
 
 enlace("https://web.telegram.org/k/", "Telegram", userLinks);
 
+enlace("https://www.televisiongratishd.com/", "Televisión gratis", userLinks);
+
 enlace("https://www.tiktok.com/", "TikTok", userLinks);
 
 enlace("https://tinypng.com/", "TinyPNG", userLinks);
