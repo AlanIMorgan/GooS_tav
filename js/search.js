@@ -152,58 +152,22 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 				if (voiceText.toLowerCase() == 'bkmrks') {
 
-					createLink("bookmarks/", "Bookmarks");
+					createLink("bookmarks/bookmarks.html", "Bookmarks");
 				}
 
 				else if (voiceText.toLowerCase() == 'krk') {
-				
-					let krkResult = document.createElement("a");
-				
-					krkResult.setAttribute("href", "karaoke/");
-				
-					// krkResult.setAttribute("target", "_blank");
-				
-					krkResult.setAttribute("class", "result actual");
-				
-					results.appendChild(krkResult);
-					
-					krkResult.innerText = "Karaoke";
-					
-					resultsBoxC.classList.remove("hidden");
+
+					createLink("karaoke/", "Karaoke");
 				}
 
 				else if (voiceText.toLowerCase() == 'calendar') {
-				
-					let krkResult = document.createElement("a");
-				
-					krkResult.setAttribute("href", "calendar/");
-				
-					// krkResult.setAttribute("target", "_blank");
-				
-					krkResult.setAttribute("class", "result actual");
-				
-					results.appendChild(krkResult);
-					
-					krkResult.innerText = "Calendario";
-					
-					resultsBoxC.classList.remove("hidden");
+
+					createLink("calendar/", "Calendario");
 				}
 
 				else if (voiceText.toLowerCase() == 'mtrx') {
-				
-					let krkResult = document.createElement("a");
-				
-					krkResult.setAttribute("href", "matrix/");
-				
-					// krkResult.setAttribute("target", "_blank");
-				
-					krkResult.setAttribute("class", "result actual");
-				
-					results.appendChild(krkResult);
-					
-					krkResult.innerText = "Matrix";
-					
-					resultsBoxC.classList.remove("hidden");
+
+					createLink("matrix/", "Matrix");
 				}
 
 				else if (voiceText.toLowerCase() == 'wp') {
