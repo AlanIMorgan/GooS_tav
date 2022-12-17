@@ -69,6 +69,23 @@ resultsBoxC.addEventListener("click", ()=>{
 	}, 250);
 });
 
+function createLink(path, tag) {
+
+	let site = document.createElement("a");
+
+	site.setAttribute("href", path);
+
+	// site.setAttribute("target", "_blank");
+
+	site.setAttribute("class", "result actual");
+
+	results.appendChild(site);
+	
+	site.innerText = tag;
+	
+	resultsBoxC.classList.remove("hidden");
+}
+
 document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 	e.preventDefault();
@@ -134,20 +151,8 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 			else {
 
 				if (voiceText.toLowerCase() == 'bkmrks') {
-				
-					let bkmrksResult = document.createElement("a");
-				
-					bkmrksResult.setAttribute("href", "bookmarks/bookmarks.html");
-				
-					// bkmrksResult.setAttribute("target", "_blank");
-				
-					bkmrksResult.setAttribute("class", "result actual");
-				
-					results.appendChild(bkmrksResult);
-					
-					bkmrksResult.innerText = "Bkmrks";
-					
-					resultsBoxC.classList.remove("hidden");
+
+					createLink("Bookmarks", "bookmarks/");
 				}
 
 				else if (voiceText.toLowerCase() == 'krk') {
@@ -199,6 +204,11 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 					krkResult.innerText = "Matrix";
 					
 					resultsBoxC.classList.remove("hidden");
+				}
+
+				else if (voiceText.toLowerCase() == 'wp') {
+
+					createLink("Wp", "img/wp.png");
 				}
 
 				else {
