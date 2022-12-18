@@ -365,8 +365,6 @@ enlace("https://www.refseek.com/", "Refseek", userLinks);
 
 enlace("http://repec.org/", "RePEc", userLinks);
 
-enlace("https://serviciosenlinea.sky.com.mx/", "SKY Servicios en línea", userLinks);
-
 enlace("https://sci-hub.se/", "Sci-Hub", userLinks);
 
 enlace("https://scielo.org/", "Scielo", userLinks);
