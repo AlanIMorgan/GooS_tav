@@ -644,6 +644,11 @@ a {
 	background: var(--sxth);
 }
 
+.key_words {
+
+	display: none;
+}
+
 /*HOME---ACCESOS DIRECTOS*/
 
 .home__direct-access {
