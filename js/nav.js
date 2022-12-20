@@ -175,7 +175,7 @@ enlace("chess/index.html", "Chess", extraLinks);
 
 enlace("conway/index.html", "Conway's game of life", extraLinks); */
 
-enlace("https://goostav.vercel.app/", "GooS_tav", "busca search búsqueda vercel", extraLinks);
+enlace("https://goostav.vercel.app/", "GooS_tav", "buscar search búsqueda vercel", extraLinks);
 
 // enlace("karaoke/index.html", "Karaoke", extraLinks);
 
@@ -201,15 +201,13 @@ enlace("https://photos.google.com/", "Fotos", "google photos gallery galería á
 
 enlace("https://mail.google.com/mail/u/0/#all", "Gmail", "google correo electrónico mail email e-mail", googleLinks);
 
-enlace("https://www.google.com/imghp", "Imágenes", "google images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", googleLinks);
+enlace("https://www.google.com/imghp", "Imágenes", "buscar búsqueda busqueda search google images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", googleLinks);
 
 enlace("https://www.google.com/maps/", "Mapas", "google maps adress lugares", googleLinks);
 
 enlace("https://news.google.com/", "Noticias", "google news", googleLinks);
 
-enlace("https://g.co/kgs/VGAksf", "Pac-Man Doodle", "google games juegos pacman", googleLinks);
-
-enlace("https://play.google.com/store/", "Play Store", "google apps aplicaciones apk juegos games", googleLinks);
+enlace("https://play.google.com/store/", "Play Store", "google apps aplicaciones apks juegos games applications celulares smartphones teléfonos telefonos mobiles móviles android", googleLinks);
 
 enlace("https://docs.google.com/spreadsheets", "Google Sheets", "docs documents documentos cálculo hojas excel contabilidad economía", googleLinks);
 
@@ -221,7 +219,7 @@ enlace("https://www.youtube.com/", "YouTube", "ver vídeos videos música", goog
 
 enlace("https://123apps.com/", "123Apps", "utilities tools herramientas pdf word excel converter convertir conversión editar edición recortar imágenes imagenes images pics pictures fotos documentos documents docs jpg jpeg png gif webp img videos vídeos ecualizar audio equalizer eq ppt font tipografía files archivos ebook libros extractor extraer", userLinks);
 
-enlace("https://www.academia.edu/", "Academia.edu", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://www.academia.edu/", "Academia.edu", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
 
 enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", "comprimir pdf reducir documentos documents docs", userLinks);
 
@@ -233,7 +231,7 @@ enlace("https://webcast.airdroid.com", "AirDroid Cast", "android mobile devices 
 
 enlace("https://alphacoders.com/", "Alpha Coders", "images imagenes imágenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", userLinks);
 
-enlace("https://www.artistapirata.com/", "Artista Pirata", "piratería pirateria piracy software pc computer computadora descargar programas gratis full free download", userLinks);
+enlace("https://www.artistapirata.com/", "Artista Pirata", "piratería pirateria piracy software pc computer computadora windows mac apple descargar programas gratis full free download", userLinks);
 
 enlace("https://www.artstation.com", "ArtStation", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", userLinks);
 
@@ -261,15 +259,11 @@ enlace("https://www.canva.com/", "Canva", "diseño gráfico graphic design edita
 
 enlace("https://chat.openai.com/", "ChatGpt", "inteligencia artificial intelligence ia ai búsqueda buscar search", userLinks);
 
-enlace("https://www.chess.com/", "Chess", "ajedrez juegos games", userLinks);
-
 enlace("https://sur.ly/o/cinefiliamalversa.blogspot.com.ar/AA000014?pageviewId=desktop-302e36363034343030302031363638383031373733203438303533313335", "Cinéfila Malversa", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
 
 enlace("https://www.deviantart.com", "DeviantArt", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", userLinks);
 
 enlace("https://dialnet.unirioja.es/", "Dialnet", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
-
-enlace("https://diep.io/", "Diep.io", "juegos games", userLinks);
 
 enlace("https://discord.com/", "Discord", "gaming gameplays videocalls videollamadas videoconferencias video-conferencias reuniones virtuales redes sociales networks", userLinks);
 
@@ -311,7 +305,7 @@ enlace("https://libgen.li/", "Library Genesis", "buscar búsqueda search books e
 
 enlace("https://www.linkedin.com/in/alanmorgan-a/", "LinkedIn", "redes sociales networks trabajos empleos jobs oficios", userLinks);
 
-enlace("https://www.malavida.com", "Malavida", "piratería pirateria piracy software pc computer computadora mobiles móviles smartphones teléfonos telefonos celulares descargar programas gratis full free download apps apk", userLinks);
+enlace("https://www.malavida.com", "Malavida", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android iphone apple descargar programas gratis full free download apps apks", userLinks);
 
 enlace("https://mega.nz/", "Mega", "almacenamiento nube cloud storage almacenar", userLinks);
 
@@ -323,7 +317,7 @@ enlace("https://mqs.link/", "MQS Albums Download", "escuchar listen descargar m�
 
 enlace("http://tavasci3-musicrewind.blogspot.com/", "Music Rewind", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", userLinks);
 
-enlace("https://www.napster.com", "Napster", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", userLinks);
+enlace("https://www.napster.com", "Napster", "escuchar listen música musica", userLinks);
 
 enlace("https://www.newgrounds.com/", "Newgrounds", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales juegos games comunidades redes sociales networks", userLinks);
 
@@ -343,19 +337,17 @@ enlace("https://jspaint.app/", "PaintJS", "", userLinks);
 
 enlace("https://pastedownload.com/25/", "PasteDownload", "descargar vídeos download videos", userLinks);
 
-enlace("https://pcwonderland.com/", "PC Wonderland", "piratería pirateria piracy software pc computer computadora descargar programas gratis full free download", userLinks);
+enlace("https://pcwonderland.com/", "PC Wonderland", "piratería pirateria piracy software pc computer computadora windows mac apple descargar programas gratis full free download", userLinks);
 
 enlace("http://www.pdfdrive.com/", "PDF Drive", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", userLinks);
 
-enlace("http://www.bajarpelisgratis.com/", "Pelis Gratis", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
+enlace("http://www.bajarpelisgratis.com/", "Pelis Gratis", "ver películas peliculas series completas gratis watch full free movies download descargar cinema piracy piratería pirateria", userLinks);
 
 enlace("https://photocall.tv", "Photocall tv", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", userLinks);
 
 enlace("https://www.pinterest.com.mx/", "Pinterest", "imágenes imagenes images img pics pictures photos fotos wallpapers arte digital artists artistas digitales", userLinks);
 
 enlace("https://www.pixiv.net/", "Pixiv", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", userLinks);
-
-enlace("https://juegosonlinegratis.com.mx/juego/plants-vs-zombies/", "Plants vs Zombies", "plantas contra zombis juegos games piratería pirateria piracy", userLinks);
 
 enlace("https://poesiamexa.wordpress.com", "Poesía Mexa", "", userLinks);
 
@@ -367,70 +359,70 @@ enlace("https://www.qwant.com/", "Qwant", "buscar search búsqueda privacidad pr
 
 enlace("https://www.random.org/widgets/", "Random", "", userLinks);
 
-enlace("https://redalyc.org/", "Redalyc", "", userLinks);
+enlace("https://redalyc.org/", "Redalyc", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://www.reddit.com/", "Reddit", "", userLinks);
+enlace("https://www.reddit.com/", "Reddit", "redes sociales network", userLinks);
 
-enlace("https://www.refseek.com/", "Refseek", "", userLinks);
+enlace("https://www.refseek.com/", "Refseek", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("http://repec.org/", "RePEc", "", userLinks);
+enlace("http://repec.org/", "RePEc", "Research Papers Economics buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://sci-hub.se/", "Sci-Hub", "", userLinks);
+enlace("https://sci-hub.se/", "Sci-Hub", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
 
-enlace("https://scielo.org/", "Scielo", "", userLinks);
+enlace("https://scielo.org/", "Scielo", "Scientific Electronic Library Online buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://www.science.gov/", "Science.gov", "", userLinks);
+enlace("https://www.science.gov/", "Science.gov", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://www.scimagojr.com/", "SCImago", "", userLinks);
+enlace("https://www.scimagojr.com/", "SCImago", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://sclouddownloader.net/", "ScloudDownloader", "", userLinks);
+enlace("https://sclouddownloader.net/", "ScloudDownloader", "soundcloud downloader escuchar listen descargar música musica gratis full free piracy piratería pirateria", userLinks);
 
-enlace("https://www.scopus.com/", "Scopus", "", userLinks);
+enlace("https://www.scopus.com/", "Scopus", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA generator", "", userLinks);
+enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA generator", "academic school scholar escuela documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://seriespapaya.club/", "Series Papaya", "", userLinks);
+enlace("https://seriespapaya.club/", "Series Papaya", "ver películas peliculas series completas gratis watch full free download movies descargar cinema piracy piratería pirateria", userLinks);
 
-enlace("https://open.spotify.com/", "Spotify", "", userLinks);
+enlace("https://open.spotify.com/", "Spotify", "escuchar listen música musica", userLinks);
 
-enlace("https://link.springer.com/", "Springer Link", "", userLinks);
+enlace("https://link.springer.com/", "Springer Link", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://soundcloud.com/", "Soundcloud", "", userLinks);
+enlace("https://soundcloud.com/", "Soundcloud", "escuchar listen música musica", userLinks);
 
-enlace("http://subes.becasbenitojuarez.gob.mx/", "SUBES", "", userLinks);
+enlace("http://subes.becasbenitojuarez.gob.mx/", "SUBES", "becas", userLinks);
 
-enlace("https://www.typingclub.com/", "TypingClub", "", userLinks);
+enlace("https://www.typingclub.com/", "TypingClub", "utilities tools herramientas learn aprender escribir write", userLinks);
 
-enlace("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid", "Teams", "", userLinks);
+enlace("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid", "Teams", "academic school scholar escuela tareas homework", userLinks);
 
-enlace("https://web.telegram.org/k/", "Telegram", "", userLinks);
+enlace("https://web.telegram.org/k/", "Telegram", "redes sociales network mensajerías mensajerias intantáneas intantaneas", userLinks);
 
-enlace("https://www.televisiongratishd.com/", "Televisión gratis", "", userLinks);
+enlace("https://www.televisiongratishd.com/", "Televisión gratis", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", userLinks);
 
-enlace("https://www.tiktok.com/", "TikTok", "", userLinks);
+enlace("https://www.tiktok.com/", "TikTok", "redes sociales network vídeos videos", userLinks);
 
-enlace("https://tinypng.com/", "TinyPNG", "", userLinks);
+enlace("https://tinypng.com/", "TinyPNG", "comprimir compressor imágenes imagenes images pics pictures fotos jpg jpeg png gif webp", userLinks);
 
-enlace("https://www.tumblr.com/", "Tumblr", "", userLinks);
+enlace("https://www.tumblr.com/", "Tumblr", "redes sociales network", userLinks);
 
-enlace("https://twitter.com/", "Twitter", "", userLinks);
+enlace("https://twitter.com/", "Twitter", "redes sociales network", userLinks);
 
-enlace("https://www.urbandictionary.com/", "Urban Dictionary", "", userLinks);
+enlace("https://www.urbandictionary.com/", "Urban Dictionary", "buscar search búqueda busqueda diccionario qué significa que significa", userLinks);
 
-enlace("https://victorraulrr.info/", "Victor RaulRR", "", userLinks);
+enlace("https://victorraulrr.info/", "Victor RaulRR", "descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android iphone apple celulares smartphones teléfonos telefonos mobiles móviles moviles", userLinks);
 
-enlace("https://www.virustotal.com/", "VirusTotal", "", userLinks);
+enlace("https://www.virustotal.com/", "VirusTotal", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android iphone apple descargar programas gratis full free download apps apks", userLinks);
 
-enlace("https://vocalremover.org/", "Vocal Remover and Isolation", "", userLinks);
+enlace("https://vocalremover.org/", "Vocal Remover and Isolation", "inteligencia artificial intelligence ia ai música musica audio", userLinks);
 
-enlace("https://wallhaven.cc/", "Wallhaven", "", userLinks);
+enlace("https://wallhaven.cc/", "Wallhaven", "google images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", userLinks);
 
-enlace("https://web.whatsapp.com/", "WhatsApp", "", userLinks);
+enlace("https://web.whatsapp.com/", "WhatsApp", "redes sociales network mensajería mensajeria intantánea intantanea", userLinks);
 
-enlace("https://www.office.com/launch/word?auth=2", "Word", "", userLinks);
+enlace("https://www.office.com/launch/word?auth=2", "Word", "ofimática documents docs", userLinks);
 
-enlace("https://www.worldcat.org/", "WorldCat", "", userLinks);
+enlace("https://www.worldcat.org/", "WorldCat", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("http://Yandex.com/", "Yandex", "", userLinks);
+enlace("http://Yandex.com/", "Yandex", "buscar search búsqueda", userLinks);
 
-enlace("https://z-lib.org/", "ZLibrary", "", userLinks);
+enlace("https://z-lib.org/", "ZLibrary", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
