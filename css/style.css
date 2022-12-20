@@ -196,8 +196,8 @@ a {
 	height: 75vh;
 	background-color: var(--svnth);
 	border-radius: 6px;
-	padding: 10px;/* 
-	padding-right: 0; */
+	padding: 10px;
+	padding-right: 0;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	border: 1px solid #bbb;
@@ -489,6 +489,50 @@ a {
 .politicas-de-privacidad-button:hover,
 .condiciones-de-servicio-button:hover {
 	background: var(--ffth);
+}
+
+#monthAndYear {
+
+	display: none;
+}
+
+#year {
+
+	width: 50px;
+}
+
+#year,
+#month {
+
+	margin-bottom: 20px;
+	border: 1px solid var(--primary);
+	background: var(--sec);
+	color: var(--primary);
+	text-align: center;
+}
+
+td {
+	
+	border: 1px solid #fff;
+}
+
+td,
+.td {
+
+	width: 40px;
+	line-height: 3;
+	text-align: center;
+}
+
+.td {
+
+	display: table-cell;
+	font-size: 10px;
+}
+
+.today {
+
+	background: #777;
 }
 
 /*--------------HOME------------------*/
