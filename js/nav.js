@@ -215,6 +215,8 @@ enlace("https://translate.google.com/", "Traductor", "google translate languages
 
 enlace("https://www.youtube.com/", "YouTube", "ver vídeos videos música", googleLinks);
 
+enlace("https://about.google/intl/es-419/products/", "Más de Google", "mas", googleLinks);
+
 //    User links    //
 
 enlace("https://123apps.com/", "123Apps", "utilities tools herramientas pdf word excel converter convertir conversión editar edición recortar imágenes imagenes images pics pictures fotos documentos documents docs jpg jpeg png gif webp img videos vídeos ecualizar audio equalizer eq ppt font tipografía files archivos ebook libros extractor extraer", userLinks);
@@ -415,7 +417,7 @@ enlace("https://www.virustotal.com/", "VirusTotal", "piratería pirateria piracy
 
 enlace("https://vocalremover.org/", "Vocal Remover and Isolation", "inteligencia artificial intelligence ia ai música musica audio", userLinks);
 
-enlace("https://wallhaven.cc/", "Wallhaven", "google images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", userLinks);
+enlace("https://wallhaven.cc/", "Wallhaven", "images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", userLinks);
 
 enlace("https://web.whatsapp.com/", "WhatsApp", "redes sociales network mensajería mensajeria intantánea intantanea", userLinks);
 
