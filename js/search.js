@@ -160,11 +160,6 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 					createLink("karaoke/", "Karaoke");
 				}
 
-				else if (voiceText.toLowerCase() == 'calendar') {
-
-					createLink("calendar/", "Calendario");
-				}
-
 				else if (voiceText.toLowerCase() == 'mtrx') {
 
 					createLink("matrix/", "Matrix");
