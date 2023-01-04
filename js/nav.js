@@ -351,7 +351,7 @@ extraExtraLinks.crear(); */
 
 //    Extra links    //
 
-/* enlace("calendar/", "Calendario", extraLinks);
+/* 
 
 enlace("chess/index.html", "Chess", extraLinks);
 
@@ -359,15 +359,9 @@ enlace("conway/index.html", "Conway's game of life", extraLinks); */
 
 enlace("https://goostav.vercel.app/", "GooS_tav", "buscar search búsqueda vercel", extraLinks);
 
-// enlace("karaoke/index.html", "Karaoke", extraLinks);
-
 enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", "buscar búsqueda search academic school scholar escuela documentos documents docs tareas ensayos académicos academicos download free books descargar libros gratis filosofía epizy bahia piracy piratería pirateria", extraLinks); /* 
 
-enlace("matrix/index.html", "Matrix", extraLinks);
-
-enlace("pac-man/index.html", "Pac-Man", extraLinks);
-
-enlace("http://burgersrestaurant.epizy.com/google/ocr/index.html", "OCR", extraLinks); */
+enlace("pac-man/index.html", "Pac-Man", extraLinks); */
 
 //    Google links    //
 
@@ -421,7 +415,7 @@ enlace("https://www.artstation.com", "ArtStation", "diseño gráfico graphic des
 
 enlace("http://webserver1.siiaa.siu.buap.mx/", "Autoservicios BUAP", "", userLinks);
 
-enlace("http://Baidu.com/", "Baidu", "buscar search búsqueda", userLinks);
+enlace("https://Baidu.com/", "Baidu", "buscar search búsqueda", userLinks);
 
 enlace("https://bandcamp.com/", "Bandcamp", "escuchar listen música musica", userLinks);
 
@@ -429,13 +423,13 @@ enlace("https://www.base-search.net/", "BASE", "Bielefeld Academic Search Engine
 
 enlace("https://becasmexico.org/becas-para-universitarios/", "Becas México", "", userLinks);
 
-enlace("http://becassubes.com/", "Becas SUBES", "", userLinks);
+enlace("https://becassubes.com/", "Becas SUBES", "", userLinks);
 
 enlace("https://www.behance.net/", "Behance", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", userLinks);
 
 enlace("https://www.bibliocatalogo.buap.mx/", "Bibliocatálogo BUAP", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("http://www.bioline.org.br/", "Bioline", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos health salud medicine medicina enfermedades epidemiología biología biologia biologic medio ambiente biodiversidad biodiversity", userLinks);
+enlace("https://www.bioline.org.br/", "Bioline", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos health salud medicine medicina enfermedades epidemiología biología biologia biologic medio ambiente biodiversidad biodiversity", userLinks);
 
 enlace("https://accesoqr.buap.mx/", "BUAP QR", "", userLinks);
 
@@ -499,7 +493,7 @@ enlace("https://mirandogratis.com/chungking-express.html", "Mirando Gratis", "ve
 
 enlace("https://mqs.link/", "MQS Albums Download", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", userLinks);
 
-enlace("http://tavasci3-musicrewind.blogspot.com/", "Music Rewind", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", userLinks);
+enlace("https://tavasci3-musicrewind.blogspot.com/", "Music Rewind", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", userLinks);
 
 enlace("https://www.napster.com", "Napster", "escuchar listen música musica", userLinks);
 
@@ -523,9 +517,9 @@ enlace("https://pastedownload.com/25/", "PasteDownload", "descargar vídeos down
 
 enlace("https://pcwonderland.com/", "PC Wonderland", "piratería pirateria piracy software pc computer computadora windows mac apple descargar programas gratis full free download", userLinks);
 
-enlace("http://www.pdfdrive.com/", "PDF Drive", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", userLinks);
+enlace("https://www.pdfdrive.com/", "PDF Drive", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", userLinks);
 
-enlace("http://www.bajarpelisgratis.com/", "Pelis Gratis", "ver películas peliculas series completas gratis watch full free movies download descargar cinema piracy piratería pirateria", userLinks);
+enlace("https://www.bajarpelisgratis.com/", "Pelis Gratis", "ver películas peliculas series completas gratis watch full free movies download descargar cinema piracy piratería pirateria", userLinks);
 
 enlace("https://photocall.tv", "Photocall tv", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", userLinks);
 
@@ -573,7 +567,7 @@ enlace("https://link.springer.com/", "Springer Link", "buscar búsqueda search a
 
 enlace("https://soundcloud.com/", "Soundcloud", "escuchar listen música musica", userLinks);
 
-enlace("http://subes.becasbenitojuarez.gob.mx/", "SUBES", "becas", userLinks);
+enlace("https://subes.becasbenitojuarez.gob.mx/", "SUBES", "becas", userLinks);
 
 enlace("https://www.typingclub.com/", "TypingClub", "utilities tools herramientas learn aprender escribir write", userLinks);
 
@@ -607,6 +601,6 @@ enlace("https://www.office.com/launch/word?auth=2", "Word", "ofimática document
 
 enlace("https://www.worldcat.org/", "WorldCat", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("http://Yandex.com/", "Yandex", "buscar search búsqueda", userLinks);
+enlace("https://yandex.com/", "Yandex", "buscar search búsqueda", userLinks);
 
 enlace("https://z-lib.org/", "ZLibrary", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);

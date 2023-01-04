@@ -86,6 +86,61 @@ function createLink(path, tag) {
 	resultsBoxC.classList.remove("hidden");
 }
 
+function reduce(array) {
+
+	if (array.includes("http") || array.includes("file:")) {
+
+		openTab(0, array);
+	}
+	
+	else {
+
+		redirect(array);
+	}
+}
+
+function redirect(array) {
+
+	if (!!array && !/^https?:\/\//i.test(array)) {
+	
+		url = 'http://' + array;
+
+		redir = confirm("Estás llendo a: " + array);
+
+		if (redir == true) {
+
+			openTab(0, url);
+		}
+	} 
+}
+
+function openTab(google, array) {
+
+	switch (google) {
+
+		case 0:
+
+			query = "";
+
+			break;
+
+		case 1:
+
+		default:
+
+			query = "https://www.google.com/search?q=";
+			
+			break;
+	}
+
+	searchInput.value = "";
+
+	setTimeout(() => {
+
+		window.open(query + array);
+	}, 250);
+}
+
 document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 	e.preventDefault();
@@ -96,56 +151,14 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 		if (voiceText.includes(' ')) {
 
-			searchInput.value = "";
-
-			setTimeout(() => {
-		
-				window.open("https://www.google.com/search?q=" + voiceText);
-			}, 250);
+			openTab(1, voiceText);
 		}
 		
 		else {
 			
 			if (voiceText.includes('.')) {
 				
-				reduce();
-
-				function reduce() {
-
-					if (voiceText.includes('://')) {
-						
-						link = voiceText.split('://');
-
-						redirect();
-					} 
-					
-					else {
-						
-						link = [0, voiceText];
-
-						redirect();
-					}
-				}
-
-				function redirect() {
-
-					if (!!link[1] && !/^https?:\/\//i.test(link[1])) {
-					
-						url = 'http://' + link[1];
-
-						redir = confirm("Estás llendo a: "+voiceText);
-	
-						if (redir == true) {
-
-							searchInput.value = "";
-
-							setTimeout(() => {
-						
-								window.open(url);
-							}, 250);
-						}
-					} 
-				}
+				reduce(voiceText);
 			}
 
 			else {
@@ -165,19 +178,9 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 					createLink("matrix/", "Matrix");
 				}
 
-				else if (voiceText.toLowerCase() == 'wp') {
-
-					createLink("img/wp.png", "Wp");
-				}
-
 				else {
 
-					searchInput.value = "";
-
-					setTimeout(() => {
-		
-						window.open("https://www.google.com/search?q=" + voiceText);
-					}, 250);
+					openTab(1, voiceText);
 				}
 			}
 		}
