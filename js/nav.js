@@ -14,7 +14,6 @@ if ("Notification" in window) { /*
     }); */
 }
 
-formBtn = document.getElementById('form-btn');
 navBtn = document.getElementById('nav_btn');
 navListBtn = document.getElementById('nav_btn-list');
 profileNavBtn = document.getElementById('nav_profile_btn');
@@ -32,17 +31,8 @@ input = document.querySelector(".google-search");
 
 navBtn.addEventListener("click", showHideNav);
 navListBtn.addEventListener("click", showHideListNav);
-formBtn.addEventListener("click", showForm);
 profileNavBtn.addEventListener("click", showHideProfileNav);
 home.addEventListener("click", hideMenus);
-
-document.documentElement.addEventListener('keyup', (e)=>{
-
-    if (e.key == "|") {
-
-        showForm();
-    }
-});
 
 function showHideNav() {
 
@@ -263,13 +253,6 @@ function hideMenus() {
     navMenu.classList.remove("block");
     navMenu.classList.remove("nav__li-submenu-ul_list");
     profileNavMenu.classList.remove("block");
-}
-
-function showForm() {
-
-    form.classList.toggle("hidden");
-    input.focus();
-    input.value = "";
 }
 
 class domElement {

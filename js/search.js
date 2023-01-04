@@ -1,3 +1,24 @@
+function showForm() {
+
+    form.classList.toggle("hidden");
+
+    input.focus();
+    
+	input.value = "";
+	
+	liveSearch();
+}
+
+document.documentElement.addEventListener('keyup', (e)=>{
+
+    if (e.key == "|") {
+
+        showForm();
+    }
+});
+
+document.getElementById('form-btn').addEventListener("click", showForm);
+
 searchInput = document.querySelector(".google-search");
 
 resultsBoxC = document.querySelector(".results_box_container");
@@ -11,9 +32,6 @@ currentURL = window.location.href;
 function liveSearch() {
 
 	let search_query = searchInput.value;
-	
-	//Use innerText if all contents are visible
-	//Use textContent for including hidden elements
 
 	for (i = 0; i < links.length; i++) {
 
@@ -62,8 +80,6 @@ searchInput.addEventListener('input', () => {
 	typingTimer = setTimeout(liveSearch, typeInterval);
 });
 
-document.getElementById('form-btn').addEventListener("click", liveSearch);
-
 resultsBoxC.addEventListener("click", ()=>{
 
 	searchInput.value = "";
@@ -73,68 +89,6 @@ resultsBoxC.addEventListener("click", ()=>{
 		liveSearch();
 	}, 250);
 });
-
-function createLink(path, tag) {
-
-	let site = document.createElement("a");
-
-	site.setAttribute("href", path);
-
-	// site.setAttribute("target", "_blank");
-
-	site.setAttribute("class", "result actual");
-
-	results.appendChild(site);
-	
-	site.innerText = tag;
-	
-	resultsBoxC.classList.remove("hidden");
-}
-
-function reduce(array) {
-
-	if (array.includes("http") || array.includes("file://")) {
-
-		redir = confirm("Estás llendo a: " + array);
-
-		if (redir == true) {
-
-			openTab(0, array);
-		}
-	}
-
-	else if (array.includes("/home/")) {
-
-		url = "file://" + array;
-
-		redir = confirm("Estás llendo a: " + url);
-
-		if (redir == true) {
-
-			openTab(0, url);
-		}
-	}
-	
-	else {
-
-		redirect(array);
-	}
-}
-
-function redirect(array) {
-
-	if (!!array && !/^https?:\/\//i.test(array)) {
-	
-		url = 'http://' + array;
-
-		redir = confirm("Estás llendo a: " + array);
-
-		if (redir == true) {
-
-			openTab(0, url);
-		}
-	} 
-}
 
 function openTab(google, array) {
 
@@ -163,6 +117,43 @@ function openTab(google, array) {
 	}, 250);
 }
 
+function redirect(array) {
+
+	if (array.includes("http")) {
+
+		url = '' + array;
+	}
+	
+	else {
+
+		url = 'http://' + array;
+	}
+	
+	confRedir = confirm("Estás llendo a: " + array);
+
+	if (confRedir == true) {
+
+		openTab(0, url);
+	}
+}
+
+function createLink(path, tag) {
+
+	let site = document.createElement("a");
+
+	site.setAttribute("href", path);
+
+	// site.setAttribute("target", "_blank");
+
+	site.setAttribute("class", "result actual");
+
+	results.appendChild(site);
+	
+	site.innerText = tag;
+	
+	resultsBoxC.classList.remove("hidden");
+}
+
 document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 	e.preventDefault();
@@ -180,7 +171,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 			
 			if (voiceText.includes('.')) {
 				
-				reduce(voiceText);
+				redirect(voiceText);
 			}
 
 			else {
