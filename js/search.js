@@ -93,13 +93,25 @@ function createLink(path, tag) {
 
 function reduce(array) {
 
-	if (array.includes("http") || array.includes("file:") || array.includes("/home/")) {
+	if (array.includes("http") || array.includes("file://")) {
 
 		redir = confirm("Estás llendo a: " + array);
 
 		if (redir == true) {
 
 			openTab(0, array);
+		}
+	}
+
+	else if (array.includes("/home/")) {
+
+		url = "file://" + array;
+
+		redir = confirm("Estás llendo a: " + url);
+
+		if (redir == true) {
+
+			openTab(0, url);
 		}
 	}
 	
