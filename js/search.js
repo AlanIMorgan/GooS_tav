@@ -93,9 +93,14 @@ function createLink(path, tag) {
 
 function reduce(array) {
 
-	if (array.includes("http") || array.includes("file:")) {
+	if (array.includes("http") || array.includes("file:") || array.includes("/home/")) {
 
-		openTab(0, array);
+		redir = confirm("Estás llendo a: " + array);
+
+		if (redir == true) {
+
+			openTab(0, array);
+		}
 	}
 	
 	else {
