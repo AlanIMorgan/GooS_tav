@@ -17,31 +17,36 @@ function liveSearch() {
 
 	for (i = 0; i < links.length; i++) {
 
-		if (search_query.length > 0) {
+		switch (search_query.length) {
 
-			if (links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
-	
-				links[i].classList.add("actual");
-	
-				resultsBoxC.classList.remove("hidden");
-			}
+			case 0:
 
-			else {
+				resultsBoxC.classList.add("hidden");
 	
 				links[i].classList.remove("actual");
 
-				if (document.querySelectorAll('.actual').length < 1) {
+			break;
 
-					resultsBoxC.classList.add("hidden");
-				}
-			}
-		}
+			default:
+
+				if (links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
 		
-		else {
+					links[i].classList.add("actual");
+		
+					resultsBoxC.classList.remove("hidden");
+				}
 
-			resultsBoxC.classList.add("hidden");
+				else {
+		
+					links[i].classList.remove("actual");
 
-			links[i].classList.remove("actual");
+					if (document.querySelectorAll('.actual').length < 1) {
+
+						resultsBoxC.classList.add("hidden");
+					}
+				}
+
+			break;
 		}
 	}
 }
@@ -122,7 +127,7 @@ function openTab(google, array) {
 
 			query = "";
 
-			break;
+		break;
 
 		case 1:
 
@@ -130,7 +135,7 @@ function openTab(google, array) {
 
 			query = "https://www.google.com/search?q=";
 			
-			break;
+		break;
 	}
 
 	searchInput.value = "";
