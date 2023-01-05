@@ -179,22 +179,16 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 				if (voiceText.toLowerCase() == '/nsfw') {
 
 					createLink("bookmarks/bookmarks.html", "NSFW Sites");
-					
-					searchInput.value = "";
 				}
 
 				else if (voiceText.toLowerCase() == '/krk') {
 
 					createLink("karaoke/", "Karaoke");
-					
-					searchInput.value = "";
 				}
 
 				else if (voiceText.toLowerCase() == '/mtrx') {
 
 					createLink("matrix/", "Matrix");
-					
-					searchInput.value = "";
 				}
 
 				else {
