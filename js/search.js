@@ -176,19 +176,25 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 			else {
 
-				if (voiceText.toLowerCase() == 'bkmrks') {
+				if (voiceText.toLowerCase() == '/nsfw') {
 
-					createLink("bookmarks/bookmarks.html", "Bookmarks");
+					createLink("bookmarks/bookmarks.html", "NSFW Sites");
+					
+					searchInput.value = "";
 				}
 
-				else if (voiceText.toLowerCase() == 'krk') {
+				else if (voiceText.toLowerCase() == '/krk') {
 
 					createLink("karaoke/", "Karaoke");
+					
+					searchInput.value = "";
 				}
 
-				else if (voiceText.toLowerCase() == 'mtrx') {
+				else if (voiceText.toLowerCase() == '/mtrx') {
 
 					createLink("matrix/", "Matrix");
+					
+					searchInput.value = "";
 				}
 
 				else {
