@@ -58,9 +58,12 @@ function liveSearch() {
 		
 					links[i].classList.remove("actual");
 
-					if (document.querySelectorAll('.actual').length < 1) {
+					switch (document.querySelectorAll('.actual').length) {
 
-						resultsBoxC.classList.add("hidden");
+						case 0:
+
+							resultsBoxC.classList.add("hidden");
+						break;
 					}
 				}
 
