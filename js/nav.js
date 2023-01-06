@@ -354,13 +354,13 @@ enlace("https://scholar.google.es/", "Google scholar", "search buscar búsqueda 
 
 enlace("https://myaccount.google.com/", "Cuenta de google", "mi sesión session user usuario", googleLinks);
 
-enlace("https://docs.google.com/", "Documentos", "google ofimática word documents docs", googleLinks);
+enlace("https://docs.google.com/", "Google Documentos", "ofimática word documents docs", googleLinks);
 
-enlace("https://photos.google.com/", "Fotos", "google photos gallery galería álbum album pics pictures images imágenes img jpg jpeg gif png webp wallpapers", googleLinks);
+enlace("https://photos.google.com/", "Google Fotos", "photos gallery galería álbum album pics pictures images imágenes img jpg jpeg gif png webp wallpapers", googleLinks);
 
 enlace("https://mail.google.com/mail/u/0/#all", "Gmail", "google correo electrónico mail email e-mail", googleLinks);
 
-enlace("https://www.google.com/imghp", "Imágenes", "buscar búsqueda busqueda search google images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", googleLinks);
+enlace("https://www.google.com/imghp", "Google Imágenes", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", googleLinks);
 
 enlace("https://www.google.com/maps/", "Mapas", "google maps adress lugares", googleLinks);
 
