@@ -22,43 +22,38 @@ html {
     background: #333;
 }
 
+.home {
+	position: relative;
+    overflow: hidden;
+}
+
 
 @keyframes gradient {
 
     0% {
 
         background: #77f;
-    }
+	}
 
-    20% {
-
-        background: #77f;
-    }
-
-    40% {
+    25% {
 
         background: #f7f;
     }
 
-    60% {
+    50% {
 
         background: #f77;
     }
 
-    80% {
+    75% {
 
-        background: #ff7;
+        background: #dd5;
     }
  
     100% {
 
-        background: #7f7;
+        background: #5d5;
     }
-}
-
-.home {
-	position: relative;
-    overflow: hidden;
 }
 
 .home__bckgrnd {
