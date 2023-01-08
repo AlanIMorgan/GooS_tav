@@ -26,8 +26,6 @@ resultsBoxC = document.querySelector(".results_box_container");
 results = document.querySelector(".results_box");
 profileNavMenu = document.querySelector(".nav__submenu-profile");
 home = document.querySelector(".home");
-form = document.querySelector(".home__form");
-input = document.querySelector(".google-search");
 
 navBtn.addEventListener("click", showHideNav);
 navListBtn.addEventListener("click", showHideListNav);

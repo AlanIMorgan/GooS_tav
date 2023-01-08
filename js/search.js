@@ -1,10 +1,13 @@
+searchForm = document.querySelector(".home__form");
+searchInput = document.querySelector(".google-search");
+
 function showForm() {
 
-    form.classList.toggle("hidden");
+    searchForm.classList.toggle("hidden");
 
-    input.focus();
+    searchInput.focus();
     
-	input.value = "";
+	searchInput.value = "";
 	
 	liveSearch();
 }
@@ -19,7 +22,10 @@ document.documentElement.addEventListener('keyup', (e)=>{
 
 document.getElementById('form-btn').addEventListener("click", showForm);
 
-searchInput = document.querySelector(".google-search");
+document.querySelector(".img_mask").addEventListener("click", ()=>{
+
+	searchInput.focus();
+});
 
 resultsBoxC = document.querySelector(".results_box_container");
 
@@ -90,6 +96,8 @@ resultsBoxC.addEventListener("click", ()=>{
 	setTimeout(() => {
 
 		liveSearch();
+
+		searchInput.focus();
 	}, 250);
 });
 
