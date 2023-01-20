@@ -340,7 +340,7 @@ enlace("conway/index.html", "Conway's game of life", extraLinks); */
 
 enlace("https://goostav.vercel.app/", "GooS_tav", "buscar search búsqueda vercel", extraLinks);
 
-enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", "buscar búsqueda search academic school scholar escuela documentos documents docs tareas ensayos académicos academicos download free books descargar libros gratis filosofía epizy bahia piracy piratería pirateria", extraLinks); /* 
+enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", "buscar búsqueda search academic school scholar escuela documentos documents docs pdfs tareas ensayos académicos academicos download free books descargar libros gratis filosofía epizy bahia piracy piratería pirateria", extraLinks); /* 
 
 enlace("pac-man/index.html", "Pac-Man", extraLinks); */
 
@@ -378,7 +378,7 @@ enlace("https://about.google/intl/es-419/products/", "Más de Google", "mas", go
 
 enlace("https://123apps.com/", "123Apps", "utilities tools herramientas pdf word excel converter convertir conversión editar edición recortar imágenes imagenes images pics pictures fotos documentos documents docs jpg jpeg png gif webp img videos vídeos ecualizar audio equalizer eq ppt font tipografía files archivos ebook libros extractor extraer", userLinks);
 
-enlace("https://www.academia.edu/", "Academia.edu", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
+enlace("https://www.academia.edu/", "Academia.edu", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
 
 enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", "comprimir pdf reducir documentos documents docs", userLinks);
 
@@ -400,7 +400,7 @@ enlace("https://Baidu.com/", "Baidu", "buscar search búsqueda", userLinks);
 
 enlace("https://bandcamp.com/", "Bandcamp", "escuchar listen música musica", userLinks);
 
-enlace("https://www.base-search.net/", "BASE", "Bielefeld Academic Search Engine buscar búsqueda escuela school scholar escuela ensayos books libros documentos docs tareas académicos academicos", userLinks);
+enlace("https://www.base-search.net/", "BASE", "Bielefeld Academic Search Engine buscar búsqueda escuela school scholar escuela ensayos books libros documentos docs pdfs tareas académicos academicos", userLinks);
 
 enlace("https://becasmexico.org/becas-para-universitarios/", "Becas México", "", userLinks);
 
@@ -410,7 +410,7 @@ enlace("https://www.behance.net/", "Behance", "diseño gráfico graphic design i
 
 enlace("https://www.bibliocatalogo.buap.mx/", "Bibliocatálogo BUAP", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://www.bioline.org.br/", "Bioline", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos health salud medicine medicina enfermedades epidemiología biología biologia biologic medio ambiente biodiversidad biodiversity", userLinks);
+enlace("https://www.bioline.org.br/", "Bioline", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos health salud medicine medicina enfermedades epidemiología biología biologia biologic medio ambiente biodiversidad biodiversity", userLinks);
 
 enlace("https://accesoqr.buap.mx/", "BUAP QR", "", userLinks);
 
@@ -422,13 +422,13 @@ enlace("https://sur.ly/o/cinefiliamalversa.blogspot.com.ar/AA000014?pageviewId=d
 
 enlace("https://www.deviantart.com", "DeviantArt", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", userLinks);
 
-enlace("https://dialnet.unirioja.es/", "Dialnet", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://dialnet.unirioja.es/", "Dialnet", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
 enlace("https://discord.com/", "Discord", "gaming gameplays videocalls videollamadas videoconferencias video-conferencias reuniones virtuales redes sociales networks", userLinks);
 
 enlace("https://duckduckgo.com/", "Duckduckgo", "buscar search búsqueda privacidad privacy", userLinks);
 
-enlace("https://www.espaebook2.com/", "ERIC", "Education Resources Information Center buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://www.espaebook2.com/", "ERIC", "Education Resources Information Center buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
 enlace("https://www.espaebook2.com/", "EspaEbook", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", userLinks);
 
@@ -453,6 +453,8 @@ enlace("https://www.ilovepdf.com/", "I love PDF", "editar edición convertir pdf
 enlace("https://imgur.com", "Imgur", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", userLinks);
 
 enlace("https://app.inferkit.com/demo", "InferKit", "inteligencia artificial intelligence ia ai", userLinks);
+
+enlace("https://archive.org/", "Internet Archive", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
 
 enlace("https://www.instagram.com/", "Instagram", "redes sociales networks photos gallery galería álbum album pics pictures images imágenes", userLinks);
 
@@ -518,33 +520,33 @@ enlace("https://www.qwant.com/", "Qwant", "buscar search búsqueda privacidad pr
 
 enlace("https://www.random.org/widgets/", "Random", "", userLinks);
 
-enlace("https://redalyc.org/", "Redalyc", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://redalyc.org/", "Redalyc", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
 enlace("https://www.reddit.com/", "Reddit", "redes sociales network", userLinks);
 
-enlace("https://www.refseek.com/", "Refseek", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://www.refseek.com/", "Refseek", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
-enlace("http://repec.org/", "RePEc", "Research Papers Economics buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("http://repec.org/", "RePEc", "Research Papers Economics buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://sci-hub.se/", "Sci-Hub", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
+enlace("https://sci-hub.se/", "Sci-Hub", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
 
-enlace("https://scielo.org/", "Scielo", "Scientific Electronic Library Online buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://scielo.org/", "Scielo", "Scientific Electronic Library Online buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://www.science.gov/", "Science.gov", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://www.science.gov/", "Science.gov", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://www.scimagojr.com/", "SCImago", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://www.scimagojr.com/", "SCImago", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
 enlace("https://sclouddownloader.net/", "ScloudDownloader", "soundcloud downloader escuchar listen descargar música musica gratis full free piracy piratería pirateria", userLinks);
 
-enlace("https://www.scopus.com/", "Scopus", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://www.scopus.com/", "Scopus", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA generator", "academic school scholar escuela documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA generator", "academic school scholar escuela documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
 enlace("https://seriespapaya.club/", "Series Papaya", "ver películas peliculas series completas gratis watch full free download movies descargar cinema piracy piratería pirateria", userLinks);
 
 enlace("https://open.spotify.com/", "Spotify", "escuchar listen música musica", userLinks);
 
-enlace("https://link.springer.com/", "Springer Link", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://link.springer.com/", "Springer Link", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
 enlace("https://soundcloud.com/", "Soundcloud", "escuchar listen música musica", userLinks);
 
@@ -580,8 +582,10 @@ enlace("https://web.whatsapp.com/", "WhatsApp", "redes sociales network mensajer
 
 enlace("https://www.office.com/launch/word?auth=2", "Word", "ofimática documents docs", userLinks);
 
-enlace("https://www.worldcat.org/", "WorldCat", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", userLinks);
+enlace("https://www.worldcat.org/", "WorldCat", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
 enlace("https://yandex.com/", "Yandex", "buscar search búsqueda", userLinks);
 
-enlace("https://z-lib.org/", "ZLibrary", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
+enlace("https://yandex.com/images/", "Yandex Images", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", googleLinks);
+
+enlace("https://z-lib.org/", "ZLibrary", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
