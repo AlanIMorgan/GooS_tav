@@ -584,8 +584,8 @@ enlace("https://www.office.com/launch/word?auth=2", "Word", "ofimática document
 
 enlace("https://www.worldcat.org/", "WorldCat", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
-enlace("https://yandex.com/", "Yandex", "buscar search búsqueda", userLinks);
+enlace("https://ya.ru/", "Яндекс (Yandex ruso)", "buscar search búsqueda", userLinks);
 
-enlace("https://yandex.com/images/", "Yandex Images", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", googleLinks);
+enlace("https://yandex.com/images/", "Yandex Images", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", userLinks);
 
 enlace("https://z-lib.org/", "ZLibrary", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
