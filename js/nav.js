@@ -528,6 +528,8 @@ enlace("https://www.refseek.com/", "Refseek", "buscar búsqueda search academic 
 
 enlace("http://repec.org/", "RePEc", "Research Papers Economics buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
+enlace("https://saucenao.com/", "SauceNAO", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", userLinks);
+
 enlace("https://sci-hub.se/", "Sci-Hub", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
 
 enlace("https://scielo.org/", "Scielo", "Scientific Electronic Library Online buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
