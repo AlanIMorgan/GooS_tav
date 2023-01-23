@@ -348,8 +348,6 @@ enlace("pac-man/index.html", "Pac-Man", extraLinks); */
 
 enlace("https://www.google.com/", "Google", "buscar search búsqueda", googleLinks);
 
-enlace("https://scholar.google.es/", "Google scholar", "search buscar búsqueda académica escolar academic school", googleLinks);
-
 enlace("https://myaccount.google.com/", "Cuenta de google", "mi sesión session user usuario", googleLinks);
 
 enlace("https://docs.google.com/", "Google Documentos", "ofimática word documents docs", googleLinks);
@@ -365,6 +363,8 @@ enlace("https://www.google.com/maps/", "Mapas", "google maps adress lugares", go
 enlace("https://news.google.com/", "Noticias", "google news", googleLinks);
 
 enlace("https://play.google.com/store/", "Play Store", "google apps aplicaciones apks juegos games applications celulares smartphones teléfonos telefonos mobiles móviles android", googleLinks);
+
+enlace("https://scholar.google.es/", "Google Scholar", "search buscar búsqueda académica escolar academic school", googleLinks);
 
 enlace("https://docs.google.com/spreadsheets", "Google Sheets", "docs documents documentos cálculo hojas excel contabilidad economía", googleLinks);
 
