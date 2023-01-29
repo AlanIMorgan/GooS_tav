@@ -494,6 +494,8 @@ enlace("https://www.onlineocr.net/", "Online OCR", "", userLinks);
 
 enlace("https://outlook.live.com/", "Outlook", "correo electrónico mail email e-mail", userLinks);
 
+enlace("https://outlook.office.com/", "Outlook (institucional)", "correo electrónico institucional mail email e-mail", userLinks);
+
 enlace("https://jspaint.app/", "PaintJS", "", userLinks);
 
 enlace("https://pastedownload.com/25/", "PasteDownload", "descargar vídeos download videos", userLinks);
