@@ -438,7 +438,7 @@ enlace("https://www.facebook.com/", "Facebook", "redes sociales networks", userL
 
 enlace("https://gatonplayseries.com/", "GatonPlaySeries", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
 
-enlace("https://github.com/AlanIMorgan", "GitHub", "code código codigo deveopers programación programacion", userLinks);
+enlace("https://github.com/AlanIMorgan/GooS_tav", "GitHub", "code código codigo deveopers programación programacion", userLinks);
 
 enlace("https://gnula2.org/", "Gnula2", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
 
