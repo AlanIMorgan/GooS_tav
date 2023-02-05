@@ -584,6 +584,8 @@ enlace("https://vocalremover.org/", "Vocal Remover and Isolation", "inteligencia
 
 enlace("https://wallhaven.cc/", "Wallhaven", "images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", userLinks);
 
+enlace("https://wallhere.com/", "Wallhere", "images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", userLinks);
+
 enlace("https://web.whatsapp.com/", "WhatsApp", "redes sociales network mensajería mensajeria intantánea intantanea", userLinks);
 
 enlace("https://www.office.com/launch/word?auth=2", "Word", "ofimática documents docs", userLinks);
