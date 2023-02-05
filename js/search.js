@@ -14,9 +14,13 @@ function showForm() {
 
 document.documentElement.addEventListener('keyup', (e)=>{
 
-    if (e.key == "|") {
+    switch (e.key) {
 
-        showForm();
+		case "|":
+
+			showForm();
+
+		break;
     }
 });
 
@@ -53,24 +57,29 @@ function liveSearch() {
 
 			default:
 
-				if (links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
-		
-					links[i].classList.add("actual");
-		
-					resultsBoxC.classList.remove("hidden");
-				}
+				switch (links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
 
-				else {
-		
-					links[i].classList.remove("actual");
+					case false:
+			
+						links[i].classList.remove("actual");
 
-					switch (document.querySelectorAll('.actual').length) {
+						switch (document.querySelectorAll('.actual').length) {
 
-						case 0:
+							case 0:
 
-							resultsBoxC.classList.add("hidden");
-						break;
-					}
+								resultsBoxC.classList.add("hidden");
+							break;
+						}
+					
+					break;
+
+					default:
+			
+						links[i].classList.add("actual");
+			
+						resultsBoxC.classList.remove("hidden");
+
+					break;
 				}
 
 			break;
@@ -111,8 +120,6 @@ function openTab(google, array) {
 
 		break;
 
-		case 1:
-
 		default:
 
 			query = "https://www.google.com/search?q=";
@@ -130,21 +137,30 @@ function openTab(google, array) {
 
 function redirect(array) {
 
-	if (array.includes("http")) {
+	switch (array.includes("http")) {
 
-		url = '' + array;
-	}
-	
-	else {
+		case false:
 
-		url = 'http://' + array;
+			url = 'http://' + array;
+
+		break;
+
+		default:
+
+			url = '' + array;
+
+		break;
 	}
 	
 	confRedir = confirm("Estás llendo a: " + array);
 
-	if (confRedir == true) {
+	switch (confRedir) {
 
-		openTab(0, url);
+		case true:
+
+			openTab(0, url);
+
+		break;
 	}
 }
 
@@ -156,7 +172,7 @@ function createLink(path, tag) {
 
 	// site.setAttribute("target", "_blank");
 
-	site.setAttribute("class", "result actual");
+	site.setAttribute("class", "result actual " + tag.toLowerCase());
 
 	results.appendChild(site);
 	
@@ -171,42 +187,77 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 	let voiceText = searchInput.value;
 
-	if (voiceText.length > 0) { 
+	switch (voiceText.length > 0) {
 
-		if (voiceText.includes(' ')) {
+		case true:
 
-			openTab(1, voiceText);
-		}
-		
-		else {
-			
-			if (voiceText.includes('.')) {
-				
-				redirect(voiceText);
-			}
+			switch (voiceText.includes(' ')) {
 
-			else {
+				case false:
 
-				if (voiceText.toLowerCase() == '/nsfw') {
+					switch (voiceText.includes('.')) {
 
-					createLink("bookmarks/bookmarks.html", "NSFW Sites");
-				}
+						case false:
 
-				else if (voiceText.toLowerCase() == '/krk') {
+							switch (voiceText.toLowerCase()) {
 
-					createLink("karaoke/", "Karaoke");
-				}
+								case '/nsfw':
 
-				else if (voiceText.toLowerCase() == '/mtrx') {
+									switch (document.querySelector(".nsfw")) {
 
-					createLink("matrix/", "Matrix");
-				}
+										case null:
 
-				else {
+											createLink("bookmarks/bookmarks.html", "NSFW Sites");
+
+										break;
+									}
+
+								break;
+								
+								case '/mtrx':
+
+									switch (document.querySelector(".matrix")) {
+
+										case null:
+
+											createLink("matrix/index.html", "Matrix");
+
+										break;
+									}
+									
+								break; /* 
+
+								case '/krk':
+
+									createLink("karaoke/", "Karaoke");
+
+								break; */
+
+								default:
+
+									openTab(1, voiceText);
+
+								break;
+							}
+
+						break;
+
+						default:
+							
+							redirect(voiceText);
+
+						break;
+					}
+
+				break;
+
+				default:
 
 					openTab(1, voiceText);
-				}
+
+				break;
 			}
-		}
+
+		break;
 	}
 });
