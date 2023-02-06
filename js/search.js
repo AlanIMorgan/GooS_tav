@@ -89,7 +89,7 @@ function liveSearch() {
 
 //A little delay
 let typingTimer;               
-let typeInterval = 500;  
+let typeInterval = 250;  
 
 searchInput.addEventListener('input', () => {
 

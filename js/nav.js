@@ -468,6 +468,8 @@ enlace("https://libgen.li/", "Library Genesis", "buscar búsqueda search books e
 
 enlace("https://www.linkedin.com/in/alanmorgan-a/", "LinkedIn", "redes sociales networks trabajos empleos jobs oficios", userLinks);
 
+enlace("https://www.locopelis.com/", "LocoPelis", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
+
 enlace("https://www.malavida.com", "Malavida", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android iphone apple descargar programas gratis full free download apps apks", userLinks);
 
 enlace("https://mega.nz/", "Mega", "almacenamiento nube cloud storage almacenar", userLinks);
@@ -572,9 +574,11 @@ enlace("https://tinypng.com/", "TinyPNG", "comprimir compressor imágenes imagen
 
 enlace("https://www.tumblr.com/", "Tumblr", "redes sociales network", userLinks);
 
-enlace("https://twitter.com/", "Twitter", "redes sociales network", userLinks);
+enlace("https://mobile.twitter.com/", "Twitter", "redes sociales network", userLinks);
 
 enlace("https://www.urbandictionary.com/", "Urban Dictionary", "buscar search búqueda busqueda diccionario qué significa que significa", userLinks);
+
+enlace("https://www.vepelis.com/", "VePelis", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
 
 enlace("https://victorraulrr.info/", "Victor RaulRR", "descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android iphone apple celulares smartphones teléfonos telefonos mobiles móviles moviles", userLinks);
 
