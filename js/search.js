@@ -207,7 +207,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 										case null:
 
-											createLink("bookmarks/bookmarks.html", "NSFW Sites");
+											createLink("sites_list/sites_list.html", "NSFW Sites");
 
 										break;
 									}

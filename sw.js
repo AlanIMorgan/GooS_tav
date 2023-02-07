@@ -10,22 +10,7 @@ urlsToCache = [
     './karaoke/index.html',
     './matrix/index.html',
     './img/wp.png'
-] /* 
-
-self.addEventListener('install', e=>{
-
-    e.waitUntil(
-
-        caches.open(cacheName)
-        
-        .then((cache)=>{
-
-            return cache.addAll(urlsToCache)
-            .then(() => self.skipWaiting())
-        })
-        .catch(err => console.log('Falló registro de caché', err))
-    );
-}); */
+]
 
 // Use the install event to pre-cache all initial resources.
 
@@ -72,23 +57,6 @@ self.addEventListener('active', e=>{
 
         .then(()=> self.clients.claim())
     );
-});
-
-self.addEventListener('fetch', e=>{
-
-    e.respondWith(
-
-        caches.match(e.request)
-        .then(res => {
-
-            if (res) {
-
-                return res;
-            }
-
-            return fetch(e.request);
-        })
-    );
 }); */
 
 self.addEventListener('fetch', event => {
@@ -119,9 +87,4 @@ self.addEventListener('fetch', event => {
             return cachedResponse;
         }
     })());
-}); /* 
-
-setTimeout(() => {
-
-    self.registration.showNotification("App corriendo en segundo plano");
-}, 3000); */
+});
