@@ -1,90 +1,70 @@
-const CACHE_NAME = `my-sample-app-cache-v1`;
+const cacheName = `cache-v1`;
 
 urlsToCache = [
     './',
     './css/style.css',
     './js/nav.js',
     './js/search.js',
-    './bookmarks/bookmarks.html',
-    './calendar/index.html',
-    './karaoke/index.html',
+    './sites_list/sites_list.html',
     './matrix/index.html',
     './img/wp.png'
 ]
 
 // Use the install event to pre-cache all initial resources.
 
-self.addEventListener('install', event => {
+this.addEventListener("install", (event) => {
 
-    event.waitUntil((async () => {
+    event.waitUntil(
+        
+        caches
 
-        const cache = await caches.open(CACHE_NAME);
-
-        cache.addAll(urlsToCache);
-    })());
+        .open("cache-v1")
+        
+        .then((cache) => cache.addAll(urlsToCache))
+    );
 });
 
-self.addEventListener('activate', (e) => {
+// Upgrade cache
 
-    e.waitUntil(caches.keys().then((keyList) => {
+globalScope.addEventListener('activate', (event) => {
 
-        return Promise.all(keyList.map((key) => {
-        
-            if (key === CACHE_NAME) { return; }
+    const cacheAllowlist = ['cache-v2'];
 
-            return caches.delete(key);
-        }));
-    }));
-}); /* 
+    event.waitUntil(
 
-self.addEventListener('active', e=>{
+        caches.forEach((cache, cacheName) => {
 
-    const cacheWhiteList = [cacheName];
+            if (!cacheAllowlist.includes(cacheName)) {
 
-    e.waitUntil(
-
-        caches.keys()
-        .then(cacheNames => {
-
-            cacheNames.map(cacheName_two =>{
-
-                if (cacheWhiteList.indexOf(cacheName_two) === -1) {
-
-                    return caches.delete(cacheName_two);
-                }
-            })
+                return caches.delete(cacheName);
+            }
         })
-
-        .then(()=> self.clients.claim())
     );
-}); */
+}); 
 
-self.addEventListener('fetch', event => {
+self.addEventListener("fetch", (event) => {
 
-    event.respondWith((async () => {
+    // Let the browser do its default thing
 
-        const cache = await caches.open(CACHE_NAME);
+    if (event.request.method !== "GET") return; // For non-GET requests.
 
-        try { // Try to fetch the resource from the network.
-            
-            const fetchResponse = await fetch(event.request);
-    
-            // Save the resource in the cache.
-            
-            cache.put(event.request, fetchResponse.clone());
-    
-            // And return it.
-            
-            return fetchResponse;
-        }
-        
-        catch (e) { // Fetching didn't work get the resource from the cache.
-            
+    event.respondWith( // Prevent the default, and handle the request ourselves.
+
+        (async () => { // Try to get the response from a cache.
+
+            const cache = await caches.open("dynamic-v1");
+
             const cachedResponse = await cache.match(event.request);
-    
-            // And return it.
 
-            return cachedResponse;
-        }
-    })());
+            if (cachedResponse) { // If we found a match in the cache, return it, but also update the entry in the cache in the background.
+
+                event.waitUntil(cache.add(event.request));
+
+                return cachedResponse;
+            }
+
+            // If we didn't find a match in the cache, use the network.
+            return fetch(event.request);
+        })()
+    );
 });

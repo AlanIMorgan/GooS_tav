@@ -170,7 +170,7 @@ function createLink(path, tag, keyWords) {
 
 	site.setAttribute("href", path);
 
-	site.setAttribute("class", "result actual " + tag.toLowerCase());
+	site.setAttribute("class", "result actual");
 
 	results.appendChild(site);
 	
