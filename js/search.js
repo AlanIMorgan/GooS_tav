@@ -164,21 +164,29 @@ function redirect(array) {
 	}
 }
 
-function createLink(path, tag) {
+function createLink(path, tag, keyWords) {
 
 	let site = document.createElement("a");
 
 	site.setAttribute("href", path);
-
-	// site.setAttribute("target", "_blank");
 
 	site.setAttribute("class", "result actual " + tag.toLowerCase());
 
 	results.appendChild(site);
 	
 	site.innerText = tag;
+
+    let words = document.createElement("span");
+
+    words.setAttribute("class", "key_words");
+
+    site.appendChild(words);
+    
+    words.innerText = keyWords;
 	
 	resultsBoxC.classList.remove("hidden");
+
+	links = document.querySelectorAll('.result');
 }
 
 document.querySelector(".home__form").addEventListener("submit", (e)=>{
@@ -207,7 +215,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 										case null:
 
-											createLink("sites_list/sites_list.html", "NSFW Sites");
+											createLink("sites_list/sites_list.html", "NSFW Sites", "/nsfw");
 
 										break;
 									}
@@ -220,7 +228,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 										case null:
 
-											createLink("matrix/index.html", "Matrix");
+											createLink("matrix/index.html", "Matrix", "/mtrx");
 
 										break;
 									}
