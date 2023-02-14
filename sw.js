@@ -5,9 +5,7 @@ urlsToCache = [
     './css/style.css',
     './js/nav.js',
     './js/search.js',
-    './sites_list/sites_list.html',
-    './matrix/index.html',
-    './img/wp.png'
+    './matrix/index.html'
 ]
 
 // Use the install event to pre-cache all initial resources.
@@ -18,7 +16,7 @@ this.addEventListener("install", (event) => {
         
         caches
 
-        .open("cache-v1")
+        .open(cacheName)
         
         .then((cache) => cache.addAll(urlsToCache))
     );

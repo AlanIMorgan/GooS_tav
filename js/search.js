@@ -26,7 +26,7 @@ document.documentElement.addEventListener('keyup', (e)=>{
 
 document.getElementById('form-btn').addEventListener("click", showForm);
 
-document.querySelector(".img_mask").addEventListener("click", ()=>{
+document.getElementById("img_mask").addEventListener("click", ()=>{
 
 	searchInput.focus();
 });
@@ -265,6 +265,25 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 				break;
 			}
+
+			inputs = [];
+
+			switch (localStorage.getItem("history")) {
+
+				case null:
+
+				break;
+
+				default:
+
+					inputs.unshift(localStorage.getItem("history"));
+
+				break;
+			}
+
+			inputs.unshift(voiceText);
+			
+			localStorage.setItem('history', inputs);
 
 		break;
 	}

@@ -1,17 +1,43 @@
-if ("Notification" in window) { /* 
+homeImg = document.getElementById("home_img");
 
-    document.addEventListener('click', e => {
+bckgrndInpt = document.getElementById("bckgrnd_sttng");
+
+bckgrndInpt.addEventListener("blur", changeBackground);
+
+switch (localStorage.getItem("bckgrnd")) {
+
+    case null:
+
+        document.getElementById("img_mask").classList.add("img_mask");
+
+        document.getElementById("home__bckgrnd").classList.add("home__bckgrnd");
+
+    break;
+
+    default:
+
+        bckgrndInpt.value = localStorage.getItem("bckgrnd");
+
+        changeBackground();
+
+    break;
+}
+
+function changeBackground() {
+
+    imgUrl = bckgrndInpt.value;
+
+    let newElement = document.createElement("img");
     
-        Notification.requestPermission().then(permission => {
+    newElement.setAttribute("src", imgUrl);
 
-            if (permission === "granted") {
+    homeImg.appendChild(newElement);
 
-                console.log("The user accepted");
+    document.getElementById("img_mask").classList.remove("img_mask");
 
-                const notification = new Notification("¡Gracias por aceptar las notificaciones!");
-            }
-        });
-    }); */
+    document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
+
+    localStorage.setItem("bckgrnd", imgUrl);
 }
 
 navBtn = document.getElementById('nav_btn');
@@ -253,33 +279,22 @@ function hideMenus() {
     profileNavMenu.classList.remove("block");
 }
 
-class domElement {
+function element(etiqueta, atributo, valor, texto) {
 
-    constructor (etiqueta, atributo, valor, texto) {
+    let newElement = document.createElement(etiqueta);
+    
+    if (atributo != "") {
+        
+        newElement.setAttribute(atributo, valor);}
 
-        this.etiqueta = etiqueta;
-        this.atributo = atributo;
-        this.texto = texto;
-        this.valor = valor;
+    if (etiqueta == "div") {
+
+        newElement.setAttribute("class", "nav__submenu-element-section");
     }
 
-    crear() {
-
-        let newElement = document.createElement(this.etiqueta);
-        
-        if (this.atributo != "") {
-            
-            newElement.setAttribute(this.atributo, this.valor);}
-
-        if (this.etiqueta == "div") {
-
-            newElement.setAttribute("class", "nav__submenu-element-section");
-        }
-
-        navMenu.appendChild(newElement);
-        
-        newElement.innerText = this.texto;
-    }
+    navMenu.appendChild(newElement);
+    
+    newElement.innerText = texto;
 }
 
 function enlace(address, text, keyWords, zone) {
@@ -325,10 +340,7 @@ function enlace(address, text, keyWords, zone) {
     div.appendChild(p);
     
     p.innerText = text;
-} /* 
-
-const extraExtraLinks = new domElement("div", "", "", "");
-extraExtraLinks.crear(); */
+}
 
 //    Extra links    //
 
