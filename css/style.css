@@ -77,7 +77,7 @@ html {
     object-fit: cover;
 }
 
-.img_mask {
+#img_mask {
 	position: fixed;
 	z-index: 3;
     top: 0;
@@ -85,6 +85,9 @@ html {
     min-width: 100%;
     min-height: 100%;
     max-height: 100vh;
+}
+
+.img_mask {
 	background: linear-gradient(45deg, #000 20%, transparent 20%, transparent 80%, #000 80%), linear-gradient(135deg, #000 30%, #7070 30%, #7070 70%, #7070 70%, #000 70%), linear-gradient(45deg, #000 20%, #7070 20%, #7070 80%, #000 80%);
 	background-size: 6em 6em;
 }
