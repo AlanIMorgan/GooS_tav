@@ -264,7 +264,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 					openTab(1, voiceText);
 
 				break;
-			}
+			} /* 
 
 			inputs = [];
 
@@ -283,7 +283,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 			inputs.unshift(voiceText);
 			
-			localStorage.setItem('history', inputs);
+			localStorage.setItem('history', inputs); */
 
 		break;
 	}
