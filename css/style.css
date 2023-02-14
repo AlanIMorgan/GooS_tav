@@ -261,13 +261,13 @@ a {
 
 	.nav__ul ul {
 
-		width: 150px;
+		width: 65vw;
 		font-size: 12px;
 	}
 
 	.nav__submenu-element p {
 
-		font-size: 12px;
+		font-size: 13px;
 	}
 }
 

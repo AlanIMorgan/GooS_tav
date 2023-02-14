@@ -40,6 +40,38 @@ function changeBackground() {
     localStorage.setItem("bckgrnd", imgUrl);
 }
 
+nickName = document.getElementById("nick_sttng");
+
+searchInpt = document.getElementById("google-search");
+
+nickName.addEventListener("blur", changeNick);
+
+switch (localStorage.getItem("user")) {
+
+    case null:
+
+        searchInpt.placeholder = "¡Hola, extraño!";
+
+    break;
+
+    default:
+
+        nickName.value = localStorage.getItem("user");
+
+        changeNick();
+
+    break;
+}
+
+function changeNick() {
+
+    nick = nickName.value;
+
+    searchInpt.placeholder = "¡Hola, " + nick + "!";
+
+    localStorage.setItem("user", nick);
+}
+
 navBtn = document.getElementById('nav_btn');
 navListBtn = document.getElementById('nav_btn-list');
 profileNavBtn = document.getElementById('nav_profile_btn');
