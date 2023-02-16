@@ -209,6 +209,19 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 							switch (voiceText.toLowerCase()) {
 
+								case '/calc':
+
+									switch (document.querySelector(".calc")) {
+
+										case null:
+
+											createLink("calculator/index.html", "Calculadora", "/calc");
+
+										break;
+									}
+
+								break;
+
 								case '/nsfw':
 
 									switch (document.querySelector(".nsfw")) {

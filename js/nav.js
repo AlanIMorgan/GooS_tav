@@ -6,11 +6,11 @@ bckgrndInpt.addEventListener("blur", changeBackground);
 
 switch (localStorage.getItem("bckgrnd")) {
 
+    case " ":
+    case "":
     case null:
 
-        document.getElementById("img_mask").classList.add("img_mask");
-
-        document.getElementById("home__bckgrnd").classList.add("home__bckgrnd");
+        resetBackground();
 
     break;
 
@@ -27,17 +27,34 @@ function changeBackground() {
 
     imgUrl = bckgrndInpt.value;
 
-    let newElement = document.createElement("img");
+    if (imgUrl.length > 1) {
     
-    newElement.setAttribute("src", imgUrl);
+        let newElement = document.createElement("img");
+        
+        newElement.setAttribute("src", imgUrl);
+    
+        homeImg.appendChild(newElement);
+    
+        document.getElementById("img_mask").classList.remove("img_mask");
+    
+        document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
+    
+        localStorage.setItem("bckgrnd", imgUrl);
+    }
 
-    homeImg.appendChild(newElement);
+    else {
 
-    document.getElementById("img_mask").classList.remove("img_mask");
+        localStorage.setItem("bckgrnd", imgUrl);
 
-    document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
+        resetBackground();
+    }
+}
 
-    localStorage.setItem("bckgrnd", imgUrl);
+function resetBackground() {
+
+    document.getElementById("img_mask").classList.add("img_mask");
+
+    document.getElementById("home__bckgrnd").classList.add("home__bckgrnd");
 }
 
 nickName = document.getElementById("nick_sttng");
@@ -48,6 +65,8 @@ nickName.addEventListener("blur", changeNick);
 
 switch (localStorage.getItem("user")) {
 
+    case " ":
+    case "":
     case null:
 
         searchInpt.placeholder = "¡Hola, extraño!";
@@ -67,9 +86,24 @@ function changeNick() {
 
     nick = nickName.value;
 
-    searchInpt.placeholder = "¡Hola, " + nick + "!";
+    if (nick.length > 1) {
+    
+        searchInpt.placeholder = "¡Hola, " + nick + "!";
+    
+        localStorage.setItem("user", nick);
+    }
+    
+    else {
 
-    localStorage.setItem("user", nick);
+        resetNick();
+
+        localStorage.setItem("user", nick);
+    }
+}
+
+function resetNick() {
+
+    searchInpt.placeholder = "¡Hola, extraño!";
 }
 
 navBtn = document.getElementById('nav_btn');
