@@ -232,8 +232,8 @@ a {
 
 .nav__submenu-element-section {
 	display: flex;
-	text-align: center;
 	justify-content: space-between;
+	text-align: center;
 }
 
 .nav__submenu-element img {

@@ -1,3 +1,5 @@
+// Background
+
 homeImg = document.getElementById("home_img");
 
 bckgrndInpt = document.getElementById("bckgrnd_sttng");
@@ -57,6 +59,8 @@ function resetBackground() {
     document.getElementById("home__bckgrnd").classList.add("home__bckgrnd");
 }
 
+// Nickname
+
 nickName = document.getElementById("nick_sttng");
 
 searchInpt = document.getElementById("google-search");
@@ -106,14 +110,12 @@ function resetNick() {
     searchInpt.placeholder = "¡Hola, extraño!";
 }
 
+// Menus
+
 navBtn = document.getElementById('nav_btn');
 navListBtn = document.getElementById('nav_btn-list');
 profileNavBtn = document.getElementById('nav_profile_btn');
 navMenu = document.querySelector(".nav__li-submenu-ul");
-linksGroup =  document.getElementsByClassName("nav__submenu-element-section");
-extraLinks = linksGroup[0];
-googleLinks = linksGroup[1];
-userLinks = linksGroup[2];
 resultsBoxC = document.querySelector(".results_box_container");
 results = document.querySelector(".results_box");
 profileNavMenu = document.querySelector(".nav__submenu-profile");
@@ -345,6 +347,8 @@ function hideMenus() {
     profileNavMenu.classList.remove("block");
 }
 
+// Shortcuts menu
+
 function element(etiqueta, atributo, valor, texto) {
 
     let newElement = document.createElement(etiqueta);
@@ -359,9 +363,49 @@ function element(etiqueta, atributo, valor, texto) {
     }
 
     navMenu.appendChild(newElement);
-    
-    newElement.innerText = texto;
+
+    if (etiqueta !== "a") {
+
+        newElement.innerText = texto;
+    }
+
+    else {
+
+        let newAnchor = document.createElement("div");
+
+        newAnchor.setAttribute("class", "nav__submenu-element");
+
+        newElement.appendChild(newAnchor);
+
+        let newAnchorName = document.createElement("p");
+
+        newAnchorName.setAttribute("title", texto);
+
+        newAnchor.appendChild(newAnchorName);
+        
+        newAnchorName.innerText = texto;
+    }
 }
+
+element("a", "href", "calculator/index.html", "Calculadora");
+
+element("div", "class", "nav__submenu-element-section", "");
+
+element("a", "href", "matrix/index.html", "Salvapantallas");
+
+element("hr", "class", "nav__submenu-element-section-separator", "");
+
+element("div", "class", "nav__submenu-element-section", "");
+
+element("hr", "class", "nav__submenu-element-section-separator", "");
+
+element("div", "class", "nav__submenu-element-section", "");
+
+linksGroup =  document.getElementsByClassName("nav__submenu-element-section");
+
+extraLinks = linksGroup[0];
+googleLinks = linksGroup[1];
+userLinks = linksGroup[2];
 
 function enlace(address, text, keyWords, zone) {
 
@@ -683,3 +727,5 @@ enlace("https://yandex.ru/images", "Yandex Images (ruso)", "buscar búsqueda bus
 enlace("https://z-lib.org/", "ZLibrary", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
 
 enlace("https://ya.ru/", "Яндекс (Yandex ruso)", "buscar search búsqueda", userLinks);
+
+element("button", "class", "mas-de-google", "Añadir");

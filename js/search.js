@@ -209,19 +209,6 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 							switch (voiceText.toLowerCase()) {
 
-								case '/calc':
-
-									switch (document.querySelector(".calc")) {
-
-										case null:
-
-											createLink("calculator/index.html", "Calculadora", "/calc");
-
-										break;
-									}
-
-								break;
-
 								case '/nsfw':
 
 									switch (document.querySelector(".nsfw")) {
@@ -233,19 +220,6 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 										break;
 									}
 
-								break;
-								
-								case '/mtrx':
-
-									switch (document.querySelector(".matrix")) {
-
-										case null:
-
-											createLink("matrix/index.html", "Matrix", "/mtrx");
-
-										break;
-									}
-									
 								break; /* 
 
 								case '/krk':
