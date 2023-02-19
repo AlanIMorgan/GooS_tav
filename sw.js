@@ -24,27 +24,22 @@ this.addEventListener("install", (event) => {
 });
 
 // Upgrade cache
-/*
-self.addEventListener("activate", (event) => {
+
+self.addEventListener('activate', (event) => {
+
+    const cacheAllowlist = ['cache-v2'];
 
     event.waitUntil(
-        
-        (async () => {
-    
-            // Permite la navegación precargada si tiene compatibilidad
-            // Mira https://developers.google.com/web/updates/2017/02/navigation-preload
-            
-            if ("navigationPreload" in self.registration) {
-                
-                    await self.registration.navigationPreload.enable();
-            }
-        })()
-    );
-    
-    // Le dice al service worker activo que tome el control inmediato de la página.
-    
-    self.clients.claim();
-}); */
+ 
+        caches.forEach((cache, cacheName) => {
+ 
+            if (!cacheAllowlist.includes(cacheName)) {
+ 
+                return caches.delete(cacheName); 
+            } 
+        }) 
+    ); 
+});
 
 self.addEventListener("fetch", (event) => {
 
