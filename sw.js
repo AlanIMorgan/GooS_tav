@@ -25,7 +25,7 @@ this.addEventListener("install", (event) => {
 
 // Upgrade cache
 
-globalScope.addEventListener('activate', (event) => {
+self.addEventListener('activate', (event) => {
 
     const cacheAllowlist = ['cache-v2'];
 
@@ -51,7 +51,7 @@ self.addEventListener("fetch", (event) => {
 
         (async () => { // Try to get the response from a cache.
 
-            const cache = await caches.open("dynamic-v1");
+            const cache = await caches.open("cache-v1");
 
             const cachedResponse = await cache.match(event.request);
 
