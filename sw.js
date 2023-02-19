@@ -24,7 +24,7 @@ this.addEventListener("install", (event) => {
 });
 
 // Upgrade cache
-
+/*
 self.addEventListener("activate", (event) => {
 
     event.waitUntil(
@@ -44,7 +44,7 @@ self.addEventListener("activate", (event) => {
     // Le dice al service worker activo que tome el control inmediato de la página.
     
     self.clients.claim();
-});
+}); */
 
 self.addEventListener("fetch", (event) => {
 
