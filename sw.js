@@ -27,7 +27,7 @@ this.addEventListener("install", (event) => {
 
 self.addEventListener('activate', (event) => {
 
-    const cacheAllowlist = ['cache-v2'];
+    const cacheAllowlist = ['cache-v1'];
 
     event.waitUntil(
  
@@ -51,7 +51,7 @@ self.addEventListener("fetch", (event) => {
 
         (async () => { // Try to get the response from a cache.
 
-            const cache = await caches.open("cache-v1");
+            const cache = await caches.open(cacheName);
 
             const cachedResponse = await cache.match(event.request);
 
