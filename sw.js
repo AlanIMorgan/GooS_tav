@@ -25,19 +25,20 @@ this.addEventListener("install", (event) => {
 
 // Upgrade cache
 
-self.addEventListener('activate', (event) => {
-
-    const cacheAllowlist = ['cache-v2'];
+self.addEventListener("activate", (event) => {
 
     event.waitUntil(
-
-        caches.forEach((cache, cacheName) => {
-
-            if (!cacheAllowlist.includes(cacheName)) {
-
-                return caches.delete(cacheName);
+        
+        (async () => {
+    
+            // Permite la navegación precargada si tiene compatibilidad
+            // Mira https://developers.google.com/web/updates/2017/02/navigation-preload
+            
+            if ("navigationPreload" in self.registration) {
+                
+                    await self.registration.navigationPreload.enable();
             }
-        })
+        })()
     );
 }); 
 
