@@ -542,6 +542,8 @@ enlace("https://chat.openai.com/", "ChatGpt", "inteligencia artificial intellige
 
 enlace("https://sur.ly/o/cinefiliamalversa.blogspot.com.ar/AA000014?pageviewId=desktop-302e36363034343030302031363638383031373733203438303533313335", "Cinéfila Malversa", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
 
+enlace("https://www.deepl.com/es/translator", "Deepl", "translate languages traducir idiomas", googleLinks);
+
 enlace("https://www.deviantart.com", "DeviantArt", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", userLinks);
 
 enlace("https://dialnet.unirioja.es/", "Dialnet", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
@@ -563,6 +565,8 @@ enlace("https://gatonplayseries.com/", "GatonPlaySeries", "ver películas pelicu
 enlace("https://github.com/AlanIMorgan/GooS_tav", "GitHub", "code código codigo deveopers programación programacion", userLinks);
 
 enlace("https://gnula2.org/", "Gnula2", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
+
+enlace("https://gnula.nu/", "Gnula", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
 
 enlace("https://www.guitars101.com/", "Guitars 101", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", userLinks);
 
@@ -673,6 +677,8 @@ enlace("https://www.scopus.com/", "Scopus", "buscar búsqueda search academic sc
 enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA generator", "academic school scholar escuela documentos documents docs pdfs tareas ensayos académicos academicos", userLinks);
 
 enlace("https://seriespapaya.club/", "Series Papaya", "ver películas peliculas series completas gratis watch full free download movies descargar cinema piracy piratería pirateria", userLinks);
+
+enlace("https://snapinsta.io/", "SnapInsta", "youtube downloader escuchar listen descargar música musica gratis full free piracy piratería pirateria", userLinks);
 
 enlace("https://open.spotify.com/", "Spotify", "escuchar listen música musica", userLinks);
 
