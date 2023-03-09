@@ -454,9 +454,7 @@ function enlace(address, text, keyWords, zone) {
 
 //    Extra links    //
 
-/* 
-
-enlace("chess/index.html", "Chess", extraLinks);
+enlace("chess/index.html", "Ajedrez", "play chess games jugar juegos",extraLinks); /* 
 
 enlace("conway/index.html", "Conway's game of life", extraLinks); */
 
