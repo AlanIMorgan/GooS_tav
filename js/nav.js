@@ -387,6 +387,8 @@ function element(etiqueta, atributo, valor, texto) {
     }
 }
 
+element("a", "href", "chess/index.html", "Ajedrez");
+
 element("a", "href", "calculator/index.html", "Calculadora");
 
 element("div", "class", "nav__submenu-element-section", "");
@@ -454,9 +456,7 @@ function enlace(address, text, keyWords, zone) {
 
 //    Extra links    //
 
-enlace("chess/index.html", "Ajedrez", "play chess games jugar juegos",extraLinks); /* 
-
-enlace("conway/index.html", "Conway's game of life", extraLinks); */
+// enlace("conway/index.html", "Conway's game of life", extraLinks);
 
 enlace("https://goostav.vercel.app/", "GooS_tav", "buscar search búsqueda vercel", extraLinks);
 
