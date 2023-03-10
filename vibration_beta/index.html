@@ -14,6 +14,14 @@
 
         <style>
 
+            #record,
+            #play,
+            #stop {
+
+                padding: 10px;
+                border: 2px solid #fff;
+            }
+
             .material-icons {
                 font-family: Material Icons;
                 font-weight: 400;
@@ -3723,7 +3731,7 @@
     
             <h2>Vibration</h2>
             
-            <p class="no-support">This feature is not (yet) supported on your device</p>
+            <p id="no-support" class="no-support">This feature is not (yet) supported on your device</p>
             
             <p>
 
@@ -3738,20 +3746,11 @@
             
             <div id="buttons">
 
-                <material-button id="record" label="Record" raised="" disabled="">
+                <a href="#" id="record" raised="" disabled=""> Record </a>
 
-                    <i class="material-icons" slot="left-icon">fiber_manual_record</i>
-                </material-button>
-                
-                <material-button id="play" label="Play" raised="" disabled="">
+                <a href="#" id="play" raised="" disabled=""> Play </a>
 
-                    <i class="material-icons" slot="left-icon">play_arrow</i>
-                </material-button>
-                
-                <material-button id="stop" label="Stop" raised="" disabled="">
-                    
-                    <i class="material-icons" slot="left-icon">stop</i>
-                </material-button>
+                <a href="#" id="stop" raised="" disabled=""> Stop </a>
 
                 <br>
             </div>
@@ -3764,6 +3763,13 @@
         </div>
 
         <script>
+
+            if (window.navigator.vibrate) {
+
+                document.getElementById("no-support").style.display = "none";
+
+                document.getElementById("record").disabled = false;
+            }
 
             const maker = document.querySelector('#pattern-maker');
             const visualizer = document.querySelector('#pattern-visualizer');
@@ -3857,6 +3863,7 @@
                 }
 
                 else {
+
                     pattern.push(currentTime - patternTime);
 
                     startTime = 0;
