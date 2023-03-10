@@ -44,12 +44,17 @@
 
             document.getElementById("play").addEventListener("click", ()=>{
 
-                window.navigator.vibrate([1000, 250, 1000]);
+                vibeLoop = setInterval(()=>{
+
+                    window.navigator.vibrate([500, 100, 500, 100]);
+                }, 10);
             });
 
             document.getElementById("stop").addEventListener("click", ()=>{
 
-                window.navigator.vibrate(0);
+                clearInterval(vibeLoop);
+
+                //window.navigator.vibrate(0);
             });
         </script>
     </body>
