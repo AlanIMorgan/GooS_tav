@@ -6,7 +6,8 @@ urlsToCache = [
     './js/nav.js',
     './js/search.js',
     './matrix/index.html',
-    './calculator/index.html'
+    './calculator/index.html',
+    './chess/index.html'
 ]
 
 // Use the install event to pre-cache all initial resources.
