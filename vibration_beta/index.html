@@ -47,14 +47,14 @@
                 vibeLoop = setInterval(()=>{
 
                     window.navigator.vibrate([500, 100, 500, 100]);
-                }, 10);
+                }, 1200);
             });
 
             document.getElementById("stop").addEventListener("click", ()=>{
 
                 clearInterval(vibeLoop);
 
-                //window.navigator.vibrate(0);
+                window.navigator.vibrate(0);
             });
         </script>
     </body>
