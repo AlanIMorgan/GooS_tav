@@ -674,7 +674,7 @@ enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA 
 
 enlace("https://seriespapaya.club/", "Series Papaya", "ver películas peliculas series completas gratis watch full free download movies descargar cinema piracy piratería pirateria", userLinks);
 
-enlace("https://snapinsta.io/", "SnapInsta", "youtube downloader escuchar listen descargar música musica gratis full free piracy piratería pirateria", userLinks);
+enlace("https://snapinsta.io/", "SnapInsta", "youtube downloader escuchar listen descargar música musica videos vídeos gratis full free piracy piratería pirateria", userLinks);
 
 enlace("https://open.spotify.com/", "Spotify", "escuchar listen música musica", userLinks);
 
