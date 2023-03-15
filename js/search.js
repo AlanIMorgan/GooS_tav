@@ -166,27 +166,36 @@ function redirect(array) {
 
 function createLink(path, tag, keyWords) {
 
-	let site = document.createElement("a");
+	switch (document.getElementById(keyWords)) {
 
-	site.setAttribute("href", path);
+		case null:
 
-	site.setAttribute("class", "result actual");
+			let site = document.createElement("a");
+		
+			site.setAttribute("href", path);
+		
+			site.setAttribute("id", keyWords);
+		
+			site.setAttribute("class", "result actual");
+		
+			results.appendChild(site);
+			
+			site.innerText = tag;
+		
+			let words = document.createElement("span");
+		
+			words.setAttribute("class", "key_words");
+		
+			site.appendChild(words);
+			
+			words.innerText = keyWords;
+			
+			resultsBoxC.classList.remove("hidden");
+		
+			links = document.querySelectorAll('.result');
 
-	results.appendChild(site);
-	
-	site.innerText = tag;
-
-    let words = document.createElement("span");
-
-    words.setAttribute("class", "key_words");
-
-    site.appendChild(words);
-    
-    words.innerText = keyWords;
-	
-	resultsBoxC.classList.remove("hidden");
-
-	links = document.querySelectorAll('.result');
+		break;
+	}
 }
 
 document.querySelector(".home__form").addEventListener("submit", (e)=>{
