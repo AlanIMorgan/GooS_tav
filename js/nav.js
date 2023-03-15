@@ -540,7 +540,7 @@ enlace("https://chat.openai.com/", "ChatGpt", "inteligencia artificial intellige
 
 enlace("https://sur.ly/o/cinefiliamalversa.blogspot.com.ar/AA000014?pageviewId=desktop-302e36363034343030302031363638383031373733203438303533313335", "Cinéfila Malversa", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
 
-enlace("https://www.deepl.com/es/translator", "Deepl", "translate languages traducir idiomas", googleLinks);
+enlace("https://www.deepl.com/es/translator", "Deepl", "translate languages traducir idiomas", userLinks);
 
 enlace("https://www.deviantart.com", "DeviantArt", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", userLinks);
 
