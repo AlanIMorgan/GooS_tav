@@ -294,6 +294,23 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 				case null:
 
+					inputs.push(voiceText);
+					
+								switch (inputs.length < 6) {
+					
+									case false:
+					
+										inputs.shift();
+					
+									break;
+					
+									default:
+					
+									break;
+								}
+								
+								localStorage.setItem('history', inputs);
+
 				break;
 
 				default:
