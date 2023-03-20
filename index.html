@@ -416,13 +416,13 @@
 
 										directAccessRow.appendChild(shortcut);
 
-										let iFrame = document.createElement("iframe");
+										let icon = document.createElement("img");
 
-										iFrame.setAttribute("src", "get-icon.html?url=google");
+										icon.setAttribute("src", "https://www.google.com/favicon.ico");
 
-										iFrame.setAttribute("class", "direct-access__img");
+										icon.setAttribute("class", "direct-access__img");
 
-										shortcut.appendChild(iFrame);
+										shortcut.appendChild(icon);
 
 										let info = document.createElement("div");
 
@@ -442,16 +442,7 @@
 
 						break;
 					}
-				</script> <!-- 
-				
-				<a href="" class="direct-access" title="Acceso directo">
-
-					<iframe src="get-icon.html?url=google" class="direct-access__img"></iframe>
-
-					<div class="direct-access__info"> Acceso dir. </div>
-
-					<div class="direct-access__options"></div>
-				</a> -->
+				</script>
 			</div>
 		</div>
 		
