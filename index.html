@@ -324,6 +324,15 @@
 
 							<input type="text" id="bckgrnd_sttng" placeholder="URL de la imagen" style="width: 50%;">
 						</div>
+
+						<br>
+
+						<div class="history_sttng" style="text-align: start;">
+
+							<label for="history_sttng"> Historial: </label>
+
+							<input type="checkbox" id="history_sttng" checked="true">
+						</div>
 					</ul>
 				</ul>
 			</nav>
@@ -364,6 +373,85 @@
 
 					<div class="results_box"></div>
 				</div>
+			</div>
+		</div>
+
+		<div class="home__direct-access">
+
+			<div class="home__direct-access-row">
+
+				<script>
+
+					directAccessRow = document.querySelector(".home__direct-access-row");
+
+					switch (localStorage.getItem("history")) {
+
+						case null:
+
+						break;
+
+						default:
+
+							userHistory = localStorage.getItem("history");
+
+							inputs = userHistory.split(',');
+
+							switch (userHistory == "noHistory") {
+
+								case false:
+
+									for (let i = 0; i < inputs.length; i++) {
+
+										const element = inputs[i];
+
+										let shortcut = document.createElement("a");
+
+										shortcut.setAttribute("href", "https://www.google.com/search?q=" + element);
+
+										shortcut.setAttribute("title", "Acceso directo");
+
+										shortcut.setAttribute("class", "direct-access");
+
+										shortcut.setAttribute("target", "_blank");
+
+										directAccessRow.appendChild(shortcut);
+
+										let iFrame = document.createElement("iframe");
+
+										iFrame.setAttribute("src", "get-icon.html?url=google");
+
+										iFrame.setAttribute("class", "direct-access__img");
+
+										shortcut.appendChild(iFrame);
+
+										let info = document.createElement("div");
+
+										info.setAttribute("class", "direct-access__info");
+
+										shortcut.appendChild(info);
+
+										info.innerText = element;
+									}
+
+								break;
+
+								default:
+
+								break;
+							}
+
+						break;
+					}
+				</script> <!-- 
+				
+				<a href="" class="direct-access" title="Acceso directo">
+
+					<iframe src="get-icon.html?url=google" class="direct-access__img"></iframe>
+
+					<div class="direct-access__info"> Acceso dir. </div>
+
+					<div class="direct-access__options"></div>
+				</a> -->
 			</div>
 		</div>
 		

@@ -53,9 +53,35 @@ function liveSearch() {
 	
 				links[i].classList.remove("actual");
 
+				switch (document.querySelector(".home__direct-access-row")) {
+
+					case null:
+
+					break;
+
+					default:
+
+						document.querySelector(".home__direct-access-row").style.display = "block";
+
+					break;
+				}
+
 			break;
 
 			default:
+
+				switch (document.querySelector(".home__direct-access-row")) {
+
+					case null:
+
+					break;
+
+					default:
+
+						document.querySelector(".home__direct-access-row").style.display = "none";
+
+					break;
+				}
 
 				switch (links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
 
@@ -260,7 +286,7 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 					openTab(1, voiceText);
 
 				break;
-			} /* 
+			}
 
 			inputs = [];
 
@@ -272,14 +298,40 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 				default:
 
-					inputs.unshift(localStorage.getItem("history"));
+					userHistory = localStorage.getItem("history");
+		
+					inputs = userHistory.split(',');
 
 				break;
 			}
 
-			inputs.unshift(voiceText);
-			
-			localStorage.setItem('history', inputs); */
+			switch (userHistory == "noHistory") {
+
+				case false:
+
+					inputs.push(voiceText);
+		
+					switch (inputs.length < 6) {
+		
+						case false:
+		
+							inputs.shift();
+		
+						break;
+		
+						default:
+		
+						break;
+					}
+					
+					localStorage.setItem('history', inputs);
+
+				break;
+
+				default:
+
+				break;
+			}
 
 		break;
 	}

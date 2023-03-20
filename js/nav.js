@@ -337,6 +337,37 @@ for (let i = 0; i < 6; i++) { // creates a table row
 
 showCalendar(currentMonth, currentYear);
 
+// Show/hide history
+
+historySttng = document.getElementById("history_sttng");
+
+historySttng.addEventListener("click", showHideHistory);
+
+function showHideHistory() {
+
+    setTimeout(()=>{
+
+        switch (historySttng.checked) {
+
+            case false:
+
+                localStorage.setItem("history", "noHistory");
+
+                location.reload();
+
+            break;
+
+            default:
+
+                localStorage.removeItem("history");
+
+                location.reload();
+
+            break;
+        }
+    }, 500);
+}
+
 function hideMenus() {
 
     navMenu.classList.add("hide");
