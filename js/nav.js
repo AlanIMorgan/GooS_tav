@@ -341,6 +341,30 @@ showCalendar(currentMonth, currentYear);
 
 historySttng = document.getElementById("history_sttng");
 
+switch (localStorage.getItem("history")) {
+
+    case null:
+
+    break;
+
+    default:
+
+        switch (localStorage.getItem("history") == "noHistory") {
+            
+            case false:
+
+            break;
+            
+            default:
+
+                historySttng.checked = false;
+
+            break;
+        }
+
+    break;
+}
+
 historySttng.addEventListener("click", showHideHistory);
 
 function showHideHistory() {

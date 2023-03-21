@@ -258,6 +258,14 @@ a {
     text-overflow: ellipsis;
 }
 
+@media (max-width: 700px) {
+	
+	.direct-access {
+
+		width: 15vw !important;
+	}
+}
+
 @media (max-width: 400px) {
 
 	.nav__ul ul {
@@ -269,6 +277,11 @@ a {
 	.nav__submenu-element p {
 
 		font-size: 13px;
+	}
+	
+	.direct-access {
+
+		width: 20vw !important;
 	}
 }
 
@@ -727,10 +740,10 @@ td,
 .direct-access {
 	display: inline-flex;
 	flex-direction: column;
-	width: 112px;
-	height: 124px;
+	width: 9vw; /* 
+	height: 124px; */
 	margin: 0;
-	margin: 0 -2px;
+	margin: 0 10px;
 	border-radius: 4px;
 	justify-content: center;
 	text-align: center;
@@ -746,11 +759,11 @@ td,
 	align-items: center;
 	background-color: rgb(244, 244, 244);
 	border-radius: 50%;
-	display: flex;
-	height: 48px;
+	display: flex; /* 
+	height: 48px; */
 	justify-content: center;
 	margin-bottom: rgba(241, 243, 244, 1);
-	width: 48px;
+	width: 37%;
 	margin: auto;
 	border: none;
 }
@@ -766,6 +779,8 @@ td,
 	width: 100%;
 	border-radius: 25px;
 	margin-bottom: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /*-------------VOICE-SEARCH-------------*/

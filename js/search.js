@@ -70,18 +70,7 @@ function liveSearch() {
 
 			default:
 
-				switch (document.querySelector(".home__direct-access-row")) {
-
-					case null:
-
-					break;
-
-					default:
-
-						document.querySelector(".home__direct-access-row").style.display = "none";
-
-					break;
-				}
+				document.querySelector(".home__direct-access-row").style.display = "none";
 
 				switch (links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
 
@@ -149,11 +138,60 @@ function openTab(google, array) {
 		default:
 
 			query = "https://www.google.com/search?q=";
+
+			inputs = [];
+
+			switch (localStorage.getItem("history")) {
+
+				case null:
+					
+					localStorage.setItem('history', array);
+
+				break;
+
+				default:
+
+					userHistory = localStorage.getItem("history");
+		
+					inputs = userHistory.split(',');
+
+					switch (userHistory == "noHistory") {
+
+						case false:
+
+							inputs.push(array);
+				
+							switch (inputs.length < 6) {
+				
+								case false:
+				
+									inputs.shift();
+				
+								break;
+				
+								default:
+				
+								break;
+							}
+							
+							localStorage.setItem('history', inputs);
+
+						break;
+
+						default:
+
+						break;
+					}
+
+				break;
+			}
 			
 		break;
 	}
 
 	searchInput.value = "";
+
+	document.querySelector(".home__direct-access-row").style.display = "block";
 
 	setTimeout(() => {
 
@@ -284,53 +322,6 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 				default:
 
 					openTab(1, voiceText);
-
-				break;
-			}
-
-			inputs = [];
-
-			switch (localStorage.getItem("history")) {
-
-				case null:
-					
-					localStorage.setItem('history', voiceText);
-
-				break;
-
-				default:
-
-					userHistory = localStorage.getItem("history");
-		
-					inputs = userHistory.split(',');
-
-					switch (userHistory == "noHistory") {
-
-						case false:
-
-							inputs.push(voiceText);
-				
-							switch (inputs.length < 6) {
-				
-								case false:
-				
-									inputs.shift();
-				
-								break;
-				
-								default:
-				
-								break;
-							}
-							
-							localStorage.setItem('history', inputs);
-
-						break;
-
-						default:
-
-						break;
-					}
 
 				break;
 			}
