@@ -753,6 +753,8 @@ enlace("https://tinypng.com/", "TinyPNG", "comprimir compressor imágenes imagen
 
 enlace("https://www.tumblr.com/", "Tumblr", "redes sociales network", userLinks);
 
+enlace("https://www.tvconexion.com/", "TV Conexion HD", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", userLinks);
+
 enlace("https://mobile.twitter.com/", "Twitter", "redes sociales network", userLinks);
 
 enlace("https://www.urbandictionary.com/", "Urban Dictionary", "buscar search búqueda busqueda diccionario qué significa que significa", userLinks);
