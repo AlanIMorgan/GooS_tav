@@ -122,9 +122,19 @@ profileNavMenu = document.querySelector(".nav__submenu-profile");
 home = document.querySelector(".home");
 
 navBtn.addEventListener("click", showHideNav);
-navListBtn.addEventListener("click", showHideListNav);
-profileNavBtn.addEventListener("click", showHideProfileNav);
-home.addEventListener("click", hideMenus);
+navListBtn.addEventListener("click", ()=>{
+
+    navMenu.classList.toggle("nav__li-submenu-ul_list");
+});
+profileNavBtn.addEventListener("click", ()=>{
+
+    profileNavMenu.classList.toggle("block");
+});
+home.addEventListener("click", ()=>{
+
+    navMenu.classList.remove("nav__li-submenu-ul_list");
+    profileNavMenu.classList.remove("block");
+});
 
 function showHideNav() {
 
@@ -132,27 +142,7 @@ function showHideNav() {
     navMenu.classList.remove("hide");
     navMenu.classList.remove("nav__li-submenu-ul_list");
 
-    profileNavMenu.classList.add("hide");
-    profileNavMenu.classList.remove("block");
-}
-
-function showHideListNav() {
-
-    navMenu.classList.toggle("nav__li-submenu-ul_list");
-    navMenu.classList.remove("block");
-
-    profileNavMenu.classList.add("hide");
-    profileNavMenu.classList.remove("block");
-}
-
-function showHideProfileNav() {
-
-    profileNavMenu.classList.toggle("block");
-    profileNavMenu.classList.remove("hide");
-
-    navMenu.classList.add("hide");
-    navMenu.classList.remove("block");
-    navMenu.classList.remove("nav__li-submenu-ul_list");
+    profileNavMenu.classList.replace("block", "hide");
 }
 
 today = new Date();
@@ -390,16 +380,6 @@ function showHideHistory() {
             break;
         }
     }, 500);
-}
-
-function hideMenus() {
-
-    navMenu.classList.add("hide");
-    profileNavMenu.classList.add("hide");
-    
-    navMenu.classList.remove("block");
-    navMenu.classList.remove("nav__li-submenu-ul_list");
-    profileNavMenu.classList.remove("block");
 }
 
 // Shortcuts menu
