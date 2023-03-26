@@ -395,76 +395,11 @@
 
 		<div class="home__direct-access">
 
-			<div class="home__direct-access-row">
-
-				<script>
-
-					directAccessRow = document.querySelector(".home__direct-access-row");
-
-					switch (localStorage.getItem("history")) {
-
-						case null:
-
-						break;
-
-						default:
-
-							userHistory = localStorage.getItem("history");
-
-							inputs = userHistory.split(',');
-
-							switch (userHistory == "noHistory") {
-
-								case false:
-
-									for (let i = 0; i < inputs.length; i++) {
-
-										const element = inputs[i];
-
-										let shortcut = document.createElement("a");
-
-										shortcut.setAttribute("href", "https://www.google.com/search?q=" + element);
-
-										shortcut.setAttribute("title", "Acceso directo");
-
-										shortcut.setAttribute("class", "direct-access");
-
-										shortcut.setAttribute("target", "_blank");
-
-										directAccessRow.appendChild(shortcut);
-
-										let icon = document.createElement("img");
-
-										icon.setAttribute("src", "https://www.google.com/favicon.ico");
-
-										icon.setAttribute("class", "direct-access__img");
-
-										shortcut.appendChild(icon);
-
-										let info = document.createElement("div");
-
-										info.setAttribute("class", "direct-access__info");
-
-										shortcut.appendChild(info);
-
-										info.innerText = element;
-									}
-
-								break;
-
-								default:
-
-								break;
-							}
-
-						break;
-					}
-				</script>
-			</div>
+			<div class="home__direct-access-row"></div>
 		</div>
 		
 		<script src="js/nav.js?v99"></script>
-		<script src="js/search.js?v53"></script> <!-- 
+		<script src="js/search.js?v54"></script> <!-- 
 		<script src="js/voice-search.js?v2"></script> -->
 
 		<script>

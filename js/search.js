@@ -53,24 +53,15 @@ function liveSearch() {
 	
 				links[i].classList.remove("actual");
 
-				switch (document.querySelector(".home__direct-access-row")) {
-
-					case null:
-
-					break;
-
-					default:
-
-						document.querySelector(".home__direct-access-row").style.display = "block";
-
-					break;
-				}
+				directAccess = document.querySelector(".home__direct-access-row");
+				
+				directAccess.style.display = "block";
 
 			break;
 
 			default:
 
-				document.querySelector(".home__direct-access-row").style.display = "none";
+				directAccess.style.display = "none";
 
 				switch (links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
 
@@ -124,6 +115,74 @@ resultsBoxC.addEventListener("click", ()=>{
 		searchInput.focus();
 	}, 250);
 });
+
+directAccessRow = document.querySelector(".home__direct-access-row");
+
+function updateHistory() {
+
+	switch (localStorage.getItem("history")) {
+
+		case null:
+
+		break;
+
+		default:
+
+			userHistory = localStorage.getItem("history");
+
+			inputs = userHistory.split(',');
+
+			switch (userHistory == "noHistory") {
+
+				case false:
+			
+					directAccessRow.innerHTML = "";
+
+					for (let i = 0; i < inputs.length; i++) {
+
+						const element = inputs[i];
+
+						let shortcut = document.createElement("a");
+
+						shortcut.setAttribute("href", "https://www.google.com/search?q=" + element);
+
+						shortcut.setAttribute("title", "Acceso directo");
+
+						shortcut.setAttribute("class", "direct-access");
+
+						shortcut.setAttribute("target", "_blank");
+
+						directAccessRow.appendChild(shortcut);
+
+						let icon = document.createElement("img");
+
+						icon.setAttribute("src", "https://www.google.com/favicon.ico");
+
+						icon.setAttribute("class", "direct-access__img");
+
+						shortcut.appendChild(icon);
+
+						let info = document.createElement("div");
+
+						info.setAttribute("class", "direct-access__info");
+
+						shortcut.appendChild(info);
+
+						info.innerText = element;
+					}
+
+				break;
+
+				default:
+
+				break;
+			}
+
+		break;
+	}
+}
+
+updateHistory();
 
 function openTab(google, array) {
 
@@ -191,12 +250,14 @@ function openTab(google, array) {
 
 	searchInput.value = "";
 
-	document.querySelector(".home__direct-access-row").style.display = "block";
+	directAccess.style.display = "block";
 
 	setTimeout(() => {
 
 		window.open(query + array);
 	}, 250);
+
+	updateHistory();
 }
 
 function redirect(array) {
