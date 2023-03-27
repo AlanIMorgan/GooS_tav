@@ -586,6 +586,8 @@ function addSite() {
 
 					localStorage.setItem("bookmarks", newBookmark);
 
+                    location.reload();
+
 				break;
 
 				default:
