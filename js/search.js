@@ -1,3 +1,25 @@
+switch (localStorage.getItem("bookmarks")) {
+
+	case null:
+
+	break;
+
+	default:
+
+		bookmarks = localStorage.getItem("bookmarks");
+
+		sites = bookmarks.split(',');
+
+		for (let i = 0; i < sites.length; i++) {
+
+			let e = sites[i];
+
+			ePrprts = e.split(';;;');
+		}
+
+	break;
+}
+
 searchForm = document.querySelector(".home__form");
 searchInput = document.querySelector(".google-search");
 
@@ -172,10 +194,6 @@ function updateHistory() {
 					}
 
 				break;
-
-				default:
-
-				break;
 			}
 
 		break;
@@ -227,24 +245,16 @@ function openTab(google, array) {
 									inputs.shift();
 				
 								break;
-				
-								default:
-				
-								break;
 							}
 							
 							localStorage.setItem('history', inputs);
-
-						break;
-
-						default:
 
 						break;
 					}
 
 				break;
 			}
-			
+
 		break;
 	}
 

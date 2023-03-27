@@ -122,14 +122,19 @@ profileNavMenu = document.querySelector(".nav__submenu-profile");
 home = document.querySelector(".home");
 
 navBtn.addEventListener("click", showHideNav);
+
 navListBtn.addEventListener("click", ()=>{
 
     navMenu.classList.toggle("nav__li-submenu-ul_list");
+    profileNavMenu.classList.remove("block");
 });
+
 profileNavBtn.addEventListener("click", ()=>{
 
     profileNavMenu.classList.toggle("block");
+    navMenu.classList.remove("nav__li-submenu-ul_list");
 });
+
 home.addEventListener("click", ()=>{
 
     navMenu.classList.remove("nav__li-submenu-ul_list");
@@ -422,13 +427,50 @@ function element(etiqueta, atributo, valor, texto) {
     }
 }
 
+element("button", "class", "mas-de-google", "Añadir sitio");
+
+newSiteModal = document.getElementById("new_site_modal");
+
+masSites = document.querySelector(".mas-de-google");
+
+masSites.addEventListener("click", ()=>{
+
+    window.scrollTo(0, 0);
+    newSiteModal.classList.replace("hidden", "new_site_modal-form");
+    navMenu.classList.add("ovrflw_hddn");
+    document.getElementById("site_name").focus();
+});
+
+cancel = document.getElementById("cancel");
+
+cancel.addEventListener("click", closeSiteForm);
+
+function closeSiteForm() {
+
+    document.getElementById("site_name").value = "";
+
+    document.getElementById("site_link").value = "";
+
+    document.getElementById("site_keywords").value = "";
+
+    newSiteModal.classList.replace("new_site_modal-form", "hidden");
+    
+    navMenu.classList.remove("ovrflw_hddn");
+}
+
+addSiteBtn = document.getElementById("cache_site");
+
+addSiteBtn.addEventListener("click", addSite);
+
 element("a", "href", "chess/index.html", "Ajedrez");
 
 element("a", "href", "calculator/index.html", "Calculadora");
 
-element("div", "class", "nav__submenu-element-section", "");
-
 element("a", "href", "matrix/index.html", "Salvapantallas");
+
+element("hr", "class", "nav__submenu-element-section-separator", "");
+
+element("div", "class", "nav__submenu-element-section", "");
 
 element("hr", "class", "nav__submenu-element-section-separator", "");
 
@@ -489,15 +531,91 @@ function enlace(address, text, keyWords, zone) {
     p.innerText = text;
 }
 
+switch (localStorage.getItem("bookmarks")) {
+
+    case null:
+
+    break;
+
+    default:
+
+        bookmarks = localStorage.getItem("bookmarks");
+
+        sites = bookmarks.split(',');
+
+        for (let i = 0; i < sites.length; i++) {
+
+            let e = sites[i];
+
+            ePrprts = e.split(';;;');
+
+            enlace(ePrprts[0], ePrprts[1], ePrprts[2], extraLinks);
+        }
+
+    break;
+}
+
+function addSite() {
+
+    switch (document.getElementById("site_name").value.length > 0 && document.getElementById("site_link").value.length > 0 && document.getElementById("site_keywords").value.length > 0) {
+
+        case false:
+
+            window.alert("Por favor, asegúrate de rellenar todos los campos");
+
+        break;
+
+        default:
+
+            siteName = document.getElementById("site_name").value;
+            
+            siteLink = document.getElementById("site_link").value;
+            
+            siteKeywords = document.getElementById("site_keywords").value.toLowerCase();
+
+            enlace(siteLink, siteName, siteKeywords, extraLinks);
+
+            newBookmark = [
+
+                siteLink + ";;;" + siteName + ";;;" + siteKeywords
+            ];
+
+			switch (localStorage.getItem("bookmarks")) {
+
+				case null:
+
+					localStorage.setItem("bookmarks", newBookmark);
+
+				break;
+
+				default:
+
+                    sites.push(newBookmark);
+
+                    localStorage.setItem("bookmarks", sites);
+
+                    location.reload();
+
+				break;
+			}
+
+            closeSiteForm();
+
+            document.getElementById("site_name").value = "";
+
+            document.getElementById("site_link").value = "";
+
+            document.getElementById("site_keywords").value = "";
+
+        break;
+    }
+}
+
 //    Extra links    //
 
 // enlace("conway/index.html", "Conway's game of life", extraLinks);
 
-enlace("https://goostav.vercel.app/", "GooS_tav", "buscar search búsqueda vercel", extraLinks);
-
-enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", "buscar búsqueda search academic school scholar escuela documentos documents docs pdfs tareas ensayos académicos academicos download free books descargar libros gratis filosofía epizy bahia piracy piratería pirateria", extraLinks); /* 
-
-enlace("pac-man/index.html", "Pac-Man", extraLinks); */
+// enlace("pac-man/index.html", "Pac-Man", extraLinks);
 
 //    Google links    //
 
@@ -605,6 +723,8 @@ enlace("https://gnula2.org/", "Gnula2", "ver películas peliculas series complet
 
 enlace("https://gnula.nu/", "Gnula", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", userLinks);
 
+enlace("https://goostav.vercel.app/", "GooS_tav", "buscar search búsqueda busqueda vercel", userLinks);
+
 enlace("https://www.guitars101.com/", "Guitars 101", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", userLinks);
 
 enlace("https://igram.io/", "iGram", "instagram downloader descargar vídeos videos imágenes imagenes pics pictures fotos photos reels", userLinks);
@@ -624,6 +744,8 @@ enlace("https://www.instagram.com/", "Instagram", "redes sociales networks photo
 enlace("https://app.keeweb.info/", "KeeWeb", "password manager administrador contraseñas", userLinks);
 
 enlace("https://kupdf.net/", "KUPDF", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", userLinks);
+
+enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", "buscar búsqueda search academic school scholar escuela documentos documents docs pdfs tareas ensayos académicos academicos download free books descargar libros gratis filosofía epizy bahia piracy piratería pirateria", userLinks);
 
 enlace("https://www.last.fm/es/user/XaMadness", "Last.fm", "escuchar listen música musica recomendaciones recommendations", userLinks);
 
@@ -770,5 +892,3 @@ enlace("https://yandex.ru/images", "Yandex Images (ruso)", "buscar búsqueda bus
 enlace("https://z-lib.org/", "ZLibrary", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", userLinks);
 
 enlace("https://ya.ru/", "Яндекс (Yandex ruso)", "buscar search búsqueda", userLinks);
-
-element("button", "class", "mas-de-google", "Añadir");
