@@ -7,7 +7,7 @@
     "orientation":"portrait",
     "display":"standalone",
     "id": "/?source=pwa",
-    "start_url":"/?source=pwa",
+    "start_url":"/",
     "scope":"/",
     "lang":"es-MX",
     "icons": [
