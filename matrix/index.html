@@ -60,7 +60,7 @@
 
             .moving {
 
-                animation: move 10s steps(65) infinite;
+                animation: move 11s steps(61) infinite;
             }
 
             @keyframes move {
@@ -325,12 +325,11 @@
 
         for (let i = 0; i < linesIDs.length; i++) {
 
-            setTimeout(()=>{
+            let e = linesIDs[i];
 
-                let e = linesIDs[i];
+            document.getElementById(e).style.animationDelay = i * 1235 + "ms";
 
-                document.getElementById(e).classList.add("moving");
-            }, i * 1000);
+            document.getElementById(e).classList.add("moving");
         }
     </script>
 </html>
