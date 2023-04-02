@@ -47,7 +47,7 @@
                 transform: translateY(-250vh);
             }
 
-            #container img {
+            img {
 
                 position: fixed;
                 top: 0;
@@ -126,18 +126,21 @@
 
     <body>
 
-        <div id="container">
+        <div id="clock_container">
 
-            <div id="clock_container">
-
-                <div id="clock"></div>
-            </div>
+            <div id="clock"></div>
         </div>
+
+        <div id="container"></div>
     </body>
 
     <script>
 
-        container = document.getElementById("container");
+        doc = document.documentElement;
+
+        doc.addEventListener('click', ()=>{ document.documentElement.requestFullscreen(); });
+
+        bd = document.body;
 
         switch ( localStorage.getItem("bckgrnd") ) {
 
@@ -151,10 +154,50 @@
 
                 img.setAttribute('src', localStorage.getItem("bckgrnd") );
 
-                container.appendChild(img);
+                bd.appendChild(img);
 
             break;
         }
+
+        // CLOCK
+
+        clockContainer = document.getElementById('clock_container');
+
+        clock = document.getElementById('clock');
+
+        setInterval(()=>{
+
+            date = new Date();
+
+            hrs = date.getHours();
+            mins = date.getMinutes();
+            secs = date.getSeconds();
+
+            period = "AM";
+
+            if (hrs == 0) {
+
+                hrs = 12;
+            }
+
+            else if (hrs >= 12) {
+
+                hrs = hrs - 12;
+
+                period = "PM";
+            }
+
+            hrs = hrs < 10 ? "0" + hrs : hrs;
+
+            mins = mins < 10 ? "0" + mins : mins;
+
+            secs = secs < 10 ? "0" + secs : secs;
+
+            time = `${hrs}:${mins}:${secs} ${period}`;
+
+            clock.innerText = time;
+
+        }, 1000);
 
         // NO SLEEP
 
@@ -190,146 +233,123 @@
         addSourceToVideo(video, 'mp4', base64('video/mp4', 'AAAAHGZ0eXBpc29tAAACAGlzb21pc28ybXA0MQAAAAhmcmVlAAAAG21kYXQAAAGzABAHAAABthADAowdbb9/AAAC6W1vb3YAAABsbXZoZAAAAAB8JbCAfCWwgAAAA+gAAAAAAAEAAAEAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIVdHJhawAAAFx0a2hkAAAAD3wlsIB8JbCAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAACAAAAAABsW1kaWEAAAAgbWRoZAAAAAB8JbCAfCWwgAAAA+gAAAAAVcQAAAAAAC1oZGxyAAAAAAAAAAB2aWRlAAAAAAAAAAAAAAAAVmlkZW9IYW5kbGVyAAAAAVxtaW5mAAAAFHZtaGQAAAABAAAAAAAAAAAAAAAkZGluZgAAABxkcmVmAAAAAAAAAAEAAAAMdXJsIAAAAAEAAAEcc3RibAAAALhzdHNkAAAAAAAAAAEAAACobXA0dgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIAAgASAAAAEgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABj//wAAAFJlc2RzAAAAAANEAAEABDwgEQAAAAADDUAAAAAABS0AAAGwAQAAAbWJEwAAAQAAAAEgAMSNiB9FAEQBFGMAAAGyTGF2YzUyLjg3LjQGAQIAAAAYc3R0cwAAAAAAAAABAAAAAQAAAAAAAAAcc3RzYwAAAAAAAAABAAAAAQAAAAEAAAABAAAAFHN0c3oAAAAAAAAAEwAAAAEAAAAUc3RjbwAAAAAAAAABAAAALAAAAGB1ZHRhAAAAWG1ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAG1kaXJhcHBsAAAAAAAAAAAAAAAAK2lsc3QAAAAjqXRvbwAAABtkYXRhAAAAAQAAAABMYXZmNTIuNzguMw=='));
 
         // Append the video to where ever you need
-        container.appendChild(video);
+        clockContainer.appendChild(video);
+
+        video.play();
 
         // Start playing video after any user interaction.
         // NOTE: Running video.play() handler without a user action may be blocked by browser.
         var playFn = function() {
         
             video.play();
-        
-            container.removeEventListener('touchend', playFn);
+
+            doc.removeEventListener('touchend', playFn);
         };
         
-        container.addEventListener('touchend', playFn);
-
-        // CLOCK
-
-        setInterval(()=>{
-
-            date = new Date();
-
-            hrs = date.getHours();
-            mins = date.getMinutes();
-            secs = date.getSeconds();
-
-            period = "AM";
-
-            if (hrs == 0) {
-
-                hrs = 12;
-            }
-
-            else if (hrs >= 12) {
-
-                hrs = hrs - 12;
-
-                period = "PM";
-            }
-
-            hrs = hrs < 10 ? "0" + hrs : hrs;
-
-            mins = mins < 10 ? "0" + mins : mins;
-
-            secs = secs < 10 ? "0" + secs : secs;
-
-            time = `${hrs}:${mins}:${secs} ${period}`;
-
-            document.getElementById('clock').innerText = time;
-
-        }, 1000);
+        doc.addEventListener('touchend', playFn);
 
         // MATRIX SCREENSAVER
 
-        window.addEventListener("resize", ()=>{ location.reload(); });
+        container = document.getElementById("container");
+
+        window.addEventListener("resize", ()=>{
+
+            container.innerHTML = "";
+            generateLines();
+        });
 
         chars = '0123456789ABCDEGHJKÑÇ@#$%&=+°*<^>¶ΓΔΞΣΨΩÆБДЖЛФЦЧЩЪЭアあいうえかきくけこㄱㄴㄷㄹㅁㅅㅏㅐㅓㅗ诶必西弟衣艾付记爱耻';
 
         charsArray = chars.split('');
 
-        windowWidth = window.innerWidth;
+        function generateLines() {
 
-        switch (windowWidth < 1024) {
+            windowWidth = window.innerWidth;
 
-            case false:
+            switch (windowWidth < 1024) {
 
-                lines = 50;
+                case false:
 
-                fontSize = 2;
+                    lines = 50;
 
-            break;
+                    fontSize = 2;
 
-            default:
+                break;
 
-                switch (windowWidth < 768) {
+                default:
 
-                    case false:
+                    switch (windowWidth < 768) {
 
-                        lines = 20;
+                        case false:
 
-                        fontSize = 3;
+                            lines = 20;
 
-                    break;
+                            fontSize = 3;
 
-                    default:
+                        break;
 
-                        switch (windowWidth < 300) {
+                        default:
 
-                            case false:
+                            switch (windowWidth < 300) {
 
-                                lines = 10;
+                                case false:
 
-                                fontSize = 5;
+                                    lines = 10;
 
-                            break;
+                                    fontSize = 5;
 
-                            default:
+                                break;
 
-                                lines = 5;
+                                default:
 
-                                fontSize = 10;
+                                    lines = 5;
 
-                            break;
-                        }
+                                    fontSize = 10;
 
-                    break;
-                }
+                                break;
+                            }
 
-            break;
+                        break;
+                    }
+
+                break;
+            }
+
+            linesWidth = windowWidth/lines;
+
+            linesIDs = [];
+
+            for (let i = 0; i < lines; i++) {
+
+                charsArray.sort( function() { return 0.5 - Math.random() } );
+
+                shuffledCharsArray = charsArray.join('');
+
+                newLine = document.createElement("p");
+
+                newLine.setAttribute("style", "width: " + linesWidth + "px;font-size: " + fontSize + "vw;");
+
+                newLine.setAttribute("id", i + 1);
+
+                container.appendChild(newLine);
+
+                newLine.innerText = shuffledCharsArray;
+
+                linesIDs.push(i + 1);
+            }
+
+            linesIDs.sort( function() { return 0.5 - Math.random() } );
+
+            for (let i = 0; i < linesIDs.length; i++) {
+
+                let e = linesIDs[i];
+
+                document.getElementById(e).style.animationDelay = i * 1235 + "ms";
+
+                document.getElementById(e).classList.add("moving");
+            }
         }
 
-        linesWidth = windowWidth/lines;
-
-        linesIDs = [];
-
-        for (let i = 0; i < lines; i++) {
-
-            charsArray.sort( function() { return 0.5 - Math.random() } );
-
-            shuffledCharsArray = charsArray.join('');
-
-            newLine = document.createElement("p");
-
-            newLine.setAttribute("style", "width: " + linesWidth + "px;font-size: " + fontSize + "vw;");
-
-            newLine.setAttribute("id", i + 1);
-
-            container.appendChild(newLine);
-
-            newLine.innerText = shuffledCharsArray;
-
-            linesIDs.push(i + 1);
-        }
-
-        linesIDs.sort( function() { return 0.5 - Math.random() } );
-
-        for (let i = 0; i < linesIDs.length; i++) {
-
-            let e = linesIDs[i];
-
-            document.getElementById(e).style.animationDelay = i * 1235 + "ms";
-
-            document.getElementById(e).classList.add("moving");
-        }
+        generateLines();
     </script>
 </html>
