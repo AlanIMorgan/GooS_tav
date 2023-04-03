@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.goostav.twa",
+        "sha256_cert_fingerprints": [
+        "A4:C1:8C:53:29:7B:AD:68:93:23:F5:93:DE:BB:01:10:B0:35:8A:D0:1C:61:7A:E4:2F:F7:91:51:A1:47:77:7F"
+        ]
+    }
+}]
