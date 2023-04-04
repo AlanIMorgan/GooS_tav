@@ -1,0 +1,10 @@
+{
+    "name": "GooS_tav",
+    "share_target": {
+        "action": "/",
+        "method": "GET",
+        "params": {
+            "url": "link"
+        }
+    }
+}

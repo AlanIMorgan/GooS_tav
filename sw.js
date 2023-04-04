@@ -70,4 +70,24 @@ self.addEventListener("fetch", (event) => {
             return cachedResponse;
         }
     })());
+
+    if (event.request.method !== "GET") {
+
+        event.respondWith(fetch(event.request));
+
+        return;
+    }
+
+    const formDataPromise = event.request.formData();
+
+    event.respondWith(
+        formDataPromise.then((formData) => {
+
+            const link = formData.get("link") || "";
+
+            saveBookmark(link);
+
+            return new Response(`Bookmark saved: ${link}`);
+        })
+    );
 });
