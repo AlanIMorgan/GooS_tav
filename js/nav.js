@@ -1,3 +1,31 @@
+navMenu = document.querySelector(".nav__li-submenu-ul");
+newSiteModal = document.getElementById("new_site_modal");
+
+const sharingSite = window.location.search;
+
+const urlParams = new URLSearchParams(sharingSite);
+
+switch (urlParams.get('link')) {
+
+    case null:
+
+    break;
+
+    default:
+
+        sharedSiteLink = urlParams.get("link");
+
+        navMenu.classList.add("nav__li-submenu-ul_list");
+
+        newSiteModal.classList.replace("hidden", "new_site_modal-form");
+
+        document.getElementById("site_link").value = sharedSiteLink;
+
+        document.getElementById("site_name").focus();
+
+    break;
+}
+
 // Background
 
 homeImg = document.getElementById("home_img");
@@ -115,7 +143,6 @@ function resetNick() {
 navBtn = document.getElementById('nav_btn');
 navListBtn = document.getElementById('nav_btn-list');
 profileNavBtn = document.getElementById('nav_profile_btn');
-navMenu = document.querySelector(".nav__li-submenu-ul");
 resultsBoxC = document.querySelector(".results_box_container");
 results = document.querySelector(".results_box");
 profileNavMenu = document.querySelector(".nav__submenu-profile");
@@ -428,8 +455,6 @@ function element(etiqueta, atributo, valor, texto) {
 }
 
 element("button", "class", "mas-de-google", "Añadir sitio");
-
-newSiteModal = document.getElementById("new_site_modal");
 
 masSites = document.querySelector(".mas-de-google");
 

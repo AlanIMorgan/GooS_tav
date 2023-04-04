@@ -47,5 +47,12 @@
             "type": "image/png",
             "density": "4.0"
         }
-    ]
+    ],
+    "share_target": {
+        "action": "/",
+        "method": "GET",
+        "params": {
+            "url": "link"
+        }
+    }
 }
