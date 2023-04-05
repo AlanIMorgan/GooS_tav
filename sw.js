@@ -44,7 +44,7 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener("fetch", (event) => {
 
-    if (event.request.method === 'POST' && event.request.url.includes('/share-target')) {
+    if (event.request.method === 'GET') {
 
         event.respondWith(handleShare(event.request));
     }
