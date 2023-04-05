@@ -75,6 +75,7 @@ self.addEventListener("fetch", (event) => {
             return cachedResponse;
         }
     })());
+<<<<<<< HEAD
 });
 
 async function handleShare(request) {
@@ -87,3 +88,6 @@ async function handleShare(request) {
 
     return Response.redirect('/?' + sharedData);
 }
+=======
+});
+>>>>>>> 63d6720 (Restored changes to a stable version)
