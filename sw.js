@@ -44,6 +44,11 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener("fetch", (event) => {
 
+    if (event.request.method === 'POST' && event.request.url.includes('/share-target')) {
+
+        event.respondWith(handleShare(event.request));
+    }
+
     event.respondWith((async () => {
 
         const cache = await caches.open(cacheName);
@@ -70,23 +75,15 @@ self.addEventListener("fetch", (event) => {
             return cachedResponse;
         }
     })());
-
-    self.addEventListener('fetch', event => {
-        if (event.request.method === 'POST' && event.request.url.includes('/share-target')) {
-
-            event.respondWith(handleShare(event.request));
-        }
-    });
-
-    async function handleShare(request) {
-
-        const formData = await request.formData();
-
-        const sharedData = formData.get('sharedData');
-
-        // Procesar los datos compartidos aquí
-        
-
-        return Response.redirect('/?' + sharedData);
-    }
 });
+
+async function handleShare(request) {
+
+    const formData = await request.formData();
+
+    const sharedData = formData.get('sharedData');
+
+    // Procesar los datos compartidos aquí
+
+    return Response.redirect('/?' + sharedData);
+}
