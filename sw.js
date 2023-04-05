@@ -44,11 +44,6 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener("fetch", (event) => {
 
-    if (event.request.method === 'GET') {
-
-        event.respondWith(handleShare(event.request));
-    }
-
     event.respondWith((async () => {
 
         const cache = await caches.open(cacheName);
@@ -75,19 +70,4 @@ self.addEventListener("fetch", (event) => {
             return cachedResponse;
         }
     })());
-<<<<<<< HEAD
 });
-
-async function handleShare(request) {
-
-    const formData = await request.formData();
-
-    const sharedData = formData.get('sharedData');
-
-    // Procesar los datos compartidos aquí
-
-    return Response.redirect('/?' + sharedData);
-}
-=======
-});
->>>>>>> 63d6720 (Restored changes to a stable version)
