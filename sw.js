@@ -71,23 +71,22 @@ self.addEventListener("fetch", (event) => {
         }
     })());
 
-    if (event.request.method !== "GET") {
+    self.addEventListener('fetch', event => {
+        if (event.request.method === 'POST' && event.request.url.includes('/share-target')) {
 
-        event.respondWith(fetch(event.request));
+            event.respondWith(handleShare(event.request));
+        }
+    });
 
-        return;
+    async function handleShare(request) {
+
+        const formData = await request.formData();
+
+        const sharedData = formData.get('sharedData');
+
+        // Procesar los datos compartidos aquí
+        
+
+        return Response.redirect('/?' + sharedData);
     }
-
-    const formDataPromise = event.request.formData();
-
-    event.respondWith(
-        formDataPromise.then((formData) => {
-
-            const link = formData.get("link") || "";
-
-            saveBookmark(link);
-
-            return new Response(`Bookmark saved: ${link}`);
-        })
-    );
 });
