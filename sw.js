@@ -31,11 +31,11 @@ self.addEventListener('activate', (event) => {
     const cacheAllowlist = [cacheName];
 
     event.waitUntil(
- 
+
         caches.forEach((cache, cacheName) => {
- 
+
             if (!cacheAllowlist.includes(cacheName)) {
- 
+
                 return caches.delete(cacheName); 
             } 
         }) 

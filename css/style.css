@@ -242,6 +242,12 @@ a {
 	text-align: center;
 }
 
+.user_links a {
+
+    display: inline-flex !important;
+    width: 85% !important;
+}
+
 .nav__submenu-element img {
 	width: 48px;
 	margin-top: 10px;
@@ -261,6 +267,11 @@ a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.delete_site {
+
+	padding: 0 9px;
 }
 
 @media (max-width: 700px) {
