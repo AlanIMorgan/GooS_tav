@@ -619,12 +619,53 @@ switch (localStorage.getItem("bookmarks")) {
                     deleteBtns[i].addEventListener("click", ()=>{
         
                         dataSets = deleteBtns[i].dataset.address + ";;;" + deleteBtns[i].dataset.site + ";;;" + deleteBtns[i].dataset.keywords;
-        
-                        console.log(dataSets);
-        
+
                         splittedBkmrks = bookmarks.split(dataSets);
-        
-                        localStorage.setItem("bookmarks", splittedBkmrks[0] + splittedBkmrks[1]);
+
+                        switch (splittedBkmrks[0].length > 9) {
+
+                            case false:
+
+                                bkmrksUpdated = splittedBkmrks[1];
+
+                            break;
+
+                            default:
+
+                                switch (splittedBkmrks[1].length > 9) {
+
+                                    case false:
+
+                                        bkmrksUpdated = splittedBkmrks[0];
+
+                                    break;
+
+                                    default:
+
+                                        bkmrksUpdated = splittedBkmrks[0] + splittedBkmrks[1];
+
+                                    break;
+                                }
+
+                            break;
+                        }
+
+                        bkmrksFixed = bkmrksUpdated.replace(",,", ",");
+
+                        switch (bkmrksFixed.length > 9) {
+
+                            case false:
+
+                                localStorage.removeItem("bookmarks");
+
+                            break;
+
+                            default:
+
+                                localStorage.setItem("bookmarks", bkmrksFixed);
+
+                            break;
+                        }
 
                         window.location.reload();
                     });
