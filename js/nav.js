@@ -598,80 +598,83 @@ switch (localStorage.getItem("bookmarks")) {
 
         sites = bookmarks.split(',');
 
-        deleteBtns = document.getElementsByClassName("delete_site");
-
         for (let i = 0; i < sites.length; i++) {
 
             let e = sites[i];
 
             switch (e.length > 9) {
-                
+
                 case false:
 
                 break;
 
                 default:
-        
+
                     ePrprts = e.split(';;;');
-        
+
                     enlace(ePrprts[0], ePrprts[1], ePrprts[2], userLinks);
-        
-                    deleteBtns[i].addEventListener("click", ()=>{
-        
-                        dataSets = deleteBtns[i].dataset.address + ";;;" + deleteBtns[i].dataset.site + ";;;" + deleteBtns[i].dataset.keywords;
-
-                        splittedBkmrks = bookmarks.split(dataSets);
-
-                        switch (splittedBkmrks[0].length > 9) {
-
-                            case false:
-
-                                bkmrksUpdated = splittedBkmrks[1];
-
-                            break;
-
-                            default:
-
-                                switch (splittedBkmrks[1].length > 9) {
-
-                                    case false:
-
-                                        bkmrksUpdated = splittedBkmrks[0];
-
-                                    break;
-
-                                    default:
-
-                                        bkmrksUpdated = splittedBkmrks[0] + splittedBkmrks[1];
-
-                                    break;
-                                }
-
-                            break;
-                        }
-
-                        bkmrksFixed = bkmrksUpdated.replace(",,", ",");
-
-                        switch (bkmrksFixed.length > 9) {
-
-                            case false:
-
-                                localStorage.removeItem("bookmarks");
-
-                            break;
-
-                            default:
-
-                                localStorage.setItem("bookmarks", bkmrksFixed);
-
-                            break;
-                        }
-
-                        window.location.reload();
-                    });
 
                 break;
             }
+        }
+
+        deleteBtns = document.getElementsByClassName("delete_site");
+
+        for (let i = 0; i < deleteBtns.length; i++) {
+
+            deleteBtns[i].addEventListener("click", ()=>{
+
+                dataSets = deleteBtns[i].dataset.address + ";;;" + deleteBtns[i].dataset.site + ";;;" + deleteBtns[i].dataset.keywords;
+
+                splittedBkmrks = bookmarks.split(dataSets);
+
+                switch (splittedBkmrks[0].length > 9) {
+
+                    case false:
+
+                        bkmrksUpdated = splittedBkmrks[1];
+
+                    break;
+
+                    default:
+
+                        switch (splittedBkmrks[1].length > 9) {
+
+                            case false:
+
+                                bkmrksUpdated = splittedBkmrks[0];
+
+                            break;
+
+                            default:
+
+                                bkmrksUpdated = splittedBkmrks[0] + splittedBkmrks[1];
+
+                            break;
+                        }
+
+                    break;
+                }
+
+                bkmrksFixed = bkmrksUpdated.replace(",,", ",");
+
+                switch (bkmrksFixed.length > 9) {
+
+                    case false:
+
+                        localStorage.removeItem("bookmarks");
+
+                    break;
+
+                    default:
+
+                        localStorage.setItem("bookmarks", bkmrksFixed);
+
+                    break;
+                }
+
+                window.location.reload();
+            });
         }
 
     break;
@@ -987,7 +990,7 @@ enlace("https://www.tumblr.com/", "Tumblr", "redes sociales network", extraLinks
 
 enlace("https://www.tvconexion.com/", "TV Conexion HD", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
 
-enlace("https://mobile.twitter.com/", "Twitter", "redes sociales network", extraLinks);
+enlace("https://mobile.twitter.com/", "Twitter", "redes sociales network tuits", extraLinks);
 
 enlace("https://www.urbandictionary.com/", "Urban Dictionary", "buscar search búqueda busqueda diccionario qué significa que significa", extraLinks);
 
