@@ -28,11 +28,11 @@ switch (urlParams.get('link')) {
 
 // Background
 
-homeImg = document.getElementById("home_img");
+homeImg = document.getElementById("home_img").getElementsByTagName("img")[0];
 
 bckgrndInpt = document.getElementById("bckgrnd_sttng");
 
-bckgrndInpt.addEventListener("blur", changeBackground);
+bckgrndInpt.addEventListener("input", changeBackground);
 
 switch (localStorage.getItem("bckgrnd")) {
 
@@ -57,30 +57,33 @@ function changeBackground() {
 
     imgUrl = bckgrndInpt.value;
 
-    if (imgUrl.length > 1) {
-    
-        let newElement = document.createElement("img");
-        
-        newElement.setAttribute("src", imgUrl);
-    
-        homeImg.appendChild(newElement);
-    
-        document.getElementById("img_mask").classList.remove("img_mask");
-    
-        document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
-    
-        localStorage.setItem("bckgrnd", imgUrl);
-    }
+    switch (imgUrl.length > 1) {
 
-    else {
+        case false:
 
-        localStorage.setItem("bckgrnd", imgUrl);
+            localStorage.setItem("bckgrnd", imgUrl);
 
-        resetBackground();
+            resetBackground();
+
+        break;
+
+        default:
+
+            homeImg.src = imgUrl;
+
+            document.getElementById("img_mask").classList.remove("img_mask");
+
+            document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
+
+            localStorage.setItem("bckgrnd", imgUrl);
+
+        break;
     }
 }
 
 function resetBackground() {
+
+    homeImg.src = "";
 
     document.getElementById("img_mask").classList.add("img_mask");
 
