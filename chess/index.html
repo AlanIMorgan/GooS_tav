@@ -18,7 +18,7 @@
 
             :root {
                 --border-width: calc(var(--diameter-tile) / 60);
-                --diameter-board: min(85vw, 85vh);
+                --diameter-board: min(95vw, 95vh);
                 --diameter-tile: calc(1 / 8 * var(--diameter-board));
                 --edge-width: calc((min(100vw, 100vh) - var(--diameter-board)) * 0.3);
                 --color-danger: tomato;
@@ -124,7 +124,7 @@
                 calc((100vw - var(--diameter-board)) * 0.5);
                 position: relative;
                 width: var(--diameter-board);
-                border: 20px solid var(--color-shadow-lighter);
+                border: 5px solid var(--color-shadow-lighter);
             }
 
             .board {
@@ -175,9 +175,6 @@
             .perspective-white .board .row:nth-child(odd) .tile:nth-child(even) {
                 color: hsl(var(--color-board-hue), var(--color-board-sat), 70%);
             }
-            .board .row .tile.highlight-active {}
-            .board .row .tile.highlight-capture {}
-            .board .row .tile.highlight-move {}
             
             .board .row .tile .move,
             .board .row .tile .moves,
