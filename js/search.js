@@ -255,6 +255,8 @@ function openTab(google, array) {
 				break;
 			}
 
+			array = array.replace("!", "%21").replace('"', "%22").replace("#", "%23").replace("$", "%24").replace("%", "%25").replace("&", "%26").replace("'", "%27").replace("(", "%28").replace(")", "%29").replace("*", "%2A").replace("+", "%2B").replace(",", "%2C").replace("/", "%2F").replace(":", "%3A").replace(";", "%3B").replace("=", "%3D").replace("?", "%3F").replace("@", "%40").replace("[", "%5B").replace("]", "%5D");
+
 		break;
 	}
 
@@ -262,11 +264,9 @@ function openTab(google, array) {
 
 	directAccess.style.display = "block";
 
-	txt = array.replace("!", "%21").replace('"', "%22").replace("#", "%23").replace("$", "%24").replace("%", "%25").replace("&", "%26").replace("'", "%27").replace("(", "%28").replace(")", "%29").replace("*", "%2A").replace("+", "%2B").replace(",", "%2C").replace("/", "%2F").replace(":", "%3A").replace(";", "%3B").replace("=", "%3D").replace("?", "%3F").replace("@", "%40").replace("[", "%5B").replace("]", "%5D");
-
 	setTimeout(() => {
 
-		window.open(query + txt);
+		window.open(query + array);
 	}, 250);
 
 	updateHistory();
