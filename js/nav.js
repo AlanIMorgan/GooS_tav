@@ -781,6 +781,8 @@ enlace("https://about.google/intl/es-419/products/", "Más de Google", "mas", go
 
 enlace("https://123apps.com/", "123Apps", "utilities tools herramientas pdf word excel converter convertir conversión editar edición recortar imágenes imagenes images pics pictures fotos documentos documents docs jpg jpeg png gif webp img videos vídeos ecualizar audio equalizer eq ppt font tipografía files archivos ebook libros extractor extraer", extraLinks);
 
+enlace("https://9xbuddy.xyz/", "9xbuddy", "movies downloader descargar vídeos videos películas peliculas piratería pirateria piracy", extraLinks);
+
 enlace("https://www.academia.edu/", "Academia.edu", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", extraLinks);
 
 enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", "comprimir pdf reducir documentos documents docs", extraLinks);
