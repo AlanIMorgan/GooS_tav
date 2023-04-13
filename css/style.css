@@ -115,6 +115,7 @@ a {
 
 .block {
 	display: block !important;
+	animation: open_menu .12s linear;
 }
 
 /*--------------NAV------------------*/
@@ -362,6 +363,21 @@ a {
 
 .nav__li-submenu-ul_list {
     display: inline-block !important;
+	animation: open_menu .12s linear;
+}
+
+@keyframes open_menu {
+
+	0% {
+
+		transform: translateX(112%);
+		opacity: 0;
+	}
+	100% {
+
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
 
 .nav__li-submenu-ul_list .nav__submenu-element-section {
