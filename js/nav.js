@@ -751,7 +751,7 @@ function addSite() {
 
 enlace("https://www.google.com/", "Google", "buscar search búsqueda", googleLinks);
 
-enlace("https://myaccount.google.com/", "Cuenta de google", "mi sesión session user usuario", googleLinks);
+enlace("https://myaccount.google.com/", "Cuenta de google", "account sesión manage session user gestionar usuario", googleLinks);
 
 enlace("https://docs.google.com/", "Google Documentos", "ofimática word documents docs", googleLinks);
 
@@ -952,6 +952,8 @@ enlace("https://www.refseek.com/", "Refseek", "buscar búsqueda search academic 
 enlace("http://repec.org/", "RePEc", "Research Papers Economics buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
 enlace("https://saucenao.com/", "SauceNAO", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", extraLinks);
+
+enlace("https://scanapp.org/", "ScanApp", "código codigo qr code scanner reader", extraLinks);
 
 enlace("https://sci-hub.se/", "Sci-Hub", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", extraLinks);
 
