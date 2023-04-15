@@ -954,13 +954,13 @@ enlace("https://normas-apa.org/", "Normas APA", "academic school scholar escuela
 
 enlace("https://sites.google.com/cuaad.udg.mx/habilidadesentics/objetos-virtuales-de-aprendizaje/normas-apa?authuser=0", "Normas APA - Google For Education", "academic school scholar escuela documentos documents docs tareas ensayos académicos academicos", extraLinks);
 
-enlace("https://correobuap-my.sharepoint.com/personal/alan_morgana_alumno_buap_mx/_layouts/15/onedrive.aspx?", "OneDrive", "almacenamiento nube cloud storage almacenar", extraLinks);
+enlace("https://onedrive.live.com/", "OneDrive", "microsoft office 365 almacenamiento nube cloud storage almacenar", extraLinks);
 
 enlace("https://www.onlineocr.net/", "Online OCR", "", extraLinks);
 
-enlace("https://outlook.live.com/", "Outlook", "correo electrónico mail email e-mail", extraLinks);
+enlace("https://outlook.live.com/", "Outlook", "microsoft office 365 correo electrónico mail email e-mail", extraLinks);
 
-enlace("https://outlook.office.com/", "Outlook (institucional)", "correo electrónico institucional mail email e-mail", extraLinks);
+enlace("https://outlook.office.com/", "Outlook (institucional)", "microsoft office 365 correo electrónico empresarial mail email e-mail", extraLinks);
 
 enlace("https://jspaint.app/", "PaintJS", "", extraLinks);
 
@@ -1060,7 +1060,7 @@ enlace("https://wallhere.com/", "Wallhere", "images imagenes img pics pictures p
 
 enlace("https://web.whatsapp.com/", "WhatsApp", "redes sociales network mensajería mensajeria intantánea intantanea", extraLinks);
 
-enlace("https://www.office.com/launch/word?auth=2", "Word", "ofimática documents docs", extraLinks);
+enlace("https://www.office.com/launch/word?auth=2", "Word", "microsoft office 365 ofimática documents docs", extraLinks);
 
 enlace("https://www.worldcat.org/", "WorldCat", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
