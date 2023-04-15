@@ -442,9 +442,9 @@ importConfig.addEventListener("input", ()=>{
         localStorage.clear();
 
         localStorage.setItem(profileKeys[i], profileValues[i]);
-
-        location.reload();
     }
+
+    location.reload();
 });
 
 // Shortcuts menu
