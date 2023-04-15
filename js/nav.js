@@ -414,8 +414,38 @@ function showHideHistory() {
 
             break;
         }
-    }, 500);
+    }, 125);
 }
+
+// Export / import settings
+
+content = JSON.stringify(localStorage);
+
+exportConfig = document.getElementById("export_config");
+
+exportConfig.href = "data:application/octet-stream," + encodeURIComponent(content);
+
+exportConfig.download = "gsconf.json";
+
+importConfig = document.getElementById("import_config");
+
+importConfig.addEventListener("input", ()=>{
+
+    profile = JSON.parse(importConfig.value);
+
+    profileKeys = Object.keys(profile);
+
+    profileValues = Object.values(profile);
+
+    for (let i = 0; i < profileKeys.length; i++) {
+
+        localStorage.clear();
+
+        localStorage.setItem(profileKeys[i], profileValues[i]);
+
+        location.reload();
+    }
+});
 
 // Shortcuts menu
 
