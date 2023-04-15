@@ -431,20 +431,33 @@ importConfig = document.getElementById("import_config");
 
 importConfig.addEventListener("input", ()=>{
 
-    profile = JSON.parse(importConfig.value);
+    val = importConfig.value;
 
-    profileKeys = Object.keys(profile);
+    switch (val.includes("{") && val.includes("}")) {
 
-    profileValues = Object.values(profile);
+        case false:
 
-    localStorage.clear();
+        break;
 
-    for (let i = 0; i < profileKeys.length; i++) {
+        default:
 
-        localStorage.setItem(profileKeys[i], profileValues[i]);
+            profile = JSON.parse(val);
+
+            profileKeys = Object.keys(profile);
+
+            profileValues = Object.values(profile);
+
+            localStorage.clear();
+
+            for (let i = 0; i < profileKeys.length; i++) {
+
+                localStorage.setItem(profileKeys[i], profileValues[i]);
+            }
+        
+            location.reload();
+
+        break;
     }
-
-    location.reload();
 });
 
 // Shortcuts menu
