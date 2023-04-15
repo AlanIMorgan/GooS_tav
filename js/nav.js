@@ -444,7 +444,7 @@ importConfig.addEventListener("input", ()=>{
         localStorage.setItem(profileKeys[i], profileValues[i]);
     }
 
-    //location.reload();
+    location.reload();
 });
 
 // Shortcuts menu
