@@ -437,14 +437,14 @@ importConfig.addEventListener("input", ()=>{
 
     profileValues = Object.values(profile);
 
-    for (let i = 0; i < profileKeys.length; i++) {
+    localStorage.clear();
 
-        localStorage.clear();
+    for (let i = 0; i < profileKeys.length; i++) {
 
         localStorage.setItem(profileKeys[i], profileValues[i]);
     }
 
-    location.reload();
+    //location.reload();
 });
 
 // Shortcuts menu
