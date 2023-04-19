@@ -842,8 +842,6 @@ enlace("https://www.artistapirata.com/", "Artista Pirata", "piratería pirateria
 
 enlace("https://www.artstation.com", "ArtStation", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", extraLinks);
 
-enlace("http://webserver1.siiaa.siu.buap.mx/", "Autoservicios BUAP", "", extraLinks);
-
 enlace("https://Baidu.com/", "Baidu", "buscar search búsqueda", extraLinks);
 
 enlace("https://bandcamp.com/", "Bandcamp", "escuchar listen música musica", extraLinks);
@@ -856,11 +854,7 @@ enlace("https://becassubes.com/", "Becas SUBES", "", extraLinks);
 
 enlace("https://www.behance.net/", "Behance", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", extraLinks);
 
-enlace("https://www.bibliocatalogo.buap.mx/", "Bibliocatálogo BUAP", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs tareas ensayos académicos academicos", extraLinks);
-
 enlace("https://www.bioline.org.br/", "Bioline", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos health salud medicine medicina enfermedades epidemiología biología biologia biologic medio ambiente biodiversidad biodiversity", extraLinks);
-
-enlace("https://accesoqr.buap.mx/", "BUAP QR", "", extraLinks);
 
 enlace("https://www.canva.com/", "Canva", "diseño gráfico graphic design editar edición recortar imágenes imagenes images pics pictures fotos jpg jpeg png gif webp img", extraLinks);
 
@@ -889,6 +883,8 @@ enlace("https://www.espaebook2.com/", "EspaEbook", "buscar búsqueda search book
 enlace("https://www.ebiblioteca.org/lecturas/", "eBiblioteca", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
 
 enlace("https://www.facebook.com/", "Facebook", "redes sociales networks", extraLinks);
+
+enlace("https://fakeupdate.net/", "Fake Update Screens", "", extraLinks);
 
 enlace("https://gatonplayseries.com/", "GatonPlaySeries", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
 
