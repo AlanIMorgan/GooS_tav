@@ -884,7 +884,7 @@ enlace("https://www.ebiblioteca.org/lecturas/", "eBiblioteca", "buscar búsqueda
 
 enlace("https://www.facebook.com/", "Facebook", "redes sociales networks", extraLinks);
 
-enlace("https://fakeupdate.net/", "Fake Update Screens", "", extraLinks);
+enlace("https://fakeupdate.net/", "Fake Update Screens", "actualización actualizacion falsa", extraLinks);
 
 enlace("https://gatonplayseries.com/", "GatonPlaySeries", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
 
