@@ -431,9 +431,61 @@ importConfig = document.getElementById("import_config");
 
 importConfig.addEventListener("input", ()=>{
 
-    val = importConfig.value;
+    file = importConfig.files[0];
 
-    switch (val.includes("{") && val.includes("}")) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", ()=>{
+
+        val = reader.result;
+
+        switch (val.includes("{") && val.includes("}")) {
+    
+            case false:
+    
+            break;
+    
+            default:
+    
+                profile = JSON.parse(val);
+    
+                profileKeys = Object.keys(profile);
+    
+                profileValues = Object.values(profile);
+    
+                localStorage.clear();
+    
+                for (let i = 0; i < profileKeys.length; i++) {
+    
+                    localStorage.setItem(profileKeys[i], profileValues[i]);
+                }
+            
+                location.reload();
+    
+            break;
+        }
+    });
+    
+    switch (file) {
+
+        case null:
+
+        break;
+
+        default:
+
+            reader.readAsText(file);
+        break;
+    }
+});
+
+deleteConfig = document.getElementById("delete_config");
+
+deleteConfig.addEventListener("click", ()=>{
+
+    let conf = window.confirm("¡Estás a punto de eliminar tu configuración!");
+
+    switch (conf) {
 
         case false:
 
@@ -441,19 +493,8 @@ importConfig.addEventListener("input", ()=>{
 
         default:
 
-            profile = JSON.parse(val);
-
-            profileKeys = Object.keys(profile);
-
-            profileValues = Object.values(profile);
-
             localStorage.clear();
 
-            for (let i = 0; i < profileKeys.length; i++) {
-
-                localStorage.setItem(profileKeys[i], profileValues[i]);
-            }
-        
             location.reload();
 
         break;

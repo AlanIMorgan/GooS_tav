@@ -375,13 +375,22 @@
 
 						<br>
 
-						<input id="import_config" placeholder="Pega aquí tu anterior perfil:" type="text" style="margin-bottom: 20px;">
+						<a id="export_config" class="mas-de-google" style="margin-top: 40px;">
+							
+							Exportar perfil
+						</a>
 
 						<br>
 
-						<a id="export_config" class="mas-de-google">
+						<label class="mas-de-google" for="import_config"> Importar perfil... </label>
+
+						<br>
+
+						<input id="import_config" class="hidden" type="file">
+
+						<a id="delete_config" class="mas-de-google" style="background: #733;">
 							
-							Exportar perfil
+							Borrar perfil
 						</a>
 					</ul>
 				</ul>
@@ -434,7 +443,7 @@
 			<div class="home__direct-access-row"></div>
 		</div>
 		
-		<script src="js/nav.js?v117"></script>
+		<script src="js/nav.js?v118"></script>
 		<script src="js/search.js?v57"></script> <!-- 
 		<script src="js/voice-search.js?v2"></script> -->
 
