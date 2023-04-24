@@ -276,6 +276,11 @@ a {
 }
 
 @media (max-width: 700px) {
+
+	.google-search::placeholder {
+
+		font-size: 10px;
+	}
 	
 	.direct-access {
 
@@ -700,6 +705,7 @@ td,
 
 .google-search::placeholder {
 	color: var(--primary);
+	opacity: .75;
 }
 
 .home__form .fa-search {

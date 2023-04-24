@@ -104,7 +104,7 @@ switch (localStorage.getItem("user")) {
     case "":
     case null:
 
-        searchInpt.placeholder = "¡Hola, extraño!";
+        searchInpt.placeholder = "¡Hola, extraño! Intenta buscar películas, música, libros, etc...";
 
     break;
 
@@ -123,7 +123,7 @@ function changeNick() {
 
     if (nick.length > 1) {
     
-        searchInpt.placeholder = "¡Hola, " + nick + "!";
+        searchInpt.placeholder = "¡Hola, " + nick + "! Intenta buscar películas, música, libros, etc...";
     
         localStorage.setItem("user", nick);
     }
@@ -417,7 +417,7 @@ function showHideHistory() {
     }, 125);
 }
 
-// Export / import settings
+// Export / import profile settings
 
 content = JSON.stringify(localStorage);
 
@@ -425,7 +425,7 @@ exportConfig = document.getElementById("export_config");
 
 exportConfig.href = "data:application/octet-stream," + encodeURIComponent(content);
 
-exportConfig.download = "gsconf.json";
+exportConfig.download = nickName.value + "_" + "gsconf.json";
 
 importConfig = document.getElementById("import_config");
 
@@ -941,7 +941,7 @@ enlace("https://goostav.vercel.app/", "GooS_tav", "goostav buscar search búsque
 
 enlace("https://www.guitars101.com/", "Guitars 101", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", extraLinks);
 
-enlace("https://igram.io/", "iGram", "instagram downloader descargar vídeos videos imágenes imagenes pics pictures fotos photos reels", extraLinks);
+enlace("https://igram.live/", "iGram", "instagram downloader descargar vídeos videos imágenes imagenes pics pictures fotos photos reels", extraLinks);
 
 enlace("https://www.iloveimg.com/", "I love IMG", "editar edición recortar convertir imágenes imagenes images pics pictures fotos jpg jpeg png gif webp", extraLinks);
 
