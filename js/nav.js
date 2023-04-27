@@ -713,54 +713,69 @@ switch (localStorage.getItem("bookmarks")) {
 
                 dataSets = deleteBtns[i].dataset.address + ";;;" + deleteBtns[i].dataset.site + ";;;" + deleteBtns[i].dataset.keywords;
 
-                splittedBkmrks = bookmarks.split(dataSets);
+                dataSetsSplitted = dataSets.split(";;;");
 
-                switch (splittedBkmrks[0].length > 9) {
+                let conf = window.confirm("Estás a punto de borrar: " + dataSetsSplitted[1]);
+
+                switch (conf) {
 
                     case false:
-
-                        bkmrksUpdated = splittedBkmrks[1];
 
                     break;
 
                     default:
 
-                        switch (splittedBkmrks[1].length > 9) {
-
+                        splittedBkmrks = bookmarks.split(dataSets);
+        
+                        switch (splittedBkmrks[0].length > 9) {
+        
                             case false:
-
-                                bkmrksUpdated = splittedBkmrks[0];
-
+        
+                                bkmrksUpdated = splittedBkmrks[1];
+        
                             break;
-
+        
                             default:
-
-                                bkmrksUpdated = splittedBkmrks[0] + splittedBkmrks[1];
-
+        
+                                switch (splittedBkmrks[1].length > 9) {
+        
+                                    case false:
+        
+                                        bkmrksUpdated = splittedBkmrks[0];
+        
+                                    break;
+        
+                                    default:
+        
+                                        bkmrksUpdated = splittedBkmrks[0] + splittedBkmrks[1];
+        
+                                    break;
+                                }
+        
                             break;
                         }
+        
+                        bkmrksFixed = bkmrksUpdated.replace(",,", ",");
+        
+                        switch (bkmrksFixed.length > 9) {
+        
+                            case false:
+        
+                                localStorage.removeItem("bookmarks");
+        
+                            break;
+        
+                            default:
+        
+                                localStorage.setItem("bookmarks", bkmrksFixed);
+        
+                            break;
+                        }
+        
+                        window.location.reload();
 
                     break;
                 }
-
-                bkmrksFixed = bkmrksUpdated.replace(",,", ",");
-
-                switch (bkmrksFixed.length > 9) {
-
-                    case false:
-
-                        localStorage.removeItem("bookmarks");
-
-                    break;
-
-                    default:
-
-                        localStorage.setItem("bookmarks", bkmrksFixed);
-
-                    break;
-                }
-
-                window.location.reload();
             });
         }
 
@@ -1050,6 +1065,8 @@ enlace("https://www.scopus.com/", "Scopus", "buscar búsqueda search academic sc
 enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA generator", "academic school scholar escuela documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
 enlace("https://seriespapaya.club/", "Series Papaya", "ver películas peliculas series completas gratis watch full free download movies descargar cinema piracy piratería pirateria", extraLinks);
+
+enlace("https://www.shazam.com/", "Shazam", "escuchar listen música musica", extraLinks);
 
 enlace("https://snapinsta.io/", "SnapInsta", "youtube downloader escuchar listen descargar música musica videos vídeos gratis full free piracy piratería pirateria", extraLinks);
 
