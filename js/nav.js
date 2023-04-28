@@ -1118,6 +1118,8 @@ enlace("https://www.office.com/launch/word?auth=2", "Word", "microsoft office 36
 
 enlace("https://www.worldcat.org/", "WorldCat", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
+enlace("https://xodo.com/", "Xodo", "editar edición convertir pdf word documentos documents docs", extraLinks);
+
 enlace("https://yandex.com/", "Yandex", "buscar search búsqueda", extraLinks);
 
 enlace("https://yandex.com/images/", "Yandex Images", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", extraLinks);
