@@ -255,6 +255,8 @@ function openTab(google, array) {
 				break;
 			}
 
+			array = encodeURIComponent(array);
+
 		break;
 	}
 
@@ -264,7 +266,7 @@ function openTab(google, array) {
 
 	setTimeout(() => {
 
-		window.open(query + encodeURIComponent(array));
+		window.open(query + array);
 	}, 250);
 
 	updateHistory();
