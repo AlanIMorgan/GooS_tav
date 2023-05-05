@@ -852,6 +852,8 @@ enlace("https://www.google.com/", "Google", "buscar search búsqueda", googleLin
 
 enlace("https://myaccount.google.com/", "Cuenta de google", "account sesión manage session user gestionar usuario", googleLinks);
 
+enlace("https://classroom.google.com/", "Google Classroom", "academic school scholar escuela tareas homework", googleLinks);
+
 enlace("https://docs.google.com/", "Google Documentos", "ofimática word documents docs", googleLinks);
 
 enlace("https://photos.google.com/", "Google Fotos", "photos gallery galería álbum album pics pictures images imágenes img jpg jpeg gif png webp wallpapers", googleLinks);
