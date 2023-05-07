@@ -986,7 +986,7 @@ enlace("https://www.linkedin.com/in/alanmorgan-a/", "LinkedIn", "redes sociales 
 
 enlace("https://www.locopelis.com/", "LocoPelis", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
 
-enlace("https://www.malavida.com", "Malavida", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android iphone apple descargar programas gratis full free download apps apks", extraLinks);
+enlace("https://www.malavida.com", "Malavida", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android descargar programas gratis full free download apps apks", extraLinks);
 
 enlace("https://mega.nz/", "Mega", "almacenamiento nube cloud storage almacenar", extraLinks);
 
@@ -1010,7 +1010,7 @@ enlace("https://sites.google.com/cuaad.udg.mx/habilidadesentics/objetos-virtuale
 
 enlace("https://onedrive.live.com/", "OneDrive", "microsoft office 365 almacenamiento nube cloud storage almacenar", extraLinks);
 
-enlace("https://www.onlineocr.net/", "Online OCR", "", extraLinks);
+enlace("https://www.newocr.com/", "Free Online OCR", "optical characters reader lector óptico caracteres", extraLinks);
 
 enlace("https://outlook.live.com/", "Outlook", "microsoft office 365 correo electrónico mail email e-mail", extraLinks);
 
@@ -1080,13 +1080,13 @@ enlace("https://soundcloud.com/", "Soundcloud", "escuchar listen música musica"
 
 enlace("https://subes.becasbenitojuarez.gob.mx/", "SUBES", "becas", extraLinks);
 
-enlace("https://www.typingclub.com/", "TypingClub", "utilities tools herramientas learn aprender escribir write", extraLinks);
-
 enlace("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid", "Teams", "academic school scholar escuela tareas homework", extraLinks);
 
 enlace("https://web.telegram.org/k/", "Telegram", "redes sociales network mensajerías mensajerias intantáneas intantaneas", extraLinks);
 
 enlace("https://www.televisiongratishd.com/", "Televisión gratis", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
+
+enlace("https://thepiratebay.org/index.html", "The Pirate Bay", "torrents magnet descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles ver películas peliculas series watch full movies cinema escuchar listen música musica", extraLinks);
 
 enlace("https://www.tiktok.com/", "TikTok", "redes sociales network vídeos videos", extraLinks);
 
@@ -1098,15 +1098,17 @@ enlace("https://www.tvconexion.com/", "TV Conexion HD", "ver canales televisión
 
 enlace("https://mobile.twitter.com/", "Twitter", "redes sociales network tuits", extraLinks);
 
+enlace("https://www.typingclub.com/", "TypingClub", "utilities tools herramientas learn aprender escribir write", extraLinks);
+
 enlace("https://www.urbandictionary.com/", "Urban Dictionary", "buscar search búqueda busqueda diccionario qué significa que significa", extraLinks);
 
 enlace("https://www.vepelis.com/", "VePelis", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://verpeliculasonline.org/", "Vision", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
 
-enlace("https://victorraulrr.info/", "Victor RaulRR", "descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android iphone apple celulares smartphones teléfonos telefonos mobiles móviles moviles", extraLinks);
+enlace("https://victorraulrr.info/", "Victor RaulRR", "descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles", extraLinks);
 
-enlace("https://www.virustotal.com/", "VirusTotal", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android iphone apple descargar programas gratis full free download apps apks", extraLinks);
+enlace("https://www.virustotal.com/", "VirusTotal", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android descargar programas gratis full free download apps apks", extraLinks);
 
 enlace("https://vocalremover.org/", "Vocal Remover and Isolation", "inteligencia artificial intelligence ia ai música musica audio", extraLinks);
 
