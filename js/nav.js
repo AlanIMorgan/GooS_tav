@@ -1050,6 +1050,8 @@ enlace("http://repec.org/", "RePEc", "Research Papers Economics buscar búsqueda
 
 enlace("https://saucenao.com/", "SauceNAO", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", extraLinks);
 
+enlace("https://saveinsta.app/", "SaveInsta", "instagram downloader descargar vídeos videos imágenes imagenes pics pictures fotos photos reels", extraLinks);
+
 enlace("https://scanapp.org/", "ScanApp", "código codigo qr code scanner reader", extraLinks);
 
 enlace("https://sci-hub.se/", "Sci-Hub", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", extraLinks);
@@ -1069,8 +1071,6 @@ enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA 
 enlace("https://seriespapaya.club/", "Series Papaya", "ver películas peliculas series completas gratis watch full free download movies descargar cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://www.shazam.com/", "Shazam", "escuchar listen música musica", extraLinks);
-
-enlace("https://snapinsta.io/", "SnapInsta", "youtube downloader escuchar listen descargar música musica videos vídeos gratis full free piracy piratería pirateria", extraLinks);
 
 enlace("https://open.spotify.com/", "Spotify", "escuchar listen música musica", extraLinks);
 
