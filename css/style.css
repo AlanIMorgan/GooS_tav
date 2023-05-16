@@ -300,6 +300,11 @@ a {
 
 		font-size: 13px;
 	}
+
+	.home__search-container {
+
+		top: calc(37% - 44px) !important;
+	}
 	
 	.direct-access {
 
