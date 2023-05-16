@@ -30,8 +30,11 @@ function showForm() {
     searchInput.focus();
     
 	searchInput.value = "";
+	
+	window.addEventListener("resize", ()=>{
 
-	document.scroll(0, 500);
+		scroll(0, 500);
+	});
 
 	liveSearch();
 }
