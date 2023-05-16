@@ -31,7 +31,7 @@ function showForm() {
     
 	searchInput.value = "";
 
-	window.scroll(0, 0);
+	document.getElementById("img_mask").scroll(0, 100);
 
 	liveSearch();
 }
