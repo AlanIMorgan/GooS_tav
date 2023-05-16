@@ -31,7 +31,7 @@ function showForm() {
     
 	searchInput.value = "";
 
-	Window.scroll(0, 500);
+	document.scroll(0, 500);
 
 	liveSearch();
 }
