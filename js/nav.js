@@ -854,6 +854,8 @@ enlace("https://myaccount.google.com/", "Cuenta de google", "account sesión man
 
 enlace("https://classroom.google.com/", "Google Classroom", "academic school scholar escuela tareas homework", googleLinks);
 
+enlace("https://drive.google.com/", "Drive", "google almacenamiento nube cloud storage almacenar", extraLinks);
+
 enlace("https://docs.google.com/", "Google Documentos", "ofimática word documents docs", googleLinks);
 
 enlace("https://photos.google.com/", "Google Fotos", "photos gallery galería álbum album pics pictures images imágenes img jpg jpeg gif png webp wallpapers", googleLinks);
