@@ -55,9 +55,7 @@ document.getElementById("img_mask").addEventListener("click", ()=>{
 
 searchEngineMenu = document.getElementById("s_engine");
 
-searchEngineMenu.addEventListener("input", ()=>{
-
-	localStorage.setItem("searchEngine", searchEngineMenu.value);
+function vetSEngine () {
 
 	switch (searchEngineMenu.value) {
 
@@ -97,6 +95,11 @@ searchEngineMenu.addEventListener("input", ()=>{
 
 		break;
 	}
+}
+
+searchEngineMenu.addEventListener("input", ()=>{
+
+	localStorage.setItem("searchEngine", searchEngineMenu.value);
 });
 
 switch (localStorage.getItem("searchEngine")) {
@@ -104,7 +107,7 @@ switch (localStorage.getItem("searchEngine")) {
 	case null:
 
 	break;
-
+	
 	default:
 
 		searchEngineMenu.value = localStorage.getItem("searchEngine");
@@ -284,6 +287,8 @@ function openTab(sEngine, array) {
 				break;
 
 				default:
+
+					vetSEngine();
 
 					userHistory = localStorage.getItem("history");
 		
