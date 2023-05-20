@@ -682,6 +682,7 @@ td,
 	margin: 0 auto;
 	max-width: 564px;
 	cursor: text;
+	overflow: hidden;
 }
 
 .home__form:hover {
@@ -731,6 +732,18 @@ td,
 	float: right;
 	margin-top: 11px;
 	margin-right: 16px;
+}
+
+.form__s_engine-icon {
+
+	float: right;
+	border: 0;
+	cursor: pointer;
+	width: 15px;
+	height: 42px;
+	margin-right: 6px;
+	border-radius: 12px;
+    font-size: 15px;
 }
 
 .results_box_container {

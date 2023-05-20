@@ -53,6 +53,65 @@ document.getElementById("img_mask").addEventListener("click", ()=>{
 	searchInput.focus();
 });
 
+searchEngineMenu = document.getElementById("s_engine");
+
+searchEngineMenu.addEventListener("input", ()=>{
+
+	localStorage.setItem("searchEngine", searchEngineMenu.value);
+
+	switch (searchEngineMenu.value) {
+
+		case "Baidu":
+
+			searchEngine = "https://www.baidu.com/s?ie=utf-8&wd=";
+
+		break;
+
+		case "Duckduckgo":
+
+			searchEngine = "https://duckduckgo.com/?q=";
+
+		break;
+
+		case "Google":
+
+			searchEngine = "https://www.google.com/search?q=";
+
+		break;
+
+		case "Qwant":
+
+			searchEngine = "https://www.qwant.com/?q=";
+
+		break;
+
+		case "Yandex":
+
+			searchEngine = "https://yandex.com/search/?text=";
+
+		break;
+
+		case "Yandex-r":
+
+			searchEngine = "https://yandex.ru/search/?text=";
+
+		break;
+	}
+});
+
+switch (localStorage.getItem("searchEngine")) {
+
+	case null:
+
+	break;
+
+	default:
+
+		searchEngineMenu.value = localStorage.getItem("searchEngine");
+
+	break;
+}
+
 resultsBoxC = document.querySelector(".results_box_container");
 
 results = document.querySelector(".results_box");
@@ -202,19 +261,17 @@ function updateHistory() {
 
 updateHistory();
 
-function openTab(google, array) {
+function openTab(sEngine, array) {
 
-	switch (google) {
+	switch (sEngine) {
 
 		case 0:
 
-			query = "";
+			searchEngine = "";
 
 		break;
 
 		default:
-
-			query = "https://www.google.com/search?q=";
 
 			inputs = [];
 
@@ -266,7 +323,7 @@ function openTab(google, array) {
 
 	setTimeout(() => {
 
-		window.open(query + array);
+		window.open(searchEngine + array);
 	}, 250);
 
 	updateHistory();
