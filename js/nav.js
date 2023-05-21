@@ -180,6 +180,44 @@ function showHideNav() {
     profileNavMenu.classList.replace("block", "hide");
 }
 
+// CLOCK
+
+clockContainer = document.getElementById('clock');
+
+setInterval( ()=>{
+
+    date = new Date();
+
+    hrs = date.getHours();
+    mins = date.getMinutes();
+    secs = date.getSeconds();
+
+    period = "AM";
+
+    if (hrs == 0) {
+
+        hrs = 12;
+    }
+
+    else if (hrs >= 12) {
+
+        hrs = hrs - 12;
+
+        period = "PM";
+    }
+
+    hrs = hrs < 10 ? "0" + hrs : hrs;
+
+    mins = mins < 10 ? "0" + mins : mins;
+
+    secs = secs < 10 ? "0" + secs : secs;
+
+    time = `${hrs}:${mins}:${secs} ${period}`;
+
+    clockContainer.innerText = time;
+
+}, 1000);
+
 today = new Date();
 
 currentMonth = today.getMonth();
