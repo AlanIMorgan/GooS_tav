@@ -240,7 +240,7 @@ function updateHistory() {
 
 						let icon = document.createElement("img");
 
-						icon.setAttribute("src", "https://www.google.com/favicon.ico");
+						icon.setAttribute("src", "./img/android-icon-192x192.png");
 
 						icon.setAttribute("class", "direct-access__img");
 
