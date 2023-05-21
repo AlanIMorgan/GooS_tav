@@ -363,6 +363,47 @@
 
 						<div class="bckgrnd_sttng" style="text-align: start;">
 
+							<label for="random_wpp"> Fondo aleatorio </label>
+
+							<input type="checkbox" id="random_wpp">
+
+							<br>
+
+							<?php
+
+								$apiKey = '';
+								$url = 'https://wallhaven.cc/api/v1/search?q=photography&sorting=random&apikey=' . $apiKey;
+
+								$response = file_get_contents($url);
+
+								if ($response == false) {
+
+									echo "Error";
+								}
+
+								else {
+
+									echo '
+
+										<script>
+
+											json = ' . $response . ';
+
+											content = JSON.stringify(json);
+
+											dataSplit = content.split(' . "'" . '"path":"' . "'" . ');
+
+											dataSplit2 = dataSplit[1].split(' . "'" . '"' . "'" . ');
+
+											randomImg = dataSplit2[0];
+										</script>
+									';
+								}
+
+							?>
+
+							<br>
+
 							<label for="bckgrnd_sttng"> Fondo: </label>
 
 							<input type="text" id="bckgrnd_sttng" placeholder="URL de la imagen" style="width: 50%;">
@@ -462,8 +503,8 @@
 			<div class="home__direct-access-row"></div>
 		</div>
 
-		<script src="js/nav.js?v126"></script>
-		<script src="js/search.js?v72"></script> <!-- 
+		<script src="js/nav.js?v128"></script>
+		<script src="js/search.js?v73"></script> <!-- 
 		<script src="js/voice-search.js?v2"></script> -->
 
 		<script>

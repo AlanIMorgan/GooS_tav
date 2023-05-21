@@ -90,6 +90,47 @@ function resetBackground() {
     document.getElementById("home__bckgrnd").classList.add("home__bckgrnd");
 }
 
+randomWpp = document.getElementById("random_wpp");
+
+randomWpp.addEventListener("input", ()=>{
+
+    switch (randomWpp.checked) {
+
+        case false:
+
+            localStorage.removeItem("random_wpp");
+
+            location.reload();
+
+        break;
+        
+        default:
+
+            localStorage.setItem("random_wpp", "true");
+
+            location.reload();
+
+        break;
+    }
+});
+
+switch ( localStorage.getItem("random_wpp") ) {
+
+    case null:
+
+    break;
+
+    default:
+
+        randomWpp.checked = true;
+
+        bckgrndInpt.value = randomImg;
+
+        changeBackground();
+
+    break;
+}
+
 // Nickname
 
 nickName = document.getElementById("nick_sttng");

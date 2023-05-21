@@ -177,15 +177,9 @@ function liveSearch() {
 	}
 }
 
-//A little delay
-let typingTimer;               
-let typeInterval = 250;  
-
 searchInput.addEventListener('input', () => {
-
-	clearTimeout(typingTimer);
 	
-	typingTimer = setTimeout(liveSearch, typeInterval);
+	liveSearch();
 });
 
 resultsBoxC.addEventListener("click", ()=>{
