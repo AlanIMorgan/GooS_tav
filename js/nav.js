@@ -88,7 +88,7 @@ function resetBackground() {
     document.getElementById("img_mask").classList.add("img_mask");
 
     document.getElementById("home__bckgrnd").classList.add("home__bckgrnd");
-}
+} /* 
 
 randomWpp = document.getElementById("random_wpp");
 
@@ -129,7 +129,7 @@ switch ( localStorage.getItem("random_wpp") ) {
         changeBackground();
 
     break;
-}
+} */
 
 // Nickname
 
