@@ -88,48 +88,31 @@ function resetBackground() {
     document.getElementById("img_mask").classList.add("img_mask");
 
     document.getElementById("home__bckgrnd").classList.add("home__bckgrnd");
-} /* 
+}
 
-randomWpp = document.getElementById("random_wpp");
-
-randomWpp.addEventListener("input", ()=>{
-
-    switch (randomWpp.checked) {
+document.getElementById("random_wpp").addEventListener("click", ()=>{
+    
+    switch ( bckgrndInpt.value.includes("https://source.unsplash.com/random") ) {
 
         case false:
 
-            localStorage.removeItem("random_wpp");
-
-            location.reload();
+            bckgrndInpt.value = "https://source.unsplash.com/random/1280x920/?night&lastmod=0";
 
         break;
-        
+
         default:
 
-            localStorage.setItem("random_wpp", "true");
+            bckgrndValueSplit = bckgrndInpt.value.split("lastmod=");
 
-            location.reload();
+            lastmod = parseInt( bckgrndValueSplit[1] ) + 1;
+
+            bckgrndInpt.value = bckgrndValueSplit[0] + "lastmod=" + lastmod;
 
         break;
     }
+
+    changeBackground();
 });
-
-switch ( localStorage.getItem("random_wpp") ) {
-
-    case null:
-
-    break;
-
-    default:
-
-        randomWpp.checked = true;
-
-        bckgrndInpt.value = randomImg;
-
-        changeBackground();
-
-    break;
-} */
 
 // Nickname
 
@@ -235,12 +218,12 @@ setInterval( ()=>{
 
     period = "AM";
 
-    if (hrs == 0) {
+    if (hrs == "00"|| 00 || 0) {
 
         hrs = 12;
     }
 
-    else if (hrs >= 12) {
+    else if (hrs > 12) {
 
         hrs = hrs - 12;
 

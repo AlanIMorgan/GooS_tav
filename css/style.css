@@ -22,6 +22,10 @@ html {
     background: #333;
 }
 
+a {
+	cursor: pointer;
+}
+
 .home {
 	position: relative;
     overflow: hidden;
