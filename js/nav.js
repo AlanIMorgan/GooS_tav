@@ -916,7 +916,7 @@ enlace("https://myaccount.google.com/", "Cuenta de google", "account sesión man
 
 enlace("https://classroom.google.com/", "Google Classroom", "academic school scholar escuela tareas homework", googleLinks);
 
-enlace("https://drive.google.com/", "Drive", "google almacenamiento nube cloud storage almacenar", extraLinks);
+enlace("https://drive.google.com/", "Drive", "google almacenamiento nube cloud storage almacenar", googleLinks);
 
 enlace("https://docs.google.com/", "Google Documentos", "ofimática word documents docs", googleLinks);
 
@@ -975,6 +975,8 @@ enlace("https://becasmexico.org/becas-para-universitarios/", "Becas México", ""
 enlace("https://becassubes.com/", "Becas SUBES", "", extraLinks);
 
 enlace("https://www.behance.net/", "Behance", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", extraLinks);
+
+enlace("https://www.bing.com/", "Bing", "buscar search búsqueda", extraLinks);
 
 enlace("https://www.bioline.org.br/", "Bioline", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos health salud medicine medicina enfermedades epidemiología biología biologia biologic medio ambiente biodiversidad biodiversity", extraLinks);
 

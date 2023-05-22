@@ -65,6 +65,12 @@ function vetSEngine () {
 
 		break;
 
+		case "Bing":
+
+			searchEngine = "https://www.bing.com/search?q=";
+
+		break;
+
 		case "Duckduckgo":
 
 			searchEngine = "https://duckduckgo.com/?q=";
