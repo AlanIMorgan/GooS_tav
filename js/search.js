@@ -28,7 +28,7 @@ function showForm() {
     searchForm.classList.toggle("hidden");
 
     searchInput.focus();
-    
+
 	searchInput.value = "";
 
 	liveSearch();
@@ -48,14 +48,11 @@ document.documentElement.addEventListener('keyup', (e)=>{
 
 document.getElementById('form-btn').addEventListener("click", showForm);
 
-document.getElementById("img_mask").addEventListener("click", ()=>{
-
-	searchInput.focus();
-});
+document.getElementById("img_mask").addEventListener("click", ()=> searchInput.focus() );
 
 searchEngineMenu = document.getElementById("s_engine");
 
-function vetSEngine () {
+function vetSEngine() {
 
 	switch (searchEngineMenu.value) {
 
@@ -103,17 +100,14 @@ function vetSEngine () {
 	}
 }
 
-searchEngineMenu.addEventListener("input", ()=>{
+searchEngineMenu.addEventListener("input", ()=> localStorage.setItem("searchEngine", searchEngineMenu.value) );
 
-	localStorage.setItem("searchEngine", searchEngineMenu.value);
-});
-
-switch (localStorage.getItem("searchEngine")) {
+switch ( localStorage.getItem("searchEngine") ) {
 
 	case null:
 
 	break;
-	
+
 	default:
 
 		searchEngineMenu.value = localStorage.getItem("searchEngine");
@@ -131,7 +125,7 @@ currentURL = window.location.href;
 
 function liveSearch() {
 
-	let search_query = searchInput.value;
+	let search_query = searchInput.value !== " " ? searchInput.value : "";
 
 	for (i = 0; i < links.length; i++) {
 
@@ -140,11 +134,11 @@ function liveSearch() {
 			case 0:
 
 				resultsBoxC.classList.add("hidden");
-	
+
 				links[i].classList.remove("actual");
 
 				directAccess = document.querySelector(".home__direct-access-row");
-				
+
 				directAccess.style.display = "block";
 
 			break;
@@ -153,10 +147,10 @@ function liveSearch() {
 
 				directAccess.style.display = "none";
 
-				switch (links[i].textContent.toLowerCase().includes(search_query.toLowerCase())) {
+				switch ( links[i].textContent.toLowerCase().includes( search_query.toLowerCase() ) ) {
 
 					case false:
-			
+
 						links[i].classList.remove("actual");
 
 						switch (document.querySelectorAll('.actual').length) {
@@ -166,13 +160,13 @@ function liveSearch() {
 								resultsBoxC.classList.add("hidden");
 							break;
 						}
-					
+
 					break;
 
 					default:
-			
+
 						links[i].classList.add("actual");
-			
+
 						resultsBoxC.classList.remove("hidden");
 
 					break;
@@ -183,16 +177,13 @@ function liveSearch() {
 	}
 }
 
-searchInput.addEventListener('input', () => {
-	
-	liveSearch();
-});
+searchInput.addEventListener('input', () => liveSearch() );
 
 resultsBoxC.addEventListener("click", ()=>{
 
 	searchInput.value = "";
 
-	setTimeout(() => {
+	setTimeout( () => {
 
 		liveSearch();
 
@@ -204,7 +195,7 @@ directAccessRow = document.querySelector(".home__direct-access-row");
 
 function updateHistory() {
 
-	switch (localStorage.getItem("history")) {
+	switch ( localStorage.getItem("history") ) {
 
 		case null:
 
@@ -219,7 +210,7 @@ function updateHistory() {
 			switch (userHistory == "noHistory") {
 
 				case false:
-			
+
 					directAccessRow.innerHTML = "";
 
 					for (let i = 0; i < inputs.length; i++) {
@@ -278,10 +269,10 @@ function openTab(sEngine, array) {
 
 			inputs = [];
 
-			switch (localStorage.getItem("history")) {
+			switch ( localStorage.getItem("history") ) {
 
 				case null:
-					
+
 					localStorage.setItem('history', array);
 
 				break;
@@ -291,7 +282,7 @@ function openTab(sEngine, array) {
 					vetSEngine();
 
 					userHistory = localStorage.getItem("history");
-		
+
 					inputs = userHistory.split(',');
 
 					switch (userHistory == "noHistory") {
@@ -299,13 +290,13 @@ function openTab(sEngine, array) {
 						case false:
 
 							inputs.push(array);
-				
+
 							switch (inputs.length < 6) {
-				
+
 								case false:
-				
+
 									inputs.shift();
-				
+
 								break;
 							}
 							
@@ -326,7 +317,7 @@ function openTab(sEngine, array) {
 
 	directAccess.style.display = "block";
 
-	setTimeout(() => {
+	setTimeout( () => {
 
 		window.open(searchEngine + array);
 	}, 250);
@@ -336,7 +327,7 @@ function openTab(sEngine, array) {
 
 function redirect(array) {
 
-	switch (array.includes("http")) {
+	switch ( array.includes("http") ) {
 
 		case false:
 
@@ -350,7 +341,7 @@ function redirect(array) {
 
 		break;
 	}
-	
+
 	confRedir = confirm("Estás llendo a: " + array);
 
 	switch (confRedir) {
@@ -365,32 +356,32 @@ function redirect(array) {
 
 function createLink(path, tag, keyWords) {
 
-	switch (document.getElementById(keyWords)) {
+	switch ( document.getElementById(keyWords) ) {
 
 		case null:
 
 			let site = document.createElement("a");
-		
+
 			site.setAttribute("href", path);
-		
+
 			site.setAttribute("id", keyWords);
-		
+
 			site.setAttribute("class", "result actual");
-		
+
 			results.appendChild(site);
-			
+
 			site.innerText = tag;
-		
+
 			let words = document.createElement("span");
-		
+
 			words.setAttribute("class", "key_words");
-		
+
 			site.appendChild(words);
-			
+
 			words.innerText = keyWords;
-			
+
 			resultsBoxC.classList.remove("hidden");
-		
+
 			links = document.querySelectorAll('.result');
 
 		break;
@@ -407,56 +398,17 @@ document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 		case true:
 
-			switch (voiceText.includes(' ')) {
+			switch ( voiceText.includes('.') && !voiceText.includes(' ') ) {
 
 				case false:
 
-					switch (voiceText.includes('.')) {
-
-						case false:
-
-							switch (voiceText.toLowerCase()) {
-
-								case '/nsfw':
-
-									switch (document.querySelector(".nsfw")) {
-
-										case null:
-
-											createLink("sites_list/sites_list.html", "NSFW Sites", "/nsfw");
-
-										break;
-									}
-
-								break; /* 
-
-								case '/krk':
-
-									createLink("karaoke/", "Karaoke");
-
-								break; */
-
-								default:
-
-									openTab(1, voiceText);
-
-								break;
-							}
-
-						break;
-
-						default:
-							
-							redirect(voiceText);
-
-						break;
-					}
+					openTab(1, voiceText);
 
 				break;
 
 				default:
 
-					openTab(1, voiceText);
+					redirect(voiceText);
 
 				break;
 			}
