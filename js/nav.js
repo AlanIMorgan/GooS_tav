@@ -96,7 +96,7 @@ document.getElementById("random_wpp").addEventListener("click", ()=>{
 
         case false:
 
-            bckgrndInpt.value = "https://source.unsplash.com/random/1920x1080/?night&lastmod=0";
+            bckgrndInpt.value = "https://source.unsplash.com/random/" + window.innerWidth + "x" + window.innerHeight + "/?night&lastmod=0";
 
         break;
 
