@@ -215,11 +215,27 @@ function updateHistory() {
 
 					for (let i = 0; i < inputs.length; i++) {
 
-						const element = inputs[i];
+						let element = inputs[i];
 
 						let shortcut = document.createElement("a");
+						
+						element.includes("Baidu") ? elementLink = element.replace("Baidu: ", "https://www.baidu.com/s?ie=utf-8&wd=")
 
-						shortcut.setAttribute("href", "https://www.google.com/search?q=" + element);
+							: element.includes("Bing") ? elementLink = element.replace("Bing: ", "https://www.bing.com/search?q=")
+
+							: element.includes("Duckduckgo") ? elementLink = element.replace("Duckduckgo: ", "https://duckduckgo.com/?q=")
+
+							: element.includes("Google") ? elementLink = element.replace("Google: ", "https://www.google.com/search?q=")
+
+							: element.includes("Qwant") ? elementLink = element.replace("Qwant: ", "https://www.qwant.com/?q=")
+
+							: element.includes("Yandex") ? elementLink = element.replace("Yandex: ", "https://yandex.com/search/?text=")
+
+							: element.includes("Yandex-r") ? elementLink = element.replace("Yandex-r: ", "https://yandex.ru/search/?text=")
+
+							: elementLink = "";
+
+						shortcut.setAttribute("href", elementLink);
 
 						shortcut.setAttribute("title", "Acceso directo");
 
@@ -267,21 +283,19 @@ function openTab(sEngine, array) {
 
 		default:
 
+			vetSEngine();
+
 			inputs = [];
 
 			switch ( localStorage.getItem("history") ) {
 
 				case null:
 
-					localStorage.setItem('history', array);
+					localStorage.setItem('history', searchEngineMenu.value + ": " + array);
 
 				break;
 
 				default:
-
-					vetSEngine();
-
-					userHistory = localStorage.getItem("history");
 
 					inputs = userHistory.split(',');
 
@@ -289,7 +303,7 @@ function openTab(sEngine, array) {
 
 						case false:
 
-							inputs.push(array);
+							inputs.push(searchEngineMenu.value + ": " + array);
 
 							switch (inputs.length < 6) {
 
