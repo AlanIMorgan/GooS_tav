@@ -52,53 +52,46 @@ document.getElementById("img_mask").addEventListener("click", ()=> searchInput.f
 
 searchEngineMenu = document.getElementById("s_engine");
 
-function vetSEngine() {
+searchEngineMenuOptions = [
+	
+	{"Baidu" : "https://www.baidu.com/s?ie=utf-8&wd="},
 
-	switch (searchEngineMenu.value) {
+	{"Bing" : "https://www.bing.com/search?q="},
 
-		case "Baidu":
+	{"Duckduckgo" : "https://duckduckgo.com/?q="},
 
-			searchEngine = "https://www.baidu.com/s?ie=utf-8&wd=";
+	{"Google" : "https://www.google.com/search?q="},
 
-		break;
+	{"Qwant" : "https://www.qwant.com/?q="},
 
-		case "Bing":
+	{"Yandex" : "https://yandex.com/search/?text="},
 
-			searchEngine = "https://www.bing.com/search?q=";
+	{"Yandex-r" : "https://yandex.ru/search/?text="}
+];
 
-		break;
+function createOptions (name) {
 
-		case "Duckduckgo":
+	let option = document.createElement("option");
 
-			searchEngine = "https://duckduckgo.com/?q=";
+	option.setAttribute("value", name);
 
-		break;
+	name == "Google" ? option.setAttribute("selected", "true") : false;
 
-		case "Google":
+	searchEngineMenu.appendChild(option);
 
-			searchEngine = "https://www.google.com/search?q=";
-
-		break;
-
-		case "Qwant":
-
-			searchEngine = "https://www.qwant.com/?q=";
-
-		break;
-
-		case "Yandex":
-
-			searchEngine = "https://yandex.com/search/?text=";
-
-		break;
-
-		case "Yandex-r":
-
-			searchEngine = "https://yandex.ru/search/?text=";
-
-		break;
-	}
+	option.innerText = name;
 }
+
+searchEngineMenuOptions.forEach(e => {
+
+	optionName = Object.keys(e);
+
+	optionNameString = JSON.stringify(optionName);
+
+	oName = optionNameString.replace('["', "").replace('"]', "");
+
+	createOptions(oName);
+});
 
 searchEngineMenu.addEventListener("input", ()=> localStorage.setItem("searchEngine", searchEngineMenu.value) );
 
@@ -218,22 +211,28 @@ function updateHistory() {
 						let element = inputs[i];
 
 						let shortcut = document.createElement("a");
-						
-						element.includes("Baidu") ? elementLink = element.replace("Baidu: ", "https://www.baidu.com/s?ie=utf-8&wd=")
 
-							: element.includes("Bing") ? elementLink = element.replace("Bing: ", "https://www.bing.com/search?q=")
+						for (let i = 0; i < searchEngineMenuOptions.length; i++) {
 
-							: element.includes("Duckduckgo") ? elementLink = element.replace("Duckduckgo: ", "https://duckduckgo.com/?q=")
+							let e = searchEngineMenuOptions[i];
 
-							: element.includes("Google") ? elementLink = element.replace("Google: ", "https://www.google.com/search?q=")
+							let sEMOKey = JSON.stringify( Object.keys(e) ).replace('["', "").replace('"]', "");
 
-							: element.includes("Qwant") ? elementLink = element.replace("Qwant: ", "https://www.qwant.com/?q=")
+							switch ( element.includes( sEMOKey ) ) {
 
-							: element.includes("Yandex") ? elementLink = element.replace("Yandex: ", "https://yandex.com/search/?text=")
+								case false:
 
-							: element.includes("Yandex-r") ? elementLink = element.replace("Yandex-r: ", "https://yandex.ru/search/?text=")
+								break;
 
-							: elementLink = "";
+								default:
+
+									elementEngine = JSON.stringify( Object.values(e) ).replace('["', "").replace('"]', "");
+
+									elementLink = element.replace(sEMOKey + ": ", elementEngine);
+			
+								break;
+							}
+						}
 
 						shortcut.setAttribute("href", elementLink);
 
@@ -283,7 +282,23 @@ function openTab(sEngine, array) {
 
 		default:
 
-			vetSEngine();
+			for (let i = 0; i < searchEngineMenuOptions.length; i++) {
+
+				let e = searchEngineMenuOptions[i];
+
+				switch ( searchEngineMenu.value == Object.keys(e) ) {
+
+					case false:
+
+					break;
+
+					default:
+
+						searchEngine = JSON.stringify( Object.values(e) ).replace('["', "").replace('"]', "");
+
+					break;
+				}
+			}
 
 			inputs = [];
 
@@ -313,7 +328,7 @@ function openTab(sEngine, array) {
 
 								break;
 							}
-							
+
 							localStorage.setItem('history', inputs);
 
 						break;
