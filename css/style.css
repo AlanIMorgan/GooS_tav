@@ -854,9 +854,20 @@ td,
 	padding: 4px;
 	width: 100%;
 	border-radius: 25px;
-	margin-bottom: 6px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	margin-bottom: 6px; /* 
+    text-overflow: ellipsis; */
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.direct-access__info::-webkit-scrollbar-thumb {
+	background-color: 777;
+	-webkit-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.05), inset 1px 1px 0 rgba(0, 0, 0, 0.05);
+	background: var(--frth);
+	background-clip: padding-box;
+	border: 4px solid transparent;
+	border-radius: 10px;
+	box-shadow: none;
 }
 
 /*-------------VOICE-SEARCH-------------*/
