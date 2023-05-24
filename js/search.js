@@ -194,7 +194,7 @@ function updateHistory() {
 
 			userHistory = localStorage.getItem("history");
 
-			inputs = userHistory.split(',');
+			inputs = userHistory.split(';;;');
 
 			switch (userHistory == "noHistory") {
 
@@ -296,8 +296,6 @@ function openTab(sEngine, array) {
 				}
 			}
 
-			inputs = [];
-
 			switch ( localStorage.getItem("history") ) {
 
 				case null:
@@ -308,13 +306,13 @@ function openTab(sEngine, array) {
 
 				default:
 
-					inputs = userHistory.split(',');
-
 					switch (userHistory == "noHistory") {
 
 						case false:
 
-							inputs.push(searchEngineMenu.value + ": " + array);
+							userHistory = userHistory + ";;;" + searchEngineMenu.value + ": " + array;
+
+							inputs = userHistory.split(";;;");
 
 							switch (inputs.length < 6) {
 
@@ -322,10 +320,23 @@ function openTab(sEngine, array) {
 
 									inputs.shift();
 
+									newHistory = "";
+
+									inputs.forEach(e => {
+
+										newHistory == "" ? newHistory = e : newHistory += ";;;" + e;
+									});
+
+									localStorage.setItem('history', newHistory);
+
+								break;
+
+								default:
+
+									localStorage.setItem('history', userHistory);
+
 								break;
 							}
-
-							localStorage.setItem('history', inputs);
 
 						break;
 					}
