@@ -86,11 +86,7 @@ searchEngineMenuOptions.forEach(e => {
 
 	optionName = Object.keys(e);
 
-	optionNameString = JSON.stringify(optionName);
-
-	oName = optionNameString.replace('["', "").replace('"]', "");
-
-	createOptions(oName);
+	createOptions(optionName[0]);
 });
 
 searchEngineMenu.addEventListener("input", ()=> localStorage.setItem("searchEngine", searchEngineMenu.value) );
@@ -216,9 +212,9 @@ function updateHistory() {
 
 							let e = searchEngineMenuOptions[i];
 
-							let sEMOKey = JSON.stringify( Object.keys(e) ).replace('["', "").replace('"]', "");
+							let sEMOKey = Object.keys(e);
 
-							switch ( element.includes( sEMOKey ) ) {
+							switch ( element.includes( sEMOKey[0] ) ) {
 
 								case false:
 
@@ -226,9 +222,9 @@ function updateHistory() {
 
 								default:
 
-									elementEngine = JSON.stringify( Object.values(e) ).replace('["', "").replace('"]', "");
+									elementEngine = Object.values(e);
 
-									elementLink = element.replace(sEMOKey + ": ", elementEngine);
+									elementLink = element.replace(sEMOKey[0] + ": ", elementEngine[0]);
 			
 								break;
 							}
@@ -294,7 +290,7 @@ function openTab(sEngine, array) {
 
 					default:
 
-						searchEngine = JSON.stringify( Object.values(e) ).replace('["', "").replace('"]', "");
+						searchEngine = Object.values(e)[0];
 
 					break;
 				}
