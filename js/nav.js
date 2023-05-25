@@ -90,28 +90,46 @@ function resetBackground() {
     document.getElementById("home__bckgrnd").classList.add("home__bckgrnd");
 }
 
+
 document.getElementById("random_wpp").addEventListener("click", ()=>{
+
+    resolution = window.innerWidth + "x" + window.innerHeight;
     
-    switch ( bckgrndInpt.value.includes("https://source.unsplash.com/random") ) {
+    switch ( bckgrndInpt.value.includes("&lasttry=")) {
 
         case false:
 
-            bckgrndInpt.value = "https://source.unsplash.com/random/" + window.innerWidth + "x" + window.innerHeight + "/?night&lastmod=0";
+            fetch("https://source.unsplash.com/random/" + resolution + "/?night&lasttry=0")
 
+            .then(response => {
+
+                bckgrndInpt.value = response.url + "&lasttry=0";
+
+                changeBackground();
+            })
+
+            .catch(err => console.log('Solicitud fallida', err));
         break;
 
         default:
 
-            bckgrndValueSplit = bckgrndInpt.value.split("lastmod=");
+            bckgrndValueSplit = bckgrndInpt.value.split("lasttry=");
 
-            lastmod = parseInt( bckgrndValueSplit[1] ) + 1;
+            lasttry = parseInt( bckgrndValueSplit[1] ) + 1;
 
-            bckgrndInpt.value = bckgrndValueSplit[0] + "lastmod=" + lastmod;
+            fetch("https://source.unsplash.com/random/" + resolution + "/?night&lasttry=" + lasttry)
+
+            .then(response => {
+
+                bckgrndInpt.value = response.url + "&lasttry=" + lasttry;
+
+                changeBackground();
+            })
+
+            .catch(err => console.log('Solicitud fallida', err));
 
         break;
     }
-
-    changeBackground();
 });
 
 // Nickname
