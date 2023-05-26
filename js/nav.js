@@ -1,4 +1,5 @@
 navMenu = document.querySelector(".nav__li-submenu-ul");
+
 newSiteModal = document.getElementById("new_site_modal");
 
 const sharingSite = window.location.search;
@@ -49,7 +50,6 @@ switch (localStorage.getItem("bckgrnd")) {
         bckgrndInpt.value = localStorage.getItem("bckgrnd");
 
         changeBackground();
-
     break;
 }
 
@@ -57,7 +57,7 @@ function changeBackground() {
 
     imgUrl = bckgrndInpt.value;
 
-    switch (imgUrl.length > 1) {
+    switch ( imgUrl.includes("http") ) {
 
         case false:
 
@@ -95,7 +95,7 @@ document.getElementById("random_wpp").addEventListener("click", ()=>{
 
     resolution = window.innerWidth + "x" + window.innerHeight;
     
-    switch ( bckgrndInpt.value.includes("&lasttry=")) {
+    switch ( bckgrndInpt.value.includes("&lasttry=") ) {
 
         case false:
 
@@ -497,6 +497,75 @@ function showHideHistory() {
     }, 125);
 }
 
+addSearchEngine = document.getElementById("add_search_engine");
+
+SearchEngineModal = document.getElementById("new_search_engine_modal");
+
+addSearchEngine.addEventListener("click", ()=>{
+
+    window.scrollTo(0, 0);
+    SearchEngineModal.classList.replace("hidden", "new_search_engine_modal-form");
+    profileNavMenu.classList.add("ovrflw_hddn");
+    document.getElementById("search_engine_name").focus();
+});
+
+cancelSearchEngine = document.getElementById("cancel-search_engine");
+
+cancelSearchEngine.addEventListener("click", ()=>{
+
+    document.getElementById("search_engine_name").value = "";
+
+    document.getElementById("search_engine_link").value = "";
+
+    SearchEngineModal.classList.replace("new_search_engine_modal-form", "hidden");
+    
+    profileNavMenu.classList.remove("ovrflw_hddn");
+});
+
+SearchEngineModal.addEventListener('keydown', (e)=>{
+
+    switch (e.key) {
+
+		case "Tab":
+
+			e.preventDefault();
+
+		break;
+    }
+});
+
+addSEBtn = document.getElementById("cache_search_engine");
+
+addSEBtn.addEventListener("click", ()=>{
+
+    newSEName = document.getElementById("search_engine_name").value;
+
+    newSELink = document.getElementById("search_engine_link").value;
+
+    console.log(newSEName + ";;;" + newSELink);
+
+    switch ( localStorage.getItem("search_engines") ) {
+
+        case null:
+
+            localStorage.setItem("search_engines", newSEName + ";;;" + newSELink);
+
+            location.reload();
+
+        break;
+
+        default:
+
+            cachedSearchEngines = localStorage.getItem("search_engines");
+
+            localStorage.setItem("search_engines", cachedSearchEngines + "," + newSEName + ";;;" + newSELink);
+
+            location.reload();
+
+        break;
+    }
+});
+
 // Export / import profile settings
 
 content = JSON.stringify(localStorage);
@@ -649,6 +718,18 @@ function closeSiteForm() {
     
     navMenu.classList.remove("ovrflw_hddn");
 }
+
+newSiteModal.addEventListener('keydown', (e)=>{
+
+    switch (e.key) {
+
+		case "Tab":
+
+			e.preventDefault();
+
+		break;
+    }
+});
 
 addSiteBtn = document.getElementById("cache_site");
 

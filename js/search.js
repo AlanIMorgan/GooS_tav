@@ -50,8 +50,6 @@ document.getElementById('form-btn').addEventListener("click", showForm);
 
 document.getElementById("img_mask").addEventListener("click", ()=> searchInput.focus() );
 
-searchEngineMenu = document.getElementById("s_engine");
-
 searchEngineMenuOptions = [
 	
 	{"Baidu" : "https://www.baidu.com/s?ie=utf-8&wd="},
@@ -68,6 +66,38 @@ searchEngineMenuOptions = [
 
 	{"Yandex-r" : "https://yandex.ru/search/?text="}
 ];
+
+switch (localStorage.getItem("search_engines") ) {
+
+	case null:
+
+	break;
+
+	default:
+
+		cachedSearchEngines = localStorage.getItem("search_engines");
+
+		cachedSEArray = cachedSearchEngines.split(",");
+
+		cachedSEArray.forEach(e => {
+
+			cachedSE = e.split();
+
+			cachedSESplit = cachedSE[0].split(";;;");
+
+			cachedSESplit[0];
+
+			cachedSESplit[1];
+
+			newSEObject = JSON.parse('{ "' + cachedSESplit[0] + '" : "' + cachedSESplit[1] + '" }');
+
+			searchEngineMenuOptions.push(newSEObject);
+		});
+
+	break;
+}
+
+searchEngineMenu = document.getElementById("s_engine");
 
 function createOptions (name) {
 
@@ -350,6 +380,8 @@ function openTab(sEngine, array) {
 	}
 
 	searchInput.value = "";
+
+	liveSearch();
 
 	directAccess.style.display = "block";
 

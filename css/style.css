@@ -357,7 +357,8 @@ a {
 	background-color: var(--ffth);
 }
 
-.new_site_modal-form {
+.new_site_modal-form,
+.new_search_engine_modal-form {
 
 	display: flex;
 	flex-direction: column;
