@@ -1253,7 +1253,7 @@ enlace("https://www.televisiongratishd.com/", "Televisión gratis", "ver canales
 
 enlace("https://thepiratebay.org/index.html", "The Pirate Bay", "torrents magnet descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles ver películas peliculas series watch full movies cinema escuchar listen música musica", extraLinks);
 
-enlace("https://www.tiktok.com/", "The Weather Channel", "pronóstico pronostico clima tiempo", extraLinks);
+enlace("https://weather.com/", "The Weather Channel", "pronóstico pronostico el clima", extraLinks);
 
 enlace("https://www.tiktok.com/", "TikTok", "redes sociales network vídeos videos", extraLinks);
 
