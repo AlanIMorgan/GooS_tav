@@ -1153,6 +1153,8 @@ enlace("https://www.locopelis.com/", "LocoPelis", "ver películas peliculas seri
 
 enlace("https://www.malavida.com", "Malavida", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android descargar programas gratis full free download apps apks", extraLinks);
 
+enlace("https://www.maztr.com/audiotageditor", "Maztr", "música musica metadata tags editor mp3", extraLinks);
+
 enlace("https://mega.nz/", "Mega", "almacenamiento nube cloud storage almacenar", extraLinks);
 
 enlace("https://www.megadiscografiascompletas.com/", "Mega Discografías", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", extraLinks);
@@ -1237,6 +1239,8 @@ enlace("https://seriespapaya.club/", "Series Papaya", "ver películas peliculas 
 
 enlace("https://www.shazam.com/", "Shazam", "escuchar listen música musica", extraLinks);
 
+enlace("https://snapinsta.io/", "SnapInsta", "instagram youtube downloader descargar música musica vídeos videos imágenes imagenes pics pictures fotos photos reels", extraLinks);
+
 enlace("https://open.spotify.com/", "Spotify", "escuchar listen música musica", extraLinks);
 
 enlace("https://link.springer.com/", "Springer Link", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
@@ -1288,6 +1292,8 @@ enlace("https://web.whatsapp.com/", "WhatsApp", "redes sociales network mensajer
 enlace("https://www.office.com/launch/word?auth=2", "Word", "microsoft office 365 ofimática documents docs", extraLinks);
 
 enlace("https://www.worldcat.org/", "WorldCat", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
+
+enlace("https://x2download.app/", "X2Download.app", "facebook youtube downloader descargar música musica vídeos videos reels", extraLinks);
 
 enlace("https://xodo.com/", "Xodo", "editar edición convertir pdf word documentos documents docs", extraLinks);
 
