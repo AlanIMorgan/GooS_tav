@@ -226,41 +226,90 @@ function showHideNav() {
 
 // CLOCK
 
-clockContainer = document.getElementById('clock');
+clockSttng = document.getElementById("clock_sttng");
 
-setInterval( ()=>{
+clockSttng.addEventListener("input", ()=>{
 
-    date = new Date();
+    switch (clockSttng.checked) {
 
-    hrs = date.getHours();
-    mins = date.getMinutes();
-    secs = date.getSeconds();
+        case false:
 
-    period = "AM";
+            localStorage.setItem("clock", "false");
+        
+            location.reload();
 
-    if (hrs == "00"|| 00 || 0) {
+        break;
 
-        hrs = 12;
+        default:
+
+            localStorage.setItem("clock", "true");
+        
+            location.reload();
+
+        break;
     }
+} );
 
-    else if (hrs > 12) {
+switch ( localStorage.getItem("clock") ) {
 
-        hrs = hrs - 12;
+    case null:
 
-        period = "PM";
-    }
+    break;
 
-    hrs = hrs < 10 ? "0" + hrs : hrs;
+    default:
 
-    mins = mins < 10 ? "0" + mins : mins;
+        isClockTrue = localStorage.getItem("clock") == "true";
 
-    secs = secs < 10 ? "0" + secs : secs;
+        if (isClockTrue) {
 
-    time = `${hrs}:${mins}:${secs} ${period}`;
+            clockSttng.checked = true;
 
-    clockContainer.innerText = time;
+            createClock();
+        }
 
-}, 1000);
+    break;
+}
+
+clockContainer = document.getElementById("clock");
+
+function createClock() {
+
+    setInterval( ()=>{
+
+        date = new Date();
+
+        hrs = date.getHours();
+        mins = date.getMinutes();
+        secs = date.getSeconds();
+
+        period = "AM";
+
+        if (hrs == "00"|| 00 || 0) {
+
+            hrs = 12;
+        }
+
+        else if (hrs > 12) {
+
+            hrs = hrs - 12;
+
+            period = "PM";
+        }
+
+        hrs = hrs < 10 ? "0" + hrs : hrs;
+
+        mins = mins < 10 ? "0" + mins : mins;
+
+        secs = secs < 10 ? "0" + secs : secs;
+
+        time = `${hrs}:${mins}:${secs} ${period}`;
+
+        clockContainer.innerText = time;
+
+    }, 1000);
+}
+
+//CALENDAR
 
 today = new Date();
 
