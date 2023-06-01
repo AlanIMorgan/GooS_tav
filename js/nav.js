@@ -63,6 +63,8 @@ function changeBackground() {
 
             localStorage.setItem("bckgrnd", imgUrl);
 
+            toExport();
+
             resetBackground();
 
         break;
@@ -568,13 +570,18 @@ addSEBtn.addEventListener("click", ()=>{
 
 // Export / import profile settings
 
-content = JSON.stringify(localStorage);
+function toExport() {
 
-exportConfig = document.getElementById("export_config");
+    content = JSON.stringify(localStorage);
 
-exportConfig.href = "data:application/octet-stream," + encodeURIComponent(content);
+    exportConfig = document.getElementById("export_config");
 
-exportConfig.download = nickName.value + "_" + "gsconf.json";
+    exportConfig.href = "data:application/octet-stream," + encodeURIComponent(content);
+
+    exportConfig.download = nickName.value + "_" + "gsconf.json";
+}
+
+toExport();
 
 importConfig = document.getElementById("import_config");
 
