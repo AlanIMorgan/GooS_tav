@@ -630,6 +630,16 @@ td,
 	background: #777;
 }
 
+.setting_button {
+
+	text-align: start;
+}
+
+.setting_button a {
+
+	padding: 5px;border: 1px solid #fff;font-size: 12px;
+}
+
 /*--------------HOME------------------*/
 
 .home {
