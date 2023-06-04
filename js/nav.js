@@ -1107,6 +1107,8 @@ enlace("https://www.academia.edu/", "Academia.edu", "buscar búsqueda search aca
 
 enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", "comprimir pdf reducir documentos documents docs", extraLinks);
 
+enlace("https://www.amazon.com/", "Amazon", "tienda shopping comprar compras e-commerce e commerce ecommerce ecomerce comercio", extraLinks);
+
 enlace("https://express.adobe.com/", "Adobe Express", "photoshop diseño gráfico graphic design editar edición recortar imágenes imagenes images pics pictures fotos jpg jpeg png gif webp img", extraLinks);
 
 enlace("https://web.airdroid.com/", "AirDroid", "android mobile devices smartphones manager dispositivos móviles celulares teléfonos telefonos remote control access acceso remoto remota llamadas mensajes calls sms find encontrar transferir send enviar pc computer computadora share screen compartir pantalla files archivos apps applications aplicaciones apks notificaciones notifications", extraLinks);
