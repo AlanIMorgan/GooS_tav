@@ -50,6 +50,10 @@ document.getElementById('form-btn').addEventListener("click", showForm);
 
 document.getElementById("img_mask").addEventListener("click", ()=> searchInput.focus() );
 
+document.querySelector(".home__logo-containerrr").addEventListener("click", ()=> searchInput.focus() );
+
+document.querySelector(".home__direct-access-row").addEventListener("click", ()=> searchInput.focus() );
+
 searchEngineMenuOptions = [
 	
 	{"Baidu" : "https://www.baidu.com/s?ie=utf-8&wd="},
