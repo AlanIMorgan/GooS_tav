@@ -53,23 +53,18 @@ switch (localStorage.getItem("bckgrnd")) {
     break;
 }
 
+function isEmptyOrSpaces (str) {
+
+    return str == null || str.match(/^\s*$/) !== null;
+}
+
 function changeBackground() {
 
     imgUrl = bckgrndInpt.value;
 
-    switch ( imgUrl.includes("http") ) {
+    switch ( isEmptyOrSpaces(imgUrl) || !imgUrl.includes("http") ) {
 
         case false:
-
-            localStorage.setItem("bckgrnd", imgUrl);
-
-            toExport();
-
-            resetBackground();
-
-        break;
-
-        default:
 
             homeImg.src = imgUrl;
 
@@ -78,6 +73,16 @@ function changeBackground() {
             document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
 
             localStorage.setItem("bckgrnd", imgUrl);
+
+        break;
+
+        default:
+
+            localStorage.setItem("bckgrnd", imgUrl);
+
+            toExport();
+
+            resetBackground();
 
         break;
     }
@@ -165,18 +170,23 @@ function changeNick() {
 
     nick = nickName.value;
 
-    if (nick.length > 1) {
-    
-        searchInpt.placeholder = "¡Hola, " + nick + "! Intenta buscar películas, música, libros, etc...";
-    
-        localStorage.setItem("user", nick);
-    }
-    
-    else {
+    switch ( isEmptyOrSpaces(nick) ) {
 
-        resetNick();
+        case false:
 
-        localStorage.setItem("user", nick);
+            resetNick();
+
+            localStorage.setItem("user", nick);
+
+        break;
+
+        default:
+
+            searchInpt.placeholder = "¡Hola, " + nick + "! Intenta buscar películas, música, libros, etc...";
+
+            localStorage.setItem("user", nick);
+
+        break;
     }
 }
 
@@ -373,16 +383,16 @@ function showCalendar(month, year) {
     monthAndYear.innerHTML = months[month] + " " + year;
 
     selectYear.value = year;
-    
+
     selectMonth.value = month;
 
     // creating all cells
     let date = 1;
 
     for (let i = 0; i < 6; i++) { // creates a table row
-        
+
         let row = document.createElement("tr");
-        
+
         for (let j = 0; j < 7; j++) { // creating individual cells, filing them up with data
 
             if (i === 0 && j < firstDay) {
@@ -644,33 +654,33 @@ importConfig.addEventListener("input", ()=>{
 
         val = reader.result;
 
-        switch (val.includes("{") && val.includes("}")) {
-    
+        switch ( val.includes("{") && val.includes("}") ) {
+
             case false:
-    
+
             break;
-    
+
             default:
-    
+
                 profile = JSON.parse(val);
-    
+
                 profileKeys = Object.keys(profile);
-    
+
                 profileValues = Object.values(profile);
-    
+
                 localStorage.clear();
-    
+
                 for (let i = 0; i < profileKeys.length; i++) {
     
                     localStorage.setItem(profileKeys[i], profileValues[i]);
                 }
-            
+
                 location.reload();
     
             break;
         }
     });
-    
+
     switch (file) {
 
         case null:
@@ -711,9 +721,9 @@ deleteConfig.addEventListener("click", ()=>{
 function element(etiqueta, atributo, valor, texto) {
 
     let newElement = document.createElement(etiqueta);
-    
+
     if (atributo != "") {
-        
+
         newElement.setAttribute(atributo, valor);}
 
     if (etiqueta == "div") {
@@ -835,7 +845,7 @@ function enlace(address, text, keyWords, zone) {
     result.setAttribute("class", "result");
 
     results.appendChild(result);
-    
+
     result.innerText = text;
 
     let words = document.createElement("span");
@@ -843,7 +853,7 @@ function enlace(address, text, keyWords, zone) {
     words.setAttribute("class", "key_words");
 
     result.appendChild(words);
-    
+
     words.innerText = keyWords;
 
     let div = document.createElement("div");
@@ -859,7 +869,7 @@ function enlace(address, text, keyWords, zone) {
     newLink.appendChild(div);
 
     div.appendChild(p);
-    
+
     p.innerText = text;
 
     switch (zone == userLinks) {
@@ -888,7 +898,7 @@ function enlace(address, text, keyWords, zone) {
     }
 }
 
-switch (localStorage.getItem("bookmarks")) {
+switch ( localStorage.getItem("bookmarks") ) {
 
     case null:
 
@@ -943,52 +953,52 @@ switch (localStorage.getItem("bookmarks")) {
                     default:
 
                         splittedBkmrks = bookmarks.split(dataSets);
-        
+
                         switch (splittedBkmrks[0].length > 9) {
-        
+
                             case false:
-        
+
                                 bkmrksUpdated = splittedBkmrks[1];
-        
+
                             break;
-        
+
                             default:
-        
+
                                 switch (splittedBkmrks[1].length > 9) {
-        
+
                                     case false:
-        
+
                                         bkmrksUpdated = splittedBkmrks[0];
-        
+
                                     break;
-        
+
                                     default:
-        
+
                                         bkmrksUpdated = splittedBkmrks[0] + splittedBkmrks[1];
-        
+
                                     break;
                                 }
-        
+
                             break;
                         }
-        
+
                         bkmrksFixed = bkmrksUpdated.replace(",,", ",");
-        
+
                         switch (bkmrksFixed.length > 9) {
-        
+
                             case false:
-        
+
                                 localStorage.removeItem("bookmarks");
-        
+
                             break;
-        
+
                             default:
-        
+
                                 localStorage.setItem("bookmarks", bkmrksFixed);
-        
+
                             break;
                         }
-        
+
                         window.location.reload();
 
                     break;
@@ -1001,20 +1011,20 @@ switch (localStorage.getItem("bookmarks")) {
 
 function addSite() {
 
-    switch (document.getElementById("site_name").value.length > 0 && document.getElementById("site_link").value.length > 0 && document.getElementById("site_keywords").value.length > 0) {
+    let newSiteName = document.getElementById("site_name").value;
+
+    let newSiteLink = document.getElementById("site_link").value;
+
+    let newSiteKw = document.getElementById("site_keywords").value;
+
+    switch ( isEmptyOrSpaces(newSiteName) || isEmptyOrSpaces(newSiteLink) || isEmptyOrSpaces(newSiteKw) ) {
 
         case false:
 
-            window.alert("Por favor, asegúrate de rellenar todos los campos");
-
-        break;
-
-        default:
-
             siteName = document.getElementById("site_name").value;
-            
+
             siteLink = document.getElementById("site_link").value;
-            
+
             siteKeywords = document.getElementById("site_keywords").value.toLowerCase();
 
             enlace(siteLink, siteName, siteKeywords, userLinks);
@@ -1052,6 +1062,12 @@ function addSite() {
             document.getElementById("site_link").value = "";
 
             document.getElementById("site_keywords").value = "";
+
+        break;
+
+        default:
+
+            window.alert("Por favor, asegúrate de rellenar todos los campos");
 
         break;
     }

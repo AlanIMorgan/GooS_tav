@@ -55,7 +55,7 @@ document.querySelector(".home__logo-containerrr").addEventListener("click", ()=>
 document.querySelector(".home__direct-access-row").addEventListener("click", ()=> searchInput.focus() );
 
 searchEngineMenuOptions = [
-	
+
 	{"Baidu" : "https://www.baidu.com/s?ie=utf-8&wd="},
 
 	{"Bing" : "https://www.bing.com/search?q="},
@@ -259,7 +259,7 @@ function updateHistory() {
 									elementEngine = Object.values(e);
 
 									elementLink = element.replace(sEMOKey[0] + ": ", elementEngine[0]);
-			
+
 								break;
 							}
 						}
@@ -460,15 +460,20 @@ function createLink(path, tag, keyWords) {
 	}
 }
 
+function isEmptyOrSpaces (str) {
+
+    return str == null || str.match(/^\s*$/) !== null;
+}
+
 document.querySelector(".home__form").addEventListener("submit", (e)=>{
 
 	e.preventDefault();
 
 	let voiceText = searchInput.value;
 
-	switch (voiceText.length > 0) {
+	switch ( isEmptyOrSpaces(voiceText) ) {
 
-		case true:
+		case false:
 
 			switch ( voiceText.includes('.') && !voiceText.includes(' ') ) {
 
