@@ -145,15 +145,20 @@ nickName = document.getElementById("nick_sttng");
 
 searchInpt = document.getElementById("google-search");
 
-nickName.addEventListener("blur", changeNick);
+nickName.addEventListener("input", changeNick);
 
-switch (localStorage.getItem("user")) {
+function resetNick() {
+
+    searchInpt.placeholder = "¡Hola, extraño! Intenta buscar películas, música, libros, etc...";
+}
+
+switch ( localStorage.getItem("user") ) {
 
     case " ":
     case "":
     case null:
 
-        searchInpt.placeholder = "¡Hola, extraño! Intenta buscar películas, música, libros, etc...";
+        resetNick();
 
     break;
 
@@ -174,7 +179,7 @@ function changeNick() {
 
         case false:
 
-            resetNick();
+            searchInpt.placeholder = "¡Hola, " + nick + "! Intenta buscar películas, música, libros, etc...";
 
             localStorage.setItem("user", nick);
 
@@ -182,17 +187,10 @@ function changeNick() {
 
         default:
 
-            searchInpt.placeholder = "¡Hola, " + nick + "! Intenta buscar películas, música, libros, etc...";
-
-            localStorage.setItem("user", nick);
+            resetNick();
 
         break;
     }
-}
-
-function resetNick() {
-
-    searchInpt.placeholder = "¡Hola, extraño!";
 }
 
 // Menus
