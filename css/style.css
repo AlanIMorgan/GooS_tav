@@ -312,7 +312,7 @@ a {
 	
 	.direct-access {
 
-		width: 20vw !important;
+		width: 25vw !important;
 	}
 }
 
@@ -658,8 +658,8 @@ td,
 	width: 272px;
 	left: calc(50% - 272px / 2);
 	top: 26%;
-	position: absolute;
-	-webkit-mask-image: url(../img/google-logo.svg);
+	position: absolute; /* 
+	-webkit-mask-image: url(../img/google-logo.svg); */
 	background: var(--logo-color);
 }
 
@@ -830,14 +830,13 @@ td,
 .direct-access {
 	display: inline-flex;
 	flex-direction: column;
-	width: 9vw; /* 
+	width: 12vw; /* 
 	height: 124px; */
-	margin: 0;
 	margin: 0 10px;
 	border-radius: 4px;
 	justify-content: center;
-	text-align: center;
-	padding: 5px;
+	text-align: center; /* 
+	padding: 5px; */
 }
 
 .direct-access:hover {
