@@ -52,7 +52,9 @@ document.getElementById("img_mask").addEventListener("click", ()=> searchInput.f
 
 document.querySelector(".home__logo-containerrr").addEventListener("click", ()=> searchInput.focus() );
 
-document.querySelector(".home__direct-access-row").addEventListener("click", ()=> searchInput.focus() );
+directAccess = document.querySelector(".home__direct-access-row");
+
+directAccess.addEventListener("click", ()=> searchInput.focus() );
 
 searchEngineMenuOptions = [
 
@@ -160,8 +162,6 @@ function liveSearch() {
 
 				links[i].classList.remove("actual");
 
-				directAccess = document.querySelector(".home__direct-access-row");
-
 				directAccess.style.display = "block";
 
 			break;
@@ -214,8 +214,6 @@ resultsBoxC.addEventListener("click", ()=>{
 	}, 250);
 });
 
-directAccessRow = document.querySelector(".home__direct-access-row");
-
 function updateHistory() {
 
 	switch ( localStorage.getItem("history") ) {
@@ -234,7 +232,7 @@ function updateHistory() {
 
 				case false:
 
-					directAccessRow.innerHTML = "";
+					directAccess.innerHTML = "";
 
 					for (let i = 0; i < inputs.length; i++) {
 
@@ -272,7 +270,7 @@ function updateHistory() {
 
 						shortcut.setAttribute("target", "_blank");
 
-						directAccessRow.appendChild(shortcut);
+						directAccess.appendChild(shortcut);
 
 						let icon = document.createElement("img");
 
@@ -416,14 +414,7 @@ function redirect(array) {
 
 	confRedir = confirm("Estás llendo a: " + array);
 
-	switch (confRedir) {
-
-		case true:
-
-			openTab(0, url);
-
-		break;
-	}
+	confRedir == true ? openTab(0, url) : false;
 }
 
 function createLink(path, tag, keyWords) {

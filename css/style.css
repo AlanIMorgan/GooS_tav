@@ -192,22 +192,23 @@ a {
 /*______________*/
 
 .nav__ul ul {
+
+	display: none;
 	position: absolute;
-	z-index: 9;
 	top: 50px;
 	right: 0;
-	margin: 7px 8px;/* 
-	width: 344px; */
+	z-index: 9;
+	width: 300px;
 	height: 75vh;
-	background-color: var(--svnth);
-	border-radius: 6px;
 	padding: 10px;
 	padding-right: 0;
+	margin: 7px 8px;
+	border: 1px solid #bbb;
+	background-color: var(--svnth);
+	border-radius: 6px;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	border: 1px solid #bbb;
 	text-align: center;
-	display: none;
 	box-shadow: 5px 5px 5px #000b;
 }
 
@@ -276,7 +277,10 @@ a {
 
 .delete_site {
 
-	padding: 0 9px;
+	display: inline-flex;
+	align-items: center;
+	font-family: monospace;
+	font-size: 18px;
 }
 
 @media (max-width: 700px) {
@@ -409,11 +413,6 @@ a {
 }
 
 /*--------NAV-PROFILE-----------*/
-
-.nav__submenu-profile {
-	width: 298px;
-	display: none;
-}
 
 .nav__submenu-profile img {
 	width: 84px;
@@ -823,7 +822,7 @@ td,
 	width: 100%;
 }
 
-.home__direct-access-row {
+.home__direct-access div {
 	text-align: center;
 }
 

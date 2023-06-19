@@ -292,9 +292,11 @@ function createClock() {
 
         period = "AM";
 
-        if (hrs == "00"|| 00 || 0) {
+        if (hrs == "00" || 0) {
 
             hrs = 12;
+
+            showCalendar(currentMonth, currentYear);
         }
 
         else if (hrs > 12) {
