@@ -6,7 +6,7 @@ const sharingSite = window.location.search;
 
 const urlParams = new URLSearchParams(sharingSite);
 
-switch (urlParams.get('link')) {
+switch ( urlParams.get('link') ) {
 
     case null:
 
@@ -722,37 +722,37 @@ function element(etiqueta, atributo, valor, texto) {
 
     let newElement = document.createElement(etiqueta);
 
-    if (atributo != "") {
+    atributo != "" ? newElement.setAttribute(atributo, valor) : false;
 
-        newElement.setAttribute(atributo, valor);}
-
-    if (etiqueta == "div") {
-
-        newElement.setAttribute("class", "nav__submenu-element-section");
-    }
+    etiqueta == "div" ? newElement.setAttribute("class", "nav__submenu-element-section") : false;
 
     navMenu.appendChild(newElement);
 
-    if (etiqueta !== "a") {
+    switch (etiqueta == 'a') {
 
-        newElement.innerText = texto;
-    }
+        case false:
 
-    else {
+            newElement.innerText = texto;
 
-        let newAnchor = document.createElement("div");
+        break;
 
-        newAnchor.setAttribute("class", "nav__submenu-element");
+        default:
 
-        newElement.appendChild(newAnchor);
+            let newAnchor = document.createElement("div");
 
-        let newAnchorName = document.createElement("p");
+            newAnchor.setAttribute("class", "nav__submenu-element");
 
-        newAnchorName.setAttribute("title", texto);
+            newElement.appendChild(newAnchor);
 
-        newAnchor.appendChild(newAnchorName);
-        
-        newAnchorName.innerText = texto;
+            let newAnchorName = document.createElement("p");
+
+            newAnchorName.setAttribute("title", texto);
+
+            newAnchor.appendChild(newAnchorName);
+
+            newAnchorName.innerText = texto;
+
+        break;
     }
 }
 
@@ -854,7 +854,7 @@ function enlace(address, text, keyWords, zone) {
 
     result.appendChild(words);
 
-    words.innerText = keyWords;
+    words.innerText = keyWords + " " + address;
 
     let div = document.createElement("div");
 

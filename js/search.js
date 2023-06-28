@@ -1,27 +1,8 @@
-switch (localStorage.getItem("bookmarks")) {
-
-	case null:
-
-	break;
-
-	default:
-
-		bookmarks = localStorage.getItem("bookmarks");
-
-		sites = bookmarks.split(',');
-
-		for (let i = 0; i < sites.length; i++) {
-
-			let e = sites[i];
-
-			ePrprts = e.split(';;;');
-		}
-
-	break;
-}
-
 searchForm = document.querySelector(".home__form");
+
 searchInput = document.querySelector(".google-search");
+
+directAccess = document.querySelector(".home__direct-access");
 
 function showForm() {
 
@@ -52,7 +33,7 @@ document.getElementById("img_mask").addEventListener("click", ()=> searchInput.f
 
 document.querySelector(".home__logo-containerrr").addEventListener("click", ()=> searchInput.focus() );
 
-directAccess = document.querySelector(".home__direct-access-row");
+historyAccesses = document.querySelector(".home__direct-access-row");
 
 directAccess.addEventListener("click", ()=> searchInput.focus() );
 
@@ -146,6 +127,69 @@ results = document.querySelector(".results_box");
 
 links = document.querySelectorAll('.result');
 
+favoritesRow = document.querySelector(".home__direct-access-favorites");
+
+switch ( localStorage.getItem("favorites") ) {
+
+	case null:
+	case "noFavorites":
+
+	break;
+
+	default:
+
+        favorites = localStorage.getItem("favorites");
+
+        favs = favorites.split(";;;");
+
+		for (let i = 0; i < links.length; i++) {
+
+			let e = links[i].innerHTML.split("<")[0];
+
+			for (let n = 0; n < favs.length; n++) {
+
+				let l = favs[n];
+
+				switch ( e == l ) {
+
+					case false:
+
+					break;
+				
+					default:
+
+						let a = document.createElement('a');
+
+						let icon = document.createElement("span");
+
+						let p = document.createElement('p');
+
+						a.setAttribute("href", links[i].href);
+
+						a.setAttribute("target", "_blank");
+
+						a.setAttribute("title", e);
+
+						a.innerText = "";
+
+						favoritesRow.appendChild(a);
+
+						icon.innerText = l[0];
+
+						a.appendChild(icon);
+
+						p.innerText = l;
+
+						a.appendChild(p);
+
+					break;
+				}
+			}
+		}
+
+	break;
+}
+
 currentURL = window.location.href;
 
 function liveSearch() {
@@ -170,23 +214,68 @@ function liveSearch() {
 
 				directAccess.style.display = "none";
 
-				switch ( links[i].textContent.toLowerCase().includes( search_query.toLowerCase() ) ) {
+				switch ( search_query.toLowerCase().includes("/favorite") ) {
 
 					case false:
 
-						links[i].classList.remove("actual");
+						switch ( links[i].textContent.toLowerCase().includes( search_query.toLowerCase() ) ) {
 
-						switch (document.querySelectorAll('.actual').length) {
+							case false:
 
-							case 0:
+								links[i].classList.remove("actual");
 
-								resultsBoxC.classList.add("hidden");
+								switch (document.querySelectorAll('.actual').length) {
+
+									case 0:
+
+										resultsBoxC.classList.add("hidden");
+									break;
+								}
+
+							break;
+
+							default:
+
+								links[i].classList.add("actual");
+
+								resultsBoxC.classList.remove("hidden");
+
 							break;
 						}
 
 					break;
 
 					default:
+
+						links[i].dataset.site = links[i].innerHTML.split('<')[0];
+
+						links[i].target = "";
+
+						links[i].href = "#";
+
+						links[i].addEventListener("click", (e)=>{
+
+							favSite = e.target.dataset.site;
+
+							switch ( localStorage.getItem("favorites") ) {
+
+								case null:
+
+									localStorage.setItem("favorites", favSite);
+
+								break;
+
+								default:
+
+									favorites = localStorage.getItem("favorites");
+
+									localStorage.setItem("favorites", favorites + ";;;" + favSite);
+
+								break;
+							}
+
+							location.reload();
+						});
 
 						links[i].classList.add("actual");
 
@@ -214,6 +303,15 @@ resultsBoxC.addEventListener("click", ()=>{
 	}, 250);
 });
 
+document.getElementById("add_fav").addEventListener("click", ()=>{
+
+	searchForm.classList.remove("hidden");
+
+	searchInput.value = "/favorite";
+
+	liveSearch();
+});
+
 function updateHistory() {
 
 	switch ( localStorage.getItem("history") ) {
@@ -232,7 +330,7 @@ function updateHistory() {
 
 				case false:
 
-					directAccess.innerHTML = "";
+					historyAccesses.innerHTML = "";
 
 					for (let i = 0; i < inputs.length; i++) {
 
@@ -270,7 +368,7 @@ function updateHistory() {
 
 						shortcut.setAttribute("target", "_blank");
 
-						directAccess.appendChild(shortcut);
+						historyAccesses.appendChild(shortcut);
 
 						let icon = document.createElement("img");
 

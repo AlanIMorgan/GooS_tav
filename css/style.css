@@ -292,7 +292,7 @@ a {
 	
 	.direct-access {
 
-		width: 15vw !important;
+		width: 18vw !important;
 	}
 }
 
@@ -823,7 +823,53 @@ td,
 }
 
 .home__direct-access div {
+
+    display: block;
 	text-align: center;
+}
+
+.home__direct-access .home__direct-access-favorites {
+
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	overflow: auto;
+}
+
+.home__direct-access-favorites a {
+
+	display: inline-block;
+    flex: 0 0 69px;
+	width: 69px;
+	height: 69px;
+    margin: 0 10px;
+	border: 2px dashed var(--primary);
+	background: var(--ffth);
+	border-radius: 12%;
+    overflow: hidden;
+}
+
+.home__direct-access-favorites a span {
+
+	display: block;
+	font-size: 31px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.home__direct-access-favorites a p {
+
+	display: inline-block;
+    width: 100%;
+	margin: 5px 0;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#add_fav svg {
+
+	width: 81%;
+	fill: var(--primary);
 }
 
 .direct-access {
@@ -857,16 +903,16 @@ td,
 }
 
 .direct-access .direct-access__info {
+	width: 100%;
+	margin: auto;
+	margin-top: -6px;
+	margin-bottom: 6px;
+	padding: 4px;
 	font-size: 11px;
 	color: var(--primary);
 	font-weight: 700;
 	background-color: var(--sec);
-	margin: auto;
-	margin-top: -6px;
-	padding: 4px;
-	width: 100%;
-	border-radius: 25px;
-	margin-bottom: 6px; /* 
+	border-radius: 25px; /* 
     text-overflow: ellipsis; */
 	overflow-x: auto;
 	white-space: nowrap;
