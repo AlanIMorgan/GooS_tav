@@ -187,6 +187,8 @@ switch ( localStorage.getItem("favorites") ) {
 			}
 		}
 
+		favoritesRow.scrollWidth > favoritesRow.clientHeight ? favoritesRow.style.justifyContent = "flex-start" : false;
+
 	break;
 }
 
