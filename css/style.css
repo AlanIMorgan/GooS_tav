@@ -832,8 +832,8 @@ td,
 
 	display: flex;
 	justify-content: center;
-	margin-bottom: 20px;
 	overflow: auto;
+	margin: 0 12vw 20px;
 }
 
 .home__direct-access-favorites a {
