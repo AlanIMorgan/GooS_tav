@@ -739,6 +739,17 @@ td,
 	margin-top: 9px;
 }
 
+#cancel_btn {
+
+	position: absolute;
+	z-index: 9;
+	top: 20%;
+	right: 10%;
+	padding: 4px;
+	background: var(--frth);
+	border-radius: 12px;
+}
+
 .form__microphone-icon {
 	border: 0;
 	background: url(../img/google-microfono.svg) no-repeat center;

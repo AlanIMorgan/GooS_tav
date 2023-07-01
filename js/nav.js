@@ -503,11 +503,165 @@ for (let i = 0; i < 6; i++) { // creates a table row
 
 showCalendar(currentMonth, currentYear);
 
+// Favorites settings
+
+favoritesSttng = document.getElementById("favorites_sttng");
+
+favoritesRow = document.querySelector(".home__direct-access-favorites");
+
+function showHideFavorites() {
+
+    switch ( localStorage.getItem("hideFavorites") ) {
+
+        case null:
+
+            favoritesRow.classList.remove("hidden");
+
+        break;
+
+        default:
+
+            favoritesRow.classList.add("hidden");
+
+            favoritesSttng.checked = false;
+
+        break;
+    }
+}
+
+showHideFavorites();
+
+favoritesSttng.addEventListener("click", ()=>{
+
+    switch (favoritesSttng.checked) {
+
+        case false:
+
+            localStorage.setItem("hideFavorites", "true");
+
+        break;
+
+        default:
+
+            localStorage.removeItem("hideFavorites");
+
+        break;
+    }
+
+    showHideFavorites();
+});
+
+deleteFavorites = document.getElementById("delete_favorites");
+
+switch ( localStorage.getItem("favorites") ) {
+
+    case null:
+
+    break;
+
+    default:
+
+        let favorites = localStorage.getItem("favorites").replace(";;;;;;", ";;;");
+
+        function createFavoriteSitesOptions (fav) {
+
+            let option = document.createElement("option");
+
+            option.setAttribute("value", fav);
+
+            deleteFavorites.appendChild(option);
+
+            option.innerText = fav;
+        }
+
+        switch ( favorites.includes(";;;") ) {
+
+            case false:
+
+                createFavoriteSitesOptions(favorites);
+
+                function deleteFavoriteSite() {
+
+                    let delSite = deleteFavorites.value;
+
+                    switch (delSite.length > 0) {
+
+                        case false:
+
+                        break;
+
+                        default:
+
+                            localStorage.removeItem("favorites");
+
+                            location.reload();
+
+                        break;
+                    }
+                }
+
+            break;
+
+            default:
+
+                favs = favorites.split(";;;");
+
+                favs.forEach(e => {
+
+                    e.length > 0 ? createFavoriteSitesOptions(e) : false;
+                });
+
+                function deleteFavoriteSite() {
+
+                    let delSite = deleteFavorites.value;
+
+                    switch (delSite) {
+
+                        case "":
+
+                        break;
+
+                        case "all":
+
+                            localStorage.removeItem("favorites");
+
+                        break;
+
+                        default:
+
+                            favs.splice( favs.indexOf(delSite), 1 );
+
+                            newFavs = '';
+
+                            favs.forEach(e => {
+
+                                e.length > 0 ? newFavs += e + ";;;" : false;
+                            });
+
+                            localStorage.setItem("favorites", newFavs);
+
+                        break;
+                    }
+
+                    location.reload();
+                }
+
+            break;
+        }
+
+        deleteFavorites.addEventListener("input", ()=>{
+
+            deleteFavoriteSite();
+        });
+
+    break;
+}
+
 // Show/hide history
 
 historySttng = document.getElementById("history_sttng");
 
-switch (localStorage.getItem("history")) {
+switch ( localStorage.getItem("history") ) {
 
     case null:
 

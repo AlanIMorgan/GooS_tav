@@ -132,7 +132,6 @@ favoritesRow = document.querySelector(".home__direct-access-favorites");
 switch ( localStorage.getItem("favorites") ) {
 
 	case null:
-	case "noFavorites":
 
 	break;
 
@@ -155,7 +154,7 @@ switch ( localStorage.getItem("favorites") ) {
 					case false:
 
 					break;
-				
+
 					default:
 
 						let a = document.createElement('a');
@@ -216,7 +215,7 @@ function liveSearch() {
 
 				directAccess.style.display = "none";
 
-				switch ( search_query.toLowerCase().includes("/favorite") ) {
+				switch ( search_query == "/favorite" ) {
 
 					case false:
 
@@ -249,6 +248,8 @@ function liveSearch() {
 
 					default:
 
+						document.getElementById("cancel_btn").classList.remove("hidden");
+
 						links[i].dataset.site = links[i].innerHTML.split('<')[0];
 
 						links[i].target = "";
@@ -271,7 +272,27 @@ function liveSearch() {
 
 									favorites = localStorage.getItem("favorites");
 
-									localStorage.setItem("favorites", favorites + ";;;" + favSite);
+									switch ( favorites.includes(";;;") ) {
+
+										case false:
+
+											favorites == favSite ? false : localStorage.setItem("favorites", favorites + ";;;" + favSite);
+
+										break;
+
+										default:
+
+											let favs = favorites.split(";;;");
+
+											for (let n = 0; n < favs.length; n++) {
+
+												let e = favs[n];
+
+												e == favSite ? false : localStorage.setItem("favorites", favorites + ";;;" + favSite);
+											}
+
+										break;
+									}
 
 								break;
 							}
