@@ -517,6 +517,8 @@ function showHideFavorites() {
 
             favoritesRow.classList.remove("hidden");
 
+            favoritesRow.scrollWidth > favoritesRow.clientWidth ? favoritesRow.style.justifyContent = "flex-start" : false;
+
         break;
 
         default:
@@ -592,9 +594,22 @@ switch ( localStorage.getItem("favorites") ) {
 
                         default:
 
-                            localStorage.removeItem("favorites");
+                            let favoritesAlert = confirm("¿Estás seguro de que quieres quedarte sin favoritos?");
 
-                            location.reload();
+                            switch (favoritesAlert == true) {
+
+                                case false:
+
+                                break;
+
+                                default:
+
+                                    localStorage.removeItem("favorites");
+
+                                    location.reload();
+
+                                break;
+                            }
 
                         break;
                     }
@@ -623,22 +638,37 @@ switch ( localStorage.getItem("favorites") ) {
 
                         case "all":
 
-                            localStorage.removeItem("favorites");
+                            let favoritesAlert = confirm("¿Estás seguro de que quieres quedarte sin favoritos?");
+
+                            favoritesAlert == true ? localStorage.removeItem("favorites") : false ;
 
                         break;
 
                         default:
 
-                            favs.splice( favs.indexOf(delSite), 1 );
+                            let favoriteAlert = confirm("Estás apunto de eliminar: " + delSite);
 
-                            newFavs = '';
+                            switch (favoriteAlert == true) {
 
-                            favs.forEach(e => {
+                                case false:
 
-                                e.length > 0 ? newFavs += e + ";;;" : false;
-                            });
+                                break;
 
-                            localStorage.setItem("favorites", newFavs);
+                                default:
+
+                                    favs.splice( favs.indexOf(delSite), 1 );
+
+                                    newFavs = '';
+
+                                    favs.forEach(e => {
+
+                                        e.length > 0 ? newFavs += e + ";;;" : false;
+                                    });
+
+                                    localStorage.setItem("favorites", newFavs);
+
+                                break;
+                            }
 
                         break;
                     }
