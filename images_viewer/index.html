@@ -255,7 +255,7 @@
 
                         default:
 
-                            contentViewer.innerHTML = "";
+                            contentViewer.innerHTML = '';
 
                             file.type.includes("image") ? fileReader.readAsDataURL(file) : false;
                         break;
@@ -267,9 +267,11 @@
 
                         let imgContainer = document.createElement("div");
 
-                        imgContainer.innerText = "";
+                        imgContainer.innerText = '';
 
                         let img = document.createElement("img");
+
+                        img.setAttribute("loading", "lazy");
 
                         img.setAttribute("src", result);
 
@@ -284,9 +286,9 @@
                 }
             }
 
-            document.getElementById("folder_picker").addEventListener("input", (e)=> processFiles(e) );
+            document.getElementById("folder_picker").addEventListener("input", (e)=> setInterval( processFiles(e), 1000 ) );
 
-            document.getElementById("file_picker").addEventListener("input", (e)=> processFiles(e) );
+            document.getElementById("file_picker").addEventListener("input", (e)=> setInterval( processFiles(e), 1000 ) );
 
             imageModal = document.getElementById("image_modal");
 
