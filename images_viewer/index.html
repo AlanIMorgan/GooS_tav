@@ -50,7 +50,8 @@
                 overflow: auto;
             }
 
-            #content_viewer div {
+            #content_viewer figure {
+                position: relative;
                 width: 45%;
                 height: 45vw;
                 margin: 3px;
@@ -69,7 +70,7 @@
                     font-size: 34px;
                 }
 
-                #content_viewer div {
+                #content_viewer figure {
                     width: 24%;
                     height: 24vw;
                 }
@@ -86,11 +87,21 @@
                 }
             }
 
-            #content_viewer div img {
+            #content_viewer figure img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 cursor: pointer;
+            }
+
+            #content_viewer figure figcaption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 5px;
+                background: #0007;
+                font-weight: bolder;
+                line-break: anywhere;
             }
 
             label, a {
@@ -173,8 +184,11 @@
                 background: none;
             }
 
-            #image_info {
+            select > option {
+                color: #0000;
+            }
 
+            #image_info {
                 width: 28px;
                 height: 27px;
                 padding: 2px 0;
@@ -256,23 +270,13 @@
 
                         let fileReader = new FileReader();
 
-                        switch (file.type) {
-
-                            case null:
-
-                            break;
-
-                            default:
-
-                                file.type.includes("image") ? fileReader.readAsDataURL(file) : false;
-                            break;
-                        }
+                        file.type.includes("image/") ? fileReader.readAsDataURL(file) : false;
 
                         fileReader.addEventListener("load", ()=>{
 
-                            let result = fileReader.result;
+                            let src = fileReader.result;
 
-                            let imgContainer = document.createElement("div");
+                            let imgContainer = document.createElement("figure");
 
                             imgContainer.innerText = '';
 
@@ -280,13 +284,19 @@
 
                             img.setAttribute("loading", "lazy");
 
-                            img.setAttribute("src", result);
+                            img.setAttribute("src", src);
 
-                            img.setAttribute("data-name", file.name);
+                            img.setAttribute("title", file.name);
+
+                            let figcaption = document.createElement("figcaption");
+
+                            figcaption.innerText = file.name;
 
                             contentViewer.appendChild(imgContainer);
 
                             imgContainer.appendChild(img);
+
+                            imgContainer.appendChild(figcaption);
 
                             document.getElementById("path").value = file.webkitRelativePath.split('/')[0];
                         });
@@ -335,7 +345,7 @@
 
                         let resolution = document.createElement("optgroup");
 
-                        name.setAttribute("label", e.target.dataset.name);
+                        name.setAttribute("label", e.target.title);
 
                         resolution.setAttribute("label", e.target.naturalWidth + " x " + e.target.naturalHeight + " px");
 
