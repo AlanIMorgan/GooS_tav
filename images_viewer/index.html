@@ -55,7 +55,7 @@
                 width: 45%;
                 height: 45vw;
                 margin: 3px;
-                margin-bottom: 5px;
+                margin-bottom: 9px;
                 outline: 2px dashed #fff;
                 overflow: hidden;
             }
@@ -256,51 +256,114 @@
 
             contentViewer = document.getElementById("content_viewer");
 
+            function loadMoreImages() {
+
+                revealer = document.querySelector(".revealer");
+
+                revealPoint = 150;
+
+                revealerPosition = revealer.getBoundingClientRect().top;
+
+                windowHeight = window.innerHeight;
+
+                if (revealerPosition < windowHeight - revealPoint) {
+
+                    window.removeEventListener("scroll", loadMoreImages);
+
+                    revealer.classList.remove("revealer");
+
+                    filesList.splice(0, 24);
+
+                    for (let i = 0; i < 24; i++) {
+
+                        let e = filesList[i];
+
+                        setTimeout(()=> printImgs(e, i), 500 * i);
+                    }
+                }
+            }
+
+            function printImgs (image, index) {
+
+                let fileReader = new FileReader();
+
+                image.type.includes("image/") ? fileReader.readAsDataURL(image) : false;
+
+                fileReader.addEventListener("load", ()=>{
+
+                    let src = fileReader.result;
+
+                    let imgContainer = document.createElement("figure");
+
+                    if (index !== 0 && index % 20 == 0) {
+
+                        imgContainer.setAttribute("class", "revealer");
+
+                        setTimeout(()=>{
+
+                            window.addEventListener("scroll", loadMoreImages);
+                        }, 500);
+                    }
+
+                    imgContainer.innerText = '';
+
+                    let img = document.createElement("img");
+
+                    img.setAttribute("loading", "lazy");
+
+                    img.setAttribute("src", src);
+
+                    img.setAttribute("title", image.name);
+
+                    let figcaption = document.createElement("figcaption");
+
+                    figcaption.innerText = image.name;
+
+                    contentViewer.appendChild(imgContainer);
+
+                    imgContainer.appendChild(img);
+
+                    imgContainer.appendChild(figcaption);
+                });
+            }
+
             function processFiles(e) {
 
                 contentViewer.innerHTML = '';
 
-                time = 0
+                filesList = [];
+
+                document.getElementById("path").value = e.target.files[0].webkitRelativePath.split('/')[0];
 
                 for (let file of e.target.files) {
 
-                    time++
+                    filesList.push(file);
+                }
 
-                    setTimeout( ()=>{
+                filesList.sort( (a, b)=>{
 
-                        let fileReader = new FileReader();
+                    let nameA = a.name.toLowerCase();
 
-                        file.type.includes("image/") ? fileReader.readAsDataURL(file) : false;
+                    let nameB = b.name.toLowerCase();
 
-                        fileReader.addEventListener("load", ()=>{
+                    if (nameA < nameB) {
 
-                            let src = fileReader.result;
+                        return -1;
+                    }
 
-                            let imgContainer = document.createElement("figure");
+                    if (nameB < nameA) {
 
-                            imgContainer.innerText = '';
+                        return 1;
+                    }
 
-                            let img = document.createElement("img");
+                    return nameA.localeCompare(nameB);
+                });
 
-                            img.setAttribute("loading", "lazy");
+                for (let i = 0; i < 24; i++) {
 
-                            img.setAttribute("src", src);
+                    let l = filesList[i];
 
-                            img.setAttribute("title", file.name);
-
-                            let figcaption = document.createElement("figcaption");
-
-                            figcaption.innerText = file.name;
-
-                            contentViewer.appendChild(imgContainer);
-
-                            imgContainer.appendChild(img);
-
-                            imgContainer.appendChild(figcaption);
-
-                            document.getElementById("path").value = file.webkitRelativePath.split('/')[0];
-                        });
-                    }, 1000 * time );
+                    setTimeout(()=> printImgs(l, i), 500 * i);
                 }
             }
 
@@ -318,7 +381,7 @@
 
             function beDimmed() {
 
-                brghtnssBtn.checked == true ? imageModalDiv.getElementsByTagName("img")[0].style = "filter: brightness(0.5);background: #666;" : imageModalDiv.getElementsByTagName("img")[0].style = "filter: brightness(1);"
+                brghtnssBtn.checked == true ? imageModalDiv.getElementsByTagName("img")[0].style = "filter: brightness(0.5);background: #666;" : imageModalDiv.getElementsByTagName("img")[0].style = "filter: brightness(1);";
             }
 
             contentViewer.addEventListener("click", (e)=>{
@@ -333,7 +396,7 @@
 
                         imageModalDiv.innerHTML = '';
 
-                        imageInfo.innerHTML = '<option selected disabled> i </option>';
+                        imageInfo.innerHTML = "<option selected disabled> i </option>";
 
                         let img = document.createElement("img");
 
