@@ -22,15 +22,12 @@
                 border: none;
                 font-family: 'Comic Neue', sans-serif;
                 font-size: 14px;
-                color: #fff;
-                background: #333;
+                color: #000;
                 user-select: none;
             }
 
             .container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                filter: invert(.8);
             }
 
             h1 {
@@ -39,36 +36,20 @@
                 text-align: center;
             }
 
-            label, a {
-                cursor: pointer;
-                width: 125px;
-                margin: 0 15px 15px;
-                padding: 5px;
-                border-radius: 5px;
-                text-align: center;
-                background: #555;
-                outline: 2px solid #fff;
+            .tox .tox-menu {
+                filter: invert(1);
             }
 
-            #menu {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                flex-wrap: wrap;
-                margin-bottom: 15px;
+            .tox .tox-dialog-wrap {
+                filter: invert(1);
             }
 
-            [type="file"] {
-                display: none;
+            .tox .tox-collection--grid .tox-collection__item .tox-collection__item-icon {
+                filter: invert(1) drop-shadow(0 0 0 #000);
             }
 
-            #text_editor_container, textarea {
-                width: 100%;
-            }
-
-            textarea {
-                height: 75vh;
-                border: 2px solid #fff;
+            .tox .tox-sidebar-wrap {
+                filter: invert(1);
             }
         </style>
     </head>
@@ -83,11 +64,16 @@
 
         </div>
 
-        <script src="./tinymce.min.js"></script>
+        <script src="tinymce.min.js"></script>
 
         <script>
 
-            tinymce.init( {selector: 'tinymce-editor'} );
+            tinymce.init({
+
+                selector: 'tinymce-editor',
+                plugins: 'fullscreen wordcount emoticons link autolink codesample image',
+                toolbar: 'fullscreen wordcount emoticons link codesample image'
+            });
         </script>
     </body>
 </html>
