@@ -260,7 +260,9 @@
 
                 revealer = document.querySelector(".revealer");
 
-                revealPoint = 150;
+                //revealPoint = 150;
+
+                revealPoint = 0;
 
                 revealerPosition = revealer.getBoundingClientRect().top;
 
@@ -287,7 +289,7 @@
 
                 let fileReader = new FileReader();
 
-                image.type.includes("image/") ? fileReader.readAsDataURL(image) : false;
+                fileReader.readAsDataURL(image);
 
                 fileReader.addEventListener("load", ()=>{
 
@@ -295,7 +297,7 @@
 
                     let imgContainer = document.createElement("figure");
 
-                    if (index !== 0 && index % 20 == 0) {
+                    if (index !== 0 && index % 19 == 0) {
 
                         imgContainer.setAttribute("class", "revealer");
 
@@ -337,7 +339,7 @@
 
                 for (let file of e.target.files) {
 
-                    filesList.push(file);
+                    file.type.includes("image/") ? filesList.push(file) : false;
                 }
 
                 filesList.sort( (a, b)=>{
