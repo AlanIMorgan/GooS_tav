@@ -12,11 +12,11 @@
 
         <title> Notepad </title>
 
-        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+        <script src="tinymce.min.js"></script>
 
         <script>
 
-            tinymce.init( {selector: 'textarea'} );
+            tinymce.init( {selector: 'tinymce-editor'} );
         </script>
 
         <style>
@@ -86,7 +86,8 @@
 
             <h1> Notepad </h1>
 
-            <textarea></textarea>
+            <tinymce-editor></tinymce-editor>
+
         </div>
     </body>
 </html>
