@@ -81,17 +81,15 @@
 
             <h1> Notepad </h1>
 
-            <tinymce-editor></tinymce-editor>
+            <textarea></textarea>
 
         </div>
-
-        <script src="tinymce.min.js"></script>
 
         <script>
 
             tinymce.init({
 
-                selector: 'tinymce-editor',
+                selector: 'textarea',
                 plugins: 'save',
                 toolbar: 'save'
             });
