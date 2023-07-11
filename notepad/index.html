@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="color-scheme" content="dark">
+
+        <title> Notepad </title>
+
+        <script src="https://cdn.tiny.cloud/1/zjz4fkm0qon1l86r2fzm2414u4d6pf2m2mvulzarlqrrluh3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+        <style>
+
+            * {
+                box-sizing: border-box;
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                border: none;
+                font-family: 'Comic Neue', sans-serif;
+                font-size: 14px;
+                color: #fff;
+                background: #333;
+                user-select: none;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+                font-size: 24px;
+                text-align: center;
+            }
+
+            label, a {
+                cursor: pointer;
+                width: 125px;
+                margin: 0 15px 15px;
+                padding: 5px;
+                border-radius: 5px;
+                text-align: center;
+                background: #555;
+                outline: 2px solid #fff;
+            }
+
+            #menu {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                flex-wrap: wrap;
+                margin-bottom: 15px;
+            }
+
+            [type="file"] {
+                display: none;
+            }
+
+            #text_editor_container, textarea {
+                width: 100%;
+            }
+
+            textarea {
+                height: 75vh;
+                border: 2px solid #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <h1> Notepad </h1>
+
+            <tinymce-editor></tinymce-editor>
+
+        </div>
+
+        <script>
+
+            tinymce.init({
+
+                selector: 'tinymce-editor',
+                plugins: 'save',
+                toolbar: 'save'
+            });
+        </script>
+    </body>
+</html>
