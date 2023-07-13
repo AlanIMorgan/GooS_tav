@@ -10,7 +10,11 @@
 
         <meta name="color-scheme" content="dark">
 
-        <title> PDF Viewer </title>
+        <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.8.162/build/pdf.min.js"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.8.162/web/pdf_viewer.min.css" rel="stylesheet">
+
+        <title> Notepad </title>
 
         <style>
 
@@ -63,19 +67,11 @@
 
         <div class="container">
 
-            <h1> PDF Viewer </h1>
-
-            <h2> Crea un nuevo documento PDF: </h2>
+            <h1> Notepad </h1>
 
             <tinymce-editor></tinymce-editor>
 
-            <label for="file_picker"> O abre un pdf existente: </label>
-
-            <input id="file_picker" type="file" accept=".pdf" placeholder="O abre uno existente">
-
-            <div id="content_viewer"></div>
-
-        </div><!-- 
+        </div>
 
         <script src="notepad/tinymce.min.js"></script>
 
@@ -90,56 +86,6 @@
                 toolbar: 'fullscreen print undo redo styles wordcount emoticons link codesample image',
                 contextmenu_never_use_native: true
             });
-        </script> -->
-
-        <script src="notepad/pdf_js/lib/webviewer.min.js"></script>
-
-        <script>
-
-            contentViewer = document.getElementById("content_viewer");
-
-            filePicker = document.getElementById("file_picker");
-
-            WebViewer({
-
-                path: "notepad/pdf_js/lib",
-                licenseKey: "6zW0R6V1E0ES5TUAHlTS"
-            }, contentViewer)
-
-            .then(instance => {
-
-                filePicker.addEventListener('change', ()=>{ // Get the file from the input
-
-                    const file = filePicker.files[0];
-
-                    instance.UI.loadDocument(file, { filename: file.name });
-                });
-
-                const { documentViewer } = instance.Core;
-
-                documentViewer.addEventListener('documentLoaded', () => { // perform document operations
-                });
-            }); /* 
-
-            filePicker.addEventListener("input", ()=>{
-
-                contentViewer.innerHTML = '';
-
-                pdf = filePicker.files[0].type.includes("/pdf") ? filePicker.files[0] : false;
-
-                let fileReader = new FileReader();
-
-                fileReader.readAsDataURL(pdf);
-
-                fileReader.addEventListener("load", ()=>{
-
-                    let src = fileReader.result;
-
-                    contentViewer.src = src;
-
-                    contentViewer.style = "display: inline-block";
-                });
-            }); */
         </script>
     </body>
 </html>
