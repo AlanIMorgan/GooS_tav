@@ -358,7 +358,9 @@
 			<div class="home__direct-access-row"></div>
 		</div>
 
-		<script src="js/nav.js?v138"></script>
+		<script src="js/crypto_js_3.1.2_rollups_aes.js"></script>
+
+		<script src="js/nav.js?v139"></script>
 
 		<script src="js/search.js?v87"></script> <!-- 
 
@@ -369,9 +371,80 @@
 			if ('serviceWorker' in navigator) { // Empezar el proceso para la PWA
 
 				navigator.serviceWorker.register('./sw.js', {scope: './'})
-				.then(reg=>console.log( /* 'Registro de SW exitoso', reg */ ))
-				.catch(err => console.warn('Error al trtar de registrar el SW', err));
+				.then(reg=> console.log( /* 'Registro de SW exitoso', reg */ ))
+				.catch(err => console.warn('Error al tratar de registrar el SW', err));
 			}
+
+			// Export profile settings
+
+			content = JSON.stringify(localStorage);
+
+			exportConfigBtn = document.getElementById("export_config");
+
+			encryptedData = CryptoJS.AES.encrypt(content, "GooStav"); // "GooStav" is the passphrase
+
+			exportConfigBtn.href = "data:application/octet-stream," + encodeURIComponent(encryptedData.toString() );
+
+			exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
+
+			// Import profile settings
+
+			function isEmptyOrSpaces (str) {
+
+				return str == null || str.match(/^\s*$/) !== null;
+			}
+
+			importConfig = document.getElementById("import_config");
+
+			importConfig.addEventListener("input", ()=>{
+
+				file = importConfig.files[0];
+
+				switch (file) {
+
+					case null:
+
+					break;
+
+					default:
+
+						reader.readAsText(file);
+					break;
+				}
+
+				const reader = new FileReader();
+
+				reader.addEventListener("load", ()=>{
+
+					val = reader.result;
+
+					switch (isEmptyOrSpaces(val) ) {
+
+						case false:
+
+							decryptedData = CryptoJS.AES.decrypt(val, "GooStav");
+
+							dataString = decryptedData.toString(CryptoJS.enc.Utf8);
+
+							profile = JSON.parse(dataString);
+
+							profileKeys = Object.keys(profile);
+
+							profileValues = Object.values(profile);
+
+							localStorage.clear();
+
+							for (let i = 0; i < profileKeys.length; i++) {
+				
+								localStorage.setItem(profileKeys[i], profileValues[i]);
+							}
+
+							location.reload();
+
+						break;
+					}
+				});
+			});
 		</script>
 	</body>
 </html>

@@ -33,12 +33,10 @@ homeImg = document.getElementById("home_img").getElementsByTagName("img")[0];
 
 bckgrndInpt = document.getElementById("bckgrnd_sttng");
 
-bckgrndInpt.addEventListener("input", changeBackground);
+bckgrndInpt.addEventListener("input", ()=>{changeBackground(); location.reload(); });
 
-switch (localStorage.getItem("bckgrnd")) {
+switch (localStorage.getItem("bckgrnd") ) {
 
-    case " ":
-    case "":
     case null:
 
         resetBackground();
@@ -75,16 +73,6 @@ function changeBackground() {
             localStorage.setItem("bckgrnd", imgUrl);
 
         break;
-
-        default:
-
-            localStorage.setItem("bckgrnd", imgUrl);
-
-            toExport();
-
-            resetBackground();
-
-        break;
     }
 }
 
@@ -113,6 +101,8 @@ document.getElementById("random_wpp").addEventListener("click", ()=>{
                 bckgrndInpt.value = response.url + "&lasttry=0";
 
                 changeBackground();
+
+                location.reload();
             })
 
             .catch(err => console.log('Solicitud fallida', err));
@@ -131,6 +121,8 @@ document.getElementById("random_wpp").addEventListener("click", ()=>{
                 bckgrndInpt.value = response.url + "&lasttry=" + lasttry;
 
                 changeBackground();
+
+                location.reload();
             })
 
             .catch(err => console.log('Solicitud fallida', err));
@@ -145,17 +137,15 @@ nickName = document.getElementById("nick_sttng");
 
 searchInpt = document.getElementById("google-search");
 
-nickName.addEventListener("input", changeNick);
+nickName.addEventListener("input", ()=>{changeNick(); location.reload();} );
 
 function resetNick() {
 
     searchInpt.placeholder = "¡Hola, extraño! Intenta buscar películas, música, libros, etc...";
 }
 
-switch ( localStorage.getItem("user") ) {
+switch (localStorage.getItem("user") ) {
 
-    case " ":
-    case "":
     case null:
 
         resetNick();
@@ -175,7 +165,7 @@ function changeNick() {
 
     nick = nickName.value;
 
-    switch ( isEmptyOrSpaces(nick) ) {
+    switch (isEmptyOrSpaces(nick) ) {
 
         case false:
 
@@ -242,23 +232,21 @@ clockSttng.addEventListener("input", ()=>{
 
         case false:
 
-            localStorage.setItem("clock", "false");
-        
-            location.reload();
+            localStorage.removeItem("clock");
 
         break;
 
         default:
 
             localStorage.setItem("clock", "true");
-        
-            location.reload();
 
         break;
     }
+
+    location.reload();
 } );
 
-switch ( localStorage.getItem("clock") ) {
+switch (localStorage.getItem("clock") ) {
 
     case null:
 
@@ -266,14 +254,9 @@ switch ( localStorage.getItem("clock") ) {
 
     default:
 
-        isClockTrue = localStorage.getItem("clock") == "true";
+        clockSttng.checked = true;
 
-        if (isClockTrue) {
-
-            clockSttng.checked = true;
-
-            createClock();
-        }
+        createClock();
 
     break;
 }
@@ -511,7 +494,7 @@ favoritesRow = document.querySelector(".home__direct-access-favorites");
 
 function showHideFavorites() {
 
-    switch ( localStorage.getItem("hideFavorites") ) {
+    switch (localStorage.getItem("hideFavorites") ) {
 
         case null:
 
@@ -550,12 +533,14 @@ favoritesSttng.addEventListener("click", ()=>{
         break;
     }
 
+    location.reload();
+
     showHideFavorites();
 });
 
 deleteFavorites = document.getElementById("delete_favorites");
 
-switch ( localStorage.getItem("favorites") ) {
+switch (localStorage.getItem("favorites") ) {
 
     case null:
 
@@ -691,7 +676,7 @@ switch ( localStorage.getItem("favorites") ) {
 
 historySttng = document.getElementById("history_sttng");
 
-switch ( localStorage.getItem("history") ) {
+switch (localStorage.getItem("history") ) {
 
     case null:
 
@@ -715,32 +700,25 @@ switch ( localStorage.getItem("history") ) {
     break;
 }
 
-historySttng.addEventListener("click", showHideHistory);
+historySttng.addEventListener("click", ()=>{
 
-function showHideHistory() {
+    switch (historySttng.checked) {
 
-    setTimeout(()=>{
+        case false:
 
-        switch (historySttng.checked) {
+            localStorage.setItem("history", "noHistory");
 
-            case false:
+        break;
 
-                localStorage.setItem("history", "noHistory");
+        default:
 
-                location.reload();
+            localStorage.removeItem("history");
 
-            break;
+        break;
+    }
 
-            default:
-
-                localStorage.removeItem("history");
-
-                location.reload();
-
-            break;
-        }
-    }, 125);
-}
+    location.reload();
+});
 
 addSearchEngine = document.getElementById("add_search_engine");
 
@@ -749,8 +727,11 @@ SearchEngineModal = document.getElementById("new_search_engine_modal");
 addSearchEngine.addEventListener("click", ()=>{
 
     window.scrollTo(0, 0);
+
     SearchEngineModal.classList.replace("hidden", "new_search_engine_modal-form");
+
     profileNavMenu.classList.add("ovrflw_hddn");
+
     document.getElementById("search_engine_name").focus();
 });
 
@@ -789,13 +770,11 @@ addSEBtn.addEventListener("click", ()=>{
 
     console.log(newSEName + ";;;" + newSELink);
 
-    switch ( localStorage.getItem("search_engines") ) {
+    switch (localStorage.getItem("search_engines") ) {
 
         case null:
 
             localStorage.setItem("search_engines", newSEName + ";;;" + newSELink);
-
-            location.reload();
 
         break;
 
@@ -805,78 +784,13 @@ addSEBtn.addEventListener("click", ()=>{
 
             localStorage.setItem("search_engines", cachedSearchEngines + "," + newSEName + ";;;" + newSELink);
 
-            location.reload();
-
         break;
     }
+
+    location.reload();
 });
 
-// Export / import profile settings
-
-function toExport() {
-
-    content = JSON.stringify(localStorage);
-
-    exportConfig = document.getElementById("export_config");
-
-    exportConfig.href = "data:application/octet-stream," + encodeURIComponent(content);
-
-    exportConfig.download = nickName.value + "_" + "gsconf.json";
-}
-
-toExport();
-
-importConfig = document.getElementById("import_config");
-
-importConfig.addEventListener("input", ()=>{
-
-    file = importConfig.files[0];
-
-    const reader = new FileReader();
-
-    reader.addEventListener("load", ()=>{
-
-        val = reader.result;
-
-        switch ( val.includes("{") && val.includes("}") ) {
-
-            case false:
-
-            break;
-
-            default:
-
-                profile = JSON.parse(val);
-
-                profileKeys = Object.keys(profile);
-
-                profileValues = Object.values(profile);
-
-                localStorage.clear();
-
-                for (let i = 0; i < profileKeys.length; i++) {
-    
-                    localStorage.setItem(profileKeys[i], profileValues[i]);
-                }
-
-                location.reload();
-    
-            break;
-        }
-    });
-
-    switch (file) {
-
-        case null:
-
-        break;
-
-        default:
-
-            reader.readAsText(file);
-        break;
-    }
-});
+// Delete profile settings
 
 deleteConfig = document.getElementById("delete_config");
 
@@ -1082,7 +996,7 @@ function enlace(address, text, keyWords, zone) {
     }
 }
 
-switch ( localStorage.getItem("bookmarks") ) {
+switch (localStorage.getItem("bookmarks") ) {
 
     case null:
 
@@ -1218,13 +1132,11 @@ function addSite() {
                 siteLink + ";;;" + siteName + ";;;" + siteKeywords
             ];
 
-			switch (localStorage.getItem("bookmarks")) {
+			switch (localStorage.getItem("bookmarks") ) {
 
 				case null:
 
 					localStorage.setItem("bookmarks", newBookmark);
-
-                    location.reload();
 
 				break;
 
@@ -1233,8 +1145,6 @@ function addSite() {
                     sites.push(newBookmark);
 
                     localStorage.setItem("bookmarks", sites);
-
-                    location.reload();
 
 				break;
 			}
@@ -1246,6 +1156,8 @@ function addSite() {
             document.getElementById("site_link").value = "";
 
             document.getElementById("site_keywords").value = "";
+
+            location.reload();
 
         break;
 
