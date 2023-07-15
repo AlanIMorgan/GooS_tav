@@ -360,7 +360,7 @@
 
 		<script src="js/crypto_js_3.1.2_rollups_aes.js"></script>
 
-		<script src="js/nav.js?v139"></script>
+		<script src="js/nav.js?v140"></script>
 
 		<script src="js/search.js?v87"></script> <!-- 
 
@@ -400,6 +400,8 @@
 
 				file = importConfig.files[0];
 
+				const reader = new FileReader();
+
 				switch (file) {
 
 					case null:
@@ -411,8 +413,6 @@
 						reader.readAsText(file);
 					break;
 				}
-
-				const reader = new FileReader();
 
 				reader.addEventListener("load", ()=>{
 

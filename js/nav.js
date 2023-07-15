@@ -73,6 +73,12 @@ function changeBackground() {
             localStorage.setItem("bckgrnd", imgUrl);
 
         break;
+
+        default:
+
+            localStorage.removeItem("bckgrnd");
+
+        break;
     }
 }
 
