@@ -1281,6 +1281,8 @@ enlace("https://www.espaebook2.com/", "EspaEbook", "buscar búsqueda search book
 
 enlace("https://www.ebiblioteca.org/lecturas/", "eBiblioteca", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
 
+enlace("https://f-droid.org/en/packages/", "F-Droid", "descargar software libre open source gratis free download apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles", extraLinks);
+
 enlace("https://www.facebook.com/", "Facebook", "redes sociales networks", extraLinks);
 
 enlace("https://fakeupdate.net/", "Fake Update Screens", "actualización actualizacion falsa", extraLinks);
@@ -1447,7 +1449,7 @@ enlace("https://mobile.twitter.com/", "Twitter", "redes sociales network tuits",
 
 enlace("https://www.typingclub.com/", "TypingClub", "utilities tools herramientas learn aprender escribir write", extraLinks);
 
-enlace("https://www.urbandictionary.com/", "Urban Dictionary", "buscar search búqueda busqueda diccionario qué significa que significa", extraLinks);
+enlace("https://www.urbandictionary.com/", "Urban Dictionary", "buscar search búqueda busqueda diccionario definición definicion qué significa que significa", extraLinks);
 
 enlace("https://www.vepelis.com/", "VePelis", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
 
@@ -1466,6 +1468,8 @@ enlace("https://wallhere.com/", "Wallhere", "images imagenes img pics pictures p
 enlace("https://web.whatsapp.com/", "WhatsApp", "redes sociales network mensajería mensajeria intantánea intantanea", extraLinks);
 
 enlace("https://www.office.com/launch/word?auth=2", "Word", "microsoft office 365 ofimática documents docs", extraLinks);
+
+enlace("https://www.wordreference.com/", "Wordreference", "buscar search búqueda busqueda definición definicion diccionario sinónimos sinonimos antónimos antonimos palabras qué significa que significa", extraLinks);
 
 enlace("https://www.worldcat.org/", "WorldCat", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
