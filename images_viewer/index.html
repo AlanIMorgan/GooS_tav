@@ -34,7 +34,7 @@
             }
 
             h1 {
-                margin-bottom: 20px;
+                margin-bottom: 80px;
                 font-size: 24px;
                 text-align: center;
             }
@@ -124,7 +124,7 @@
             }
 
             #path {
-                margin: 20px 0;
+                margin: 40px 0;
                 text-align: center;
             }
 
@@ -143,6 +143,29 @@
 
             dialog #image_modal__div img {
                 object-fit: scale-down;
+            }
+
+            .next_btn, .previous_btn {
+                position: fixed;
+                z-index: 5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                width: 12%;
+                height: 100%;
+                font-size: 40px;
+                font-weight: bolder;
+                background: #0000;
+                filter: drop-shadow(0px 0px 3px #000) drop-shadow(0px 0px 3px #bbb) drop-shadow(0px 0px 3px #bbb) drop-shadow(0px 0px 3px #bbb);
+            }
+
+            .next_btn {
+                right: 0;
+            }
+
+            .previous_btn {
+                left: 0;
             }
 
             nav {
@@ -260,73 +283,93 @@
 
                 revealer = document.querySelector(".revealer");
 
-                //revealPoint = 150;
+                switch (revealer) {
 
-                revealPoint = 0;
+                    case null:
 
-                revealerPosition = revealer.getBoundingClientRect().top;
+                    break;
 
-                windowHeight = window.innerHeight;
+                    default:
 
-                if (revealerPosition < windowHeight - revealPoint) {
+                        //revealPoint = 150;
 
-                    window.removeEventListener("scroll", loadMoreImages);
+                        revealPoint = 0;
 
-                    revealer.classList.remove("revealer");
+                        revealerPosition = revealer.getBoundingClientRect().top;
 
-                    filesList.splice(0, 24);
+                        windowHeight = window.innerHeight;
 
-                    for (let i = 0; i < 24; i++) {
+                        if (revealerPosition < windowHeight - revealPoint) {
 
-                        let e = filesList[i];
+                            window.removeEventListener("scroll", loadMoreImages);
 
-                        setTimeout(()=> printImgs(e, i), 500 * i);
-                    }
+                            revealer.classList.remove("revealer");
+
+                            filesList.splice(0, 24);
+
+                            for (let i = 0; i < 24; i++) {
+
+                                setTimeout(()=> printImgs(filesList[i], i), 500 * i);
+                            }
+                        }
+
+                    break;
                 }
             }
 
             function printImgs (image, index) {
 
-                let fileReader = new FileReader();
+                switch (image) {
 
-                fileReader.readAsDataURL(image);
+                    case undefined:
 
-                fileReader.addEventListener("load", ()=>{
+                    break;
 
-                    let src = fileReader.result;
+                    default:
 
-                    let imgContainer = document.createElement("figure");
+                        let fileReader = new FileReader();
 
-                    if (index !== 0 && index % 19 == 0) {
+                        fileReader.readAsDataURL(image);
 
-                        imgContainer.setAttribute("class", "revealer");
+                        fileReader.addEventListener("load", ()=>{
 
-                        setTimeout(()=>{
+                            let src = fileReader.result;
 
-                            window.addEventListener("scroll", loadMoreImages);
-                        }, 500);
-                    }
+                            let imgContainer = document.createElement("figure");
 
-                    imgContainer.innerText = '';
+                            if (index !== 0 && index % 19 == 0) {
 
-                    let img = document.createElement("img");
+                                imgContainer.setAttribute("class", "revealer");
 
-                    img.setAttribute("loading", "lazy");
+                                setTimeout(()=>{
 
-                    img.setAttribute("src", src);
+                                    window.addEventListener("scroll", loadMoreImages);
+                                }, 500);
+                            }
 
-                    img.setAttribute("title", image.name);
+                            imgContainer.innerText = '';
 
-                    let figcaption = document.createElement("figcaption");
+                            let img = document.createElement("img");
 
-                    figcaption.innerText = image.name;
+                            img.setAttribute("loading", "lazy");
 
-                    contentViewer.appendChild(imgContainer);
+                            img.setAttribute("src", src);
 
-                    imgContainer.appendChild(img);
+                            img.setAttribute("title", image.name);
 
-                    imgContainer.appendChild(figcaption);
-                });
+                            let figcaption = document.createElement("figcaption");
+
+                            figcaption.innerText = image.name;
+
+                            contentViewer.appendChild(imgContainer);
+
+                            imgContainer.appendChild(img);
+
+                            imgContainer.appendChild(figcaption);
+                        });
+
+                    break;
+                }
             }
 
             function processFiles(e) {
@@ -375,15 +418,100 @@
 
             imageModal = document.getElementById("image_modal");
 
+            imageModal.addEventListener("close", ()=> document.body.style = "overflow: auto;");
+
             imageModalDiv = document.getElementById("image_modal__div");
 
             imageInfo = document.getElementById("image_info");
 
             brghtnssBtn = document.getElementById("brightness_btn");
 
+            function printModal(trgt) {
+
+                imageModalDiv.innerHTML = '';
+
+                imageInfo.innerHTML = "<option selected disabled> i </option>";
+
+                let img = document.createElement("img");
+
+                img.setAttribute("src", trgt.src);
+
+                imageModalDiv.appendChild(img);
+
+                let name = document.createElement("optgroup");
+
+                let resolution = document.createElement("optgroup");
+
+                name.setAttribute("label", trgt.title);
+
+                resolution.setAttribute("label", trgt.naturalWidth + " x " + trgt.naturalHeight + " px");
+
+                imageInfo.appendChild(name);
+
+                imageInfo.appendChild(resolution);
+
+                switch (trgt.parentElement.nextElementSibling) {
+
+                    case null:
+
+                    break;
+
+                    default:
+
+                        let nextBtn = document.createElement("a");
+
+                        nextBtn.setAttribute("class", "next_btn");
+
+                        nextBtn.innerText = '>';
+
+                        nextBtn.addEventListener("click", ()=>{
+
+                            imageModal.close();
+
+                            printModal(trgt.parentElement.nextElementSibling.children[0]);
+                        });
+
+                        imageModalDiv.appendChild(nextBtn);
+
+                    break;
+                }
+
+                switch (trgt.parentElement.previousElementSibling) {
+
+                    case null:
+
+                    break;
+
+                    default:
+
+                        let previousBtn = document.createElement("a");
+
+                        previousBtn.setAttribute("class", "previous_btn");
+
+                        previousBtn.innerText = '<';
+
+                        previousBtn.addEventListener("click", ()=>{
+
+                            imageModal.close();
+
+                            printModal(trgt.parentElement.previousElementSibling.children[0]);
+                        });
+
+                        imageModalDiv.appendChild(previousBtn);
+
+                    break;
+                }
+
+                beDimmed();
+
+                imageModal.showModal();
+
+                setTimeout(()=> document.body.style = "overflow: hidden;" , 100);
+            }
+
             function beDimmed() {
 
-                brghtnssBtn.checked == true ? imageModalDiv.getElementsByTagName("img")[0].style = "filter: brightness(0.5);background: #666;" : imageModalDiv.getElementsByTagName("img")[0].style = "filter: brightness(1);";
+                brghtnssBtn.checked == true ? imageModalDiv.children[0].style = "filter: brightness(0.5);background: #666;" : imageModalDiv.children[0].style = "filter: brightness(1);";
             }
 
             contentViewer.addEventListener("click", (e)=>{
@@ -396,31 +524,7 @@
 
                     default:
 
-                        imageModalDiv.innerHTML = '';
-
-                        imageInfo.innerHTML = "<option selected disabled> i </option>";
-
-                        let img = document.createElement("img");
-
-                        img.setAttribute("src", e.target.src);
-
-                        imageModalDiv.appendChild(img);
-
-                        let name = document.createElement("optgroup");
-
-                        let resolution = document.createElement("optgroup");
-
-                        name.setAttribute("label", e.target.title);
-
-                        resolution.setAttribute("label", e.target.naturalWidth + " x " + e.target.naturalHeight + " px");
-
-                        imageInfo.appendChild(name);
-
-                        imageInfo.appendChild(resolution);
-
-                        beDimmed();
-
-                        imageModal.showModal();
+                        printModal(e.target);
 
                     break;
                 }
