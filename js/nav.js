@@ -45,7 +45,7 @@ switch (localStorage.getItem("bckgrnd") ) {
 
     default:
 
-        bckgrndInpt.value = localStorage.getItem("bckgrnd");
+        // bckgrndInpt.value = localStorage.getItem("bckgrnd");
 
         changeBackground();
     break;
