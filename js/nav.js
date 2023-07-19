@@ -58,7 +58,7 @@ function isEmptyOrSpaces (str) {
 
 function changeBackground(url) {
 
-    switch ( url.includes("http") || url.includes("data:image/") ) {
+    switch (url.includes("http") || url.includes("data:image/") ) {
 
         case false:
 
@@ -68,13 +68,13 @@ function changeBackground(url) {
 
         default:
 
+            localStorage.setItem("bckgrnd", url);
+
             homeImg.src = url;
 
             document.getElementById("img_mask").classList.remove("img_mask");
 
             document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
-
-            localStorage.setItem("bckgrnd", url);
 
         break;
     }
@@ -94,7 +94,7 @@ document.getElementById("random_wpp").addEventListener("click", ()=>{
 
     resolution = window.innerWidth + "x" + window.innerHeight;
     
-    switch ( bckgrndInpt.value.includes("&lasttry=") ) {
+    switch (bckgrndInpt.value.includes("&lasttry=") ) {
 
         case false:
 
