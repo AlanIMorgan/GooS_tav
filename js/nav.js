@@ -58,9 +58,9 @@ function isEmptyOrSpaces (str) {
 
 function changeBackground() {
 
-    imgUrl = bckgrndInpt.value;
+    imgUrl = bckgrndInpt.value.includes("http") || bckgrndInpt.value.includes("data:image/") ? bckgrndInpt.value : "";
 
-    switch ( isEmptyOrSpaces(imgUrl) || !imgUrl.includes("http") ) {
+    switch ( isEmptyOrSpaces(imgUrl) ) {
 
         case false:
 
@@ -135,6 +135,22 @@ document.getElementById("random_wpp").addEventListener("click", ()=>{
 
         break;
     }
+});
+
+wppInput = document.getElementById("upload_wpp");
+
+wppInput.addEventListener("input", ()=>{
+
+    let fileReader = new FileReader();
+
+    fileReader.readAsDataURL(wppInput.files[0]);
+
+    fileReader.addEventListener("load", ()=>{
+
+        bckgrndInpt.value = fileReader.result;
+
+        changeBackground();
+    });
 });
 
 // Nickname

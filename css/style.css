@@ -22,7 +22,7 @@ html {
     background: #333;
 }
 
-a {
+a, label {
 	cursor: pointer;
 }
 
@@ -276,11 +276,10 @@ a {
 }
 
 .delete_site {
-
-	display: inline-flex;
-	align-items: center;
+	margin-left: 5px;
 	font-family: monospace;
 	font-size: 18px;
+	cursor: pointer;
 }
 
 @media (max-width: 700px) {
@@ -289,7 +288,7 @@ a {
 
 		font-size: 10px;
 	}
-	
+
 	.direct-access {
 
 		width: 18vw !important;
@@ -313,7 +312,7 @@ a {
 
 		top: calc(37% - 44px) !important;
 	}
-	
+
 	.direct-access {
 
 		width: 25vw !important;
@@ -634,9 +633,10 @@ td,
 	text-align: start;
 }
 
-.setting_button a {
-
-	padding: 5px;border: 1px solid #fff;font-size: 12px;
+.setting_button a, .setting_button .btn {
+	padding: 5px;
+	border: 1px solid #fff;
+	font-size: 12px;
 }
 
 /*--------------HOME------------------*/
