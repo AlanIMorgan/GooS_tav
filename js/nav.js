@@ -33,7 +33,7 @@ homeImg = document.getElementById("home_img").getElementsByTagName("img")[0];
 
 bckgrndInpt = document.getElementById("bckgrnd_sttng");
 
-bckgrndInpt.addEventListener("input", ()=>{changeBackground(); location.reload(); });
+bckgrndInpt.addEventListener("input", ()=>{changeBackground(bckgrndInpt.value); location.reload(); });
 
 switch (localStorage.getItem("bckgrnd") ) {
 
@@ -47,7 +47,7 @@ switch (localStorage.getItem("bckgrnd") ) {
 
         // bckgrndInpt.value = localStorage.getItem("bckgrnd");
 
-        changeBackground();
+        changeBackground(localStorage.getItem("bckgrnd") );
     break;
 }
 
@@ -56,27 +56,25 @@ function isEmptyOrSpaces (str) {
     return str == null || str.match(/^\s*$/) !== null;
 }
 
-function changeBackground() {
+function changeBackground(url) {
 
-    imgUrl = bckgrndInpt.value.includes("http") || bckgrndInpt.value.includes("data:image/") ? bckgrndInpt.value : "";
-
-    switch ( isEmptyOrSpaces(imgUrl) ) {
+    switch ( url.includes("http") || url.includes("data:image/") ) {
 
         case false:
 
-            homeImg.src = imgUrl;
-
-            document.getElementById("img_mask").classList.remove("img_mask");
-
-            document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
-
-            localStorage.setItem("bckgrnd", imgUrl);
+            localStorage.removeItem("bckgrnd");
 
         break;
 
         default:
 
-            localStorage.removeItem("bckgrnd");
+            homeImg.src = url;
+
+            document.getElementById("img_mask").classList.remove("img_mask");
+
+            document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
+
+            localStorage.setItem("bckgrnd", url);
 
         break;
     }
@@ -106,7 +104,7 @@ document.getElementById("random_wpp").addEventListener("click", ()=>{
 
                 bckgrndInpt.value = response.url + "&lasttry=0";
 
-                changeBackground();
+                changeBackground(bckgrndInpt.value);
 
                 location.reload();
             })
@@ -126,7 +124,7 @@ document.getElementById("random_wpp").addEventListener("click", ()=>{
 
                 bckgrndInpt.value = response.url + "&lasttry=" + lasttry;
 
-                changeBackground();
+                changeBackground(bckgrndInpt.value);
 
                 location.reload();
             })
@@ -149,7 +147,9 @@ wppInput.addEventListener("input", ()=>{
 
         bckgrndInpt.value = fileReader.result;
 
-        changeBackground();
+        changeBackground(bckgrndInpt.value);
+
+        location.reload();
     });
 });
 
