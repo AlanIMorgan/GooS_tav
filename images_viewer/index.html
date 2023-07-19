@@ -98,10 +98,13 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                max-width: 50%;
+                max-height: 50%;
                 padding: 5px;
                 background: #0007;
                 font-weight: bolder;
                 line-break: anywhere;
+                overflow: hidden;
             }
 
             label, a {
@@ -143,6 +146,7 @@
 
             dialog #image_modal__div img {
                 object-fit: scale-down;
+                background: #0000;
             }
 
             .next_btn, .previous_btn {
@@ -169,11 +173,13 @@
             }
 
             nav {
+                position: sticky;
+                z-index: 9;
+                top: 0;
+                left: 0;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                position: fixed;
-                z-index: 9;
                 width: 100%;
                 height: 50px;
                 padding: 5px;
@@ -181,7 +187,8 @@
             }
 
             nav div {
-                display: inline-block;
+                display: inline-flex;
+                align-items: center;
                 background: none;
             }
 
@@ -191,6 +198,22 @@
                 padding: 0 5px;
                 border: 2px solid #fff;
                 font-weight: bolder;
+            }
+
+            #full_screen_btn {
+                width: 32px;
+                height: 32px;
+                margin-right: 5px;
+                border: 2px solid #fff;
+            }
+
+            #full_screen_btn a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                fill: #fff;
             }
 
             .checkbox_w_label {
@@ -237,11 +260,18 @@
                         <a id="close_image_modal" class="back_btn"> &lt; </a>
                     </div>
 
-                    <div> <!-- 
+                    <div>
 
-                        <a id="previous_image">Anterior</a>
+                        <div id="full_screen_btn">
 
-                        <a id="next_image">Siguiente</a> -->
+                            <a>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"> <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+    
+                                    <path d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"/>
+                                </svg>
+                            </a>
+                        </div>
 
                         <div class="checkbox_w_label">
 
@@ -422,9 +452,11 @@
 
             imageModalDiv = document.getElementById("image_modal__div");
 
-            imageInfo = document.getElementById("image_info");
+            fullScreenBtn = document.getElementById("full_screen_btn");
 
             brghtnssBtn = document.getElementById("brightness_btn");
+
+            imageInfo = document.getElementById("image_info");
 
             function printModal(trgt) {
 
@@ -511,7 +543,7 @@
 
             function beDimmed() {
 
-                brghtnssBtn.checked == true ? imageModalDiv.children[0].style = "filter: brightness(0.5);background: #666;" : imageModalDiv.children[0].style = "filter: brightness(1);";
+                brghtnssBtn.checked == true ? imageModalDiv.children[0].style = "filter: brightness(0.5);" : imageModalDiv.children[0].style = "filter: brightness(1);";
             }
 
             contentViewer.addEventListener("click", (e)=>{
@@ -529,6 +561,8 @@
                     break;
                 }
             });
+
+            fullScreenBtn.addEventListener('click', ()=> imageModalDiv.children[0].requestFullscreen() );
 
             brghtnssBtn.addEventListener("click", beDimmed);
 
