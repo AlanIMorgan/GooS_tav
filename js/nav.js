@@ -93,46 +93,17 @@ function resetBackground() {
 document.getElementById("random_wpp").addEventListener("click", ()=>{
 
     resolution = window.innerWidth + "x" + window.innerHeight;
-    
-    switch (bckgrndInpt.value.includes("&lasttry=") ) {
 
-        case false:
+    fetch("https://source.unsplash.com/random/" + resolution + "/?night")
 
-            fetch("https://source.unsplash.com/random/" + resolution + "/?night&lasttry=0")
+    .then(response => {
 
-            .then(response => {
+        changeBackground(response.url);
 
-                bckgrndInpt.value = response.url + "&lasttry=0";
+        location.reload();
+    })
 
-                changeBackground(bckgrndInpt.value);
-
-                location.reload();
-            })
-
-            .catch(err => console.log('Solicitud fallida', err));
-        break;
-
-        default:
-
-            bckgrndValueSplit = bckgrndInpt.value.split("lasttry=");
-
-            lasttry = parseInt( bckgrndValueSplit[1] ) + 1;
-
-            fetch("https://source.unsplash.com/random/" + resolution + "/?night&lasttry=" + lasttry)
-
-            .then(response => {
-
-                bckgrndInpt.value = response.url + "&lasttry=" + lasttry;
-
-                changeBackground(bckgrndInpt.value);
-
-                location.reload();
-            })
-
-            .catch(err => console.log('Solicitud fallida', err));
-
-        break;
-    }
+    .catch(err => console.log('Solicitud fallida', err));
 });
 
 wppInput = document.getElementById("upload_wpp");
@@ -145,9 +116,7 @@ wppInput.addEventListener("input", ()=>{
 
     fileReader.addEventListener("load", ()=>{
 
-        bckgrndInpt.value = fileReader.result;
-
-        changeBackground(bckgrndInpt.value);
+        changeBackground(fileReader.result);
 
         location.reload();
     });
