@@ -45,8 +45,6 @@ switch (localStorage.getItem("bckgrnd") ) {
 
     default:
 
-        // bckgrndInpt.value = localStorage.getItem("bckgrnd");
-
         changeBackground(localStorage.getItem("bckgrnd") );
     break;
 }
@@ -56,19 +54,23 @@ function isEmptyOrSpaces (str) {
     return str == null || str.match(/^\s*$/) !== null;
 }
 
-function changeBackground(url) {
+function changeBackground (url) {
 
-    switch (url.includes("http") || url.includes("data:image/") ) {
+    switch (url.includes("http") ) {
 
         case false:
 
             localStorage.removeItem("bckgrnd");
+
+            localStorage.removeItem("comp_bck");
 
         break;
 
         default:
 
             localStorage.setItem("bckgrnd", url);
+
+            localStorage.removeItem("comp_bck");
 
             homeImg.src = url;
 
@@ -104,22 +106,6 @@ document.getElementById("random_wpp").addEventListener("click", ()=>{
     })
 
     .catch(err => console.log('Solicitud fallida', err));
-});
-
-wppInput = document.getElementById("upload_wpp");
-
-wppInput.addEventListener("input", ()=>{
-
-    let fileReader = new FileReader();
-
-    fileReader.readAsDataURL(wppInput.files[0]);
-
-    fileReader.addEventListener("load", ()=>{
-
-        changeBackground(fileReader.result);
-
-        location.reload();
-    });
 });
 
 // Nickname

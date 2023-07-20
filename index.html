@@ -368,7 +368,9 @@
 
 		<script src="js/crypto_js_3.1.2_rollups_aes.js"></script>
 
-		<script src="js/nav.js?v147"></script>
+		<script src="js/lz-string.min.js"></script>
+
+		<script src="js/nav.js?v148"></script>
 
 		<script src="js/search.js?v87"></script> <!-- 
 
@@ -451,6 +453,44 @@
 
 						break;
 					}
+				});
+			});
+
+			switch (localStorage.getItem("comp_bck") ) {
+
+				case null:
+
+				break;
+
+				default:
+
+					compressedBckgrnd = localStorage.getItem("comp_bck");
+
+					homeImg.src = LZString.decompress(compressedBckgrnd);
+
+					document.getElementById("img_mask").classList.remove("img_mask");
+
+					document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
+				break;
+			}
+
+			wppInput = document.getElementById("upload_wpp");
+
+			wppInput.addEventListener("input", ()=>{
+
+				let fileReader = new FileReader();
+
+				fileReader.readAsDataURL(wppInput.files[0]);
+
+				fileReader.addEventListener("load", ()=>{
+
+					let compressedData = LZString.compress(fileReader.result);
+
+					localStorage.removeItem("bckgrnd");
+
+					localStorage.setItem("comp_bck", compressedData);
+
+					location.reload();
 				});
 			});
 		</script>
