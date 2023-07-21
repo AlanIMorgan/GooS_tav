@@ -872,6 +872,7 @@ td,
 
 	display: inline-block;
     width: 100%;
+	font-size: 14px;
 	margin: 5px 0;
 	overflow: hidden;
     white-space: nowrap;
