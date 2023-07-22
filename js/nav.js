@@ -703,9 +703,9 @@ SearchEngineModal = document.getElementById("new_search_engine_modal");
 
 addSearchEngine.addEventListener("click", ()=>{
 
-    window.scrollTo(0, 0);
-
     SearchEngineModal.classList.replace("hidden", "new_search_engine_modal-form");
+
+    window.scrollTo(0, 0);
 
     profileNavMenu.classList.add("ovrflw_hddn");
 
