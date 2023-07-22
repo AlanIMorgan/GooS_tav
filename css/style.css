@@ -9,6 +9,7 @@
 }
 
 * {
+	line-height: 1.25;
 	box-sizing: border-box;
 	outline: none;
 	font-family: "Segoe UI", "Roboto", arial, sans-serif;
@@ -372,6 +373,26 @@ a {
 	width: 100%;height: 100%;
 	margin-bottom: 10px;
 	background: var(--svnth);
+}
+
+.new_site_modal-form input,
+.new_search_engine_modal-form input {
+	margin: 0 10px 20px 0;
+}
+
+.new_site_modal-form div,
+.new_search_engine_modal-form div {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.new_site_modal-form div a,
+.new_search_engine_modal-form div a {
+	padding: 10px 5px;
+	margin-left: -10px;
+	border: 1px solid var(--primary);
+	border-radius: 4px;
 }
 
 .ovrflw_hddn {

@@ -37,7 +37,7 @@
 
 		<!-- Custom CSS -->
 
-		<link rel="stylesheet" type="text/css" href="css/style.css?v88" />
+		<link rel="stylesheet" type="text/css" href="css/style.css?v89" />
 	</head>
 
 	<body>
@@ -113,21 +113,15 @@
 
 							<input id="site_name" placeholder="Nombre del sitio" type="text" required>
 
-							<br>
-
 							<input id="site_link" placeholder="URL" type="text" required>
-
-							<br>
 
 							<input id="site_keywords" placeholder="Palabras clave" type="text" required>
 
-							<br>
+							<div>
 
-							<div style="display: flex;width: 100%;justify-content: space-around;">
+								<a id="cancel"> Cancelar </a>
 
-								<a id="cancel"  style="padding: 10px 5px;border: 1px solid var(--primary);border-radius: 4px;"> Cancelar </a>
-
-								<a id="cache_site" style="padding: 10px 5px;border: 1px solid var(--primary);border-radius: 4px;"> Añadir </a>
+								<a id="cache_site"> Añadir </a>
 							</div>
 						</div>
 					</ul>
@@ -138,17 +132,13 @@
 
 							<input id="search_engine_name" placeholder="Nombre del buscador" type="text">
 
-							<br>
-
 							<input id="search_engine_link" placeholder="URL" type="text">
 
-							<br>
+							<div>
 
-							<div style="display: flex;width: 100%;justify-content: space-around;">
+								<a id="cancel-search_engine"> Cancelar </a>
 
-								<a id="cancel-search_engine"  style="padding: 10px 5px;border: 1px solid var(--primary);border-radius: 4px;"> Cancelar </a>
-
-								<a id="cache_search_engine" style="padding: 10px 5px;border: 1px solid var(--primary);border-radius: 4px;"> Añadir </a>
+								<a id="cache_search_engine"> Añadir </a>
 							</div>
 						</div>
 
@@ -297,7 +287,7 @@
 
 						<br>
 
-						<input id="import_config" class="hidden" type="file">
+						<input id="import_config" class="hidden" type="file" accept=".json">
 
 						<a id="delete_config" class="mas-de-google" style="background: #733;">
 
