@@ -168,6 +168,7 @@ profileNavBtn = document.getElementById('nav_profile_btn');
 resultsBoxC = document.querySelector(".results_box_container");
 results = document.querySelector(".results_box");
 profileNavMenu = document.querySelector(".nav__submenu-profile");
+fullScreenBtn = document.getElementById("full_screen_btn");
 home = document.querySelector(".home");
 
 navBtn.addEventListener("click", showHideNav);
@@ -182,6 +183,11 @@ profileNavBtn.addEventListener("click", ()=>{
 
     profileNavMenu.classList.toggle("block");
     navMenu.classList.remove("nav__li-submenu-ul_list");
+});
+
+fullScreenBtn.addEventListener("click", ()=>{
+
+    home.requestFullscreen();
 });
 
 home.addEventListener("click", ()=>{
@@ -878,9 +884,9 @@ addSiteBtn.addEventListener("click", addSite);
 
 element("a", "href", "chess/index.html", "Ajedrez");
 
-element("a", "href", "calculator/index.html", "Calculadora");
+element("a", "href", "calculator/index.html", "Calculadora"); /* 
 
-element("a", "href", "matrix/index.html", "Salvapantallas");
+element("a", "href", "matrix/index.html", "Salvapantallas"); */
 
 element("hr", "class", "nav__submenu-element-section-separator", "");
 

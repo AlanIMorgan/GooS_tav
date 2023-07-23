@@ -660,7 +660,14 @@ td,
 	font-size: 12px;
 }
 
-/*--------------HOME------------------*/
+/*--------------Full Screen Button--------------*/
+
+#full_screen_btn svg {
+    width: 30px;
+    border-radius: 0;
+}
+
+/*--------------HOME--------------*/
 
 .home {
 	position: absolute;
