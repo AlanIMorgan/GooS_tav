@@ -357,15 +357,26 @@
 
 			// Export profile settings
 
-			content = JSON.stringify(localStorage);
+			switch (localStorage.length > 0) {
 
-			exportConfigBtn = document.getElementById("export_config");
+				case false:
 
-			encryptedData = CryptoJS.AES.encrypt(content, "GooStav"); // "GooStav" is the passphrase
+				break;
 
-			exportConfigBtn.href = "data:application/octet-stream," + encodeURIComponent(encryptedData.toString() );
+				default:
 
-			exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
+					content = JSON.stringify(localStorage);
+
+					exportConfigBtn = document.getElementById("export_config");
+
+					encryptedData = CryptoJS.AES.encrypt(content, "GooStav"); // "GooStav" is the passphrase
+
+					exportConfigBtn.href = "data:application/octet-stream," + encodeURIComponent(encryptedData.toString() );
+
+					exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
+
+				break;
+			}
 
 			// Import profile settings
 
