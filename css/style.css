@@ -10,6 +10,7 @@
 
 * {
 	font-family: "Segoe UI", "Roboto", arial, sans-serif;
+	font-size: 14px;
 	line-height: 1.25;
 	padding: 0;
 	margin: 0;
@@ -157,13 +158,16 @@ a {
 	padding: 7px;
 	border-radius: 23px;
 	background: var(--ffth);
+	cursor: pointer;
 	transition: background .25s linear;
 }
 
 .nav__li .gb_Ue:hover {
-	/*
-	background-color: rgba(255, 255, 255, 0.1); */
 	background-color: var(--svnth);
+}
+
+#nav_profile_btn .gb_Ue {
+	width: 34px;
 }
 
 .nav__li {
@@ -663,6 +667,10 @@ td,
 	background: #777;
 }
 
+#nick_sttng {
+	width: 50%;
+}
+
 .setting_button {
 	margin-top: 20px;
 	text-align: start;
@@ -687,6 +695,14 @@ td,
 #delete_favorites {
 	display: block;
 	margin-top: 20px;
+}
+
+#export_config {
+	margin-top: 40px;
+}
+
+#delete_config {
+	background: #733;
 }
 
 /*--------------Full Screen Button--------------*/
