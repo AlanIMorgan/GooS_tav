@@ -736,16 +736,16 @@ td,
 }
 
 .home__logo-containerrr p {
-    filter: drop-shadow(0px 0px 1px #000) drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 3px #fff);
+	font-size: 37px;
 	font-weight: bolder;
 	margin-top: 15vh;
+    filter: drop-shadow(0px 0px 1px #000) drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 3px #fff);
 }
 
 .home__logo-containerrr {
 	position: absolute;
 	z-index: 9;
 	display: inline-block;
-	font-size: 37px;
 	text-align: center;
 	width: 100%;
 }
