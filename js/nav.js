@@ -589,10 +589,7 @@ switch (localStorage.getItem("favorites") ) {
 
                 favs = favorites.split(";;;");
 
-                favs.forEach(e => {
-
-                    e.length > 0 ? createFavoriteSitesOptions(e) : false;
-                });
+                favs.forEach(e => e.length > 0 ? createFavoriteSitesOptions(e) : false);
 
                 function deleteFavoriteSite() {
 
@@ -628,10 +625,7 @@ switch (localStorage.getItem("favorites") ) {
 
                                     newFavs = '';
 
-                                    favs.forEach(e => {
-
-                                        e.length > 0 ? newFavs += e + ";;;" : false;
-                                    });
+                                    favs.forEach(e => e.length > 0 ? newFavs += e + ";;;" : false);
 
                                     localStorage.setItem("favorites", newFavs);
 
@@ -1318,6 +1312,8 @@ enlace("https://www.messenger.com/", "Messenger", "facebook redes sociales netwo
 
 enlace("https://mirandogratis.com/chungking-express.html", "Mirando Gratis", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
 
+enlace("https://movieparadise.org/", "Moviesparadise", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+
 enlace("https://mqs.link/", "MQS Albums Download", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", extraLinks);
 
 enlace("https://tavasci3-musicrewind.blogspot.com/", "Music Rewind", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", extraLinks);
@@ -1362,11 +1358,15 @@ enlace("https://www.qwant.com/", "Qwant", "buscar search búsqueda privacidad pr
 
 enlace("https://www.random.org/widgets/", "Random", "", extraLinks);
 
+enlace("https://rarefilmm.com/", "Rarefilmm", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+
 enlace("https://redalyc.org/", "Redalyc", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
 enlace("https://www.reddit.com/", "Reddit", "redes sociales network", extraLinks);
 
 enlace("https://www.refseek.com/", "Refseek", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
+
+enlace("https://rentry.co/megathread", "Piracy megathread on Rentry.co", "torrents magnet descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles ver películas peliculas series watch full movies cinema escuchar listen música musica", extraLinks);
 
 enlace("http://repec.org/", "RePEc", "Research Papers Economics buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
