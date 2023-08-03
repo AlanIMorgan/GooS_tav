@@ -531,30 +531,50 @@ switch (localStorage.getItem("favorites") ) {
 
     default:
 
-        let favorites = localStorage.getItem("favorites").replace(";;;;;;", ";;;");
+        let favorites = localStorage.getItem("favorites");
 
-        function createFavoriteSitesOptions (fav) {
+        favs = favorites.split(";;;");
 
-            let option = document.createElement("option");
+        favs.forEach(e => {
 
-            option.setAttribute("value", fav);
+            if (e.length > 0) {
 
-            deleteFavorites.appendChild(option);
+                let option = document.createElement("option");
 
-            option.innerText = fav;
-        }
+                option.setAttribute("value", e);
 
-        switch ( favorites.includes(";;;") ) {
+                deleteFavorites.appendChild(option);
 
-            case false:
+                option.innerText = e;
+            }
+        });
 
-                createFavoriteSitesOptions(favorites);
+        deleteFavorites.addEventListener("input", ()=>{
 
-                function deleteFavoriteSite() {
+            let delSite = deleteFavorites.value;
 
-                    let delSite = deleteFavorites.value;
+            switch (delSite) {
 
-                    switch (delSite.length > 0) {
+                case "":
+
+                break;
+
+                case "all":
+
+                    let favoritesAlert = confirm("¿Estás seguro de que quieres quedarte sin favoritos?");
+
+                    if (favoritesAlert) {
+
+                        localStorage.removeItem("favorites");
+                    }
+
+                break;
+
+                default:
+
+                    let favoriteAlert = confirm("Estás apunto de eliminar: " + delSite);
+
+                    switch (favoriteAlert) {
 
                         case false:
 
@@ -562,88 +582,19 @@ switch (localStorage.getItem("favorites") ) {
 
                         default:
 
-                            let favoritesAlert = confirm("¿Estás seguro de que quieres quedarte sin favoritos?");
+                            favs.splice(favs.indexOf(delSite), 1 );
 
-                            switch (favoritesAlert == true) {
+                            newFavs = favs.join(";;;");
 
-                                case false:
-
-                                break;
-
-                                default:
-
-                                    localStorage.removeItem("favorites");
-
-                                    location.reload();
-
-                                break;
-                            }
-
-                        break;
-                    }
-                }
-
-            break;
-
-            default:
-
-                favs = favorites.split(";;;");
-
-                favs.forEach(e => e.length > 0 ? createFavoriteSitesOptions(e) : false);
-
-                function deleteFavoriteSite() {
-
-                    let delSite = deleteFavorites.value;
-
-                    switch (delSite) {
-
-                        case "":
-
-                        break;
-
-                        case "all":
-
-                            let favoritesAlert = confirm("¿Estás seguro de que quieres quedarte sin favoritos?");
-
-                            favoritesAlert == true ? localStorage.removeItem("favorites") : false ;
-
-                        break;
-
-                        default:
-
-                            let favoriteAlert = confirm("Estás apunto de eliminar: " + delSite);
-
-                            switch (favoriteAlert == true) {
-
-                                case false:
-
-                                break;
-
-                                default:
-
-                                    favs.splice( favs.indexOf(delSite), 1 );
-
-                                    newFavs = '';
-
-                                    favs.forEach(e => e.length > 0 ? newFavs += e + ";;;" : false);
-
-                                    localStorage.setItem("favorites", newFavs);
-
-                                break;
-                            }
+                            newFavs.length > 0 ? localStorage.setItem("favorites", newFavs) : localStorage.removeItem("favorites");
 
                         break;
                     }
 
-                    location.reload();
-                }
+                break;
+            }
 
-            break;
-        }
-
-        deleteFavorites.addEventListener("input", ()=>{
-
-            deleteFavoriteSite();
+            location.reload();
         });
 
     break;
@@ -659,20 +610,9 @@ switch (localStorage.getItem("history") ) {
 
     break;
 
-    default:
+    case "noHistory":
 
-        switch (localStorage.getItem("history") == "noHistory") {
-            
-            case false:
-
-            break;
-            
-            default:
-
-                historySttng.checked = false;
-
-            break;
-        }
+        historySttng.checked = false;
 
     break;
 }
@@ -744,8 +684,6 @@ addSEBtn.addEventListener("click", ()=>{
     newSEName = document.getElementById("search_engine_name").value;
 
     newSELink = document.getElementById("search_engine_link").value;
-
-    console.log(newSEName + ";;;" + newSELink);
 
     switch (localStorage.getItem("search_engines") ) {
 
@@ -878,9 +816,7 @@ addSiteBtn.addEventListener("click", addSite);
 
 element("a", "href", "chess/index.html", "Ajedrez");
 
-element("a", "href", "calculator/index.html", "Calculadora"); /* 
-
-element("a", "href", "matrix/index.html", "Salvapantallas"); */
+element("a", "href", "calculator/index.html", "Calculadora");
 
 element("hr", "class", "nav__submenu-element-section-separator", "");
 
@@ -987,99 +923,50 @@ switch (localStorage.getItem("bookmarks") ) {
 
         sites = bookmarks.split(',');
 
-        for (let i = 0; i < sites.length; i++) {
+        sites.forEach(e =>{
 
-            let e = sites[i];
+            ePrprts = e.split(";;;");
 
-            switch (e.length > 9) {
+            e.length > 8 ? enlace(ePrprts[0], ePrprts[1], ePrprts[2], userLinks) : false;
+        });
 
-                case false:
+        userLinks.addEventListener("click", (e)=>{
 
-                break;
+            switch (e.target.className) {
 
-                default:
+                case "delete_site":
 
-                    ePrprts = e.split(';;;');
+                    dataSets = [
 
-                    enlace(ePrprts[0], ePrprts[1], ePrprts[2], userLinks);
+                        e.target.dataset.address,
+
+                        e.target.dataset.site,
+
+                        e.target.dataset.keywords
+                    ]
+
+                    let conf = window.confirm("Estás a punto de borrar: " + dataSets[1]);
+
+                    switch (conf) {
+
+                        case false:
+
+                        break;
+
+                        default:
+
+                            sites.splice(sites.indexOf(dataSets.join(";;;") ), 1);
+
+                            sites.length > 0 ? localStorage.setItem("bookmarks", sites.toString() ) : localStorage.removeItem("bookmarks");
+
+                            window.location.reload();
+
+                        break;
+                    }
 
                 break;
             }
-        }
-
-        deleteBtns = document.getElementsByClassName("delete_site");
-
-        for (let i = 0; i < deleteBtns.length; i++) {
-
-            deleteBtns[i].addEventListener("click", ()=>{
-
-                dataSets = deleteBtns[i].dataset.address + ";;;" + deleteBtns[i].dataset.site + ";;;" + deleteBtns[i].dataset.keywords;
-
-                dataSetsSplitted = dataSets.split(";;;");
-
-                let conf = window.confirm("Estás a punto de borrar: " + dataSetsSplitted[1]);
-
-                switch (conf) {
-
-                    case false:
-
-                    break;
-
-                    default:
-
-                        splittedBkmrks = bookmarks.split(dataSets);
-
-                        switch (splittedBkmrks[0].length > 9) {
-
-                            case false:
-
-                                bkmrksUpdated = splittedBkmrks[1];
-
-                            break;
-
-                            default:
-
-                                switch (splittedBkmrks[1].length > 9) {
-
-                                    case false:
-
-                                        bkmrksUpdated = splittedBkmrks[0];
-
-                                    break;
-
-                                    default:
-
-                                        bkmrksUpdated = splittedBkmrks[0] + splittedBkmrks[1];
-
-                                    break;
-                                }
-
-                            break;
-                        }
-
-                        bkmrksFixed = bkmrksUpdated.replace(",,", ",");
-
-                        switch (bkmrksFixed.length > 9) {
-
-                            case false:
-
-                                localStorage.removeItem("bookmarks");
-
-                            break;
-
-                            default:
-
-                                localStorage.setItem("bookmarks", bkmrksFixed);
-
-                            break;
-                        }
-
-                        window.location.reload();
-
-                    break;
-                }
-            });
-        }
+        });
 
     break;
 }
@@ -1092,22 +979,22 @@ function addSite() {
 
     let newSiteKw = document.getElementById("site_keywords").value;
 
-    switch ( isEmptyOrSpaces(newSiteName) || isEmptyOrSpaces(newSiteLink) || isEmptyOrSpaces(newSiteKw) ) {
+    switch (isEmptyOrSpaces(newSiteName) || isEmptyOrSpaces(newSiteLink) || isEmptyOrSpaces(newSiteKw) ) {
 
         case false:
 
-            siteName = document.getElementById("site_name").value;
-
-            siteLink = document.getElementById("site_link").value;
-
-            siteKeywords = document.getElementById("site_keywords").value.toLowerCase();
-
-            enlace(siteLink, siteName, siteKeywords, userLinks);
-
             newBookmark = [
 
-                siteLink + ";;;" + siteName + ";;;" + siteKeywords
+                document.getElementById("site_link").value,
+
+                document.getElementById("site_name").value,
+
+                document.getElementById("site_keywords").value.replace(',', '').toLowerCase()
             ];
+
+            enlace(newBookmark[0], newBookmark[1], newBookmark[2], userLinks);
+
+            newBookmark = newBookmark.join(";;;");
 
 			switch (localStorage.getItem("bookmarks") ) {
 
@@ -1145,12 +1032,6 @@ function addSite() {
         break;
     }
 }
-
-//    Extra elements    //
-
-// enlace("conway/index.html", "Conway's game of life", userLinks);
-
-// enlace("pac-man/index.html", "Pac-Man", userLinks);
 
 //    Google links    //
 
