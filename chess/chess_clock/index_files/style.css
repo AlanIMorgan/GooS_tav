@@ -1,0 +1,79 @@
+@font-face{font-family:'digital';src:url('DS-DIGII.TTF')}
+*{user-select: none;-webkit-user-drag: none;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+html{filter: invert(1);}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+strong{font-weight:bold}
+.adwrap{text-align:center}
+.importantText{text-align:center;font-size:30px;font-family:arial;font-weight:bold;color: #c70000;margin:10px 0 20px}
+blockquote,q{quotes:none}
+.qc-cmp2-persistent-link{padding:2px 5px;text-decoration:none;color:#FFF !important;font-weight:normal !important;opacity:0.6;left:0;font-size:13px;right:auto;font-family:arial}
+.qc-cmp2-persistent-link:hover{opacity:0.9}
+h1{font-size:20px;font-weight:bold;margin:20px 0 6px}
+h2{font-size:17px;font-weight:bold;margin:20px 0 6px}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+body{font-family:'digital';background:#d4dae2;color:#333;text-align:center;margin:0;user-select:none}
+#toggle{float:right;font-size:50px;cursor:pointer;font-weight:bold;opacity:0.7;color:#000}
+#toggle:hover{opacity:1}
+.hidden #toggle{position:absolute;top:25px;right:20px}
+#times, #equiv{line-height:44px;display:inline-block;background:#FFF;border-radius:30px;height:50px;width:50px;text-align:center}
+#equiv{display:none}
+img.small{width:50px}
+.center{text-align:center}
+.hidden #times, .hidden .helpers, .hidden article{display:none}
+.hidden #equiv{display:inline-block;font-size:35px}
+.names{font-family:Verdana, sans-serif;font-size:45px}
+#article{font-family:Verdana, sans-serif;font-size:15px;line-height:22px;text-align:left}
+article{max-width:949px;margin:auto}
+#article li{display:block}
+.dropdown{font-family:Verdana, sans-serif}
+img{max-width:100%}
+li{display:inline-block}
+input{border:none}
+input.playerInput{font-size:33px;display:block;text-align:center;border:2px solid #000;width:279px;border-radius:10px;padding:5px}
+.clock_input input{position:relative;display:inline-block;float:left;margin-top:0.5em;width:3.5em;height:3em;padding:1.5em 1.7em;background-color:black;color:#000;opacity:0}
+.clock_input{text-align:center}
+.helpers{display:block}
+.clock{margin:60px 10px 30px;display:inline-block;width:80%;height:27em;border-radius:3em;background-color:#fff;padding:70px 0}
+#logo{position:absolute;top:10px;text-decoration:none;left:10px;text-align:center;color:#456;font-size:22px;font-weight:bold}
+#logo img{opacity:0.8;width:100px;margin-bottom:5px}
+#logo:hover img{opacity:1}
+#logo span{display:block;margin-top:-9px}
+#logo em{display:block;color:#000}
+.player{display:inline-block;position:relative;font-size:4em;padding-left:0.5em;padding-right:0.5em;min-width:2em}
+.chess_knight{display:inline-block}
+.names{text-align:center}
+.counter{position:absolute;padding:0.1em;min-height:1em;margin-left:0.1em;margin-right:0.1em;margin-top:0.1em;text-align:left}
+.counter_element{position:absolute;display:inline-block}
+.hour{}.minute{}.second{}.first_semicolon{margin-left:1em}
+.second_semicolon{margin-left:1em}
+.intertimer{color:#000;text-align:left;padding:0.1em;min-height:1em;margin-left:0.1em;margin-top:0.1em;text-align:left}
+.hide_info{display:none}
+.buttons{cursor:pointer;display:inline-block;margin:0.5em;background:#fff;margin-bottom:1em;font-family:Verdana, sans-serif;font-weight:bold;min-width:100px;padding:10px 12px;font-size:14px;border-radius:10px}
+.buttons:hover{background:#deeaf9}
+#hours_1, #set_hours_1, #hours_2, #set_hours_2, .first_semicolon{display:none}
+.clock_button{cursor:pointer;margin:30px 90px 70px;max-width:130px;display:inline-block;font-size:2em;border-radius:0.5em}
+.clock_button img{opacity:0.5}
+.clock_button:hover img{opacity:0.7}
+#player_1{color:#fff;background:#000}
+#player_2{color:#000;background:#fff}
+#set_name_1, #set_name_2{position:absolute;display:inline-block;padding-right:20em;padding-left:4em;z-index:2}
+@media screen and (max-height:800px){.clock{margin-top:20px;margin-bottom:20px;padding-top:30px;padding-bottom:30px}
+.clock_button{margin-top:20px;margin-bottom:40px}
+}@media screen and (max-height:650px){.clock_button{max-width:75px;margin-top:10px;margin-bottom:20px}
+.clock{margin-top:10px;margin-bottom:10px;padding-top:15px;padding-bottom:25px;height:300px}
+}@media screen and (max-width:1300px){#logo img{width:50px}
+.clock{width:94%}
+}@media screen and (max-width:1100px){.clock_button{margin-right:60px;margin-left:60px;max-width:75px}
+	.buttons{min-width:85px;padding:10px 7px}
+}@media screen and (max-width:850px){.clock_button{margin:10px 30px;max-width:50px}
+.clock{margin:10px 10px 30px}
+body{background:#FFF}
+#times, .buttons{background:#d4dae2}
+.player{padding-left:5px;padding-right:5px}
+input.playerInput{font-size:25px;width:222px}
+}@media screen and (max-width:550px){.clock_button{margin-right:10px;margin-left:10px;max-width:50px}
+}

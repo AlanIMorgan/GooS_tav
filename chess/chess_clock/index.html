@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://scorecount.com/chess-clock/ -->
+<html lang="es">
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="color-scheme" content="dark">
+
+		<title>Chess Clock</title>
+
+		<link rel="stylesheet" href="./index_files/style.css">
+
+		<script src="./index_files/jquery-1.9.1.js"></script>
+	</head>
+
+	<body>
+
+		<audio id="click" src="sounds/click.wav"></audio>
+
+		<audio id="end" src="sounds/end.wav"></audio>
+
+		<audio id="stop" src="sounds/stop.wav"></audio>
+
+		<section class="clock">
+
+			<div>
+
+				<span class="clock_button tooltip" id="click_button" title="Start and change player: Space"><img src="./index_files/swap.png" alt="start or switch button"></span>
+
+				<span class="clock_button tooltip" id="stop_button" title="Pause: Shift"><img src="./index_files/pause.png" alt="stop button"></span>
+
+				<span class="clock_button tooltip" id="reset_button" title="Reset: R"><img src="./index_files/reset.png" alt="reset button"></span>
+			</div>
+
+			<div class="player">
+
+				<input type="text" id="player_1" value="Blancas" class="playerInput">
+
+				<div class="counter" id="counter_1">
+
+					<span id="hours_1" class="counter_element hour">00</span><span class="first_semicolon">:</span><span id="minutes_1" class="counter_element minute">05</span><span class="second_semicolon">:</span><span id="seconds_1" class="counter_element second">00.0</span>
+				</div>
+
+				<div class="clock_input"><input type="number" name="quantity" id="set_hours_1"><input type="number" name="quantity" id="set_min_1"><input type="number" name="quantity" id="set_sec_1"></div>
+				<div class="intertimer tooltip" id="intertimer1" title="counts the last movement time">00:00.0</div>
+			</div>
+
+			<div class="player">
+
+				<input type="text" id="player_2" value="Negras" class="playerInput">
+
+				<div class="counter" id="counter_2">
+
+					<span id="hours_2" class="counter_element hour">00</span><span class="first_semicolon">:</span><span id="minutes_2" class="counter_element minute">05</span><span class="second_semicolon">:</span><span id="seconds_2" class="counter_element second">00.0</span>
+				</div>
+
+				<div class="clock_input"><input type="number" name="quantity" id="set_hours_2"><input type="number" name="quantity" id="set_min_2"><input type="number" name="quantity" id="set_sec_2"></div>
+				<div class="intertimer tooltip" id="intertimer2" title="counts the last movement time">00:00.0</div>
+			</div>
+		</section>
+
+		<ul class="helpers" style="display: none;">
+
+			<li class="tooltip buttons" id="set_names" title="Swaps white and black (key: N)">Next game</li>
+
+			<li class="buttons" id="hideHour">Show hours</li>
+
+			<li class="tooltip buttons" id="bonus_button" title="Adds bouns time for each move (key: B)">Bonus</li>
+
+			<li class="buttons" id="tips_button">Tooltips</li>
+
+			<li class="buttons" id="sound_button">Sound off</li>
+
+			<li class="buttons" id="hideButtons">Hide buttons</li>
+		</ul>
+
+		<div id="article" style="display: none;">
+
+			<div id="toggle">
+
+				<span id="equiv">≡</span>
+
+				<span id="times">×</span>
+			</div>
+		</div>
+
+		<script src="./index_files/chess.js"></script>
+
+		<script async="" src="./index_files/js"></script>
+
+		<script>
+
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag(){dataLayer.push(arguments);}
+
+			gtag('js', new Date() );
+
+			gtag('config', 'UA-199625911-1');
+		</script>
+
+		<div class="adwrap"></div>
+
+	</body>
+</html>
