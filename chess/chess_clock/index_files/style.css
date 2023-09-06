@@ -70,7 +70,7 @@ input.playerInput{font-size:33px;display:block;text-align:center;border:2px soli
 }@media screen and (max-width:1100px){.clock_button{margin-right:60px;margin-left:60px;max-width:75px}
 	.buttons{min-width:85px;padding:10px 7px}
 }@media screen and (max-width:850px){.clock_button{margin:10px 30px;max-width:50px}
-.clock{margin:10px 10px 30px}
+.clock{margin:10px 10px 30px;height: 100%;}
 body{background:#FFF}
 #times, .buttons{background:#d4dae2}
 .player{padding-left:5px;padding-right:5px}

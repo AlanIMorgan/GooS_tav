@@ -16,7 +16,7 @@
 
 		<title>Chess Clock</title>
 
-		<link rel="stylesheet" href="./index_files/style.css">
+		<link rel="stylesheet" href="./index_files/style.css?v2">
 
 		<script src="./index_files/jquery-1.9.1.js"></script>
 	</head>
@@ -40,30 +40,35 @@
 				<span class="clock_button tooltip" id="reset_button" title="Reset: R"><img src="./index_files/reset.png" alt="reset button"></span>
 			</div>
 
-			<div class="player">
+			<div style="width: 100%;height: 100%;position: relative;">
 
-				<input type="text" id="player_1" value="Blancas" class="playerInput">
+				<div id="players_layer" style="position: absolute;z-index: 9;top: 0;left: 0;"></div>
 
-				<div class="counter" id="counter_1">
-
-					<span id="hours_1" class="counter_element hour">00</span><span class="first_semicolon">:</span><span id="minutes_1" class="counter_element minute">05</span><span class="second_semicolon">:</span><span id="seconds_1" class="counter_element second">00.0</span>
+				<div class="player">
+	
+					<input type="text" id="player_1" value="Blancas" class="playerInput">
+	
+					<div class="counter" id="counter_1">
+	
+						<span id="hours_1" class="counter_element hour">00</span><span class="first_semicolon">:</span><span id="minutes_1" class="counter_element minute">05</span><span class="second_semicolon">:</span><span id="seconds_1" class="counter_element second">00.0</span>
+					</div>
+	
+					<div class="clock_input"><input type="number" name="quantity" id="set_hours_1"><input type="number" name="quantity" id="set_min_1"><input type="number" name="quantity" id="set_sec_1"></div>
+					<div class="intertimer tooltip" id="intertimer1" title="counts the last movement time">00:00.0</div>
 				</div>
-
-				<div class="clock_input"><input type="number" name="quantity" id="set_hours_1"><input type="number" name="quantity" id="set_min_1"><input type="number" name="quantity" id="set_sec_1"></div>
-				<div class="intertimer tooltip" id="intertimer1" title="counts the last movement time">00:00.0</div>
-			</div>
-
-			<div class="player">
-
-				<input type="text" id="player_2" value="Negras" class="playerInput">
-
-				<div class="counter" id="counter_2">
-
-					<span id="hours_2" class="counter_element hour">00</span><span class="first_semicolon">:</span><span id="minutes_2" class="counter_element minute">05</span><span class="second_semicolon">:</span><span id="seconds_2" class="counter_element second">00.0</span>
+	
+				<div class="player">
+	
+					<input type="text" id="player_2" value="Negras" class="playerInput">
+	
+					<div class="counter" id="counter_2">
+	
+						<span id="hours_2" class="counter_element hour">00</span><span class="first_semicolon">:</span><span id="minutes_2" class="counter_element minute">05</span><span class="second_semicolon">:</span><span id="seconds_2" class="counter_element second">00.0</span>
+					</div>
+	
+					<div class="clock_input"><input type="number" name="quantity" id="set_hours_2"><input type="number" name="quantity" id="set_min_2"><input type="number" name="quantity" id="set_sec_2"></div>
+					<div class="intertimer tooltip" id="intertimer2" title="counts the last movement time">00:00.0</div>
 				</div>
-
-				<div class="clock_input"><input type="number" name="quantity" id="set_hours_2"><input type="number" name="quantity" id="set_min_2"><input type="number" name="quantity" id="set_sec_2"></div>
-				<div class="intertimer tooltip" id="intertimer2" title="counts the last movement time">00:00.0</div>
 			</div>
 		</section>
 

@@ -241,7 +241,12 @@ new Filler("set_sec_2", "seconds_2", "second", 1);
     intertimers[player] = 0;
   }
 
+  playersLayer = document.getElementById("players_layer");
+
   function changePlayer() {
+
+    playersLayer.style.width = "100%";
+    playersLayer.style.height = "100%";
     var click = document.getElementById("click");
     clearInterval(clock);
     if (timerOn) {
@@ -257,19 +262,11 @@ new Filler("set_sec_2", "seconds_2", "second", 1);
     clock = setInterval(tick, 100);
   }
 
-  counters = document.querySelectorAll(".player");
-  
-  counters.forEach(e => {
-  
-    e.addEventListener("click", ()=>{
+  playersLayer.addEventListener("click", ()=>{
 
-      if (document.getElementById("set_min_1").disabled) {
+    document.documentElement.requestFullscreen();
 
-        document.documentElement.requestFullscreen();
-
-        changePlayer();
-      }
-    });
+    changePlayer();
   });
 
   //HOT KEYS
