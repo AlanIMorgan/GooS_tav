@@ -255,8 +255,6 @@ new Filler("set_sec_2", "seconds_2", "second", 1);
     timerOn = true;
     disableInputs(true);
     clock = setInterval(tick, 100);
-
-    document.documentElement.requestFullscreen();
   }
 
   counters = document.querySelectorAll(".player");
@@ -264,8 +262,13 @@ new Filler("set_sec_2", "seconds_2", "second", 1);
   counters.forEach(e => {
   
     e.addEventListener("click", ()=>{
-  
-      document.getElementById("set_min_1").disabled ? changePlayer() : false;
+
+      if (document.getElementById("set_min_1").disabled) {
+
+        document.documentElement.requestFullscreen();
+
+        changePlayer();
+      }
     });
   });
 
