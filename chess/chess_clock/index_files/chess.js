@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   $("#hideButtons").click(function(){
     $(".clock_button img").fadeToggle(333);
@@ -101,6 +100,7 @@ function Filler(id, counter, type, player) {
     updateTimer();
     } else {
       
+      console.log("Jsjs");
     }
     clearInterval(cursorInterval);
     cursorIntervalOn = false;
@@ -164,10 +164,12 @@ new Filler("set_sec_2", "seconds_2", "second", 1);
     soundOn = soundOn ? false : true;
   }
 
-  function resetTimers() {
+  function resetTimers() { /* 
     timers = timersMemory.slice(0);
     intertimers = [0, 0];
-    updateTimer();
+    updateTimer(); */
+
+    location.reload();
   }
 
   function setBonusTime() {
@@ -253,7 +255,19 @@ new Filler("set_sec_2", "seconds_2", "second", 1);
     timerOn = true;
     disableInputs(true);
     clock = setInterval(tick, 100);
+
+    document.documentElement.requestFullscreen();
   }
+
+  counters = document.querySelectorAll(".player");
+  
+  counters.forEach(e => {
+  
+    e.addEventListener("click", ()=>{
+  
+      document.getElementById("set_min_1").disabled ? changePlayer() : false;
+    });
+  });
 
   //HOT KEYS
   window.onkeyup = function (event) {
