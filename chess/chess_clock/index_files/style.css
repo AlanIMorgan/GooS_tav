@@ -15,7 +15,7 @@ h1{font-size:20px;font-weight:bold;margin:20px 0 6px}
 h2{font-size:17px;font-weight:bold;margin:20px 0 6px}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
-body{font-family:'digital';background:#d4dae2;color:#333;text-align:center;margin:0;user-select:none}
+body{font-family:'digital';background:#d4dae2;color:#000;text-align:center;margin:0;user-select:none}
 #toggle{float:right;font-size:50px;cursor:pointer;font-weight:bold;opacity:0.7;color:#000}
 #toggle:hover{opacity:1}
 .hidden #toggle{position:absolute;top:25px;right:20px}
@@ -37,7 +37,7 @@ input.playerInput{font-size:33px;display:block;text-align:center;border:2px soli
 .clock_input input{position:relative;display:inline-block;float:left;margin-top:0.5em;width:3.5em;height:3em;padding:1.5em 1.7em;background-color:black;color:#000;opacity:0}
 .clock_input{text-align:center}
 .helpers{display:block}
-.clock{margin:60px 10px 30px;display:inline-block;width:80%;height:27em;border-radius:3em;background-color:#fff;padding:70px 0}
+.clock{margin:60px 10px 30px;display:inline-block;width:80%;height:27em;border-radius:3em;background-color:#fff;padding:70px 0;overflow: hidden;}
 #logo{position:absolute;top:10px;text-decoration:none;left:10px;text-align:center;color:#456;font-size:22px;font-weight:bold}
 #logo img{opacity:0.8;width:100px;margin-bottom:5px}
 #logo:hover img{opacity:1}
@@ -50,7 +50,7 @@ input.playerInput{font-size:33px;display:block;text-align:center;border:2px soli
 .counter_element{position:absolute;display:inline-block}
 .hour{}.minute{}.second{}.first_semicolon{margin-left:1em}
 .second_semicolon{margin-left:1em}
-.intertimer{color:#000;text-align:left;padding:0.1em;min-height:1em;margin-left:0.1em;margin-top:0.1em;text-align:left}
+.intertimer{color:#0007;text-align:left;padding:0.1em;min-height:1em;margin-left:0.1em;margin-top:0.1em;text-align:left}
 .hide_info{display:none}
 .buttons{cursor:pointer;display:inline-block;margin:0.5em;background:#fff;margin-bottom:1em;font-family:Verdana, sans-serif;font-weight:bold;min-width:100px;padding:10px 12px;font-size:14px;border-radius:10px}
 .buttons:hover{background:#deeaf9}
