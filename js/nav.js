@@ -1229,6 +1229,8 @@ enlace("https://www.pinterest.com.mx/", "Pinterest", "imágenes imagenes images 
 
 enlace("https://www.pixiv.net/", "Pixiv", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", extraLinks);
 
+enlace("https://pixlr.com/", "Pixlr", "diseño gráfico graphic design editar edición recortar imágenes imagenes images pics pictures fotos jpg jpeg png gif webp img", extraLinks);
+
 enlace("https://poesiamexa.wordpress.com", "Poesía Mexa", "", extraLinks);
 
 enlace("https://www.qrcode-monkey.com/", "QRCode Monkey", "", extraLinks);
@@ -1304,6 +1306,8 @@ enlace("https://www.tumblr.com/", "Tumblr", "redes sociales network", extraLinks
 enlace("https://www.tvconexion.com/", "TV Conexion HD", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
 
 enlace("https://mobile.twitter.com/", "Twitter", "redes sociales network tuits", extraLinks);
+
+enlace("https://twittervid.com/", "Twitter Vid", "twitter downloader descargar vídeos videos imágenes imagenes pics pictures fotos photos", extraLinks);
 
 enlace("https://www.typingclub.com/", "TypingClub", "utilities tools herramientas learn aprender escribir write", extraLinks);
 
