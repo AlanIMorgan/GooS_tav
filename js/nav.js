@@ -1127,11 +1127,13 @@ enlace("https://discord.com/", "Discord", "gaming gameplays videocalls videollam
 
 enlace("https://duckduckgo.com/", "Duckduckgo", "buscar search búsqueda privacidad privacy", extraLinks);
 
+enlace("https://www.ebiblioteca.org/lecturas/", "eBiblioteca", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
+
 enlace("https://www.espaebook2.com/", "ERIC", "Education Resources Information Center buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
 enlace("https://www.espaebook2.com/", "EspaEbook", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
 
-enlace("https://www.ebiblioteca.org/lecturas/", "eBiblioteca", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
+enlace("https://excalidraw.com/", "Excalidraw", "whiteboard pizarra pizarrón pizarron diagramas dibujar drawing", extraLinks);
 
 enlace("https://f-droid.org/en/packages/", "F-Droid", "descargar software libre open source gratis free download apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles", extraLinks);
 
@@ -1158,6 +1160,8 @@ enlace("https://igram.live/", "iGram", "instagram downloader descargar vídeos v
 enlace("https://www.iloveimg.com/", "I love IMG", "editar edición recortar convertir imágenes imagenes images pics pictures fotos jpg jpeg png gif webp", extraLinks);
 
 enlace("https://www.ilovepdf.com/", "I love PDF", "editar edición convertir pdf word documentos documents docs", extraLinks);
+
+enlace("https://www.bing.com/images/create", "Image Creator from Bing", "inteligencia artificial intelligence ia ai images imagenes img pics pictures photos fotos wallpapers jpg jpeg png webp", extraLinks);
 
 enlace("https://imgur.com", "Imgur", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", extraLinks);
 
@@ -1344,6 +1348,8 @@ enlace("https://yandex.com/", "Yandex", "buscar search búsqueda", extraLinks);
 enlace("https://yandex.com/images/", "Yandex Images", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", extraLinks);
 
 enlace("https://yandex.ru/images", "Yandex Images (ruso)", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", extraLinks);
+
+enlace("https://yt5s.io/en109/youtube-to-mp3", "YT5s.io", "youtube downloader descargar música musica vídeos videos", extraLinks);
 
 enlace("https://z-lib.org/", "ZLibrary", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", extraLinks);
 
