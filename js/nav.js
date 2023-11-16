@@ -114,7 +114,7 @@ nickName = document.getElementById("nick_sttng");
 
 searchInpt = document.getElementById("google-search");
 
-nickName.addEventListener("input", ()=>{changeNick(); location.reload();} );
+nickName.addEventListener("blur", ()=>{changeNick(); location.reload();} );
 
 function resetNick() {
 
