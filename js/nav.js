@@ -517,8 +517,6 @@ favoritesSttng.addEventListener("click", ()=>{
     }
 
     location.reload();
-
-    showHideFavorites();
 });
 
 deleteFavorites = document.getElementById("delete_favorites");

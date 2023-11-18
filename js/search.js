@@ -133,6 +133,10 @@ switch ( localStorage.getItem("favorites") ) {
 
 	case null:
 
+		localStorage.setItem("favorites", "GooS_tav");
+
+		location.reload();
+
 	break;
 
 	default:
