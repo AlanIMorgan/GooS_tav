@@ -1225,6 +1225,8 @@ enlace("https://outlook.office.com/", "Outlook (institucional)", "microsoft offi
 
 enlace("https://jspaint.app/", "PaintJS", "", extraLinks);
 
+enlace("https://pastedownload.com/", "PasteDownload", "facebook youtube downloader descargar música musica vídeos videos reels", extraLinks);
+
 enlace("https://pcwonderland.com/", "PC Wonderland", "piratería pirateria piracy software pc computer computadora windows mac apple descargar programas gratis full free download", extraLinks);
 
 enlace("https://www.pdfdrive.com/", "PDF Drive", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
