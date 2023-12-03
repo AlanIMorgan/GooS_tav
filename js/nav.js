@@ -1073,6 +1073,8 @@ enlace("https://9xbuddy.xyz/", "9xbuddy", "movies downloader descargar vídeos v
 
 enlace("https://www.academia.edu/", "Academia.edu", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", extraLinks);
 
+enlace("https://www.elacervo.com/directores", "Acervo Fílmico Digital", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+
 enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", "comprimir pdf reducir documentos documents docs", extraLinks);
 
 enlace("https://www.amazon.com/", "Amazon", "tienda shopping comprar compras e-commerce e commerce ecommerce ecomerce comercio", extraLinks);
@@ -1153,6 +1155,8 @@ enlace("https://goostav.vercel.app/", "GooS_tav", "goostav buscar search búsque
 
 enlace("https://www.guitars101.com/", "Guitars 101", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", extraLinks);
 
+enlace("https://hollymoviehd.cc/", "HollyMovieHD", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+
 enlace("https://igram.live/", "iGram", "instagram downloader descargar vídeos videos imágenes imagenes pics pictures fotos photos reels", extraLinks);
 
 enlace("https://www.iloveimg.com/", "I love IMG", "editar edición recortar convertir imágenes imagenes images pics pictures fotos jpg jpeg png gif webp", extraLinks);
@@ -1208,6 +1212,8 @@ enlace("https://www.newgrounds.com/", "Newgrounds", "diseño gráfico graphic de
 enlace("https://normas-apa.org/", "Normas APA", "academic school scholar escuela documentos documents docs tareas ensayos académicos academicos", extraLinks);
 
 enlace("https://sites.google.com/cuaad.udg.mx/habilidadesentics/objetos-virtuales-de-aprendizaje/normas-apa?authuser=0", "Normas APA - Google For Education", "academic school scholar escuela documentos documents docs tareas ensayos académicos academicos", extraLinks);
+
+enlace("https://novamovie.net/", "Novamovie", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://onedrive.live.com/", "OneDrive", "microsoft office 365 almacenamiento nube cloud storage almacenar", extraLinks);
 
