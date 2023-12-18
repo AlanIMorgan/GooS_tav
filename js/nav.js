@@ -1337,6 +1337,8 @@ enlace("https://wallhaven.cc/", "Wallhaven", "images imagenes img pics pictures 
 
 enlace("https://wallhere.com/", "Wallhere", "images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", extraLinks);
 
+enlace("https://www.watermarkremover.io/", "Watermark Remover", "diseño gráfico graphic design edición editar imágenes quitar marca de agua imagenes images pics pictures fotos jpg jpeg png gif webp img", extraLinks);
+
 enlace("https://web.whatsapp.com/", "WhatsApp", "redes sociales network mensajería mensajeria intantánea intantanea", extraLinks);
 
 enlace("https://www.office.com/launch/word?auth=2", "Word", "microsoft office 365 ofimática documents docs", extraLinks);
