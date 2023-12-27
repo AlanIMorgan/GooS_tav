@@ -1295,6 +1295,8 @@ enlace("https://link.springer.com/", "Springer Link", "buscar búsqueda search a
 
 enlace("https://soundcloud.com/", "Soundcloud", "escuchar listen música musica", extraLinks);
 
+enlace("https://ww1.streamm4u.ws/#", "StreamM4u", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+
 enlace("https://subes.becasbenitojuarez.gob.mx/", "SUBES", "becas", extraLinks);
 
 enlace("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid", "Teams", "academic school scholar escuela tareas homework", extraLinks);
