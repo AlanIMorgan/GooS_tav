@@ -1077,6 +1077,8 @@ enlace("https://www.elacervo.com/directores", "Acervo Fílmico Digital", "ver pe
 
 enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", "comprimir pdf reducir documentos documents docs", extraLinks);
 
+enlace("https://www.alamy.com/", "Alamy", "download descargar vídeos videos imágenes 360-degree imagenes pics pictures fotos photos buscar búsqueda search creative content contenido creativo vectors vectores artists artistas artes", extraLinks);
+
 enlace("https://www.amazon.com/", "Amazon", "tienda shopping comprar compras e-commerce e commerce ecommerce ecomerce comercio", extraLinks);
 
 enlace("https://express.adobe.com/", "Adobe Express", "photoshop diseño gráfico graphic design editar edición recortar imágenes imagenes images pics pictures fotos jpg jpeg png gif webp img", extraLinks);
@@ -1116,6 +1118,8 @@ enlace("https://sur.ly/o/cinefiliamalversa.blogspot.com.ar/AA000014?pageviewId=d
 enlace("https://cloudconvert.com/", "CloudConvert", "utilities tools herramientas pdf word excel converter convertir conversión imágenes imagenes images pics pictures fotos documentos documents docs jpg jpeg png gif webp img mp4 mp3 videos vídeos audio ppt files archivos ebook libros", extraLinks);
 
 enlace("https://convertio.co/", "Convertio", "utilities tools herramientas pdf word excel converter convertir conversión imágenes imagenes images pics pictures fotos documentos documents docs jpg jpeg png gif webp img mp4 mp3 videos vídeos audio ppt files archivos ebook libros", extraLinks);
+
+enlace("https://cuevana3.ch/", "Cuevana3", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://www.deepl.com/es/translator", "Deepl", "translate languages traducir idiomas", extraLinks);
 
