@@ -1287,6 +1287,8 @@ enlace("https://www.scopus.com/", "Scopus", "buscar búsqueda search academic sc
 
 enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA generator", "academic school scholar escuela documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
+enlace("https://www.sejda.com/", "Sejda", "editar edición convertir pdf word documentos documents docs", extraLinks);
+
 enlace("https://seriespapaya.club/", "Series Papaya", "ver películas peliculas series completas gratis watch full free download movies descargar cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://www.shazam.com/", "Shazam", "escuchar listen música musica", extraLinks);
