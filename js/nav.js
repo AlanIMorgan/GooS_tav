@@ -1299,6 +1299,8 @@ enlace("https://snapinsta.io/", "SnapInsta", "instagram youtube downloader desca
 
 enlace("https://open.spotify.com/", "Spotify", "escuchar listen música musica", extraLinks);
 
+enlace("https://spotifymate.com/", "SpotifyMate", "downloader descargar música musica", extraLinks);
+
 enlace("https://link.springer.com/", "Springer Link", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
 enlace("https://soundcloud.com/", "Soundcloud", "escuchar listen música musica", extraLinks);
