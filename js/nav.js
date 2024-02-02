@@ -1099,11 +1099,9 @@ enlace("https://bandcamp.com/", "Bandcamp", "escuchar listen música musica", ex
 
 enlace("https://www.base-search.net/", "BASE", "Bielefeld Academic Search Engine buscar búsqueda escuela school scholar escuela ensayos books libros documentos docs pdfs tareas académicos academicos", extraLinks);
 
-enlace("https://becasmexico.org/becas-para-universitarios/", "Becas México", "", extraLinks);
-
-enlace("https://becassubes.com/", "Becas SUBES", "", extraLinks);
-
 enlace("https://www.behance.net/", "Behance", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", extraLinks);
+
+enlace("https://scriptorum.humanidades.unam.mx/SitiosInteres/Catalogo", "BIBLIOTHECA SCRIPTORVM GRAECORVM ET ROMANORVM MEXICANA", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs académicos academicos download free descargar gratis", extraLinks);
 
 enlace("https://www.bing.com/", "Bing", "buscar search búsqueda", extraLinks);
 
@@ -1255,6 +1253,8 @@ enlace("https://quillbot.com/", "QuillBot", "inteligencia artificial intelligenc
 
 enlace("https://www.qwant.com/", "Qwant", "buscar search búsqueda privacidad privacy", extraLinks);
 
+enlace("https://www.rae.es/biblioteca-digital", "RAE (biblioteca digital)", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs académicos academicos download free descargar gratis", extraLinks);
+
 enlace("https://www.random.org/widgets/", "Random", "", extraLinks);
 
 enlace("https://rarefilmm.com/", "Rarefilmm", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
@@ -1306,8 +1306,6 @@ enlace("https://link.springer.com/", "Springer Link", "buscar búsqueda search a
 enlace("https://soundcloud.com/", "Soundcloud", "escuchar listen música musica", extraLinks);
 
 enlace("https://ww1.streamm4u.ws/#", "StreamM4u", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
-
-enlace("https://subes.becasbenitojuarez.gob.mx/", "SUBES", "becas", extraLinks);
 
 enlace("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid", "Teams", "academic school scholar escuela tareas homework", extraLinks);
 
