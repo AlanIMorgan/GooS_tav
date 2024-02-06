@@ -706,19 +706,6 @@ addSEBtn.addEventListener("click", ()=>{
 
 // Profile settings
 
-function showProfileSttng(id, txt) {
-
-    let newAnchor = document.createElement("a");
-
-    newAnchor.setAttribute("id", id);
-
-    newAnchor.setAttribute("class", "mas-de-google");
-
-    profileNavMenu.appendChild(newAnchor);
-
-    newAnchor.innerText = txt;
-}
-
 profileSttngs = document.getElementById("profile_settings");
 
 profileSttngs.addEventListener("input", ()=>{
@@ -730,7 +717,7 @@ profileSttngs.addEventListener("input", ()=>{
 
         case "export":
 
-            showProfileSttng("export_config", "Exportar perfil");
+            exportConfigBtn = document.getElementById("export_config");
 
 			switch (localStorage.length > 0) {
 
@@ -741,20 +728,18 @@ profileSttngs.addEventListener("input", ()=>{
 
 					content = JSON.stringify(localStorage);
 
-					exportConfigBtn = document.getElementById("export_config");
-
 					encryptedData = CryptoJS.AES.encrypt(content, "GooStav"); // "GooStav" is the passphrase
 
 					exportConfigBtn.href = "data:application/octet-stream," + encodeURIComponent(encryptedData.toString() );
 
 					exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
+
+                    exportConfigBtn.style.display = "inline-block";
 				break;
 			}
         break;
 
         case "import":
-
-            document.getElementById("import_config_label").style.display = "inline-block";
 
 			importConfig = document.getElementById("import_config");
 
@@ -805,15 +790,15 @@ profileSttngs.addEventListener("input", ()=>{
 					}
 				});
 			});
+
+            document.getElementById("import_config_label").style.display = "inline-block";
         break;
 
         case "delete":
 
-            showProfileSttng("delete_config", "Borrar perfil");
+            deleteConfigBtn = document.getElementById("delete_config");
 
-            deleteConfig = document.getElementById("delete_config");
-
-            deleteConfig.addEventListener("click", ()=>{
+            deleteConfigBtn.addEventListener("click", ()=>{
 
                 let conf = window.confirm("¡Estás a punto de eliminar tu configuración!");
 
@@ -830,6 +815,8 @@ profileSttngs.addEventListener("input", ()=>{
                     break;
                 }
             });
+
+            deleteConfigBtn.style.display = "inline-block";
         break;
     }
 });

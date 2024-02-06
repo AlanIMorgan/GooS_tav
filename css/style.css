@@ -359,12 +359,12 @@ a {
 }
 
 .mas-de-google {
+	display: none;
 	background-color: var(--sec);
 	border: 1px solid var(--sec);
 	border-radius: 4px;
 	box-sizing: border-box;
 	color: var(--primary);
-	display: inline-block;
 	font: 500 14px/16px "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
 	margin: 20px 0;
 	max-width: 265px;
