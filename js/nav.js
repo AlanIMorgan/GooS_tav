@@ -737,10 +737,10 @@ profileSttngs.addEventListener("input", ()=>{
 					exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
 
                     exportConfigBtn.style.display = "inline-block";
+
+                    document.getElementById("loader").style.display = "none";
 				break;
 			}
-
-            document.getElementById("loader").style.display = "none";
         break;
 
         case "import":
