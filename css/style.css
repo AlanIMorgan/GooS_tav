@@ -366,7 +366,7 @@ a {
 	color: var(--primary);
 	display: inline-block;
 	font: 500 14px/16px "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-	margin-bottom: 20px;
+	margin: 20px 0;
 	max-width: 265px;
 	outline: 0;
 	padding: 10px 24px;
