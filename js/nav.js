@@ -484,7 +484,6 @@ function showHideFavorites() {
             favoritesRow.classList.remove("hidden");
 
             favoritesRow.scrollWidth > favoritesRow.clientWidth ? favoritesRow.style.justifyContent = "flex-start" : false;
-
         break;
 
         default:
@@ -492,7 +491,6 @@ function showHideFavorites() {
             favoritesRow.classList.add("hidden");
 
             favoritesSttng.checked = false;
-
         break;
     }
 }
@@ -506,13 +504,11 @@ favoritesSttng.addEventListener("click", ()=>{
         case false:
 
             localStorage.setItem("hideFavorites", "true");
-
         break;
 
         default:
 
             localStorage.removeItem("hideFavorites");
-
         break;
     }
 
@@ -524,7 +520,6 @@ deleteFavorites = document.getElementById("delete_favorites");
 switch (localStorage.getItem("favorites") ) {
 
     case null:
-
     break;
 
     default:
@@ -554,7 +549,6 @@ switch (localStorage.getItem("favorites") ) {
             switch (delSite) {
 
                 case "":
-
                 break;
 
                 case "all":
@@ -564,8 +558,9 @@ switch (localStorage.getItem("favorites") ) {
                     if (favoritesAlert) {
 
                         localStorage.removeItem("favorites");
-                    }
 
+                        location.reload();
+                    }
                 break;
 
                 default:
@@ -575,7 +570,6 @@ switch (localStorage.getItem("favorites") ) {
                     switch (favoriteAlert) {
 
                         case false:
-
                         break;
 
                         default:
@@ -586,15 +580,12 @@ switch (localStorage.getItem("favorites") ) {
 
                             newFavs.length > 0 ? localStorage.setItem("favorites", newFavs) : localStorage.removeItem("favorites");
 
+                            location.reload();
                         break;
                     }
-
                 break;
             }
-
-            location.reload();
         });
-
     break;
 }
 
@@ -703,26 +694,132 @@ addSEBtn.addEventListener("click", ()=>{
     location.reload();
 });
 
-// Delete profile settings
+// Profile settings
 
-deleteConfig = document.getElementById("delete_config");
+function showProfileSttng(id, txt) {
 
-deleteConfig.addEventListener("click", ()=>{
+    let newAnchor = document.createElement("a");
 
-    let conf = window.confirm("¡Estás a punto de eliminar tu configuración!");
+    newAnchor.setAttribute("id", id);
 
-    switch (conf) {
+    newAnchor.setAttribute("class", "mas-de-google");
 
-        case false:
+    profileNavMenu.appendChild(newAnchor);
 
+    newAnchor.innerText = txt;
+}
+
+profileSttngs = document.getElementById("profile_settings");
+
+profileSttngs.addEventListener("input", ()=>{
+
+    switch (profileSttngs.value) {
+
+        case "":
         break;
 
-        default:
+        case "export":
 
-            localStorage.clear();
+            showProfileSttng("export_config", "Exportar perfil");
 
-            location.reload();
+			switch (localStorage.length > 0) {
 
+				case false:
+				break;
+
+				default:
+
+					content = JSON.stringify(localStorage);
+
+					exportConfigBtn = document.getElementById("export_config");
+
+					encryptedData = CryptoJS.AES.encrypt(content, "GooStav"); // "GooStav" is the passphrase
+
+					exportConfigBtn.href = "data:application/octet-stream," + encodeURIComponent(encryptedData.toString() );
+
+					exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
+				break;
+			}
+        break;
+
+        case "import":
+
+            getElementById("import_config_label").style.display = "inline-block";
+
+			importConfig = document.getElementById("import_config");
+
+			importConfig.addEventListener("input", ()=>{
+
+				file = importConfig.files[0];
+
+				const reader = new FileReader();
+
+				switch (file) {
+
+					case null:
+					break;
+
+					default:
+
+						reader.readAsText(file);
+					break;
+				}
+
+				reader.addEventListener("load", ()=>{
+
+					val = reader.result;
+
+					switch (isEmptyOrSpaces(val) ) {
+
+						case false:
+
+							decryptedData = CryptoJS.AES.decrypt(val, "GooStav");
+
+							dataString = decryptedData.toString(CryptoJS.enc.Utf8);
+
+							profile = JSON.parse(dataString);
+
+							profileKeys = Object.keys(profile);
+
+							profileValues = Object.values(profile);
+
+							localStorage.clear();
+
+							for (let i = 0; i < profileKeys.length; i++) {
+
+								localStorage.setItem(profileKeys[i], profileValues[i]);
+							}
+
+							location.reload();
+						break;
+					}
+				});
+			});
+        break;
+
+        case "delete":
+
+            showProfileSttng("delete_config", "Borrar perfil");
+
+            deleteConfig = document.getElementById("delete_config");
+
+            deleteConfig.addEventListener("click", ()=>{
+
+                let conf = window.confirm("¡Estás a punto de eliminar tu configuración!");
+
+                switch (conf) {
+
+                    case false:
+                    break;
+
+                    default:
+
+                        localStorage.clear();
+
+                        location.reload();
+                    break;
+                }
+            });
         break;
     }
 });

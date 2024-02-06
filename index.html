@@ -37,7 +37,7 @@
 
 		<!-- Custom CSS -->
 
-		<link rel="stylesheet" type="text/css" href="css/style.css?v93" />
+		<link rel="stylesheet" type="text/css" href="css/style.css?v94" />
 	</head>
 
 	<body>
@@ -240,7 +240,7 @@
 
 							<select id="delete_favorites">
 
-								<option value=""> - Borrar favoritos - </option>
+								<option value=""> Borrar favoritos </option>
 
 								<option value="all"> Todos </option>
 							</select>
@@ -258,21 +258,32 @@
 							<a id="add_search_engine" href="#new_search_engine_modal"> Añadir buscador </a>
 						</div>
 
+						<select id="profile_settings">
+
+							<option value=""> Perfil </option>
+
+							<option value="export"> Exportar </option>
+
+							<option value="import"> Importar </option>
+
+							<option value="delete"> Borrar </option>
+						</select> <!-- 
+
 						<a id="export_config" class="mas-de-google">
 
 							Exportar perfil
-						</a>
+						</a> -->
 
-						<label class="mas-de-google" for="import_config"> Importar perfil... </label>
+						<label id="import_config_label" class="mas-de-google" for="import_config"> Importar perfil... </label>
 
 						<input id="import_config" class="hidden" type="file" accept=".json">
 
-						<br>
+						<br> <!-- 
 
 						<a id="delete_config" class="mas-de-google">
 
 							Borrar perfil
-						</a>
+						</a> -->
 					</ul>
 				</ul>
 			</nav>
@@ -340,7 +351,7 @@
 
 		<script src="js/lz-string.min.js"></script>
 
-		<script src="js/nav.js?v164"></script>
+		<script src="js/nav.js?v165"></script>
 
 		<script src="js/search.js?v88"></script> <!-- 
 
@@ -355,92 +366,9 @@
 				.catch(err => console.warn('Error al tratar de registrar el SW', err) );
 			}
 
-			// Export profile settings
-
-			switch (localStorage.length > 0) {
-
-				case false:
-
-				break;
-
-				default:
-
-					content = JSON.stringify(localStorage);
-
-					exportConfigBtn = document.getElementById("export_config");
-
-					encryptedData = CryptoJS.AES.encrypt(content, "GooStav"); // "GooStav" is the passphrase
-
-					exportConfigBtn.href = "data:application/octet-stream," + encodeURIComponent(encryptedData.toString() );
-
-					exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
-
-				break;
-			}
-
-			// Import profile settings
-
-			function isEmptyOrSpaces (str) {
-
-				return str == null || str.match(/^\s*$/) !== null;
-			}
-
-			importConfig = document.getElementById("import_config");
-
-			importConfig.addEventListener("input", ()=>{
-
-				file = importConfig.files[0];
-
-				const reader = new FileReader();
-
-				switch (file) {
-
-					case null:
-
-					break;
-
-					default:
-
-						reader.readAsText(file);
-					break;
-				}
-
-				reader.addEventListener("load", ()=>{
-
-					val = reader.result;
-
-					switch (isEmptyOrSpaces(val) ) {
-
-						case false:
-
-							decryptedData = CryptoJS.AES.decrypt(val, "GooStav");
-
-							dataString = decryptedData.toString(CryptoJS.enc.Utf8);
-
-							profile = JSON.parse(dataString);
-
-							profileKeys = Object.keys(profile);
-
-							profileValues = Object.values(profile);
-
-							localStorage.clear();
-
-							for (let i = 0; i < profileKeys.length; i++) {
-
-								localStorage.setItem(profileKeys[i], profileValues[i]);
-							}
-
-							location.reload();
-
-						break;
-					}
-				});
-			});
-
 			switch (localStorage.getItem("comp_bck") ) {
 
 				case null:
-
 				break;
 
 				default:
