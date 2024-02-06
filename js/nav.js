@@ -717,6 +717,8 @@ profileSttngs.addEventListener("input", ()=>{
 
         case "export":
 
+            document.getElementById("loader").style.display = "block";
+
             exportConfigBtn = document.getElementById("export_config");
 
 			switch (localStorage.length > 0) {
@@ -737,6 +739,8 @@ profileSttngs.addEventListener("input", ()=>{
                     exportConfigBtn.style.display = "inline-block";
 				break;
 			}
+
+            document.getElementById("loader").style.display = "none";
         break;
 
         case "import":

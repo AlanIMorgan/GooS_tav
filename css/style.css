@@ -702,6 +702,11 @@ td,
 	margin-top: 20px;
 }
 
+#loader {
+	display: none;
+	margin: 20px 0;
+}
+
 #import_config_label {
 	display: none;
 }
