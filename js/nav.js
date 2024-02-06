@@ -717,8 +717,6 @@ profileSttngs.addEventListener("input", ()=>{
 
         case "export":
 
-            document.getElementById("loader").style.display = "block";
-
             exportConfigBtn = document.getElementById("export_config");
 
 			switch (localStorage.length > 0) {
@@ -737,8 +735,6 @@ profileSttngs.addEventListener("input", ()=>{
 					exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
 
                     exportConfigBtn.style.display = "inline-block";
-
-                    document.getElementById("loader").style.display = "none";
 				break;
 			}
         break;
