@@ -744,7 +744,7 @@ profileSttngs.addEventListener("input", ()=>{
 
         case "import":
 
-            getElementById("import_config_label").style.display = "inline-block";
+            document.getElementById("import_config_label").style.display = "inline-block";
 
 			importConfig = document.getElementById("import_config");
 
