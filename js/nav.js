@@ -555,11 +555,19 @@ switch (localStorage.getItem("favorites") ) {
 
                     let favoritesAlert = confirm("¿Estás seguro de que quieres quedarte sin favoritos?");
 
-                    if (favoritesAlert) {
+                    switch (favoritesAlert) {
 
-                        localStorage.removeItem("favorites");
+                        case false:
 
-                        location.reload();
+                            deleteFavorites.value = '';
+                        break;
+
+                        default:
+
+                            localStorage.removeItem("favorites");
+
+                            location.reload();
+                        break;
                     }
                 break;
 
@@ -570,6 +578,8 @@ switch (localStorage.getItem("favorites") ) {
                     switch (favoriteAlert) {
 
                         case false:
+
+                            deleteFavorites.value = '';
                         break;
 
                         default:
