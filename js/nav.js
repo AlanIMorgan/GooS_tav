@@ -865,6 +865,8 @@ element("button", "class", "mas-de-google", "Añadir sitio");
 
 masSites = document.querySelector(".mas-de-google");
 
+masSites.style.display = "inline-block";
+
 masSites.addEventListener("click", ()=>{
 
     window.scrollTo(0, 0);
