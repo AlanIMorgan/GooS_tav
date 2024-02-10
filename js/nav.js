@@ -33,7 +33,7 @@ homeImg = document.getElementById("home_img").getElementsByTagName("img")[0];
 
 bckgrndInpt = document.getElementById("bckgrnd_sttng");
 
-bckgrndInpt.addEventListener("input", ()=>{changeBackground(bckgrndInpt.value); location.reload(); });
+bckgrndInpt.addEventListener("input", ()=>{changeBackground(bckgrndInpt.value); location.reload(); } );
 
 switch (localStorage.getItem("bckgrnd") ) {
 
@@ -708,6 +708,8 @@ addSEBtn.addEventListener("click", ()=>{
 
 profileSttngs = document.getElementById("profile_settings");
 
+function moveToProfileBttns(){ profileNavMenu.scrollTo(0, profileNavMenu.scrollHeight) }
+
 profileSttngs.addEventListener("input", ()=>{
 
     switch (profileSttngs.value) {
@@ -735,6 +737,8 @@ profileSttngs.addEventListener("input", ()=>{
 					exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
 
                     exportConfigBtn.style.display = "inline-block";
+
+                    moveToProfileBttns();
 				break;
 			}
         break;
@@ -792,6 +796,8 @@ profileSttngs.addEventListener("input", ()=>{
 			});
 
             document.getElementById("import_config_label").style.display = "inline-block";
+
+            moveToProfileBttns();
         break;
 
         case "delete":
@@ -817,6 +823,8 @@ profileSttngs.addEventListener("input", ()=>{
             });
 
             deleteConfigBtn.style.display = "inline-block";
+
+            moveToProfileBttns();
         break;
     }
 });
