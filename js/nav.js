@@ -1193,6 +1193,8 @@ enlace("https://webcast.airdroid.com", "AirDroid Cast", "android mobile devices 
 
 enlace("https://alphacoders.com/", "Alpha Coders", "images imagenes imágenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", extraLinks);
 
+enlace("https://apkgstore.com/", "Apkgstore", "descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles", extraLinks);
+
 enlace("https://www.artistapirata.com/", "Artista Pirata", "piratería pirateria piracy software pc computer computadora windows mac apple descargar programas gratis full free download", extraLinks);
 
 enlace("https://www.artstation.com", "ArtStation", "diseño gráfico graphic design imágenes imagenes images img pics pictures photos fotos wallpapers arte 3d digital artists artistas digitales", extraLinks);
