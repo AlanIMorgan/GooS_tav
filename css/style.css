@@ -1,5 +1,5 @@
 :root {
-	--primary: #fff;
+	--primary: #ddd;
 	--sec: #333e;
 	--thrd: #bbb;
 	--frth: #777;
@@ -170,16 +170,16 @@ a {
 }
 
 #nav_btn-list svg{
-	fill: #dd5;
+	fill: #dd7;
 }
 
 #nav_profile_btn .gb_Ue {
 	width: 34px;
-	fill: #5d5;
+	fill: #7d7;
 }
 
 #full_screen_btn svg{
-	fill: #77f;
+	fill: #99f;
 }
 
 .nav__li {
