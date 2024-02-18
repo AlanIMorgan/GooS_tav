@@ -1,11 +1,11 @@
 :root {
 	--primary: #fff;
-	--sec: #444e;
-	--thrd: #aaa;
+	--sec: #333e;
+	--thrd: #bbb;
 	--frth: #777;
-	--ffth: #333d;
+	--ffth: #222d;
 	--sxth: #bbb7;
-	--svnth: #555f;
+	--svnth: #444f;
 }
 
 * {
@@ -38,8 +38,7 @@ a, label {
 }
 
 input::placeholder {
-	color: var(--primary);
-	opacity: .75;
+	color: var(--thrd);
 }
 
 .home {
@@ -153,8 +152,8 @@ a {
 }
 
 .nav__li .gb_Ue {
-	width: 38px;
-	fill: #eaeaea;
+	width: 38px; /* 
+	fill: #eaeaea; */
 	padding: 7px;
 	border-radius: 23px;
 	background: var(--ffth);
@@ -166,8 +165,21 @@ a {
 	background-color: var(--svnth);
 }
 
+#form-btn{
+	fill: #fb7;
+}
+
+#nav_btn-list svg{
+	fill: #dd5;
+}
+
 #nav_profile_btn .gb_Ue {
 	width: 34px;
+	fill: #5d5;
+}
+
+#full_screen_btn svg{
+	fill: #77f;
 }
 
 .nav__li {
@@ -956,9 +968,8 @@ td,
 }
 
 #add_fav svg {
-
 	width: 81%;
-	fill: var(--primary);
+	fill: #b7f;
 }
 
 .direct-access {
