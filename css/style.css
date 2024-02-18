@@ -32,6 +32,10 @@ a, label {
 	cursor: pointer;
 }
 
+[target="_blank"]:hover{
+	color: #fff;
+}
+
 [type="text"], [type="number"], select {
 	border: 1px solid var(--primary);
 	background: var(--sec);
