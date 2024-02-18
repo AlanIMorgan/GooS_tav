@@ -32,7 +32,7 @@ a, label {
 	cursor: pointer;
 }
 
-[target="_blank"] p:hover, [target="_blank"] span:hover{
+[target="_blank"]:hover, [target="_blank"]:hover > p, [target="_blank"]:hover > span{
 	color: #fff;
 }
 
