@@ -31,6 +31,8 @@ document.getElementById('form-btn').addEventListener("click", showForm);
 
 document.getElementById("img_mask").addEventListener("click", ()=> searchInput.focus() );
 
+document.getElementById("home_img").getElementsByTagName("img")[0].addEventListener("click", ()=> searchInput.focus() );
+
 document.querySelector(".home__logo-containerrr").addEventListener("click", ()=> searchInput.focus() );
 
 historyAccesses = document.querySelector(".home__direct-access-row");
