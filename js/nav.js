@@ -83,12 +83,7 @@ function changeBackground (url) {
 function resetBackground() {
 
     homeImg.src = "";
-
-    document.getElementById("img_mask").classList.add("img_mask");
-
-    document.getElementById("home__bckgrnd").classList.add("home__bckgrnd");
 }
-
 
 document.getElementById("random_wpp").addEventListener("click", ()=>{
 

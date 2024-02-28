@@ -79,7 +79,7 @@ input::placeholder {
     }
 }
 
-.home__bckgrnd {
+#home__bckgrnd {
     position: fixed;
 	z-index: 1;
     top: 0;
@@ -108,18 +108,13 @@ input::placeholder {
     max-height: 100vh;
 }
 
-.img_mask svg{
+#img_mask svg{
     position: fixed;
     top: 0;
     left: 0;
     min-width: 100%;
     min-height: 100vh;
     object-fit: cover;
-}
-
-.img_mask-trnsprnt {
-
-	opacity: 0 !important;
 }
 
 body,
