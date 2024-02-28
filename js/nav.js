@@ -74,9 +74,7 @@ function changeBackground (url) {
 
             homeImg.src = url;
 
-            document.getElementById("img_mask").classList.remove("img_mask");
-
-            document.getElementById("home__bckgrnd").classList.remove("home__bckgrnd");
+            document.getElementById("img_mask").style = "z-index: 1;";
 
         break;
     }
