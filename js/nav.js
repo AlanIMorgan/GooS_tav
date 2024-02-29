@@ -39,7 +39,7 @@ switch (localStorage.getItem("bckgrnd") ) {
 
     case null:
 
-        resetBackground();
+        homeImg.src = "";
 
     break;
 
@@ -78,11 +78,6 @@ function changeBackground (url) {
 
         break;
     }
-}
-
-function resetBackground() {
-
-    homeImg.src = "";
 }
 
 document.getElementById("random_wpp").addEventListener("click", ()=>{

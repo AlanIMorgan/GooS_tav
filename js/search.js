@@ -151,6 +151,15 @@ switch ( localStorage.getItem("favorites") ) {
 
 			let e = links[i].innerHTML.split("<")[0];
 
+			links[i].addEventListener("click", ()=>{
+
+				searchInput.value = "";
+
+				liveSearch();
+
+				searchInput.focus();
+			});
+
 			for (let n = 0; n < favs.length; n++) {
 
 				let l = favs[n];
@@ -319,18 +328,6 @@ function liveSearch() {
 }
 
 searchInput.addEventListener('input', () => liveSearch() );
-
-resultsBoxC.addEventListener("click", ()=>{
-
-	searchInput.value = "";
-
-	setTimeout( () => {
-
-		liveSearch();
-
-		searchInput.focus();
-	}, 250);
-});
 
 document.getElementById("add_fav").addEventListener("click", ()=>{
 
