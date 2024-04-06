@@ -210,7 +210,7 @@ currentURL = window.location.href;
 
 function liveSearch() {
 
-	let search_query = searchInput.value !== " " ? searchInput.value : "";
+	let search_query = searchInput.value !== ' ' ? searchInput.value : '';
 
 	for (i = 0; i < links.length; i++) {
 
@@ -234,7 +234,7 @@ function liveSearch() {
 
 					case false:
 
-						switch ( links[i].textContent.toLowerCase().includes( search_query.toLowerCase() ) ) {
+						switch ( links[i].textContent.toLowerCase().includes( search_query.toLowerCase().replace(' ', '') ) ) {
 
 							case false:
 
