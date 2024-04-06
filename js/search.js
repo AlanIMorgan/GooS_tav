@@ -234,7 +234,7 @@ function liveSearch() {
 
 					case false:
 
-						switch ( links[i].textContent.toLowerCase().includes( search_query.toLowerCase().replace(' ', '') ) ) {
+						switch ( links[i].textContent.toLowerCase().includes( search_query.toLowerCase().replaceAll(' ', '') ) ) {
 
 							case false:
 
