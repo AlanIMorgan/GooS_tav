@@ -106,7 +106,7 @@ nickName.addEventListener("blur", ()=>{changeNick(); location.reload();} );
 
 function resetNick() {
 
-    searchInpt.placeholder = "¡Hola, extraño! Intenta buscar películas, música, libros, etc...";
+    searchInpt.placeholder = "¿Buscas películas, música o libros?";
 }
 
 switch (localStorage.getItem("user") ) {
@@ -134,7 +134,7 @@ function changeNick() {
 
         case false:
 
-            searchInpt.placeholder = "¡Hola, " + nick + "! Intenta buscar películas, música, libros, etc...";
+            searchInpt.placeholder = "¡Hola, " + nick + "!";
 
             localStorage.setItem("user", nick);
 
