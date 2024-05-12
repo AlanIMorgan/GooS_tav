@@ -1317,9 +1317,9 @@ enlace("https://onedrive.live.com/", "OneDrive", "microsoft office 365 almacenam
 
 enlace("https://www.newocr.com/", "Free Online OCR", "optical characters reader lector óptico caracteres", extraLinks);
 
-enlace("https://outlook.live.com/", "Outlook", "microsoft office 365 correo electrónico mail email e-mail", extraLinks);
+enlace("https://outlook.live.com/", "Outlook", "microsoft office 365 correo electrónico mail email e-mail hotmail", extraLinks);
 
-enlace("https://outlook.office.com/", "Outlook (institucional)", "microsoft office 365 correo electrónico empresarial mail email e-mail", extraLinks);
+enlace("https://outlook.office.com/", "Outlook (institucional)", "microsoft office 365 correo electrónico empresarial mail email e-mail hotmail", extraLinks);
 
 enlace("https://jspaint.app/", "PaintJS", "", extraLinks);
 
