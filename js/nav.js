@@ -1273,8 +1273,6 @@ enlace("https://app.keeweb.info/", "KeeWeb", "password manager administrador con
 
 enlace("https://kupdf.net/", "KUPDF", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
 
-enlace("https://labahia.epizy.com/", "La Bahía Del Naufragio", "buscar búsqueda search academic school scholar escuela documentos documents docs pdfs tareas ensayos académicos academicos download free books descargar libros gratis filosofía epizy bahia piracy piratería pirateria", extraLinks);
-
 enlace("https://www.last.fm/es/user/XaMadness", "Last.fm", "escuchar listen música musica recomendaciones recommendations", extraLinks);
 
 enlace("https://libgen.li/", "Library Genesis", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
