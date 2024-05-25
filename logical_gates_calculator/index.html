@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="color-scheme" content="dark">
+
+        <link rel="stylesheet" href="style.css?v1.0.8">
+
+        <script type="text/javascript" src="ast.js"></script>
+        <script type="text/javascript" src="core.js?v2"></script>
+        <script type="text/javascript" src="parser.js"></script>
+        <script type="text/javascript" src="renderer.js"></script>
+        <script type="text/javascript" src="scanner.js"></script>
+        <script type="text/javascript" src="truth-table.js"></script>
+
+        <title> Calculadora de compuertas lógicas </title>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <h1> Calculadora de compuertas lógicas </h1>
+
+            <div class="calculator">
+
+                <section class="screen">
+
+                    <section class="secuente">
+
+                        <input id="argument_input" size="15" readonly type="text">
+
+                        <div id="table-target">
+
+                            <!-- Generated truth tables go here -->
+
+                            <div class="truth-table-holder">
+
+                                <table class="truthTable"></table>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="controls" id="controls_menu">
+
+                    <a class="calculator_btn forbidden" id="conj_btn">^</a>
+
+                    <a class="calculator_btn forbidden" id="disj_btn">v</a>
+
+                    <a class="calculator_btn forbidden" id="substit_btn">&lt;</a>
+
+                    <a class="calculator_btn forbidden" id="implic_btn">&gt;</a>
+
+                    <a class="calculator_btn forbidden" id="bicondi_btn">=</a>
+
+                    <a class="calculator_btn" id="op_parent_btn">&lpar;</a>
+
+                    <a class="calculator_btn forbidden" id="clo_paren_btn">&rpar;</a>
+
+                    <a class="calculator_btn" id="premises_menu_btn">p</a>
+
+                    <a class="calculator_btn" id="nega_btn">¬</a>
+
+                    <a class="calculator_btn forbidden" id="del_btn">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+
+                            <path d="M576 128c0-35.3-28.7-64-64-64H205.3c-17 0-33.3 6.7-45.3 18.7L9.4 233.4c-6 6-9.4 14.1-9.4 22.6s3.4 16.6 9.4 22.6L160 429.3c12 12 28.3 18.7 45.3 18.7H512c35.3 0 64-28.7 64-64V128zM271 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/>
+                        </svg>
+                    </a>
+
+                    <a class="calculator_btn forbidden res_btn" id="solution_btn" onclick="go();">Resolver</a>
+                </section>
+
+                <section class="premises" id="premises_menu">
+
+                    <a class="calculator_btn premise_btn">T</a>
+
+                    <a class="calculator_btn premise_btn">┴</a>
+
+                    <a class="calculator_btn premise_btn">p</a>
+
+                    <a class="calculator_btn premise_btn">q</a>
+
+                    <a class="calculator_btn premise_btn">r</a>
+
+                    <a class="calculator_btn premise_btn">s</a>
+
+                    <a class="calculator_btn premise_btn">w</a>
+
+                    <a class="calculator_btn premise_btn">x</a>
+
+                    <a class="calculator_btn premise_btn">y</a>
+
+                    <a class="calculator_btn premise_btn">z</a>
+
+                    <a class="calculator_btn" id="cancel_btn">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+
+                            <path d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/>
+                        </svg>
+                    </a>
+                </section>
+            </div>
+        </div>
+
+        <script src="main.js?v1.1.8"></script>
+    </body>
+</html>
