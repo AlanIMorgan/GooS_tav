@@ -1417,7 +1417,7 @@ enlace("https://www.tumblr.com/", "Tumblr", "redes sociales network", extraLinks
 
 enlace("https://www.tvconexion.com/", "TV Conexion HD", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
 
-enlace("https://mobile.twitter.com/", "Twitter", "redes sociales network tuits", extraLinks);
+enlace("https://x.com/", "X (Twitter)", "redes sociales network tuits", extraLinks);
 
 enlace("https://twittervid.com/", "Twitter Vid", "twitter downloader descargar vídeos videos imágenes imagenes pics pictures fotos photos", extraLinks);
 
