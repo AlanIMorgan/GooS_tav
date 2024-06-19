@@ -1203,9 +1203,11 @@ enlace("https://www.bioline.org.br/", "Bioline", "buscar búsqueda search academ
 
 enlace("https://www.canva.com/", "Canva", "diseño gráfico graphic design editar edición recortar imágenes imagenes images pics pictures fotos jpg jpeg png gif webp img", extraLinks);
 
-enlace("https://chat.openai.com/", "ChatGpt", "inteligencia artificial intelligence ia ai búsqueda buscar search", extraLinks);
+enlace("https://chat.openai.com/", "ChatGPT", "inteligencia artificial intelligence ia ai búsqueda buscar search", extraLinks);
 
 enlace("https://sur.ly/o/cinefiliamalversa.blogspot.com.ar/AA000014?pageviewId=desktop-302e36363034343030302031363638383031373733203438303533313335", "Cinéfila Malversa", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+
+enlace("https://ciudadseva.com/", "Ciudad Seva", "escritor Luis López Lopez Nieves biblioteca digital library cuentos poemas minicuentos aforismo teatro arte", extraLinks);
 
 enlace("https://cloudconvert.com/", "CloudConvert", "utilities tools herramientas pdf word excel converter convertir conversión imágenes imagenes images pics pictures fotos documentos documents docs jpg jpeg png gif webp img mp4 mp3 videos vídeos audio ppt files archivos ebook libros", extraLinks);
 

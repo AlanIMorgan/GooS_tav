@@ -394,6 +394,13 @@ a {
 	background-color: var(--ffth);
 }
 
+#export_config,
+#import_config_label {
+    border: 4px solid #b7f;
+    border-top: none;
+    border-bottom: none;
+}
+
 .new_site_modal-form,
 .new_search_engine_modal-form {
 
