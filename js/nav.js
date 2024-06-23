@@ -1401,7 +1401,7 @@ enlace("https://soundcloud.com/", "Soundcloud", "escuchar listen música musica"
 
 enlace("https://ww1.streamm4u.ws/#", "StreamM4u", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
 
-enlace("https://teams.microsoft.com/_#/school/teams-grid/General?ctx=teamsGrid", "Teams", "academic school scholar escuela tareas homework", extraLinks);
+enlace("https://teams.microsoft.com/", "Teams", "academic school scholar escuela tareas homework", extraLinks);
 
 enlace("https://web.telegram.org/k/", "Telegram", "redes sociales network mensajerías mensajerias intantáneas intantaneas", extraLinks);
 
