@@ -920,7 +920,7 @@ element("hr", "class", "nav__submenu-element-section-separator", "");
 
 element("div", "class", "nav__submenu-element-section", "");
 
-linksGroup =  document.getElementsByClassName("nav__submenu-element-section");
+linksGroup = document.getElementsByClassName("nav__submenu-element-section");
 
 userLinks = linksGroup[0];
 
@@ -999,11 +999,15 @@ function enlace(address, text, keyWords, zone) {
     }
 }
 
+enlace("", "", "", userLinks);
+
+userLinks.getElementsByTagName("a")[0].style = "display: none !important;";
+
 switch (localStorage.getItem("bookmarks") ) {
 
     case null:
 
-        enlace("./", "Aquí aparecerán tus sitios", ".", userLinks);
+        enlace("./", "Aquí aparecerán tus sitios", "", userLinks);
 
     break;
 

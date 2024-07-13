@@ -127,7 +127,7 @@ resultsBoxC = document.querySelector(".results_box_container");
 
 results = document.querySelector(".results_box");
 
-links = document.querySelectorAll('.result');
+links = document.querySelectorAll(".result");
 
 favoritesRow = document.querySelector(".home__direct-access-favorites");
 
@@ -234,11 +234,44 @@ function liveSearch() {
 
 					case false:
 
+						switch ( search_query.includes('.') && !search_query.includes(' ') ) {
+
+							case false:
+
+								for (let i = 0; i < searchEngineMenuOptions.length; i++) {
+
+									let e = searchEngineMenuOptions[i];
+
+									switch ( searchEngineMenu.value == Object.keys(e) ) {
+
+										case false:
+										break;
+
+										default:
+
+											searchEngine = Object.values(e)[0];
+
+											links[0].href = searchEngine + encodeURIComponent(search_query);
+
+											links[0].innerHTML = searchEngine + encodeURIComponent(search_query);
+										break;
+									}
+								}
+							break;
+
+							default:
+
+								links[0].href = "https://" + search_query;
+
+								links[0].innerHTML = "https://" + search_query;
+							break;
+						}
+
 						switch ( links[i].textContent.toLowerCase().includes( search_query.toLowerCase().replaceAll(' ', '') ) ) {
 
 							case false:
 
-								links[i].classList.remove("actual");
+								links[i+1].classList.remove("actual"); /* 
 
 								switch (document.querySelectorAll('.actual').length) {
 
@@ -246,7 +279,7 @@ function liveSearch() {
 
 										resultsBoxC.classList.add("hidden");
 									break;
-								}
+								} */
 
 							break;
 

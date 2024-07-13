@@ -129,7 +129,8 @@ a {
 	text-decoration: none;
 }
 
-.hidden {
+.hidden,
+[data-keywords=""] {
 	display: none !important;
 }
 
@@ -884,13 +885,10 @@ td,
 	max-height: 200px;
 	overflow: hidden;
 	margin: 0 auto;
-	padding: 45px 0px 0px;/* 
-	border: 20px solid var(--ffth); */
+	padding: 45px 0px 0px;
 	border-top: none;
 	border-bottom: 5px solid var(--ffth);
 	border-radius: 25px;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
 	background: var(--ffth);
 }
 
