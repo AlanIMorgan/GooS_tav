@@ -273,13 +273,17 @@ function liveSearch() {
 
 							case false:
 
-								links[i+1].classList.remove("actual"); /* 
+								links[i+1].classList.remove("actual");
+								
+								document.querySelectorAll('.actual').length == 0 ? links[i+1].classList.remove("actual") : links[i].classList.remove("actual"); /* 
 
 								switch (document.querySelectorAll('.actual').length) {
 
 									case 0:
 
 										resultsBoxC.classList.add("hidden");
+
+										links[i].classList.remove("actual");
 									break;
 								} */
 
