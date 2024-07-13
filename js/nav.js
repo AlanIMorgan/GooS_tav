@@ -1007,7 +1007,7 @@ switch (localStorage.getItem("bookmarks") ) {
 
     case null:
 
-        enlace("./", "Aquí aparecerán tus sitios", "", userLinks);
+        enlace("./", "Aquí verás tus sitios", "", userLinks);
 
     break;
 
