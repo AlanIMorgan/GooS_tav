@@ -902,6 +902,7 @@ td,
 .results_box a {
 	display: none;
 	padding: 5px;
+	border-radius: 25px;
 }
 
 .results_box a:hover {
