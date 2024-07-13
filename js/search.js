@@ -47,6 +47,8 @@ searchEngineMenuOptions = [
 
 	{"Duckduckgo" : "https://duckduckgo.com/?q="},
 
+	{"Ecosia" : "https://www.ecosia.org/search?q="},
+
 	{"Google" : "https://www.google.com/search?q="},
 
 	{"Qwant" : "https://www.qwant.com/?q="},

@@ -1231,6 +1231,8 @@ enlace("https://duckduckgo.com/", "Duckduckgo", "buscar search búsqueda privaci
 
 enlace("https://www.ebiblioteca.org/lecturas/", "eBiblioteca", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
 
+enlace("https://www.ecosia.org/", "Ecosia", "buscar search búsqueda", extraLinks);
+
 enlace("https://www.espaebook2.com/", "ERIC", "Education Resources Information Center buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
 enlace("https://www.espaebook2.com/", "EspaEbook", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
