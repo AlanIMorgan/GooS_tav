@@ -273,7 +273,7 @@ function liveSearch() {
 
 							case false:
 
-								document.querySelectorAll('.actual').length == 0 ? links[1].classList.remove("actual") : links[i].classList.remove("actual"); /* 
+								i == 0 ? links[i].classList.add("actual") : links[i].classList.remove("actual"); /* 
 
 								switch (document.querySelectorAll('.actual').length) {
 
