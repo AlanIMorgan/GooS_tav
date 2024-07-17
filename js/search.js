@@ -174,7 +174,7 @@ if (localStorage.getItem("favorites") == null){
 
 	if (favoritesRow.scrollWidth > favoritesRow.clientWidth){
 
-		ritesRow.style.justifyContent = "flex-start"
+		favoritesRow.style.justifyContent = "flex-start"
 	}
 }
 
