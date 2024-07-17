@@ -237,11 +237,11 @@ function liveSearch(){
 			return
 		}
 
+		resultsBoxC.classList.remove("hidden");
+
 		directAccess.style.display = "none";
-
-		for (let n = 0; n < searchEngineMenuOptions.length; n++){
-
-			let e = searchEngineMenuOptions[n];
+		
+		searchEngineMenuOptions.forEach(e => {
 
 			if (searchEngineMenu.value == Object.keys(e) ){
 
@@ -251,13 +251,11 @@ function liveSearch(){
 
 				links[0].innerHTML = searchEngine + encodeURIComponent(q);
 			}
-		}
+		});
 
 		if (links[i].textContent.toLowerCase().includes(q.toLowerCase().replaceAll(' ', '') ) ){
 
 			links[i].classList.add("actual");
-
-			resultsBoxC.classList.remove("hidden");
 		}else{
 
 			links[i].classList.remove("actual");
