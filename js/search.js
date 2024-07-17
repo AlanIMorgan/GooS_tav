@@ -10,21 +10,19 @@ function showForm() {
 
     searchInput.focus();
 
-	searchInput.value = "";
+	searchInput.value = '';
 
-	liveSearch();
+	return liveSearch();
 }
 
-document.documentElement.addEventListener('keyup', (e)=>{
+document.documentElement.addEventListener("keydown", (e)=>{
 
-    switch (e.key) {
+	if (e.key == "|"){
 
-		case "|":
+        e.preventDefault();
 
-			showForm();
-
-		break;
-    }
+		return showForm();
+	}
 });
 
 document.getElementById('form-btn').addEventListener("click", showForm);
@@ -35,7 +33,7 @@ document.getElementById("home_img").getElementsByTagName("img")[0].addEventListe
 
 document.querySelector(".home__logo-containerrr").addEventListener("click", ()=> searchInput.focus() );
 
-historyAccesses = document.querySelector(".home__direct-access-row");
+const historyAccesses = document.getElementById("direct_access_row");
 
 directAccess.addEventListener("click", ()=> searchInput.focus() );
 
@@ -58,34 +56,26 @@ searchEngineMenuOptions = [
 	{"Yandex-r" : "https://yandex.ru/search/?text="}
 ];
 
-switch (localStorage.getItem("search_engines") ) {
+if (localStorage.getItem("search_engines") ){
 
-	case null:
+	cachedSearchEngines = localStorage.getItem("search_engines");
 
-	break;
+	cachedSEArray = cachedSearchEngines.split(",");
 
-	default:
+	cachedSEArray.forEach(e => {
 
-		cachedSearchEngines = localStorage.getItem("search_engines");
+		cachedSE = e.split();
 
-		cachedSEArray = cachedSearchEngines.split(",");
+		cachedSESplit = cachedSE[0].split(";;;");
 
-		cachedSEArray.forEach(e => {
+		cachedSESplit[0];
 
-			cachedSE = e.split();
+		cachedSESplit[1];
 
-			cachedSESplit = cachedSE[0].split(";;;");
+		newSEObject = JSON.parse('{ "' + cachedSESplit[0] + '" : "' + cachedSESplit[1] + '" }');
 
-			cachedSESplit[0];
-
-			cachedSESplit[1];
-
-			newSEObject = JSON.parse('{ "' + cachedSESplit[0] + '" : "' + cachedSESplit[1] + '" }');
-
-			searchEngineMenuOptions.push(newSEObject);
-		});
-
-	break;
+		searchEngineMenuOptions.push(newSEObject);
+	});
 }
 
 searchEngineMenu = document.getElementById("s_engine");
@@ -112,267 +102,213 @@ searchEngineMenuOptions.forEach(e => {
 
 searchEngineMenu.addEventListener("input", ()=> localStorage.setItem("searchEngine", searchEngineMenu.value) );
 
-switch ( localStorage.getItem("searchEngine") ) {
+if (localStorage.getItem("searchEngine") ){
 
-	case null:
-
-	break;
-
-	default:
-
-		searchEngineMenu.value = localStorage.getItem("searchEngine");
-
-	break;
+	searchEngineMenu.value = localStorage.getItem("searchEngine");
 }
 
-resultsBoxC = document.querySelector(".results_box_container");
+// resultsBoxC = document.getElementById("results_box_container");
 
-results = document.querySelector(".results_box");
+// results = document.getElementById("results_box");
 
 links = document.querySelectorAll(".result");
 
-favoritesRow = document.querySelector(".home__direct-access-favorites");
+// favoritesRow = document.getElementById("favorites_menu");
 
-switch ( localStorage.getItem("favorites") ) {
+if (localStorage.getItem("favorites") == null){
 
-	case null:
+	localStorage.setItem("favorites", "GooS_tav");
 
-		localStorage.setItem("favorites", "GooS_tav");
+	location.reload();
+}else{
 
-		location.reload();
+	favorites = localStorage.getItem("favorites");
 
-	break;
+	favs = favorites.split(";;;");
 
-	default:
+	for (let i = 0; i < links.length; i++) {
 
-        favorites = localStorage.getItem("favorites");
+		let e = links[i].innerHTML.split("<")[0];
 
-        favs = favorites.split(";;;");
+		links[i].addEventListener("click", ()=>{
 
-		for (let i = 0; i < links.length; i++) {
+			searchInput.value = "";
 
-			let e = links[i].innerHTML.split("<")[0];
+			liveSearch();
 
-			links[i].addEventListener("click", ()=>{
+			searchInput.focus();
+		});
 
-				searchInput.value = "";
+		for (let n = 0; n < favs.length; n++){
 
-				liveSearch();
+			let l = favs[n];
 
-				searchInput.focus();
-			});
+			if (e == l){
 
-			for (let n = 0; n < favs.length; n++) {
+				let a = document.createElement('a');
 
-				let l = favs[n];
+				let icon = document.createElement("span");
 
-				switch ( e == l ) {
+				let p = document.createElement('p');
 
-					case false:
+				a.setAttribute("href", links[i].href);
 
-					break;
+				a.setAttribute("target", "_blank");
 
-					default:
+				a.setAttribute("title", e);
 
-						let a = document.createElement('a');
+				a.innerText = "";
 
-						let icon = document.createElement("span");
+				favoritesRow.appendChild(a);
 
-						let p = document.createElement('p');
+				icon.innerText = l[0];
 
-						a.setAttribute("href", links[i].href);
+				a.appendChild(icon);
 
-						a.setAttribute("target", "_blank");
+				p.innerText = l;
 
-						a.setAttribute("title", e);
-
-						a.innerText = "";
-
-						favoritesRow.appendChild(a);
-
-						icon.innerText = l[0];
-
-						a.appendChild(icon);
-
-						p.innerText = l;
-
-						a.appendChild(p);
-
-					break;
-				}
+				a.appendChild(p);
 			}
 		}
+	}
 
-		favoritesRow.scrollWidth > favoritesRow.clientWidth ? favoritesRow.style.justifyContent = "flex-start" : false;
+	if (favoritesRow.scrollWidth > favoritesRow.clientWidth){
 
-	break;
-}
-
-currentURL = window.location.href;
-
-function liveSearch() {
-
-	let search_query = searchInput.value !== ' ' ? searchInput.value : '';
-
-	for (i = 0; i < links.length; i++) {
-
-		switch (search_query.length) {
-
-			case 0:
-
-				resultsBoxC.classList.add("hidden");
-
-				links[i].classList.remove("actual");
-
-				directAccess.style.display = "block";
-
-			break;
-
-			default:
-
-				directAccess.style.display = "none";
-
-				switch ( search_query == "/favorite" ) {
-
-					case false:
-
-						switch ( search_query.includes('.') && !search_query.includes(' ') ) {
-
-							case false:
-
-								for (let i = 0; i < searchEngineMenuOptions.length; i++) {
-
-									let e = searchEngineMenuOptions[i];
-
-									switch ( searchEngineMenu.value == Object.keys(e) ) {
-
-										case false:
-										break;
-
-										default:
-
-											searchEngine = Object.values(e)[0];
-
-											links[0].href = searchEngine + encodeURIComponent(search_query);
-
-											links[0].innerHTML = searchEngine + encodeURIComponent(search_query);
-										break;
-									}
-								}
-							break;
-
-							default:
-
-								links[0].href = "https://" + search_query;
-
-								links[0].innerHTML = "https://" + search_query;
-							break;
-						}
-
-						switch ( links[i].textContent.toLowerCase().includes( search_query.toLowerCase().replaceAll(' ', '') ) ) {
-
-							case false:
-
-								i == 0 ? links[i].classList.add("actual") : links[i].classList.remove("actual"); /* 
-
-								switch (document.querySelectorAll('.actual').length) {
-
-									case 0:
-
-										resultsBoxC.classList.add("hidden");
-
-										links[i].classList.remove("actual");
-									break;
-								} */
-
-							break;
-
-							default:
-
-								links[i].classList.add("actual");
-
-								resultsBoxC.classList.remove("hidden");
-
-							break;
-						}
-
-					break;
-
-					default:
-
-						document.getElementById("cancel_btn").classList.remove("hidden");
-
-						links[i].dataset.site = links[i].innerHTML.split('<')[0];
-
-						links[i].target = "";
-
-						links[i].href = "#";
-
-						links[i].addEventListener("click", (e)=>{
-
-							favSite = e.target.dataset.site;
-
-							switch ( localStorage.getItem("favorites") ) {
-
-								case null:
-
-									localStorage.setItem("favorites", favSite);
-
-								break;
-
-								default:
-
-									favorites = localStorage.getItem("favorites");
-
-									switch ( favorites.includes(";;;") ) {
-
-										case false:
-
-											favorites == favSite ? false : localStorage.setItem("favorites", favorites + ";;;" + favSite);
-
-										break;
-
-										default:
-
-											let favs = favorites.split(";;;");
-
-											for (let n = 0; n < favs.length; n++) {
-
-												let e = favs[n];
-
-												e == favSite ? false : localStorage.setItem("favorites", favorites + ";;;" + favSite);
-											}
-
-										break;
-									}
-
-								break;
-							}
-
-							location.reload();
-						});
-
-						links[i].classList.add("actual");
-
-						resultsBoxC.classList.remove("hidden");
-
-					break;
-				}
-
-			break;
-		}
+		ritesRow.style.justifyContent = "flex-start"
 	}
 }
 
-searchInput.addEventListener('input', () => liveSearch() );
+const currentURL = window.location.href;
+
+function addFav(e){
+
+	let favSite = e.target.dataset.site;
+
+	if (localStorage.getItem("favorites") == null){
+
+		localStorage.setItem("favorites", favSite);
+
+		return location.reload();
+	}
+
+	let favorites = localStorage.getItem("favorites");
+
+	if (favorites.includes(";;;") ){
+
+		let favs = favorites.split(";;;");
+
+		if (favs.find((m)=>{return m == favSite}) == undefined){
+
+			localStorage.setItem("favorites", favorites + ";;;" + favSite);
+		}
+
+		return location.reload();
+	}
+
+	if (favorites != favSite){
+
+		localStorage.setItem("favorites", favorites + ";;;" + favSite);
+	}
+
+	return location.reload();
+}
+
+function isEmptyOrSpaces (str) {
+
+    return str == null || str.match(/^\s*$/) !== null;
+}
+
+favMenu = false;
+
+function liveSearch(){
+
+	let q = searchInput.value;
+
+	for (i = 0; i < links.length; i++){
+
+		if (isEmptyOrSpaces(q) ){
+
+			links[i].classList.remove("actual");
+
+			resultsBoxC.classList.add("hidden");
+
+			directAccess.style.display = "block";
+
+			return
+		}
+
+		directAccess.style.display = "none";
+
+		for (let n = 0; n < searchEngineMenuOptions.length; n++){
+
+			let e = searchEngineMenuOptions[n];
+
+			if (searchEngineMenu.value == Object.keys(e) ){
+
+				searchEngine = Object.values(e)[0];
+
+				links[0].href = searchEngine + encodeURIComponent(q);
+
+				links[0].innerHTML = searchEngine + encodeURIComponent(q);
+			}
+		}
+
+		if (links[i].textContent.toLowerCase().includes(q.toLowerCase().replaceAll(' ', '') ) ){
+
+			links[i].classList.add("actual");
+
+			resultsBoxC.classList.remove("hidden");
+		}else{
+
+			links[i].classList.remove("actual");
+		}
+
+		if (q.includes('.') && !q.includes(' ') ){
+
+			https = q.includes("http") ? '' : "https://";
+
+			links[0].href = https + q;
+
+			links[0].innerHTML = https + q;
+		}
+
+		links[0].classList.add("actual");
+
+		if (favMenu){
+
+			links[0].classList.remove("actual");
+		}
+	}
+
+	return
+}
+
+searchInput.addEventListener("input", liveSearch);
 
 document.getElementById("add_fav").addEventListener("click", ()=>{
 
+	searchInput.placeholder = "Nuevo favorito:";
+
+	document.getElementById("cancel_btn").classList.remove("hidden");
+
+	directAccess.style.display = "none";
+
+	links.forEach(e => {
+
+		e.dataset.site = e.innerHTML.split('<')[0];
+
+		e.target = '';
+
+		e.href = '#';
+
+		e.addEventListener("click", (m)=> addFav(m) );
+	});
+
 	searchForm.classList.remove("hidden");
 
-	searchInput.value = "/favorite";
+	favMenu = true;
 
-	liveSearch();
+	return liveSearch();
 });
 
 function updateHistory() {
@@ -610,11 +546,6 @@ function createLink(path, tag, keyWords) {
 
 		break;
 	}
-}
-
-function isEmptyOrSpaces (str) {
-
-    return str == null || str.match(/^\s*$/) !== null;
 }
 
 document.querySelector(".home__form").addEventListener("submit", (e)=>{

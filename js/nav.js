@@ -1,30 +1,24 @@
-navMenu = document.querySelector(".nav__li-submenu-ul");
-
-newSiteModal = document.getElementById("new_site_modal");
+const navMenu = document.getElementById("sites_list");
+const newSiteModal = document.getElementById("new_site_modal");
+const siteNameInpt = document.getElementById("site_name");
+const siteLinkInpt = document.getElementById("site_link");
+const siteKeywrdsInpt = document.getElementById("site_keywords");
 
 const sharingSite = window.location.search;
 
 const urlParams = new URLSearchParams(sharingSite);
 
-switch ( urlParams.get('link') ) {
+if (urlParams.get('link') != null){
 
-    case null:
+    sharedSiteLink = urlParams.get("link");
 
-    break;
+    navMenu.classList.add("nav__li-submenu-ul_list");
 
-    default:
+    newSiteModal.classList.replace("hidden", "new_site_modal-form");
 
-        sharedSiteLink = urlParams.get("link");
+    siteLinkInpt.value = sharedSiteLink;
 
-        navMenu.classList.add("nav__li-submenu-ul_list");
-
-        newSiteModal.classList.replace("hidden", "new_site_modal-form");
-
-        document.getElementById("site_link").value = sharedSiteLink;
-
-        document.getElementById("site_name").focus();
-
-    break;
+    siteNameInpt.focus();
 }
 
 // Background
@@ -33,37 +27,28 @@ homeImg = document.getElementById("home_img").getElementsByTagName("img")[0];
 
 bckgrndInpt = document.getElementById("bckgrnd_sttng");
 
-bckgrndInpt.addEventListener("input", ()=>{changeBackground(bckgrndInpt.value); location.reload(); } );
+bckgrndInpt.addEventListener("input", ()=>{changeBackground(bckgrndInpt.value); location.reload();});
 
-switch (localStorage.getItem("bckgrnd") ) {
+localStorage.getItem("bckgrnd") != null ?
 
-    case null:
+    changeBackground(localStorage.getItem("bckgrnd") ) :
 
-        homeImg.src = "";
-
-    break;
-
-    default:
-
-        changeBackground(localStorage.getItem("bckgrnd") );
-    break;
-}
+homeImg.src = "";
 
 function isEmptyOrSpaces (str) {
 
     return str == null || str.match(/^\s*$/) !== null;
 }
 
-function changeBackground (url) {
+function changeBackground (url){
 
-    switch (url.includes("http") ) {
+    switch (url.includes("http") ){
 
         case false:
 
             localStorage.removeItem("bckgrnd");
 
             localStorage.removeItem("comp_bck");
-
         break;
 
         default:
@@ -75,7 +60,6 @@ function changeBackground (url) {
             homeImg.src = url;
 
             document.getElementById("img_mask").style = "z-index: 1;";
-
         break;
     }
 }
@@ -93,27 +77,41 @@ document.getElementById("random_wpp").addEventListener("click", ()=>{
         location.reload();
     })
 
-    .catch(err => console.log('Solicitud fallida', err));
+    .catch(err => console.log('Solicitud fallida', err) );
 });
 
 // Nickname
 
-nickName = document.getElementById("nick_sttng");
+const nickName = document.getElementById("nick_sttng");
 
-searchInpt = document.getElementById("google-search");
+const searchInpt = document.getElementById("google-search");
 
-nickName.addEventListener("blur", ()=>{changeNick(); location.reload();} );
+nickName.addEventListener("blur", ()=>{
 
-function resetNick() {
+    newNick = nickName.value;
 
-    searchInpt.placeholder = "¿Buscas películas, música o libros?";
-}
+    if (isEmptyOrSpaces(newNick) ){
 
-switch (localStorage.getItem("user") ) {
+        localStorage.removeItem("user");
+
+        return location.reload();
+    }
+
+    if (newNick != localStorage.getItem("user") ){
+
+        localStorage.setItem("user", nick);
+
+        return location.reload();
+    }
+
+    return
+});
+
+switch (localStorage.getItem("user") ){
 
     case null:
 
-        resetNick();
+        searchInpt.placeholder = "¿Buscas películas, música o libros?";
 
     break;
 
@@ -121,43 +119,21 @@ switch (localStorage.getItem("user") ) {
 
         nickName.value = localStorage.getItem("user");
 
-        changeNick();
+        searchInpt.placeholder = "¡Hola, " + nickName.value + "!";
 
     break;
 }
 
-function changeNick() {
-
-    nick = nickName.value;
-
-    switch (isEmptyOrSpaces(nick) ) {
-
-        case false:
-
-            searchInpt.placeholder = "¡Hola, " + nick + "!";
-
-            localStorage.setItem("user", nick);
-
-        break;
-
-        default:
-
-            resetNick();
-
-        break;
-    }
-}
-
 // Menus
 
-navBtn = document.getElementById('nav_btn');
-navListBtn = document.getElementById('nav_btn-list');
-profileNavBtn = document.getElementById('nav_profile_btn');
-resultsBoxC = document.querySelector(".results_box_container");
-results = document.querySelector(".results_box");
-profileNavMenu = document.querySelector(".nav__submenu-profile");
-fullScreenBtn = document.getElementById("full_screen_btn");
-home = document.querySelector(".home");
+const navBtn = document.getElementById('nav_btn');
+const navListBtn = document.getElementById('nav_btn-list');
+const profileNavBtn = document.getElementById('nav_profile_btn');
+const resultsBoxC = document.getElementById("results_box_container");
+const results = document.getElementById("results_box");
+const profileNavMenu = document.getElementById("profile_menu");
+const fullScreenBtn = document.getElementById("full_screen_btn");
+const home = document.querySelector(".home");
 
 navBtn.addEventListener("click", showHideNav);
 
@@ -184,7 +160,7 @@ home.addEventListener("click", ()=>{
     profileNavMenu.classList.remove("block");
 });
 
-function showHideNav() {
+function showHideNav(){
 
     navMenu.classList.toggle("block");
     navMenu.classList.remove("hide");
@@ -195,44 +171,30 @@ function showHideNav() {
 
 // CLOCK
 
-clockSttng = document.getElementById("clock_sttng");
+const clockSttng = document.getElementById("clock_sttng");
 
 clockSttng.addEventListener("input", ()=>{
 
-    switch (clockSttng.checked) {
+    if (clockSttng.checked){
 
-        case false:
+        localStorage.setItem("clock", "true");
 
-            localStorage.removeItem("clock");
-
-        break;
-
-        default:
-
-            localStorage.setItem("clock", "true");
-
-        break;
+        return location.reload();
     }
 
-    location.reload();
+    localStorage.removeItem("clock");
+
+    return location.reload();
 } );
 
-switch (localStorage.getItem("clock") ) {
+if (localStorage.getItem("clock") != null){
 
-    case null:
+    clockSttng.checked = true;
 
-    break;
-
-    default:
-
-        clockSttng.checked = true;
-
-        createClock();
-
-    break;
+    createClock();
 }
 
-clockContainer = document.getElementById("clock");
+const clockContainer = document.getElementById("clock");
 
 function createClock() {
 
@@ -275,17 +237,16 @@ function createClock() {
 
 //CALENDAR
 
-today = new Date();
+const today = new Date();
 
 currentMonth = today.getMonth();
-
 currentYear = today.getFullYear();
 
-selectYear = document.getElementById("year");
+const selectYear = document.getElementById("year");
 
 selectYear.addEventListener("input", jump);
 
-selectMonth = document.getElementById("month");
+const selectMonth = document.getElementById("month");
 
 selectMonth.addEventListener("input", jump);
 
@@ -295,9 +256,9 @@ selectMonth.value = selectMonth;
 
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-monthAndYear = document.getElementById("monthAndYear");
+const monthAndYear = document.getElementById("monthAndYear");
 
-function next() {
+function next(){
 
     currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
     
@@ -306,7 +267,7 @@ function next() {
     showCalendar(currentMonth, currentYear);
 }
 
-function previous() {
+function previous(){
 
     currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
     
@@ -315,7 +276,7 @@ function previous() {
     showCalendar(currentMonth, currentYear);
 }
 
-function jump() {
+function jump(){
 
     currentYear = parseInt(selectYear.value);
 
@@ -324,7 +285,7 @@ function jump() {
     showCalendar(currentMonth, currentYear);
 }
 
-function showCalendar(month, year) {
+function showCalendar(month, year){
 
     let firstDay = (new Date(year, month)).getDay();
 
@@ -343,7 +304,7 @@ function showCalendar(month, year) {
     // creating all cells
     let date = 1;
 
-    for (let i = 0; i < 6; i++) { // creates a table row
+    for (let i = 0; i < 6; i++){ // creates a table row
 
         let row = document.createElement("tr");
 
@@ -389,12 +350,12 @@ function showCalendar(month, year) {
 }
 
 // check how many days in a month code from https://dzone.com/articles/determining-number-days-month
-function daysInMonth(iMonth, iYear) {
+function daysInMonth(iMonth, iYear){
 
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
 
-let firstDay = (new Date(year, month)).getDay();
+let firstDay = (new Date(year, month) ).getDay();
 
 tbl = document.getElementById("calendar"); // body of the calendar
 
@@ -459,174 +420,115 @@ showCalendar(currentMonth, currentYear);
 
 // Favorites settings
 
-favoritesSttng = document.getElementById("favorites_sttng");
+const favoritesSttng = document.getElementById("favorites_sttng");
+const favoritesRow = document.getElementById("favorites_menu");
 
-favoritesRow = document.querySelector(".home__direct-access-favorites");
+if (localStorage.getItem("hideFavorites") ){
 
-function showHideFavorites() {
+    favoritesRow.classList.add("hidden");
 
-    switch (localStorage.getItem("hideFavorites") ) {
+    favoritesSttng.checked = false;
+}else{
 
-        case null:
+    favoritesRow.classList.remove("hidden");
 
-            favoritesRow.classList.remove("hidden");
+    if (favoritesRow.scrollWidth > favoritesRow.clientWidth){
 
-            favoritesRow.scrollWidth > favoritesRow.clientWidth ? favoritesRow.style.justifyContent = "flex-start" : false;
-        break;
-
-        default:
-
-            favoritesRow.classList.add("hidden");
-
-            favoritesSttng.checked = false;
-        break;
+        favoritesRow.style.justifyContent = "flex-start";
     }
 }
 
-showHideFavorites();
-
 favoritesSttng.addEventListener("click", ()=>{
 
-    switch (favoritesSttng.checked) {
-
-        case false:
-
-            localStorage.setItem("hideFavorites", "true");
-        break;
-
-        default:
-
-            localStorage.removeItem("hideFavorites");
-        break;
-    }
+    favoritesSttng.checked ? localStorage.setItem("hideFavorites", "true") : localStorage.removeItem("hideFavorites");
 
     location.reload();
 });
 
-deleteFavorites = document.getElementById("delete_favorites");
+const deleteFavorites = document.getElementById("delete_favorites");
 
-switch (localStorage.getItem("favorites") ) {
+if (localStorage.getItem("favorites") != null){
 
-    case null:
-    break;
+    let favorites = localStorage.getItem("favorites");
 
-    default:
+    favs = favorites.split(";;;");
 
-        let favorites = localStorage.getItem("favorites");
+    favs.forEach(e => {
 
-        favs = favorites.split(";;;");
+        if (e.length > 0) {
 
-        favs.forEach(e => {
+            let option = document.createElement("option");
 
-            if (e.length > 0) {
+            option.setAttribute("value", e);
 
-                let option = document.createElement("option");
+            deleteFavorites.appendChild(option);
 
-                option.setAttribute("value", e);
+            option.innerText = e;
+        }
+    });
 
-                deleteFavorites.appendChild(option);
+    deleteFavorites.addEventListener("input", ()=>{
 
-                option.innerText = e;
+        let delSite = deleteFavorites.value;
+
+        if (deleteFavorites.value == "all"){
+
+            let favoritesAlert = confirm("¿Estás seguro de que quieres quedarte sin favoritos?");
+
+            if (favoritesAlert){
+
+                localStorage.removeItem("favorites");
+
+                return location.reload();
             }
-        });
 
-        deleteFavorites.addEventListener("input", ()=>{
+            return deleteFavorites.value = '';
+        }
 
-            let delSite = deleteFavorites.value;
+        let favoriteAlert = confirm("Estás apunto de eliminar: " + deleteFavorites.value);
 
-            switch (delSite) {
+        if (favoriteAlert){
 
-                case "":
-                break;
+            favs.splice(favs.indexOf(delSite), 1 );
 
-                case "all":
+            newFavs = favs.join(";;;");
 
-                    let favoritesAlert = confirm("¿Estás seguro de que quieres quedarte sin favoritos?");
+            newFavs.length > 0 ? localStorage.setItem("favorites", newFavs) : localStorage.removeItem("favorites");
 
-                    switch (favoritesAlert) {
+            return location.reload();
+        }
 
-                        case false:
-
-                            deleteFavorites.value = '';
-                        break;
-
-                        default:
-
-                            localStorage.removeItem("favorites");
-
-                            location.reload();
-                        break;
-                    }
-                break;
-
-                default:
-
-                    let favoriteAlert = confirm("Estás apunto de eliminar: " + delSite);
-
-                    switch (favoriteAlert) {
-
-                        case false:
-
-                            deleteFavorites.value = '';
-                        break;
-
-                        default:
-
-                            favs.splice(favs.indexOf(delSite), 1 );
-
-                            newFavs = favs.join(";;;");
-
-                            newFavs.length > 0 ? localStorage.setItem("favorites", newFavs) : localStorage.removeItem("favorites");
-
-                            location.reload();
-                        break;
-                    }
-                break;
-            }
-        });
-    break;
+        return deleteFavorites.value = '';
+    });
 }
 
-// Show/hide history
+// HISTORY
 
-historySttng = document.getElementById("history_sttng");
+const historySttng = document.getElementById("history_sttng");
 
-switch (localStorage.getItem("history") ) {
+if (localStorage.getItem("history") == "noHistory"){
 
-    case null:
-
-    break;
-
-    case "noHistory":
-
-        historySttng.checked = false;
-
-    break;
+    historySttng.checked = false;
 }
 
 historySttng.addEventListener("click", ()=>{
 
-    switch (historySttng.checked) {
+    if (historySttng.checked){
 
-        case false:
+        localStorage.removeItem("history");
 
-            localStorage.setItem("history", "noHistory");
-
-        break;
-
-        default:
-
-            localStorage.removeItem("history");
-
-        break;
+        return location.reload();
     }
 
-    location.reload();
+    localStorage.setItem("history", "noHistory");
+
+    return location.reload();
 });
 
-addSearchEngine = document.getElementById("add_search_engine");
+// SEARCH ENGINES
 
-SearchEngineModal = document.getElementById("new_search_engine_modal");
+const addSearchEngine = document.getElementById("add_search_engine");
+const SearchEngineModal = document.getElementById("new_search_engine_modal");
 
 addSearchEngine.addEventListener("click", ()=>{
 
@@ -639,7 +541,7 @@ addSearchEngine.addEventListener("click", ()=>{
     document.getElementById("search_engine_name").focus();
 });
 
-cancelSearchEngine = document.getElementById("cancel-search_engine");
+const cancelSearchEngine = document.getElementById("cancel-search_engine");
 
 cancelSearchEngine.addEventListener("click", ()=>{
 
@@ -664,124 +566,111 @@ SearchEngineModal.addEventListener('keydown', (e)=>{
     }
 });
 
-addSEBtn = document.getElementById("cache_search_engine");
+const addSEBtn = document.getElementById("cache_search_engine");
 
 addSEBtn.addEventListener("click", ()=>{
 
-    newSEName = document.getElementById("search_engine_name").value;
+    const newSEName = document.getElementById("search_engine_name").value;
+    const newSELink = document.getElementById("search_engine_link").value;
 
-    newSELink = document.getElementById("search_engine_link").value;
+    cachedSearchEngines = '';
 
-    switch (localStorage.getItem("search_engines") ) {
+    if (localStorage.getItem("search_engines") ){
 
-        case null:
-
-            localStorage.setItem("search_engines", newSEName + ";;;" + newSELink);
-
-        break;
-
-        default:
-
-            cachedSearchEngines = localStorage.getItem("search_engines");
-
-            localStorage.setItem("search_engines", cachedSearchEngines + "," + newSEName + ";;;" + newSELink);
-
-        break;
+        cachedSearchEngines = localStorage.getItem("search_engines") + ',';
     }
 
-    location.reload();
+    localStorage.setItem("search_engines", cachedSearchEngines + newSEName + ";;;" + newSELink);
+
+    return location.reload();
 });
 
-// Profile settings
+// PROFILE SETTINGS
 
-profileSttngs = document.getElementById("profile_settings");
+const profileSttngs = document.getElementById("profile_settings");
+const exportConfigBtn = document.getElementById("export_config");
+const importConfig = document.getElementById("import_config");
+const deleteConfigBtn = document.getElementById("delete_config");
 
-function moveToProfileBttns(){ profileNavMenu.scrollTo(0, profileNavMenu.scrollHeight) }
+importConfig.addEventListener("input", ()=>{
+
+    reader = new FileReader();
+
+    function setProfile(){
+
+        val = reader.result;
+
+        if (isEmptyOrSpaces(val) == false){
+
+            decryptedData = CryptoJS.AES.decrypt(val, "GooStav");
+
+            dataString = decryptedData.toString(CryptoJS.enc.Utf8);
+
+            profile = JSON.parse(dataString);
+
+            profileKeys = Object.keys(profile);
+
+            profileValues = Object.values(profile);
+
+            localStorage.clear();
+
+            for (let i = 0; i < profileKeys.length; i++) {
+
+                localStorage.setItem(profileKeys[i], profileValues[i]);
+            }
+
+            return location.reload();
+        }
+    }
+
+    file = importConfig.files[0];
+
+    reader.addEventListener("load", setProfile);
+
+    if (file){
+
+        reader.readAsText(file);
+    }
+
+    return
+});
+
+deleteConfigBtn.addEventListener("click", ()=>{
+
+    conf = window.confirm("¡Estás a punto de eliminar tu configuración!");
+
+    if (conf){
+
+        localStorage.clear();
+
+        return location.reload();
+    }
+
+    return
+});
+
+const moveToProfileBttns = ()=> profileNavMenu.scrollTo(0, profileNavMenu.scrollHeight);
 
 profileSttngs.addEventListener("input", ()=>{
 
-    switch (profileSttngs.value) {
-
-        case "":
-        break;
+    switch (profileSttngs.value){
 
         case "export":
 
-            exportConfigBtn = document.getElementById("export_config");
+            content = JSON.stringify(localStorage);
 
-			switch (localStorage.length > 0) {
+            encryptedData = CryptoJS.AES.encrypt(content, "GooStav"); // "GooStav" is the passphrase
 
-				case false:
-				break;
+            exportConfigBtn.href = "data:application/octet-stream," + encodeURIComponent(encryptedData.toString() );
 
-				default:
+            exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
 
-					content = JSON.stringify(localStorage);
+            exportConfigBtn.style.display = "inline-block";
 
-					encryptedData = CryptoJS.AES.encrypt(content, "GooStav"); // "GooStav" is the passphrase
-
-					exportConfigBtn.href = "data:application/octet-stream," + encodeURIComponent(encryptedData.toString() );
-
-					exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
-
-                    exportConfigBtn.style.display = "inline-block";
-
-                    moveToProfileBttns();
-				break;
-			}
+            moveToProfileBttns();
         break;
 
         case "import":
-
-			importConfig = document.getElementById("import_config");
-
-			importConfig.addEventListener("input", ()=>{
-
-				file = importConfig.files[0];
-
-				const reader = new FileReader();
-
-				switch (file) {
-
-					case null:
-					break;
-
-					default:
-
-						reader.readAsText(file);
-					break;
-				}
-
-				reader.addEventListener("load", ()=>{
-
-					val = reader.result;
-
-					switch (isEmptyOrSpaces(val) ) {
-
-						case false:
-
-							decryptedData = CryptoJS.AES.decrypt(val, "GooStav");
-
-							dataString = decryptedData.toString(CryptoJS.enc.Utf8);
-
-							profile = JSON.parse(dataString);
-
-							profileKeys = Object.keys(profile);
-
-							profileValues = Object.values(profile);
-
-							localStorage.clear();
-
-							for (let i = 0; i < profileKeys.length; i++) {
-
-								localStorage.setItem(profileKeys[i], profileValues[i]);
-							}
-
-							location.reload();
-						break;
-					}
-				});
-			});
 
             document.getElementById("import_config_label").style.display = "inline-block";
 
@@ -790,26 +679,6 @@ profileSttngs.addEventListener("input", ()=>{
 
         case "delete":
 
-            deleteConfigBtn = document.getElementById("delete_config");
-
-            deleteConfigBtn.addEventListener("click", ()=>{
-
-                let conf = window.confirm("¡Estás a punto de eliminar tu configuración!");
-
-                switch (conf) {
-
-                    case false:
-                    break;
-
-                    default:
-
-                        localStorage.clear();
-
-                        location.reload();
-                    break;
-                }
-            });
-
             deleteConfigBtn.style.display = "inline-block";
 
             moveToProfileBttns();
@@ -817,9 +686,9 @@ profileSttngs.addEventListener("input", ()=>{
     }
 });
 
-// Shortcuts menu
+// SHORTCUTS MENU
 
-function element(etiqueta, atributo, valor, texto) {
+function element(etiqueta, atributo, valor, texto){
 
     let newElement = document.createElement(etiqueta);
 
@@ -829,32 +698,28 @@ function element(etiqueta, atributo, valor, texto) {
 
     navMenu.appendChild(newElement);
 
-    switch (etiqueta == 'a') {
+    if (etiqueta == 'a'){
 
-        case false:
+        let newAnchor = document.createElement("div");
 
-            newElement.innerText = texto;
+        newAnchor.setAttribute("class", "nav__submenu-element");
 
-        break;
+        newElement.appendChild(newAnchor);
 
-        default:
+        let newAnchorName = document.createElement("p");
 
-            let newAnchor = document.createElement("div");
+        newAnchorName.setAttribute("title", texto);
 
-            newAnchor.setAttribute("class", "nav__submenu-element");
+        newAnchor.appendChild(newAnchorName);
 
-            newElement.appendChild(newAnchor);
+        newAnchorName.innerText = texto;
 
-            let newAnchorName = document.createElement("p");
-
-            newAnchorName.setAttribute("title", texto);
-
-            newAnchor.appendChild(newAnchorName);
-
-            newAnchorName.innerText = texto;
-
-        break;
+        return
     }
+
+    newElement.innerText = texto;
+
+    return
 }
 
 element("button", "class", "mas-de-google", "Añadir sitio");
@@ -866,70 +731,64 @@ masSites.style.display = "inline-block";
 masSites.addEventListener("click", ()=>{
 
     window.scrollTo(0, 0);
+
     newSiteModal.classList.replace("hidden", "new_site_modal-form");
+
     navMenu.classList.add("ovrflw_hddn");
-    document.getElementById("site_name").focus();
+
+    return siteNameInpt.focus();
 });
 
 cancel = document.getElementById("cancel");
 
 cancel.addEventListener("click", closeSiteForm);
 
-function closeSiteForm() {
+function closeSiteForm(){
 
-    document.getElementById("site_name").value = "";
+    siteNameInpt.value = "";
 
-    document.getElementById("site_link").value = "";
+    siteLinkInpt.value = "";
 
-    document.getElementById("site_keywords").value = "";
+    siteKeywrdsInpt.value = "";
 
     newSiteModal.classList.replace("new_site_modal-form", "hidden");
-    
-    navMenu.classList.remove("ovrflw_hddn");
+
+    return navMenu.classList.remove("ovrflw_hddn");
 }
 
-newSiteModal.addEventListener('keydown', (e)=>{
+newSiteModal.addEventListener("keydown", (e)=>{
 
-    switch (e.key) {
+    if (e.key == "Tab"){
 
-		case "Tab":
-
-			e.preventDefault();
-
-		break;
+        return e.preventDefault();
     }
+
+    return
 });
 
-addSiteBtn = document.getElementById("cache_site");
+const addSiteBtn = document.getElementById("cache_site");
 
 addSiteBtn.addEventListener("click", addSite);
 
 element("a", "href", "chess/index.html", "Ajedrez");
-
 element("a", "href", "calculator/index.html", "Calculadora");
-
 element("hr", "class", "nav__submenu-element-section-separator", "");
-
+element("div", "class", "nav__submenu-element-section", "");
+element("hr", "class", "nav__submenu-element-section-separator", "");
+element("div", "class", "nav__submenu-element-section", "");
+element("hr", "class", "nav__submenu-element-section-separator", "");
 element("div", "class", "nav__submenu-element-section", "");
 
-element("hr", "class", "nav__submenu-element-section-separator", "");
+const linksGroup = document.getElementsByClassName("nav__submenu-element-section");
 
-element("div", "class", "nav__submenu-element-section", "");
-
-element("hr", "class", "nav__submenu-element-section-separator", "");
-
-element("div", "class", "nav__submenu-element-section", "");
-
-linksGroup = document.getElementsByClassName("nav__submenu-element-section");
-
-userLinks = linksGroup[0];
+const userLinks = linksGroup[0];
 
 userLinks.classList.add("user_links");
 
-googleLinks = linksGroup[1];
-extraLinks = linksGroup[2];
+const googleLinks = linksGroup[1];
+const extraLinks = linksGroup[2];
 
-function enlace(address, text, keyWords, zone) {
+function enlace(address, text, keyWords, zone){
 
     let newLink = document.createElement("a");
 
@@ -973,161 +832,106 @@ function enlace(address, text, keyWords, zone) {
 
     p.innerText = text;
 
-    switch (zone == userLinks) {
+    if (zone == userLinks){
 
-        case false:
+        let del = document.createElement("span");
 
-        break;
+        del.setAttribute("class", "delete_site");
 
-        default:
+        del.setAttribute("data-address", address);
 
-            let del = document.createElement("span");
+        del.setAttribute("data-site", text);
 
-            del.setAttribute("class", "delete_site");
+        del.setAttribute("data-keywords", keyWords);
 
-            del.setAttribute("data-address", address);
+        zone.appendChild(del);
 
-            del.setAttribute("data-site", text);
-
-            del.setAttribute("data-keywords", keyWords);
-
-            zone.appendChild(del);
-
-            del.innerText = "x";
-
-        break;
+        del.innerText = "x";
     }
+    return
 }
 
 enlace("", "", "", userLinks);
 
 userLinks.getElementsByTagName("a")[0].style = "display: none !important;";
 
-switch (localStorage.getItem("bookmarks") ) {
+if (localStorage.getItem("bookmarks") == null){
 
-    case null:
+    enlace("./", "Aquí verás tus sitios", "", userLinks);
+}else{
 
-        enlace("./", "Aquí verás tus sitios", "", userLinks);
+    bookmarks = localStorage.getItem("bookmarks");
 
-    break;
+    sites = bookmarks.split(',');
 
-    default:
+    sites.forEach(e =>{
 
-        bookmarks = localStorage.getItem("bookmarks");
+        ePrprts = e.split(";;;");
 
-        sites = bookmarks.split(',');
+        e.length > 8 ? enlace(ePrprts[0], ePrprts[1], ePrprts[2], userLinks) : false;
+    });
 
-        sites.forEach(e =>{
+    userLinks.addEventListener("click", (e)=>{
 
-            ePrprts = e.split(";;;");
+        if (e.target.className == "delete_site"){
 
-            e.length > 8 ? enlace(ePrprts[0], ePrprts[1], ePrprts[2], userLinks) : false;
-        });
+            dataSets = [
 
-        userLinks.addEventListener("click", (e)=>{
+                e.target.dataset.address,
+                e.target.dataset.site,
+                e.target.dataset.keywords
+            ]
 
-            switch (e.target.className) {
+            let conf = window.confirm("Estás a punto de borrar: " + dataSets[1]);
 
-                case "delete_site":
+            if (conf){
 
-                    dataSets = [
+                sites.splice(sites.indexOf(dataSets.join(";;;") ), 1);
 
-                        e.target.dataset.address,
+                sites.length > 0 ? localStorage.setItem("bookmarks", sites.toString() ) : localStorage.removeItem("bookmarks");
 
-                        e.target.dataset.site,
-
-                        e.target.dataset.keywords
-                    ]
-
-                    let conf = window.confirm("Estás a punto de borrar: " + dataSets[1]);
-
-                    switch (conf) {
-
-                        case false:
-
-                        break;
-
-                        default:
-
-                            sites.splice(sites.indexOf(dataSets.join(";;;") ), 1);
-
-                            sites.length > 0 ? localStorage.setItem("bookmarks", sites.toString() ) : localStorage.removeItem("bookmarks");
-
-                            window.location.reload();
-
-                        break;
-                    }
-
-                break;
+                return window.location.reload();
             }
-        });
-
-    break;
+        }
+        return
+    });
 }
 
-function addSite() {
+function addSite(){
 
-    let newSiteName = document.getElementById("site_name").value;
+    if (isEmptyOrSpaces(siteNameInpt.value) || isEmptyOrSpaces(siteLinkInpt.value) || isEmptyOrSpaces(siteKeywrdsInpt.value) ){
 
-    let newSiteLink = document.getElementById("site_link").value;
-
-    let newSiteKw = document.getElementById("site_keywords").value;
-
-    switch (isEmptyOrSpaces(newSiteName) || isEmptyOrSpaces(newSiteLink) || isEmptyOrSpaces(newSiteKw) ) {
-
-        case false:
-
-            newBookmark = [
-
-                document.getElementById("site_link").value,
-
-                document.getElementById("site_name").value,
-
-                document.getElementById("site_keywords").value.replace(',', '').toLowerCase()
-            ];
-
-            enlace(newBookmark[0], newBookmark[1], newBookmark[2], userLinks);
-
-            newBookmark = newBookmark.join(";;;");
-
-			switch (localStorage.getItem("bookmarks") ) {
-
-				case null:
-
-					localStorage.setItem("bookmarks", newBookmark);
-
-				break;
-
-				default:
-
-                    sites.push(newBookmark);
-
-                    localStorage.setItem("bookmarks", sites);
-
-				break;
-			}
-
-            closeSiteForm();
-
-            document.getElementById("site_name").value = "";
-
-            document.getElementById("site_link").value = "";
-
-            document.getElementById("site_keywords").value = "";
-
-            location.reload();
-
-        break;
-
-        default:
-
-            window.alert("Por favor, asegúrate de rellenar todos los campos");
-
-        break;
+        return window.alert("Por favor, asegúrate de rellenar todos los campos");
     }
+
+    newBookmark = [
+
+        siteLinkInpt.value,
+
+        siteNameInpt.value,
+
+        siteKeywrdsInpt.value.replace(',', '').toLowerCase()
+    ];
+
+    enlace(newBookmark[0], newBookmark[1], newBookmark[2], userLinks);
+
+    newBookmark = newBookmark.join(";;;");
+
+    if (localStorage.getItem("bookmarks") == null){
+
+        localStorage.setItem("bookmarks", newBookmark);
+
+        return location.reload();
+    }
+
+    sites.push(newBookmark);
+
+    localStorage.setItem("bookmarks", sites);
+
+    return location.reload();
 }
 
-//    Google links    //
+//    GOOGLE LINKS    //
 
 enlace("https://www.google.com/", "Google", "buscar search búsqueda", googleLinks);
 
@@ -1161,7 +965,7 @@ enlace("https://www.youtube.com/", "YouTube", "ver vídeos videos música", goog
 
 enlace("https://about.google/intl/es-419/products/", "Más de Google", "mas", googleLinks);
 
-//    User links    //
+//    USER LINKS    //
 
 enlace("https://123apps.com/", "123Apps", "utilities tools herramientas pdf word excel converter convertir conversión editar edición recortar imágenes imagenes images pics pictures fotos documentos documents docs jpg jpeg png gif webp img videos vídeos ecualizar audio equalizer eq ppt font tipografía files archivos ebook libros extractor extraer", extraLinks);
 
@@ -1409,7 +1213,9 @@ enlace("https://ww1.streamm4u.ws/#", "StreamM4u", "ver películas peliculas seri
 
 enlace("https://teams.microsoft.com/", "Teams", "academic school scholar escuela tareas homework", extraLinks);
 
-enlace("https://web.telegram.org/k/", "Telegram", "redes sociales network mensajerías mensajerias intantáneas intantaneas", extraLinks);
+enlace("https://telegram.org/", "Telegram", "redes sociales network mensajerías mensajerias intantáneas intantaneas", extraLinks);
+
+enlace("https://web.telegram.org/k/", "Telegram web", "redes sociales network mensajerías mensajerias intantáneas intantaneas", extraLinks);
 
 enlace("https://www.televisiongratishd.com/", "Televisión gratis", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
 
