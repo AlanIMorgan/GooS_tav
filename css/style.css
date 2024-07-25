@@ -834,9 +834,10 @@ td,
 .home__form .fa-search {
 	width: 21px;
     fill: var(--thrd);
-	float: left;
-	margin-left: 18px;
+	float: right;
+	margin-right: 18px;
 	margin-top: 9px;
+	cursor: pointer;
 }
 
 #cancel_btn {
@@ -863,12 +864,14 @@ td,
 }
 
 .form__s_engine-icon {
-	float: right;
+    position: relative;
+    z-index: 99;
+	float: left;
 	border: 0;
 	cursor: pointer;
 	width: 16px;
 	height: 34px;
-	margin: 4px 6px 4px 0;
+	margin: 4px 0px 4px 18px;
 	border-radius: 12px;
     font-size: 15px;
 	outline: 1px solid var(--frth);
