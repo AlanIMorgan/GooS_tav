@@ -78,7 +78,7 @@ if (localStorage.getItem("search_engines") ){
 	});
 }
 
-searchEngineMenu = document.getElementById("s_engine");
+// searchEngineMenu = document.getElementById("s_engine");
 
 function createOptions (name) {
 

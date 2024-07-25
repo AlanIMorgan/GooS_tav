@@ -418,7 +418,7 @@ for (let i = 0; i < 6; i++) { // creates a table row
 
 showCalendar(currentMonth, currentYear);
 
-// Favorites settings
+// FAVORITES
 
 const favoritesSttng = document.getElementById("favorites_sttng");
 const favoritesRow = document.getElementById("favorites_menu");
@@ -469,8 +469,6 @@ if (localStorage.getItem("favorites") != null){
 
     deleteFavorites.addEventListener("input", ()=>{
 
-        let delSite = deleteFavorites.value;
-
         if (deleteFavorites.value == "all"){
 
             let favoritesAlert = confirm("¿Estás seguro de que quieres quedarte sin favoritos?");
@@ -489,7 +487,7 @@ if (localStorage.getItem("favorites") != null){
 
         if (favoriteAlert){
 
-            favs.splice(favs.indexOf(delSite), 1 );
+            favs.splice(favs.indexOf(deleteFavorites.value), 1 );
 
             newFavs = favs.join(";;;");
 
@@ -584,6 +582,66 @@ addSEBtn.addEventListener("click", ()=>{
 
     return location.reload();
 });
+
+const deleteSearchEngines = document.getElementById("delete_search_engines");
+const searchEngineMenu = document.getElementById("s_engine");
+
+if (localStorage.getItem("search_engines") != null){
+
+    let searchEngines = localStorage.getItem("search_engines");
+
+    engines = searchEngines.split(",");
+
+    engines.forEach(e => {
+
+        if (e.length > 0) {
+
+            let option = document.createElement("option");
+
+            option.setAttribute("value", e);
+
+            deleteSearchEngines.appendChild(option);
+
+            option.innerText = e.split(";;;")[0];
+        }
+    });
+
+    deleteSearchEngines.addEventListener("input", ()=>{
+
+        if (deleteSearchEngines.value == "all"){
+
+            let enginesAlert = confirm("¿Estás seguro de que quieres borrar tus buscadores?");
+
+            if (enginesAlert){
+
+                localStorage.removeItem("search_engines");
+
+                localStorage.removeItem("searchEngine");
+
+                return location.reload();
+            }
+
+            return deleteSearchEngines.value = '';
+        }
+
+        let engineAlert = confirm("Estás apunto de eliminar: " + deleteSearchEngines.value.split(";;;")[0]);
+
+        if (engineAlert){
+
+            engines.splice(engines.indexOf(deleteSearchEngines.value), 1 );
+
+            newEngines = engines.join(",");
+
+            newEngines.length > 0 ? localStorage.setItem("search_engines", newEngines) : localStorage.removeItem("search_engines");
+
+            localStorage.removeItem("searchEngine");
+
+            return location.reload();
+        }
+
+        return deleteSearchEngines.value = '';
+    });
+}
 
 // PROFILE SETTINGS
 

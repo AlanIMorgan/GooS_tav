@@ -693,12 +693,12 @@ td,
 	width: 50%;
 }
 
-.setting_button {
+.sttng_btn_or_menu {
 	margin-top: 20px;
 	text-align: start;
 }
 
-.setting_button a, .setting_button .btn {
+.sttng_btn_or_menu a, .sttng_btn_or_menu .btn {
 	padding: 5px;
 	border: 1px solid #fff;
 	font-size: 12px;

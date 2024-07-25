@@ -37,7 +37,7 @@
 
 		<!-- Custom CSS -->
 
-		<link rel="stylesheet" type="text/css" href="css/style.css?v117" />
+		<link rel="stylesheet" type="text/css" href="css/style.css?v118" />
 	</head>
 
 	<body>
@@ -203,21 +203,21 @@
 							<div id="calendar"></div>
 						</div>
 
-						<div class="setting_button">
+						<div class="sttng_btn_or_menu">
 
 							<label for="clock_sttng"> Mostrar reloj </label>
 
 							<input type="checkbox" id="clock_sttng">
 						</div>
 
-						<div class="setting_button">
+						<div class="sttng_btn_or_menu">
 
 							<label for="nick_sttng"> Usuario: </label>
 
 							<input type="text" id="nick_sttng" placeholder="Tu nombre">
 						</div>
 
-						<div class="bckgrnd_sttng setting_button">
+						<div class="bckgrnd_sttng sttng_btn_or_menu">
 
 							<label for="bckgrnd_sttng"> Fondo: </label>
 
@@ -232,7 +232,7 @@
 							<input id="upload_wpp" type="file" accept="image/*" hidden>
 						</div>
 
-						<div class="setting_button">
+						<div class="sttng_btn_or_menu">
 
 							<label for="favorites_sttng"> Mostrar favoritos </label>
 
@@ -246,16 +246,26 @@
 							</select>
 						</div>
 
-						<div class="setting_button">
+						<div class="sttng_btn_or_menu">
 
 							<label for="history_sttng"> Guardar historial </label>
 
 							<input type="checkbox" id="history_sttng" checked="true">
 						</div>
 
-						<div class="setting_button">
+						<div class="sttng_btn_or_menu">
 
 							<a id="add_search_engine" href="#new_search_engine_modal"> Añadir buscador </a>
+						</div>
+
+						<div class="sttng_btn_or_menu">
+
+							<select id="delete_search_engines">
+
+								<option value=""> Borrar buscador </option>
+
+								<option value="all"> Todos </option>
+							</select>
 						</div>
 
 						<select id="profile_settings">
@@ -356,9 +366,9 @@
 
 		<script src="js/lz-string.min.js"></script>
 
-		<script src="js/nav.js?v185"></script>
+		<script src="js/nav.js?v186"></script>
 
-		<script src="js/search.js?v101"></script> <!-- 
+		<script src="js/search.js?v102"></script> <!-- 
 
 		<script src="js/voice-search.js?v2"></script> -->
 
