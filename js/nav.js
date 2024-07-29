@@ -652,9 +652,16 @@ const deleteConfigBtn = document.getElementById("delete_config");
 
 importConfig.addEventListener("input", ()=>{
 
+    file = importConfig.files[0];
+
+    toHandleConfigFile(file);
+});
+
+function toHandleConfigFile(file){
+
     reader = new FileReader();
 
-    function setProfile(){
+    reader.addEventListener("load", ()=>{
 
         val = reader.result;
 
@@ -679,19 +686,12 @@ importConfig.addEventListener("input", ()=>{
 
             return location.reload();
         }
-    }
+    });
 
-    file = importConfig.files[0];
-
-    reader.addEventListener("load", setProfile);
-
-    if (file){
-
-        reader.readAsText(file);
-    }
+    reader.readAsText(file);
 
     return
-});
+}
 
 deleteConfigBtn.addEventListener("click", ()=>{
 
@@ -708,6 +708,23 @@ deleteConfigBtn.addEventListener("click", ()=>{
 });
 
 const moveToProfileBttns = ()=> profileNavMenu.scrollTo(0, profileNavMenu.scrollHeight);
+const importConfigLabel = document.getElementById("import_config_label");
+
+importConfigLabel.addEventListener("dragover", (e)=> e.preventDefault() );
+
+importConfigLabel.addEventListener("drop", (e)=>{
+
+    e.preventDefault();
+
+    item = e.dataTransfer.items[0];
+
+    if (item.kind === "file") {
+
+        file = item.getAsFile();
+
+        toHandleConfigFile(file);
+    }
+});
 
 profileSttngs.addEventListener("input", ()=>{
 
@@ -730,7 +747,7 @@ profileSttngs.addEventListener("input", ()=>{
 
         case "import":
 
-            document.getElementById("import_config_label").style.display = "inline-block";
+            importConfigLabel.style.display = "inline-block";
 
             moveToProfileBttns();
         break;
