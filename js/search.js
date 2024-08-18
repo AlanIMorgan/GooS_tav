@@ -43,6 +43,8 @@ searchEngineMenuOptions = [
 
 	{"Bing" : "https://www.bing.com/search?q="},
 
+	{"Brave" : "https://search.brave.com/search?q="},
+
 	{"Duckduckgo" : "https://duckduckgo.com/?q="},
 
 	{"Ecosia" : "https://www.ecosia.org/search?q="},

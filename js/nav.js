@@ -1036,7 +1036,7 @@ enlace("https://docs.google.com/spreadsheets", "Google Sheets", "docs documents 
 
 enlace("https://translate.google.com/", "Traductor", "google translate languages idiomas", googleLinks);
 
-enlace("https://www.youtube.com/", "YouTube", "ver vídeos videos música", googleLinks);
+enlace("https://www.youtube.com/", "YouTube", "ver watch vídeos videos música", googleLinks);
 
 enlace("https://about.google/intl/es-419/products/", "Más de Google", "mas", googleLinks);
 
@@ -1048,7 +1048,7 @@ enlace("https://9xbuddy.xyz/", "9xbuddy", "movies downloader descargar vídeos v
 
 enlace("https://www.academia.edu/", "Academia.edu", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos download free descargar gratis piracy piratería pirateria", extraLinks);
 
-enlace("https://www.elacervo.com/directores", "Acervo Fílmico Digital", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://www.elacervo.com/directores", "Acervo Fílmico Digital", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrobat Compressor", "comprimir pdf reducir documentos documents docs", extraLinks);
 
@@ -1088,7 +1088,9 @@ enlace("https://www.canva.com/", "Canva", "diseño gráfico graphic design edita
 
 enlace("https://chat.openai.com/", "ChatGPT", "inteligencia artificial intelligence ia ai búsqueda buscar search", extraLinks);
 
-enlace("https://sur.ly/o/cinefiliamalversa.blogspot.com.ar/AA000014?pageviewId=desktop-302e36363034343030302031363638383031373733203438303533313335", "Cinéfila Malversa", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://sur.ly/o/cinefiliamalversa.blogspot.com.ar/AA000014?pageviewId=desktop-302e36363034343030302031363638383031373733203438303533313335", "Cinéfila Malversa", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
+
+enlace("https://cinestentativos.com/", "CinesTentativos", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://ciudadseva.com/", "Ciudad Seva", "escritor Luis López Lopez Nieves biblioteca digital library cuentos poemas minicuentos aforismo teatro arte", extraLinks);
 
@@ -1096,7 +1098,7 @@ enlace("https://cloudconvert.com/", "CloudConvert", "utilities tools herramienta
 
 enlace("https://convertio.co/", "Convertio", "utilities tools herramientas pdf word excel converter convertir conversión imágenes imagenes images pics pictures fotos documentos documents docs jpg jpeg png gif webp img mp4 mp3 videos vídeos audio ppt files archivos ebook libros", extraLinks);
 
-enlace("https://cuevana3.ch/", "Cuevana3", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://cuevana3.ch/", "Cuevana3", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://www.deepl.com/es/translator", "Deepl", "translate languages traducir idiomas", extraLinks);
 
@@ -1122,23 +1124,25 @@ enlace("https://f-droid.org/en/packages/", "F-Droid", "descargar software libre 
 
 enlace("https://www.facebook.com/", "Facebook", "redes sociales networks", extraLinks);
 
+enlace("https://fdown.net/", "FDOWN", "facebook downloader descargar vídeos videos", extraLinks);
+
 enlace("https://fakeupdate.net/", "Fake Update Screens", "actualización actualizacion falsa", extraLinks);
 
-enlace("https://gatonplayseries.com/", "GatonPlaySeries", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://gatonplayseries.com/", "GatonPlaySeries", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://github.com/AlanIMorgan/GooS_tav", "GitHub", "code código codigo deveopers programación programacion", extraLinks);
 
-enlace("https://gnula2.org/", "Gnula2", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://gnula2.org/", "Gnula2", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
-enlace("http://gnula.me", "Gnula.me", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("http://gnula.me", "Gnula.me", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
-enlace("https://gnula.nu/", "Gnula", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://gnula.nu/", "Gnula", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://goostav.vercel.app/", "GooS_tav", "goostav buscar search búsqueda busqueda vercel", extraLinks);
 
 enlace("https://www.guitars101.com/", "Guitars 101", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", extraLinks);
 
-enlace("https://hollymoviehd.cc/", "HollyMovieHD", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://hollymoviehd.cc/", "HollyMovieHD", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://igram.live/", "iGram", "instagram downloader descargar vídeos videos imágenes imagenes pics pictures fotos photos reels", extraLinks);
 
@@ -1156,6 +1160,8 @@ enlace("https://archive.org/", "Internet Archive", "buscar búsqueda search acad
 
 enlace("https://www.instagram.com/", "Instagram", "redes sociales networks photos gallery galería álbum album pics pictures images imágenes", extraLinks);
 
+enlace("https://it-tools.tech/", "IT Tools", "utilities tools herramientas pdf converter convertir conversión font tipografía files archivos", extraLinks);
+
 enlace("https://app.keeweb.info/", "KeeWeb", "password manager administrador contraseñas", extraLinks);
 
 enlace("https://kupdf.net/", "KUPDF", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
@@ -1166,9 +1172,9 @@ enlace("https://libgen.li/", "Library Genesis", "buscar búsqueda search books e
 
 enlace("https://www.linkedin.com/in/alanmorgan-a/", "LinkedIn", "redes sociales networks trabajos empleos jobs oficios", extraLinks);
 
-enlace("https://www.locopelis.com/", "LocoPelis", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://www.locopelis.com/", "LocoPelis", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
-enlace("https://ww1.m4uhd.tv/", "M4uHD", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://ww1.m4uhd.tv/", "M4uHD", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://www.malavida.com", "Malavida", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android descargar programas gratis full free download apps apks", extraLinks);
 
@@ -1180,9 +1186,9 @@ enlace("https://www.megadiscografiascompletas.com/", "Mega Discografías", "escu
 
 enlace("https://www.messenger.com/", "Messenger", "facebook redes sociales network mensajería mensajeria intantánea intantanea", extraLinks);
 
-enlace("https://mirandogratis.com/chungking-express.html", "Mirando Gratis", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://mirandogratis.com/chungking-express.html", "Mirando Gratis", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
-enlace("https://movieparadise.org/", "Moviesparadise", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://movieparadise.org/", "Moviesparadise", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://mqs.link/", "MQS Albums Download", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", extraLinks);
 
@@ -1196,7 +1202,9 @@ enlace("https://normas-apa.org/", "Normas APA", "academic school scholar escuela
 
 enlace("https://sites.google.com/cuaad.udg.mx/habilidadesentics/objetos-virtuales-de-aprendizaje/normas-apa?authuser=0", "Normas APA - Google For Education", "academic school scholar escuela documentos documents docs tareas ensayos académicos academicos", extraLinks);
 
-enlace("https://novamovie.net/", "Novamovie", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://novamovie.net/", "Novamovie", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
+
+enlace("https://ok.ru/", "Одноклассники", "redes sociales network vídeos videos ver watch películas peliculas completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://onedrive.live.com/", "OneDrive", "microsoft office 365 almacenamiento nube cloud storage almacenar", extraLinks);
 
@@ -1214,9 +1222,9 @@ enlace("https://pcwonderland.com/", "PC Wonderland", "piratería pirateria pirac
 
 enlace("https://www.pdfdrive.com/", "PDF Drive", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
 
-enlace("https://www.bajarpelisgratis.com/", "Pelis Gratis", "ver películas peliculas series completas gratis watch full free movies download descargar cinema piracy piratería pirateria", extraLinks);
+enlace("https://www.bajarpelisgratis.com/", "Pelis Gratis", "ver watch películas peliculas series completas gratis full free movies download descargar cinema piracy piratería pirateria", extraLinks);
 
-enlace("https://photocall.tv", "Photocall tv", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
+enlace("https://photocall.tv", "Photocall tv", "ver watch canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
 
 enlace("https://www.pinterest.com.mx/", "Pinterest", "imágenes imagenes images img pics pictures photos fotos wallpapers arte digital artists artistas digitales", extraLinks);
 
@@ -1236,7 +1244,7 @@ enlace("https://www.rae.es/biblioteca-digital", "RAE (biblioteca digital)", "bus
 
 enlace("https://www.random.org/widgets/", "Random", "", extraLinks);
 
-enlace("https://rarefilmm.com/", "Rarefilmm", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://rarefilmm.com/", "Rarefilmm", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://redalyc.org/", "Redalyc", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
@@ -1244,7 +1252,7 @@ enlace("https://www.reddit.com/", "Reddit", "redes sociales network", extraLinks
 
 enlace("https://www.refseek.com/", "Refseek", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
-enlace("https://rentry.co/megathread", "Piracy megathread on Rentry.co", "torrents magnet descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles ver películas peliculas series watch full movies cinema escuchar listen música musica", extraLinks);
+enlace("https://rentry.co/megathread", "Piracy megathread on Rentry.co", "torrents magnet descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles ver watch películas peliculas series full movies cinema escuchar listen música musica", extraLinks);
 
 enlace("http://repec.org/", "RePEc", "Research Papers Economics buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
 
@@ -1270,7 +1278,7 @@ enlace("https://www.scribbr.es/detector-de-plagio/generador-apa/", "Scribbr APA 
 
 enlace("https://www.sejda.com/", "Sejda", "editar edición convertir pdf word documentos documents docs", extraLinks);
 
-enlace("https://seriespapaya.club/", "Series Papaya", "ver películas peliculas series completas gratis watch full free download movies descargar cinema piracy piratería pirateria", extraLinks);
+enlace("https://seriespapaya.club/", "Series Papaya", "ver watch películas peliculas series completas gratis full free download movies descargar cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://www.shazam.com/", "Shazam", "escuchar listen música musica", extraLinks);
 
@@ -1284,7 +1292,7 @@ enlace("https://link.springer.com/", "Springer Link", "buscar búsqueda search a
 
 enlace("https://soundcloud.com/", "Soundcloud", "escuchar listen música musica", extraLinks);
 
-enlace("https://ww1.streamm4u.ws/#", "StreamM4u", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://ww1.streamm4u.ws/#", "StreamM4u", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://teams.microsoft.com/", "Teams", "academic school scholar escuela tareas homework", extraLinks);
 
@@ -1292,9 +1300,9 @@ enlace("https://telegram.org/", "Telegram", "redes sociales network mensajerías
 
 enlace("https://web.telegram.org/k/", "Telegram web", "redes sociales network mensajerías mensajerias intantáneas intantaneas", extraLinks);
 
-enlace("https://www.televisiongratishd.com/", "Televisión gratis", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
+enlace("https://www.televisiongratishd.com/", "Televisión gratis", "ver watch canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
 
-enlace("https://thepiratebay.org/index.html", "The Pirate Bay", "torrents magnet descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles ver películas peliculas series watch full movies cinema escuchar listen música musica", extraLinks);
+enlace("https://thepiratebay.org/index.html", "The Pirate Bay", "torrents magnet descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles ver watch películas peliculas series full movies cinema escuchar listen música musica", extraLinks);
 
 enlace("https://weather.com/", "The Weather Channel", "pronóstico pronostico el clima", extraLinks);
 
@@ -1304,7 +1312,7 @@ enlace("https://tinypng.com/", "TinyPNG", "comprimir compressor imágenes imagen
 
 enlace("https://www.tumblr.com/", "Tumblr", "redes sociales network", extraLinks);
 
-enlace("https://www.tvconexion.com/", "TV Conexion HD", "ver canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
+enlace("https://www.tvconexion.com/", "TV Conexion HD", "ver watch canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
 
 enlace("https://x.com/", "X (Twitter)", "redes sociales network tuits", extraLinks);
 
@@ -1314,15 +1322,15 @@ enlace("https://www.typingclub.com/", "TypingClub", "utilities tools herramienta
 
 enlace("https://www.urbandictionary.com/", "Urban Dictionary", "buscar search búqueda busqueda diccionario definición definicion qué significa que significa", extraLinks);
 
-enlace("https://www.vepelis.com/", "VePelis", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://www.vepelis.com/", "VePelis", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
-enlace("https://verpeliculasonline.org/", "Vision", "ver películas peliculas series completas gratis watch full free movies cinema piracy piratería pirateria", extraLinks);
+enlace("https://verpeliculasonline.org/", "Vision", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://victorraulrr.info/", "Victor RaulRR", "descargar gratis free download piracy piratería pirateria apps aplicaciones apks juegos games completas completos android celulares smartphones teléfonos telefonos mobiles móviles moviles", extraLinks);
 
 enlace("https://www.virustotal.com/", "VirusTotal", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android descargar programas gratis full free download apps apks", extraLinks);
 
-enlace("https://vocalremover.org/", "Vocal Remover and Isolation", "inteligencia artificial intelligence ia ai música musica audio", extraLinks);
+enlace("https://vocalremover.org/", "Vocal Remover watch and Isolation", "inteligencia artificial intelligence ia ai música musica audio", extraLinks);
 
 enlace("https://wallhaven.cc/", "Wallhaven", "images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", extraLinks);
 
