@@ -649,12 +649,79 @@ const profileSttngs = document.getElementById("profile_settings");
 const exportConfigBtn = document.getElementById("export_config");
 const importConfig = document.getElementById("import_config");
 const deleteConfigBtn = document.getElementById("delete_config");
+const importConfigLabel = document.getElementById("import_config_label");
+const moveToProfileBttns = ()=> profileNavMenu.scrollTo(0, profileNavMenu.scrollHeight);
+
+importConfigLabel.addEventListener("dragover", (e)=> e.preventDefault() );
+
+importConfigLabel.addEventListener("drop", (e)=>{
+
+    e.preventDefault();
+
+    item = e.dataTransfer.items[0];
+
+    if (item.kind === "file") {
+
+        file = item.getAsFile();
+
+        toHandleConfigFile(file);
+    }
+});
 
 importConfig.addEventListener("input", ()=>{
 
     file = importConfig.files[0];
 
     toHandleConfigFile(file);
+});
+
+deleteConfigBtn.addEventListener("click", ()=>{
+
+    conf = window.confirm("¡Estás a punto de eliminar tu configuración!");
+
+    if (conf){
+
+        localStorage.clear();
+
+        return location.reload();
+    }
+
+    return
+});
+
+profileSttngs.addEventListener("input", ()=>{
+
+    switch (profileSttngs.value){
+
+        case "export":
+
+            content = JSON.stringify(localStorage);
+
+            encryptedData = CryptoJS.AES.encrypt(content, "GooStav"); // "GooStav" is the passphrase
+
+            exportConfigBtn.href = "data:application/octet-stream," + encodeURIComponent(encryptedData.toString() );
+
+            exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
+
+            exportConfigBtn.style.display = "inline-block";
+
+            moveToProfileBttns();
+        break;
+
+        case "import":
+
+            importConfigLabel.style.display = "inline-block";
+
+            moveToProfileBttns();
+        break;
+
+        case "delete":
+
+            deleteConfigBtn.style.display = "inline-block";
+
+            moveToProfileBttns();
+        break;
+    }
 });
 
 function toHandleConfigFile(file){
@@ -692,74 +759,6 @@ function toHandleConfigFile(file){
 
     return
 }
-
-deleteConfigBtn.addEventListener("click", ()=>{
-
-    conf = window.confirm("¡Estás a punto de eliminar tu configuración!");
-
-    if (conf){
-
-        localStorage.clear();
-
-        return location.reload();
-    }
-
-    return
-});
-
-const moveToProfileBttns = ()=> profileNavMenu.scrollTo(0, profileNavMenu.scrollHeight);
-const importConfigLabel = document.getElementById("import_config_label");
-
-importConfigLabel.addEventListener("dragover", (e)=> e.preventDefault() );
-
-importConfigLabel.addEventListener("drop", (e)=>{
-
-    e.preventDefault();
-
-    item = e.dataTransfer.items[0];
-
-    if (item.kind === "file") {
-
-        file = item.getAsFile();
-
-        toHandleConfigFile(file);
-    }
-});
-
-profileSttngs.addEventListener("input", ()=>{
-
-    switch (profileSttngs.value){
-
-        case "export":
-
-            content = JSON.stringify(localStorage);
-
-            encryptedData = CryptoJS.AES.encrypt(content, "GooStav"); // "GooStav" is the passphrase
-
-            exportConfigBtn.href = "data:application/octet-stream," + encodeURIComponent(encryptedData.toString() );
-
-            exportConfigBtn.download = nickName.value + "_" + "gsconf.json";
-
-            exportConfigBtn.style.display = "inline-block";
-
-            moveToProfileBttns();
-        break;
-
-        case "import":
-
-            importConfigLabel.style.display = "inline-block";
-
-            moveToProfileBttns();
-        break;
-
-        case "delete":
-
-            deleteConfigBtn.style.display = "inline-block";
-
-            moveToProfileBttns();
-        break;
-    }
-});
 
 // SHORTCUTS MENU
 

@@ -227,7 +227,7 @@
 
 							<br>
 
-							<label class="btn" for="upload_wpp"> Subir imagen </label>
+							<label id="upload_wpp-label" class="btn" for="upload_wpp"> Subir imagen </label>
 
 							<input id="upload_wpp" type="file" accept="image/*" hidden>
 						</div>
@@ -366,7 +366,7 @@
 
 		<script src="js/lz-string.min.js"></script>
 
-		<script src="js/nav.js?v188"></script>
+		<script src="js/nav.js?v189"></script>
 
 		<script src="js/search.js?v103"></script> <!-- 
 
@@ -374,14 +374,14 @@
 
 		<script>
 
-			if ('serviceWorker' in navigator) { // Empezar el proceso para la PWA
+			if ('serviceWorker' in navigator){ // Empezar el proceso para la PWA
 
-				navigator.serviceWorker.register('./sw.js', {scope: './'} )
+				navigator.serviceWorker.register('./sw.js', {scope: './'})
 				.then(reg => console.log( /* 'Registro de SW exitoso', reg */ ) )
 				.catch(err => console.warn('Error al tratar de registrar el SW', err) );
 			}
 
-			switch (localStorage.getItem("comp_bck") ) {
+			switch (localStorage.getItem("comp_bck") ){
 
 				case null:
 				break;
@@ -396,13 +396,35 @@
 				break;
 			}
 
-			wppInput = document.getElementById("upload_wpp");
+			const wppInput = document.getElementById("upload_wpp");
+			const uploadWpp = document.getElementById("upload_wpp-label");
 
-			wppInput.addEventListener("input", ()=>{
+			uploadWpp.addEventListener("dragover", (e)=> e.preventDefault() );
+
+			uploadWpp.addEventListener("drop", (e)=>{
+
+				e.preventDefault();
+
+				item = e.dataTransfer.items[0];
+
+				if (item.kind === "file" && item.type.match("^image/") ){
+
+					file = item.getAsFile();
+
+					handleWpp(file);
+				}
+			});
+
+			wppInput.addEventListener("input", (e)=>{
+
+				file = wppInput.files[0];
+
+				handleWpp(file);
+			});
+
+			function handleWpp(file){
 
 				let fileReader = new FileReader();
-
-				fileReader.readAsDataURL(wppInput.files[0]);
 
 				fileReader.addEventListener("load", ()=>{
 
@@ -414,7 +436,9 @@
 
 					location.reload();
 				});
-			});
+
+				fileReader.readAsDataURL(file);
+			}
 		</script>
 	</body>
 </html>
