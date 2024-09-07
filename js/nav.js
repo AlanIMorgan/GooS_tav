@@ -1223,6 +1223,8 @@ enlace("https://www.pdfdrive.com/", "PDF Drive", "buscar búsqueda search books 
 
 enlace("https://www.bajarpelisgratis.com/", "Pelis Gratis", "ver watch películas peliculas series completas gratis full free movies download descargar cinema piracy piratería pirateria", extraLinks);
 
+enlace("https://pelisplay.info/", "Pelisplus", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
+
 enlace("https://photocall.tv", "Photocall tv", "ver watch canales televisión gratis watch tv free television channels piatería pirateria piracy", extraLinks);
 
 enlace("https://www.pinterest.com.mx/", "Pinterest", "imágenes imagenes images img pics pictures photos fotos wallpapers arte digital artists artistas digitales", extraLinks);
