@@ -12,6 +12,8 @@ function showForm() {
 
 	searchInput.value = '';
 
+	window.scrollTo(0, innerHeight);
+
 	return liveSearch();
 }
 
