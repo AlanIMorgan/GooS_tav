@@ -259,7 +259,7 @@ a {
 /* .nav__ul ul */ *::-webkit-scrollbar-thumb {
 	background-color: rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.05), inset 1px 1px 0 rgba(0, 0, 0, 0.05);
-	background: var(--sec);
+	background: var(--sxth);
 	background-clip: padding-box;
 	border: 4px solid transparent;
 	border-radius: 10px;
@@ -840,14 +840,14 @@ td,
 }
 
 #cancel_btn {
-
 	position: absolute;
 	z-index: 9;
 	top: 20%;
 	right: 10%;
 	padding: 4px;
-	background: var(--frth);
-	border-radius: 12px;
+	color: #000;
+    background: var(--primary);
+    border-radius: 6px;
 }
 
 .form__microphone-icon {
@@ -1036,7 +1036,6 @@ td,
 }
 
 .direct-access__info::-webkit-scrollbar-thumb {
-	background-color: 777;
 	-webkit-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.05), inset 1px 1px 0 rgba(0, 0, 0, 0.05);
 	background: var(--frth);
 	background-clip: padding-box;
