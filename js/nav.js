@@ -1053,6 +1053,8 @@ enlace("https://www.adobe.com/mx/acrobat/online/compress-pdf.html", "Adobe Acrob
 
 enlace("https://www.alamy.com/", "Alamy", "download descargar vídeos videos imágenes 360-degree imagenes pics pictures fotos photos buscar búsqueda search creative content contenido creativo vectors vectores artists artistas artes", extraLinks);
 
+enlace("https://allcalidad.re/", "AllCalidad", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
+
 enlace("https://www.amazon.com/", "Amazon", "tienda shopping comprar compras e-commerce e commerce ecommerce ecomerce comercio", extraLinks);
 
 enlace("https://express.adobe.com/", "Adobe Express", "photoshop diseño gráfico graphic design editar edición recortar imágenes imagenes images pics pictures fotos jpg jpeg png gif webp img", extraLinks);
@@ -1290,6 +1292,8 @@ enlace("https://open.spotify.com/", "Spotify", "escuchar listen música musica",
 enlace("https://spotifymate.com/", "SpotifyMate", "downloader descargar música musica", extraLinks);
 
 enlace("https://link.springer.com/", "Springer Link", "buscar búsqueda search academic school scholar escuela books libros documentos documents docs pdfs tareas ensayos académicos academicos", extraLinks);
+
+enlace("https://somosmovies.com/", "SomosMovies", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
 enlace("https://soundcloud.com/", "Soundcloud", "escuchar listen música musica", extraLinks);
 
