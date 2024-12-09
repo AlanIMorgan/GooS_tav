@@ -1185,6 +1185,8 @@ enlace("https://mega.nz/", "Mega", "almacenamiento nube cloud storage almacenar"
 
 enlace("https://www.megadiscografiascompletas.com/", "Mega Discografías", "escuchar listen descargar música musica gratis full free download piracy piratería pirateria", extraLinks);
 
+enlace("https://www.mercadolibre.com.mx/", "Mercado Libre", "tienda shopping comprar compras e-commerce e commerce ecommerce ecomerce comercio", extraLinks);
+
 enlace("https://www.messenger.com/", "Messenger", "facebook redes sociales network mensajería mensajeria intantánea intantanea", extraLinks);
 
 enlace("https://mirandogratis.com/chungking-express.html", "Mirando Gratis", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
