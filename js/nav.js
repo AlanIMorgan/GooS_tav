@@ -1169,6 +1169,8 @@ enlace("https://kupdf.net/", "KUPDF", "buscar búsqueda search books ebooks libr
 
 enlace("https://www.last.fm/es/user/XaMadness", "Last.fm", "escuchar listen música musica recomendaciones recommendations", extraLinks);
 
+enlace("https://ww3.lectulandia.com/", "Lectulandia", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
+
 enlace("https://libgen.li/", "Library Genesis", "buscar búsqueda search books ebooks libros electrónicos electronicos epub gratis free piratería pirateria piracy full free download descargar", extraLinks);
 
 enlace("https://www.linkedin.com/in/alanmorgan-a/", "LinkedIn", "redes sociales networks trabajos empleos jobs oficios", extraLinks);
