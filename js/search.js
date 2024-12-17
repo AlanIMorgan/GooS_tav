@@ -255,7 +255,7 @@ function liveSearch(){
 			}
 		});
 
-		if (links[i].textContent.toLowerCase().includes(q.toLowerCase().replaceAll(' ', '') ) ){
+		if (links[i].textContent.toLowerCase().replaceAll(' ', '').includes(q.toLowerCase().replaceAll(' ', '') ) ){
 
 			links[i].classList.add("actual");
 		}else{
