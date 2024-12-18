@@ -1019,6 +1019,8 @@ enlace("https://docs.google.com/", "Google Documentos", "ofimática word documen
 
 enlace("https://photos.google.com/", "Google Fotos", "photos gallery galería álbum album pics pictures images imágenes img jpg jpeg gif png webp wallpapers", googleLinks);
 
+enlace("https://fonts.google.com/", "Google Fonts", "typography tipografías fuentes diseño gráfico graphic design developers desarrolladores", extraLinks);
+
 enlace("https://mail.google.com/mail/u/0/#all", "Gmail", "google correo electrónico mail email e-mail", googleLinks);
 
 enlace("https://www.google.com/imghp", "Google Imágenes", "buscar búsqueda busqueda search images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", googleLinks);
@@ -1131,9 +1133,11 @@ enlace("https://fdown.net/", "FDOWN", "facebook downloader descargar vídeos vid
 
 enlace("https://fakeupdate.net/", "Fake Update Screens", "actualización actualizacion falsa", extraLinks);
 
+enlace("https://fontawesome.com/", "Font Awesome", "icons logos diseño gráfico graphic design developers desarrolladores", extraLinks);
+
 enlace("https://gatonplayseries.com/", "GatonPlaySeries", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
-enlace("https://github.com/AlanIMorgan/GooS_tav", "GitHub", "code código codigo deveopers programación programacion", extraLinks);
+enlace("https://github.com/AlanIMorgan/GooS_tav", "GitHub", "code código codigo developers desarrolladores programación programacion", extraLinks);
 
 enlace("https://gnula2.org/", "Gnula2", "ver watch películas peliculas series completas gratis full free movies cinema piracy piratería pirateria", extraLinks);
 
@@ -1342,6 +1346,8 @@ enlace("https://victorraulrr.info/", "Victor RaulRR", "descargar gratis free dow
 enlace("https://www.virustotal.com/", "VirusTotal", "piratería pirateria piracy software pc computer computadora windows mac apple mobiles móviles smartphones teléfonos telefonos celulares android descargar programas gratis full free download apps apks", extraLinks);
 
 enlace("https://vocalremover.org/", "Vocal Remover watch and Isolation", "inteligencia artificial intelligence ia ai música musica audio", extraLinks);
+
+enlace("https://www.w3schools.com/", "W3Schools", "learn aprender code código codigo developers desarrolladores programación programacion web", extraLinks);
 
 enlace("https://wallhaven.cc/", "Wallhaven", "images imagenes img pics pictures photos fotos wallpapers jpg jpeg png gif webp", extraLinks);
 
