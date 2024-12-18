@@ -1017,9 +1017,9 @@ enlace("https://drive.google.com/", "Drive", "google almacenamiento nube cloud s
 
 enlace("https://docs.google.com/", "Google Documentos", "ofimática word documents docs", googleLinks);
 
-enlace("https://photos.google.com/", "Google Fotos", "photos gallery galería álbum album pics pictures images imágenes img jpg jpeg gif png webp wallpapers", googleLinks);
-
 enlace("https://fonts.google.com/", "Google Fonts", "typography tipografías fuentes diseño gráfico graphic design developers desarrolladores", extraLinks);
+
+enlace("https://photos.google.com/", "Google Fotos", "photos gallery galería álbum album pics pictures images imágenes img jpg jpeg gif png webp wallpapers", googleLinks);
 
 enlace("https://mail.google.com/mail/u/0/#all", "Gmail", "google correo electrónico mail email e-mail", googleLinks);
 
